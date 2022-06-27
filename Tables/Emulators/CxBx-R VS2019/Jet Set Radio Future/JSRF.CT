@@ -191,7 +191,7 @@
                         <Key>22534</Key>
                         <Key>22533</Key>
                       </Keys>
-                      <Value>4</Value>
+                      <Value>4.5</Value>
                       <ID>0</ID>
                     </Hotkey>
                     <Hotkey>
@@ -368,6 +368,18 @@
                 <Offset>0</Offset>
                 <Offset>4</Offset>
               </Offsets>
+              <Hotkeys>
+                <Hotkey>
+                  <Action>Set Value</Action>
+                  <Keys>
+                    <Key>22533</Key>
+                    <Key>22532</Key>
+                    <Key>22535</Key>
+                  </Keys>
+                  <Value>0</Value>
+                  <ID>0</ID>
+                </Hotkey>
+              </Hotkeys>
             </CheatEntry>
           </CheatEntries>
         </CheatEntry>
@@ -618,6 +630,56 @@
                 <Offset>28</Offset>
                 <Offset>24</Offset>
                 <Offset>1E0</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>609</ID>
+              <Description>"Jet Flags"</Description>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"cxbxr-emu.dll"+00098A54</Address>
+              <Offsets>
+                <Offset>44</Offset>
+                <Offset>30</Offset>
+                <Offset>34</Offset>
+                <Offset>34</Offset>
+                <Offset>24</Offset>
+                <Offset>30</Offset>
+                <Offset>1CD4</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>617</ID>
+              <Description>"Jet Score"</Description>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
+              <Offsets>
+                <Offset>FA8</Offset>
+                <Offset>24</Offset>
+                <Offset>28</Offset>
+                <Offset>148</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>616</ID>
+              <Description>"Count Down Timer"</Description>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
+              <Offsets>
+                <Offset>1048</Offset>
+                <Offset>24</Offset>
+                <Offset>2C</Offset>
+                <Offset>30</Offset>
+                <Offset>30</Offset>
+                <Offset>444</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>622</ID>
+              <Description>"Graffitti Timer"</Description>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"cxbxr-emu.dll"+0001AF14</Address>
+              <Offsets>
+                <Offset>E50</Offset>
               </Offsets>
             </CheatEntry>
           </CheatEntries>
