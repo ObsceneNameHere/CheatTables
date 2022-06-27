@@ -1,0 +1,1578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="24">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>97</ID>
+      <Description>"Time"</Description>
+      <Color>008000</Color>
+      <VariableType>Float</VariableType>
+      <Address>Disrupt_64.dll+3E61450</Address>
+      <Offsets>
+        <Offset>3c0</Offset>
+        <Offset>4f0</Offset>
+        <Offset>0</Offset>
+      </Offsets>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Deactivate</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>107</Key>
+          </Keys>
+          <Value>600</Value>
+          <Description>+10 min</Description>
+          <ID>0</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Deactivate</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>109</Key>
+          </Keys>
+          <Value>600</Value>
+          <Description>-10 min</Description>
+          <ID>1</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>106</Key>
+          </Keys>
+          <Description>Freeze Time</Description>
+          <ID>4</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Deactivate</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>96</Key>
+          </Keys>
+          <Value>0</Value>
+          <Description>Night</Description>
+          <ID>2</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Deactivate</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>98</Key>
+          </Keys>
+          <Value>43200</Value>
+          <Description>Day</Description>
+          <ID>3</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Deactivate</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>97</Key>
+          </Keys>
+          <Value>21600</Value>
+          <Description>Morning</Description>
+          <ID>5</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Deactivate</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>99</Key>
+          </Keys>
+          <Value>64800</Value>
+          <Description>Evening</Description>
+          <ID>6</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Deactivate</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>100</Key>
+          </Keys>
+          <Value>16800</Value>
+          <Description>Morning sky</Description>
+          <ID>7</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Deactivate</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>102</Key>
+          </Keys>
+          <Value>76800</Value>
+          <Description>Evening sky</Description>
+          <ID>8</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Deactivate</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>103</Key>
+          </Keys>
+          <Value>3600</Value>
+          <Description>-1 Hour</Description>
+          <ID>9</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Deactivate</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>105</Key>
+          </Keys>
+          <Value>3600</Value>
+          <Description>+1 Hour</Description>
+          <ID>10</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Increase Value</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>107</Key>
+          </Keys>
+          <Value>600</Value>
+          <Description>+10 min</Description>
+          <ID>11</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Activate</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>107</Key>
+          </Keys>
+          <Description>+10 min</Description>
+          <ID>12</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Decrease Value</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>109</Key>
+          </Keys>
+          <Value>600</Value>
+          <Description>-10 min</Description>
+          <ID>13</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Activate</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>109</Key>
+          </Keys>
+          <Description>-10 min</Description>
+          <ID>14</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Set Value</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>96</Key>
+          </Keys>
+          <Value>0</Value>
+          <Description>Night</Description>
+          <ID>15</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Activate</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>96</Key>
+          </Keys>
+          <Description>Night</Description>
+          <ID>16</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Set Value</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>98</Key>
+          </Keys>
+          <Value>43200</Value>
+          <Description>Day</Description>
+          <ID>17</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Activate</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>98</Key>
+          </Keys>
+          <Description>Day</Description>
+          <ID>18</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Set Value</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>97</Key>
+          </Keys>
+          <Value>21600</Value>
+          <Description>Morning</Description>
+          <ID>19</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Activate</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>97</Key>
+          </Keys>
+          <Description>Morning</Description>
+          <ID>20</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Set Value</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>99</Key>
+          </Keys>
+          <Value>64800</Value>
+          <Description>Evening</Description>
+          <ID>21</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Activate</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>99</Key>
+          </Keys>
+          <Description>Evening</Description>
+          <ID>22</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Set Value</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>100</Key>
+          </Keys>
+          <Value>16800</Value>
+          <Description>Morning sky</Description>
+          <ID>23</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Activate</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>100</Key>
+          </Keys>
+          <Description>Morning sky</Description>
+          <ID>24</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Set Value</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>102</Key>
+          </Keys>
+          <Value>76800</Value>
+          <Description>Evening sky</Description>
+          <ID>25</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Activate</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>102</Key>
+          </Keys>
+          <Description>Evening sky</Description>
+          <ID>26</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Decrease Value</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>103</Key>
+          </Keys>
+          <Value>3600</Value>
+          <Description>-1 Hour</Description>
+          <ID>27</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Activate</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>103</Key>
+          </Keys>
+          <Description>-1 Hour</Description>
+          <ID>28</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Increase Value</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>105</Key>
+          </Keys>
+          <Value>3600</Value>
+          <Description>+1 Hour</Description>
+          <ID>29</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Activate</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>105</Key>
+          </Keys>
+          <Description>+1 Hour</Description>
+          <ID>30</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1200</ID>
+      <Description>"SF_FOG switch"</Description>
+      <VariableType>Byte</VariableType>
+      <Address>Disrupt_64.dll+3E60DD0</Address>
+      <Offsets>
+        <Offset>cf9</Offset>
+      </Offsets>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Deactivate</Action>
+          <Keys>
+            <Key>16</Key>
+            <Key>107</Key>
+          </Keys>
+          <Value>1</Value>
+          <Description>SF_Fog ON</Description>
+          <ID>0</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Deactivate</Action>
+          <Keys>
+            <Key>16</Key>
+            <Key>109</Key>
+          </Keys>
+          <Value>0</Value>
+          <Description>SF_Fog OFF</Description>
+          <ID>1</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Set Value</Action>
+          <Keys>
+            <Key>16</Key>
+            <Key>107</Key>
+          </Keys>
+          <Value>1</Value>
+          <Description>SF_Fog ON</Description>
+          <ID>2</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Activate</Action>
+          <Keys>
+            <Key>16</Key>
+            <Key>107</Key>
+          </Keys>
+          <Description>SF_Fog ON</Description>
+          <ID>3</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Set Value</Action>
+          <Keys>
+            <Key>16</Key>
+            <Key>109</Key>
+          </Keys>
+          <Value>0</Value>
+          <Description>SF_Fog OFF</Description>
+          <ID>4</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Activate</Action>
+          <Keys>
+            <Key>16</Key>
+            <Key>109</Key>
+          </Keys>
+          <Description>SF_Fog OFF</Description>
+          <ID>5</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1201</ID>
+      <Description>"SF_FOG fader"</Description>
+      <VariableType>Array of byte</VariableType>
+      <ByteLength>7</ByteLength>
+      <Address>Disrupt_64.dll+3E60DD0</Address>
+      <Offsets>
+        <Offset>cfd</Offset>
+      </Offsets>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>16</Key>
+            <Key>106</Key>
+          </Keys>
+          <Description>SF_Fog Freeze</Description>
+          <ID>0</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Deactivate</Action>
+          <Keys>
+            <Key>16</Key>
+            <Key>107</Key>
+          </Keys>
+          <ID>1</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Deactivate</Action>
+          <Keys>
+            <Key>16</Key>
+            <Key>109</Key>
+          </Keys>
+          <ID>2</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>79</ID>
+      <Description>"Weather Timer 1"</Description>
+      <Color>FF0000</Color>
+      <VariableType>Float</VariableType>
+      <Address>Disrupt_64.dll+3E60D98</Address>
+      <Offsets>
+        <Offset>3e4</Offset>
+      </Offsets>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>18</Key>
+            <Key>106</Key>
+          </Keys>
+          <Description>Freezee Weather</Description>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>76</ID>
+      <Description>"Weather Timer 2"</Description>
+      <Color>FF0000</Color>
+      <VariableType>Float</VariableType>
+      <Address>Disrupt_64.dll+3E60D98</Address>
+      <Offsets>
+        <Offset>3e8</Offset>
+      </Offsets>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>18</Key>
+            <Key>106</Key>
+          </Keys>
+          <Description>Freeze Weather</Description>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1198</ID>
+      <Description>"Weather Flag"</Description>
+      <Color>FF0000</Color>
+      <VariableType>2 Bytes</VariableType>
+      <Address>Disrupt_64.dll+3E60D98</Address>
+      <Offsets>
+        <Offset>3f0</Offset>
+      </Offsets>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Deactivate</Action>
+          <Keys>
+            <Key>18</Key>
+            <Key>107</Key>
+          </Keys>
+          <Description>Change Weather</Description>
+          <ID>1</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Set Value</Action>
+          <Keys>
+            <Key>18</Key>
+            <Key>107</Key>
+          </Keys>
+          <Value>3</Value>
+          <Description>Change Weather</Description>
+          <ID>0</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Toggle Activation Allow Decrease</Action>
+          <Keys>
+            <Key>18</Key>
+            <Key>107</Key>
+          </Keys>
+          <Description>Change Weather</Description>
+          <ID>2</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>90</ID>
+      <Description>"Weather Type"</Description>
+      <Color>CA8F8A</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>Disrupt_64.dll+3E60D98</Address>
+      <Offsets>
+        <Offset>3a0</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1118</ID>
+      <Description>"Invisible"</Description>
+      <LastState/>
+      <Color>0000FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+aobscanmodule(nodetection,Disrupt_64.dll,F3 0F 11 43 30 74 0A) // should be unique
+alloc(newmem,$1000,"Disrupt_64.dll"+4DD5FF2)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  //movss [rbx+30],xmm0
+  jmp return
+
+nodetection:
+  jmp newmem
+return:
+registersymbol(nodetection)
+
+[DISABLE]
+
+nodetection:
+  db F3 0F 11 43 30
+
+unregistersymbol(nodetection)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: "Disrupt_64.dll"+4DD5FF2
+
+"Disrupt_64.dll"+4DD5FD6: EB 2B                    -  jmp Disrupt_64.dll+4DD6003
+"Disrupt_64.dll"+4DD5FD8: D1 FF                    -  sar edi,1
+"Disrupt_64.dll"+4DD5FDA: 0F 2F C2                 -  comiss xmm0,xmm2
+"Disrupt_64.dll"+4DD5FDD: F3 0F 11 5B 2C           -  movss [rbx+2C],xmm3
+"Disrupt_64.dll"+4DD5FE2: 77 03                    -  ja Disrupt_64.dll+4DD5FE7
+"Disrupt_64.dll"+4DD5FE4: 0F 28 C2                 -  movaps xmm0,xmm2
+"Disrupt_64.dll"+4DD5FE7: 0F 2F C7                 -  comiss xmm0,xmm7
+"Disrupt_64.dll"+4DD5FEA: 76 03                    -  jna Disrupt_64.dll+4DD5FEF
+"Disrupt_64.dll"+4DD5FEC: 0F 28 C7                 -  movaps xmm0,xmm7
+"Disrupt_64.dll"+4DD5FEF: 0F 2E C3                 -  ucomiss xmm0,xmm3
+// ---------- INJECTING HERE ----------
+"Disrupt_64.dll"+4DD5FF2: F3 0F 11 43 30           -  movss [rbx+30],xmm0
+// ---------- DONE INJECTING  ----------
+"Disrupt_64.dll"+4DD5FF7: 74 0A                    -  je Disrupt_64.dll+4DD6003
+"Disrupt_64.dll"+4DD5FF9: 48 8D 4B 40              -  lea rcx,[rbx+40]
+"Disrupt_64.dll"+4DD5FFD: 48 8B 01                 -  mov rax,[rcx]
+"Disrupt_64.dll"+4DD6000: FF 50 10                 -  call qword ptr [rax+10]
+"Disrupt_64.dll"+4DD6003: 8B 87 31 04 00 00        -  mov eax,[rdi+00000431]
+"Disrupt_64.dll"+4DD6009: 4C 8B 0F                 -  mov r9,[rdi]
+"Disrupt_64.dll"+4DD600C: 4D 8B 85 90 00 00 00     -  mov r8,[r13+00000090]
+"Disrupt_64.dll"+4DD6013: 4D 8B 49 08              -  mov r9,[r9+08]
+"Disrupt_64.dll"+4DD6017: 89 45 80                 -  mov [rbp-80],eax
+"Disrupt_64.dll"+4DD601A: 0F B7 87 35 04 00 00     -  movzx eax,word ptr [rdi+00000435]
+}
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>49</Key>
+          </Keys>
+          <Description>Invis</Description>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1207</ID>
+      <Description>"Inf Battery"</Description>
+      <LastState/>
+      <Color>0000FF</Color>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{ Game   : WatchDogs2.exe
+  Version: 
+  Date   : 2017-02-27
+  Author : Alpha_User
+
+  This script does blah blah blah
+}
+
+[ENABLE]
+
+aobscanmodule(InfBattery,Disrupt_64.dll,F3 0F 11 49 74 C3 00 CC) // should be unique
+alloc(newmem,$1000,"Disrupt_64.dll"+5208EF9)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  //movss [rcx+74],xmm1
+  jmp return
+
+InfBattery:
+  jmp newmem
+return:
+registersymbol(InfBattery)
+
+[DISABLE]
+
+InfBattery:
+  db F3 0F 11 49 74
+
+unregistersymbol(InfBattery)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: "Disrupt_64.dll"+5208EF9
+
+"Disrupt_64.dll"+5208ED0: 8B 91 80 00 00 00                             -  mov edx,[rcx+00000080]
+"Disrupt_64.dll"+5208ED6: 85 D2                                         -  test edx,edx
+"Disrupt_64.dll"+5208ED8: 74 24                                         -  je Disrupt_64.dll+5208EFE
+"Disrupt_64.dll"+5208EDA: 8B 81 88 00 00 00                             -  mov eax,[rcx+00000088]
+"Disrupt_64.dll"+5208EE0: 0F 57 C9                                      -  xorps xmm1,xmm1
+"Disrupt_64.dll"+5208EE3: 0F 57 C0                                      -  xorps xmm0,xmm0
+"Disrupt_64.dll"+5208EE6: F3 48 0F 2A C2                                -  cvtsi2ss xmm0,rdx
+"Disrupt_64.dll"+5208EEB: F3 48 0F 2A C8                                -  cvtsi2ss xmm1,rax
+"Disrupt_64.dll"+5208EF0: F3 0F 5E C8                                   -  divss xmm1,xmm0
+"Disrupt_64.dll"+5208EF4: F3 0F 59 49 70                                -  mulss xmm1,[rcx+70]
+// ---------- INJECTING HERE ----------
+"Disrupt_64.dll"+5208EF9: F3 0F 11 49 74                                -  movss [rcx+74],xmm1
+// ---------- DONE INJECTING  ----------
+"Disrupt_64.dll"+5208EFE: C3                                            -  ret 
+"Disrupt_64.dll"+5208EFF: 00 CC                                         -  add ah,cl
+"Disrupt_64.dll"+5208F01: 66 66 66 66 66 66 2E 0F 1F 84 00 00 00 00 00  -  nop cs:[rax+rax+00000000]
+"Disrupt_64.dll"+5208F10: 3B 91 88 00 00 00                             -  cmp edx,[rcx+00000088]
+"Disrupt_64.dll"+5208F16: 0F 84 DF 00 00 00                             -  je Disrupt_64.dll+5208FFB
+"Disrupt_64.dll"+5208F1C: 8B 81 80 00 00 00                             -  mov eax,[rcx+00000080]
+"Disrupt_64.dll"+5208F22: 4C 8B 81 D8 01 00 00                          -  mov r8,[rcx+000001D8]
+"Disrupt_64.dll"+5208F29: 39 C2                                         -  cmp edx,eax
+"Disrupt_64.dll"+5208F2B: 0F 42 C2                                      -  cmovb eax,edx
+"Disrupt_64.dll"+5208F2E: 89 81 88 00 00 00                             -  mov [rcx+00000088],eax
+}
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>50</Key>
+          </Keys>
+          <Description>Inf Battery</Description>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1112</ID>
+      <Description>"No Gravity"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+aobscanmodule(nogravity,Disrupt_64.dll,0F 29 47 70 0F 29 B7 B0 00 00 00 48 3B 74 24 30 8B 0D 23 6C 54 FD) // should be unique
+alloc(newmem,$1000,"Disrupt_64.dll"+6D99C47)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+
+  //movaps [rdi+70],xmm0
+  movaps [rdi+000000B0],xmm6
+  jmp return
+
+nogravity:
+  jmp newmem
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+return:
+registersymbol(nogravity)
+
+[DISABLE]
+
+nogravity:
+  db 0F 29 47 70 0F 29 B7 B0 00 00 00
+
+unregistersymbol(nogravity)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: "Disrupt_64.dll"+6D99C47
+
+"Disrupt_64.dll"+6D99C22: 48 FF C6              -  inc rsi
+"Disrupt_64.dll"+6D99C25: 48 83 C3 70           -  add rbx,70
+"Disrupt_64.dll"+6D99C29: 4C 39 FE              -  cmp rsi,r15
+"Disrupt_64.dll"+6D99C2C: 7C 82                 -  jl Disrupt_64.dll+6D99BB0
+"Disrupt_64.dll"+6D99C2E: 0F 28 47 70           -  movaps xmm0,[rdi+70]
+"Disrupt_64.dll"+6D99C32: F3 45 0F 5C C3        -  subss xmm8,xmm11
+"Disrupt_64.dll"+6D99C37: 0F 58 C6              -  addps xmm0,xmm6
+"Disrupt_64.dll"+6D99C3A: 8B 44 24 38           -  mov eax,[rsp+38]
+"Disrupt_64.dll"+6D99C3E: 48 8B 74 24 40        -  mov rsi,[rsp+40]
+"Disrupt_64.dll"+6D99C43: 8B 5C 24 48           -  mov ebx,[rsp+48]
+// ---------- INJECTING HERE ----------
+"Disrupt_64.dll"+6D99C47: 0F 29 47 70           -  movaps [rdi+70],xmm0
+// ---------- DONE INJECTING  ----------
+"Disrupt_64.dll"+6D99C4B: 0F 29 B7 B0 00 00 00  -  movaps [rdi+000000B0],xmm6
+"Disrupt_64.dll"+6D99C52: 48 3B 74 24 30        -  cmp rsi,[rsp+30]
+"Disrupt_64.dll"+6D99C57: 8B 0D 23 6C 54 FD     -  mov ecx,[Disrupt_64.dll+42E0880]
+"Disrupt_64.dll"+6D99C5D: 41 BF 00 00 00 00     -  mov r15d,00000000
+"Disrupt_64.dll"+6D99C63: 41 0F 44 C7           -  cmove eax,r15d
+"Disrupt_64.dll"+6D99C67: C1 E3 06              -  shl ebx,06
+"Disrupt_64.dll"+6D99C6A: 83 C3 7F              -  add ebx,7F
+"Disrupt_64.dll"+6D99C6D: 89 44 24 38           -  mov [rsp+38],eax
+"Disrupt_64.dll"+6D99C71: 83 E3 80              -  and ebx,-80
+"Disrupt_64.dll"+6D99C74: FF 15 16 3A 33 01     -  call qword ptr [Disrupt_64.dll+80CD690]
+"Disrupt_64.dll"+6D99C7A: 44 8D 43 0F           -  lea r8d,[rbx+0F]
+}
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Activate</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>219</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Deactivate</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>221</Key>
+          </Keys>
+          <ID>1</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1160</ID>
+      <Description>"No Clip"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+
+aobscanmodule(NoClip,Disrupt_64.dll,41 0F 28 49 30 0F 58) // should be unique
+alloc(newmem,$1000,"Disrupt_64.dll"+74C8A33)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  //movaps xmm1,[r9+30]
+  jmp return
+
+NoClip:
+  jmp newmem
+return:
+registersymbol(NoClip)
+
+[DISABLE]
+
+NoClip:
+  db 41 0F 28 49 30
+
+unregistersymbol(NoClip)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: "Disrupt_64.dll"+74C8A33
+
+"Disrupt_64.dll"+74C8A13: 0F 59 C5                                   -  mulps xmm0,xmm5
+"Disrupt_64.dll"+74C8A16: 0F 59 CF                                   -  mulps xmm1,xmm7
+"Disrupt_64.dll"+74C8A19: 0F 58 D0                                   -  addps xmm2,xmm0
+"Disrupt_64.dll"+74C8A1C: 0F 58 D1                                   -  addps xmm2,xmm1
+"Disrupt_64.dll"+74C8A1F: 0F 5D DA                                   -  minps xmm3,xmm2
+"Disrupt_64.dll"+74C8A22: 0F 5F E2                                   -  maxps xmm4,xmm2
+"Disrupt_64.dll"+74C8A25: 48 FF C9                                   -  dec rcx
+"Disrupt_64.dll"+74C8A28: 75 CD                                      -  jne Disrupt_64.dll+74C89F7
+"Disrupt_64.dll"+74C8A2A: 0F 28 3C 24                                -  movaps xmm7,[rsp]
+"Disrupt_64.dll"+74C8A2E: 0F 28 74 24 10                             -  movaps xmm6,[rsp+10]
+// ---------- INJECTING HERE ----------
+"Disrupt_64.dll"+74C8A33: 41 0F 28 49 30                             -  movaps xmm1,[r9+30]
+// ---------- DONE INJECTING  ----------
+"Disrupt_64.dll"+74C8A38: 0F 58 D9                                   -  addps xmm3,xmm1
+"Disrupt_64.dll"+74C8A3B: 0F 58 CC                                   -  addps xmm1,xmm4
+"Disrupt_64.dll"+74C8A3E: 41 0F 29 48 10                             -  movaps [r8+10],xmm1
+"Disrupt_64.dll"+74C8A43: 41 0F 29 18                                -  movaps [r8],xmm3
+"Disrupt_64.dll"+74C8A47: F3 41 0F 10 42 18                          -  movss xmm0,[r10+18]
+"Disrupt_64.dll"+74C8A4D: 0F C6 C0 00                                -  shufps xmm0,xmm0,00
+"Disrupt_64.dll"+74C8A51: 0F 58 C8                                   -  addps xmm1,xmm0
+"Disrupt_64.dll"+74C8A54: 0F 5C D8                                   -  subps xmm3,xmm0
+"Disrupt_64.dll"+74C8A57: 41 0F 29 48 10                             -  movaps [r8+10],xmm1
+"Disrupt_64.dll"+74C8A5C: 41 0F 29 18                                -  movaps [r8],xmm3
+}
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Activate</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>219</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Deactivate</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>221</Key>
+          </Keys>
+          <ID>1</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1163</ID>
+      <Description>"X"</Description>
+      <Color>008000</Color>
+      <VariableType>Float</VariableType>
+      <Address>"Disrupt_64.dll"+03E2E3F0</Address>
+      <Offsets>
+        <Offset>70</Offset>
+        <Offset>4D0</Offset>
+        <Offset>2B8</Offset>
+        <Offset>48</Offset>
+        <Offset>0</Offset>
+      </Offsets>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Increase Value</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>74</Key>
+          </Keys>
+          <Value>2</Value>
+          <ID>0</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Decrease Value</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>85</Key>
+          </Keys>
+          <Value>2</Value>
+          <ID>1</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Increase Value</Action>
+          <Keys>
+            <Key>16</Key>
+            <Key>74</Key>
+          </Keys>
+          <Value>20</Value>
+          <ID>2</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Decrease Value</Action>
+          <Keys>
+            <Key>16</Key>
+            <Key>85</Key>
+          </Keys>
+          <Value>20</Value>
+          <ID>3</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1101</ID>
+      <Description>"Y"</Description>
+      <Color>008000</Color>
+      <VariableType>Float</VariableType>
+      <Address>"Disrupt_64.dll"+03E08130</Address>
+      <Offsets>
+        <Offset>74</Offset>
+        <Offset>4D0</Offset>
+        <Offset>2B8</Offset>
+        <Offset>58</Offset>
+        <Offset>0</Offset>
+      </Offsets>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Increase Value</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>75</Key>
+          </Keys>
+          <Value>2</Value>
+          <ID>0</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Decrease Value</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>73</Key>
+          </Keys>
+          <Value>2</Value>
+          <ID>1</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Increase Value</Action>
+          <Keys>
+            <Key>16</Key>
+            <Key>75</Key>
+          </Keys>
+          <Value>20</Value>
+          <ID>2</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Decrease Value</Action>
+          <Keys>
+            <Key>16</Key>
+            <Key>73</Key>
+          </Keys>
+          <Value>20</Value>
+          <ID>3</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1162</ID>
+      <Description>"Z"</Description>
+      <Color>008000</Color>
+      <VariableType>Float</VariableType>
+      <Address>"Disrupt_64.dll"+03E081E0</Address>
+      <Offsets>
+        <Offset>78</Offset>
+        <Offset>4D0</Offset>
+        <Offset>2B8</Offset>
+        <Offset>58</Offset>
+        <Offset>0</Offset>
+      </Offsets>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Increase Value</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>79</Key>
+          </Keys>
+          <Value>2</Value>
+          <ID>0</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Decrease Value</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>76</Key>
+          </Keys>
+          <Value>2</Value>
+          <ID>1</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Increase Value</Action>
+          <Keys>
+            <Key>16</Key>
+            <Key>79</Key>
+          </Keys>
+          <Value>10</Value>
+          <ID>2</ID>
+        </Hotkey>
+        <Hotkey>
+          <Action>Decrease Value</Action>
+          <Keys>
+            <Key>16</Key>
+            <Key>76</Key>
+          </Keys>
+          <Value>10</Value>
+          <ID>3</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1199</ID>
+      <Description>"Addresses"</Description>
+      <Options moManualExpandCollapse="1"/>
+      <LastState Value="" RealAddress="00000000"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>122</ID>
+          <Description>"Smartphone Info"</Description>
+          <Options moManualExpandCollapse="1"/>
+          <LastState Value="" RealAddress="00000000"/>
+          <Color>FF00FF</Color>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>66</ID>
+              <Description>"Smartphone Weather 1"</Description>
+              <Options moManualExpandCollapse="1" moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
+              <Color>FF00FF</Color>
+              <VariableType>4 Bytes</VariableType>
+              <Address>Disrupt_64.dll+3E451E0</Address>
+              <Offsets>
+                <Offset>18</Offset>
+                <Offset>48</Offset>
+              </Offsets>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>71</ID>
+                  <Description>"Smartphone Weather 2"</Description>
+                  <Color>FF00FF</Color>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>Disrupt_64.dll+3E47230</Address>
+                  <Offsets>
+                    <Offset>18</Offset>
+                    <Offset>48</Offset>
+                    <Offset>0</Offset>
+                  </Offsets>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>91</ID>
+              <Description>"Smartphone Temperature 1"</Description>
+              <Options moManualExpandCollapse="1" moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
+              <Color>FF00FF</Color>
+              <VariableType>Float</VariableType>
+              <Address>Disrupt_64.dll+3E60DD0</Address>
+              <Offsets>
+                <Offset>4d8</Offset>
+              </Offsets>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>92</ID>
+                  <Description>"Smartphone Temperature 2"</Description>
+                  <Color>FF00FF</Color>
+                  <VariableType>Float</VariableType>
+                  <Address>Disrupt_64.dll+3E451E0</Address>
+                  <Offsets>
+                    <Offset>4d8</Offset>
+                    <Offset>50</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>93</ID>
+                  <Description>"Smartphone Temperature 3"</Description>
+                  <Color>FF00FF</Color>
+                  <VariableType>Float</VariableType>
+                  <Address>Disrupt_64.dll+3E47230</Address>
+                  <Offsets>
+                    <Offset>4d8</Offset>
+                    <Offset>50</Offset>
+                    <Offset>0</Offset>
+                  </Offsets>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1196</ID>
+          <Description>"Drone Z"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"Disrupt_64.dll"+03E09F70</Address>
+          <Offsets>
+            <Offset>78</Offset>
+            <Offset>4D0</Offset>
+            <Offset>2B8</Offset>
+            <Offset>410</Offset>
+            <Offset>30</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1225</ID>
+          <Description>"Drone Z"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"Disrupt_64.dll"+03E09F70</Address>
+          <Offsets>
+            <Offset>78</Offset>
+            <Offset>4D0</Offset>
+            <Offset>2B8</Offset>
+            <Offset>4A0</Offset>
+            <Offset>30</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1205</ID>
+          <Description>"Drone X"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"Disrupt_64.dll"+03E664C0</Address>
+          <Offsets>
+            <Offset>94</Offset>
+            <Offset>10</Offset>
+            <Offset>D8</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1226</ID>
+          <Description>"Drone X"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"Disrupt_64.dll"+03E29B48</Address>
+          <Offsets>
+            <Offset>94</Offset>
+            <Offset>10</Offset>
+            <Offset>D8</Offset>
+            <Offset>220</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1227</ID>
+          <Description>"Drone X"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"Disrupt_64.dll"+03E29BB8</Address>
+          <Offsets>
+            <Offset>94</Offset>
+            <Offset>10</Offset>
+            <Offset>D8</Offset>
+            <Offset>220</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1228</ID>
+          <Description>"Drone X"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"Disrupt_64.dll"+03E09B98</Address>
+          <Offsets>
+            <Offset>94</Offset>
+            <Offset>10</Offset>
+            <Offset>D8</Offset>
+            <Offset>288</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1229</ID>
+          <Description>"Drone X"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"Disrupt_64.dll"+03E16F88</Address>
+          <Offsets>
+            <Offset>94</Offset>
+            <Offset>10</Offset>
+            <Offset>D8</Offset>
+            <Offset>40</Offset>
+            <Offset>20</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1230</ID>
+          <Description>"Drone X"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"Disrupt_64.dll"+03E16F88</Address>
+          <Offsets>
+            <Offset>94</Offset>
+            <Offset>10</Offset>
+            <Offset>E0</Offset>
+            <Offset>220</Offset>
+            <Offset>50</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>107</ID>
+          <Description>"Fog1-2 "0-1""</Description>
+          <VariableType>Byte</VariableType>
+          <Address>Disrupt_64.dll+3E451E0</Address>
+          <Offsets>
+            <Offset>cf9</Offset>
+            <Offset>50</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>109</ID>
+          <Description>"Fog1-3 "0-1""</Description>
+          <VariableType>Byte</VariableType>
+          <Address>Disrupt_64.dll+3E47230</Address>
+          <Offsets>
+            <Offset>cf9</Offset>
+            <Offset>50</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>103</ID>
+          <Description>"Fog1-4 "0-1""</Description>
+          <VariableType>Byte</VariableType>
+          <Address>Disrupt_64.dll+3E61450</Address>
+          <Offsets>
+            <Offset>cf9</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>110</ID>
+          <Description>"Fog2-1 "1-257""</Description>
+          <VariableType>2 Bytes</VariableType>
+          <Address>Disrupt_64.dll+3E60DD0</Address>
+          <Offsets>
+            <Offset>cf8</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>111</ID>
+          <Description>"Fog2-2 "1-257""</Description>
+          <VariableType>2 Bytes</VariableType>
+          <Address>Disrupt_64.dll+3E451E0</Address>
+          <Offsets>
+            <Offset>cf8</Offset>
+            <Offset>50</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>112</ID>
+          <Description>"Fog2-3 "1-257""</Description>
+          <VariableType>2 Bytes</VariableType>
+          <Address>Disrupt_64.dll+3E47230</Address>
+          <Offsets>
+            <Offset>cf8</Offset>
+            <Offset>50</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>113</ID>
+          <Description>"Fog2-4 "1-257""</Description>
+          <VariableType>2 Bytes</VariableType>
+          <Address>Disrupt_64.dll+3E61450</Address>
+          <Offsets>
+            <Offset>cf8</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>119</ID>
+          <Description>"SF_Fog fader 2"</Description>
+          <VariableType>Array of byte</VariableType>
+          <ByteLength>7</ByteLength>
+          <Address>Disrupt_64.dll+3E451E0</Address>
+          <Offsets>
+            <Offset>cfd</Offset>
+            <Offset>50</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>117</ID>
+          <Description>"SF_Fog fader 3"</Description>
+          <VariableType>Array of byte</VariableType>
+          <ByteLength>7</ByteLength>
+          <Address>Disrupt_64.dll+3E47230</Address>
+          <Offsets>
+            <Offset>cfd</Offset>
+            <Offset>50</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>118</ID>
+          <Description>"SF_Fog fader 4"</Description>
+          <VariableType>Array of byte</VariableType>
+          <ByteLength>7</ByteLength>
+          <Address>Disrupt_64.dll+3E61450</Address>
+          <Offsets>
+            <Offset>cfd</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>96</ID>
+          <Description>"Current Time 2"</Description>
+          <Color>008000</Color>
+          <VariableType>Float</VariableType>
+          <Address>Disrupt_64.dll+3E47230</Address>
+          <Offsets>
+            <Offset>3c0</Offset>
+            <Offset>58</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1206</ID>
+          <Description>"Current Time 3"</Description>
+          <Color>008000</Color>
+          <VariableType>Float</VariableType>
+          <Address>Disrupt_64.dll+3E47230</Address>
+          <Offsets>
+            <Offset>3c0</Offset>
+            <Offset>4f0</Offset>
+            <Offset>50</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>99</ID>
+          <Description>"Health Value"</Description>
+          <Color>0000FF</Color>
+          <VariableType>Float</VariableType>
+          <Address>Disrupt_64.dll+3E25328</Address>
+          <Offsets>
+            <Offset>18</Offset>
+            <Offset>a0</Offset>
+            <Offset>5d8</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1208</ID>
+          <Description>"Health"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"Disrupt_64.dll"+03E25328</Address>
+          <Offsets>
+            <Offset>18</Offset>
+            <Offset>A0</Offset>
+            <Offset>2A0</Offset>
+            <Offset>338</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1209</ID>
+          <Description>"Health"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"Disrupt_64.dll"+03E081E0</Address>
+          <Offsets>
+            <Offset>18</Offset>
+            <Offset>A0</Offset>
+            <Offset>5D8</Offset>
+            <Offset>60</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1210</ID>
+          <Description>"Health"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"Disrupt_64.dll"+03E25328</Address>
+          <Offsets>
+            <Offset>18</Offset>
+            <Offset>A0</Offset>
+            <Offset>5D8</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1211</ID>
+          <Description>"Health"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"Disrupt_64.dll"+03E25328</Address>
+          <Offsets>
+            <Offset>18</Offset>
+            <Offset>0</Offset>
+            <Offset>40</Offset>
+            <Offset>5D8</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1212</ID>
+          <Description>"X"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"Disrupt_64.dll"+03E2E3F0</Address>
+          <Offsets>
+            <Offset>74</Offset>
+            <Offset>4D0</Offset>
+            <Offset>2B8</Offset>
+            <Offset>48</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1213</ID>
+          <Description>"X"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"Disrupt_64.dll"+03E07280</Address>
+          <Offsets>
+            <Offset>74</Offset>
+            <Offset>4D0</Offset>
+            <Offset>2B8</Offset>
+            <Offset>48</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1214</ID>
+          <Description>"X"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"Disrupt_64.dll"+03E08188</Address>
+          <Offsets>
+            <Offset>74</Offset>
+            <Offset>4D0</Offset>
+            <Offset>2B8</Offset>
+            <Offset>58</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1215</ID>
+          <Description>"X"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"Disrupt_64.dll"+03E25328</Address>
+          <Offsets>
+            <Offset>74</Offset>
+            <Offset>4D0</Offset>
+            <Offset>2B8</Offset>
+            <Offset>58</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1216</ID>
+          <Description>"Y"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"Disrupt_64.dll"+03E2E3F0</Address>
+          <Offsets>
+            <Offset>70</Offset>
+            <Offset>4D0</Offset>
+            <Offset>2B8</Offset>
+            <Offset>48</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1217</ID>
+          <Description>"Y"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"Disrupt_64.dll"+03E5F3B0</Address>
+          <Offsets>
+            <Offset>70</Offset>
+            <Offset>4D0</Offset>
+            <Offset>2B8</Offset>
+            <Offset>48</Offset>
+            <Offset>8</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1218</ID>
+          <Description>"Y"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"Disrupt_64.dll"+03E08188</Address>
+          <Offsets>
+            <Offset>70</Offset>
+            <Offset>4D0</Offset>
+            <Offset>2B8</Offset>
+            <Offset>58</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1219</ID>
+          <Description>"Y"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"Disrupt_64.dll"+03E25328</Address>
+          <Offsets>
+            <Offset>70</Offset>
+            <Offset>4D0</Offset>
+            <Offset>2B8</Offset>
+            <Offset>58</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1220</ID>
+          <Description>"Y"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"Disrupt_64.dll"+03E4FC90</Address>
+          <Offsets>
+            <Offset>70</Offset>
+            <Offset>4D0</Offset>
+            <Offset>2B8</Offset>
+            <Offset>60</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1221</ID>
+          <Description>"Z"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"Disrupt_64.dll"+03E5F3B0</Address>
+          <Offsets>
+            <Offset>78</Offset>
+            <Offset>4D0</Offset>
+            <Offset>2B8</Offset>
+            <Offset>48</Offset>
+            <Offset>8</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1222</ID>
+          <Description>"Z"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"Disrupt_64.dll"+03E08130</Address>
+          <Offsets>
+            <Offset>78</Offset>
+            <Offset>4D0</Offset>
+            <Offset>2B8</Offset>
+            <Offset>58</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1223</ID>
+          <Description>"Z"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"Disrupt_64.dll"+03E081E0</Address>
+          <Offsets>
+            <Offset>78</Offset>
+            <Offset>4D0</Offset>
+            <Offset>2B8</Offset>
+            <Offset>58</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1224</ID>
+          <Description>"Z"</Description>
+          <VariableType>Float</VariableType>
+          <Address>"Disrupt_64.dll"+03E4FC90</Address>
+          <Offsets>
+            <Offset>78</Offset>
+            <Offset>4D0</Offset>
+            <Offset>2B8</Offset>
+            <Offset>60</Offset>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+  <Comments>Time:
+Tgl Frz	-	- Ctrl *
++10min	-	- Ctrl +
+-10min	-	- Ctrl -
++1Hour	-	- Ctrl 9
+-1Hour	-	- Ctrl 7
+Night	-	- Ctrl 0
+Morning	-	- Ctrl 1
+Day	-	- Ctrl 2
+Evening	-	- Ctrl 3
+Sky Mor	-	- Ctrl 4
+Sky Nig	-	- Ctrl 6
+	SF_Fog
+Fog_On	-	- Shift +
+Fog_Off	-	- Shift -
+Fog Frz	-	- Shift *
+	Weather*
+Tgl Frz	-	- Alt *
+Change	-	- Alt +
+	Scripts
+Invis	-	- Ctrl 1
+Battery	-	- Ctrl 2
+	
+	No Clip/Gravity
+Enable	-	- Ctrl [
+Disable	-	- Ctrl ]
+	
+	Moves
+Weast/East	- Ctrl J/U
+		- Shift J/U
+North/South	- Ctrl I/K
+		- Shift I/K
+Up/Down		- Ctrl O/L
+		- Shift O/L
+*Weather Type value range different every new game. But during your current game you can save values and copy/paste them, after you collect them with pressing (Alt +).
+The game have total 8 weather conditions.
+</Comments>
+</CheatTable>

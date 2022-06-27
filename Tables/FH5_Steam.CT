@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="34">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>2</ID>
+      <Description>"1 = XP"</Description>
+      <LastState Value="0" RealAddress="217D3932CB8"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"ForzaHorizon5.exe"+090E1BE0</Address>
+      <Offsets>
+        <Offset>A8</Offset>
+        <Offset>50</Offset>
+        <Offset>18</Offset>
+        <Offset>D0</Offset>
+        <Offset>50</Offset>
+        <Offset>48</Offset>
+        <Offset>50</Offset>
+      </Offsets>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Set Value</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>97</Key>
+          </Keys>
+          <Value>200</Value>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>3</ID>
+      <Description>"XP"</Description>
+      <LastState Value="200" RealAddress="217D3932CBC"/>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"ForzaHorizon5.exe"+090E1BE0</Address>
+      <Offsets>
+        <Offset>AC</Offset>
+        <Offset>50</Offset>
+        <Offset>18</Offset>
+        <Offset>D0</Offset>
+        <Offset>50</Offset>
+        <Offset>48</Offset>
+        <Offset>50</Offset>
+      </Offsets>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Set Value</Action>
+          <Keys>
+            <Key>17</Key>
+            <Key>98</Key>
+          </Keys>
+          <Value>20000</Value>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

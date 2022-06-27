@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="38">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>4</ID>
+      <Description>"TX"</Description>
+      <LastState Value="251" RealAddress="7FF7773B5F44"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>ViceCity.exe+4E75F44</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>7</ID>
+      <Description>"AbMis"</Description>
+      <LastState Value="13" RealAddress="7FF7773B6008"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>ViceCity.exe+4E76008</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>11</ID>
+      <Description>"PzzM1"</Description>
+      <LastState Value="10" RealAddress="7FF7773B737C"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>ViceCity.exe+4E7737C</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>12</ID>
+      <Description>"PzzM2"</Description>
+      <LastState Value="12" RealAddress="7FF7773B7380"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>ViceCity.exe+4E77380</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>16</ID>
+      <Description>"Fires"</Description>
+      <LastState Value="177" RealAddress="7FF7773B6184"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>ViceCity.exe+4E76184</Address>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="34">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>187</ID>
+      <Description>"X - (51200 - Start)"</Description>
+      <Options moHideChildren="1" moRecursiveSetValue="1" moAllowManualCollapseAndExpand="1"/>
+      <LastState Value="" RealAddress="00000000"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>248</ID>
+          <Description>"pointerscan result"</Description>
+          <LastState Value="66524.08594" RealAddress="27DC3F88"/>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>"THREADSTACK0"-000005C8</Address>
+          <Offsets>
+            <Offset>20</Offset>
+            <Offset>64</Offset>
+            <Offset>12C</Offset>
+            <Offset>50</Offset>
+            <Offset>4</Offset>
+            <Offset>144</Offset>
+            <Offset>28</Offset>
+          </Offsets>
+          <Hotkeys>
+            <Hotkey>
+              <Action>Increase Value</Action>
+              <Keys>
+                <Key>18</Key>
+                <Key>39</Key>
+              </Keys>
+              <Value>500</Value>
+              <ID>0</ID>
+            </Hotkey>
+            <Hotkey>
+              <Action>Decrease Value</Action>
+              <Keys>
+                <Key>18</Key>
+                <Key>37</Key>
+              </Keys>
+              <Value>500</Value>
+              <ID>1</ID>
+            </Hotkey>
+          </Hotkeys>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>188</ID>
+      <Description>"Y - (6700 - Ground Level)"</Description>
+      <Options moHideChildren="1" moRecursiveSetValue="1" moAllowManualCollapseAndExpand="1"/>
+      <LastState Value="" RealAddress="00000000"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>230</ID>
+          <Description>"pointerscan result"</Description>
+          <LastState Value="7910" RealAddress="27DC3F8C"/>
+          <VariableType>Float</VariableType>
+          <Address>"THREADSTACK0"-000008F0</Address>
+          <Offsets>
+            <Offset>24</Offset>
+            <Offset>64</Offset>
+            <Offset>12C</Offset>
+            <Offset>50</Offset>
+            <Offset>4</Offset>
+            <Offset>144</Offset>
+            <Offset>24</Offset>
+          </Offsets>
+          <Hotkeys>
+            <Hotkey>
+              <Action>Decrease Value</Action>
+              <Keys>
+                <Key>18</Key>
+                <Key>38</Key>
+              </Keys>
+              <Value>500</Value>
+              <ID>0</ID>
+            </Hotkey>
+            <Hotkey>
+              <Action>Increase Value</Action>
+              <Keys>
+                <Key>18</Key>
+                <Key>40</Key>
+              </Keys>
+              <Value>500</Value>
+              <ID>1</ID>
+            </Hotkey>
+          </Hotkeys>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>190</ID>
+      <Description>"Buff Timer (3600=1 Min) | 4+ Ea. Buff"</Description>
+      <Options moRecursiveSetValue="1" moAlwaysHideChildren="1" moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1" moAllowManualCollapseAndExpand="1"/>
+      <LastState Value="" RealAddress="00000000"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>391</ID>
+          <Description>"pointerscan result"</Description>
+          <LastState Value="18000" RealAddress="27DC4DA4"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"THREADSTACK0"-00000980</Address>
+          <Offsets>
+            <Offset>E3C</Offset>
+            <Offset>70</Offset>
+            <Offset>C</Offset>
+            <Offset>8</Offset>
+            <Offset>400</Offset>
+            <Offset>4</Offset>
+            <Offset>32C</Offset>
+          </Offsets>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>189</ID>
+      <Description>"Health"</Description>
+      <Options moHideChildren="1" moRecursiveSetValue="1" moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1" moAllowManualCollapseAndExpand="1"/>
+      <LastState Value="" RealAddress="00000000"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>368</ID>
+          <Description>"pointerscan result"</Description>
+          <LastState Value="500" RealAddress="27DC431C"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"THREADSTACK0"-00000FB0</Address>
+          <Offsets>
+            <Offset>3B4</Offset>
+            <Offset>88</Offset>
+            <Offset>14</Offset>
+            <Offset>108</Offset>
+            <Offset>24</Offset>
+            <Offset>3C</Offset>
+            <Offset>14</Offset>
+          </Offsets>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>347</ID>
+      <Description>"Mana"</Description>
+      <Options moHideChildren="1" moAllowManualCollapseAndExpand="1"/>
+      <LastState Value="" RealAddress="00000000"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>374</ID>
+          <Description>"pointerscan result"</Description>
+          <LastState Value="200" RealAddress="27DC4320"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"THREADSTACK0"-00000980</Address>
+          <Offsets>
+            <Offset>3B8</Offset>
+            <Offset>70</Offset>
+            <Offset>0</Offset>
+            <Offset>0</Offset>
+            <Offset>290</Offset>
+            <Offset>4</Offset>
+            <Offset>32C</Offset>
+          </Offsets>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>393</ID>
+      <Description>"S7"</Description>
+      <LastState Value="8" RealAddress="27DC9C0C"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"MessageBus.dll"+00024F6C</Address>
+      <Offsets>
+        <Offset>A8</Offset>
+        <Offset>20</Offset>
+        <Offset>10C</Offset>
+        <Offset>4</Offset>
+        <Offset>308</Offset>
+        <Offset>750</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>395</ID>
+      <Description>"A1"</Description>
+      <LastState Value="999" RealAddress="27DCFAFC"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"MessageBus.dll"+00024F6C</Address>
+      <Offsets>
+        <Offset>A8</Offset>
+        <Offset>298</Offset>
+        <Offset>100</Offset>
+        <Offset>4</Offset>
+        <Offset>344</Offset>
+        <Offset>750</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>398</ID>
+      <Description>"C1"</Description>
+      <LastState Value="12" RealAddress="27DCF664"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"Terraria.exe"+004C6B34</Address>
+      <Offsets>
+        <Offset>A8</Offset>
+        <Offset>288</Offset>
+        <Offset>B8</Offset>
+        <Offset>7C</Offset>
+        <Offset>1AA8</Offset>
+      </Offsets>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols>
+    <SymbolEntry>
+      <Name>pshieldv</Name>
+      <Address>05AD0000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>pshieldv2</Name>
+      <Address>05AD0010</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>shield/health_lock</Name>
+      <Address>13600030</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>mycode</Name>
+      <Address>29700050000</Address>
+    </SymbolEntry>
+  </UserdefinedSymbols>
+  <DisassemblerComments>
+    <DisassemblerComment>
+      <Address>"halo2.dll"+E66B9A</Address>
+      <Comment>mark 2
+
+incoming
+
+bonk
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"halo2.dll"+E66BB2</Address>
+      <Comment>asd
+sad
+sad
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"halo2.dll"+E66BCB</Address>
+      <Comment>da
+dsasa
+sadas
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"halo2.dll"+E66C82</Address>
+      <Comment>mark 1
+
+income
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"halo2.dll"+E66CCA</Address>
+      <Comment>dasf
+adfa
+adf
+</Comment>
+    </DisassemblerComment>
+  </DisassemblerComments>
+</CheatTable>

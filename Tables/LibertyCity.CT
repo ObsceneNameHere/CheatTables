@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="38">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>2</ID>
+      <Description>"Found"</Description>
+      <Options moHideChildren="1"/>
+      <LastState Value="" RealAddress="00000000"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>51</ID>
+          <Description>"Clock"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Double</VariableType>
+          <Address>LibertyCity.exe+4E1C168</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>9</ID>
+          <Description>"Stats"</Description>
+          <Options moHideChildren="1"/>
+          <LastState Value="" RealAddress="00000000"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>0</ID>
+              <Description>"Hidden Packages"</Description>
+              <Options moHideChildren="1"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>LibertyCity.exe+4C04000</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>1</ID>
+                  <Description>"HdPk"</Description>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>LibertyCity.exe+4E1DDCC</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>39</ID>
+              <Description>"Criminals Wasted"</Description>
+              <VariableType>4 Bytes</VariableType>
+              <Address>LibertyCity.exe+4EA3108</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>46</ID>
+              <Description>"Stunt Jumps Completed"</Description>
+              <Options moHideChildren="1" moRecursiveSetValue="1"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>LibertyCity.exe+4E8F66C</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>42</ID>
+                  <Description>"StJm"</Description>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>LibertyCity.exe+4E1D9A8</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>43</ID>
+                  <Description>"StJm"</Description>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>LibertyCity.exe+4E1D9AC</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>44</ID>
+                  <Description>"StJm"</Description>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>LibertyCity.exe+4E1D9B0</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>45</ID>
+                  <Description>"StJm"</Description>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>LibertyCity.exe+4E1D9E0</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>7</ID>
+          <Description>"R3 Missions"</Description>
+          <Options moHideChildren="1"/>
+          <LastState Value="" RealAddress="00000000"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>26</ID>
+              <Description>"Taxi"</Description>
+              <Options moHideChildren="1"/>
+              <LastState Value="" RealAddress="00000000"/>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>23</ID>
+                  <Description>"Taxi Fares"</Description>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>LibertyCity.exe+4E1E468</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>25</ID>
+                  <Description>"Taxi Timer"</Description>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>LibertyCity.exe+4E1E470</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>20</ID>
+                  <Description>"Taxi Passengers Dropped Off"</Description>
+                  <Options moHideChildren="1" moRecursiveSetValue="1"/>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>LibertyCity.exe+4E8F688</Address>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>21</ID>
+                      <Description>"TPDO2"</Description>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>LibertyCity.exe+4E1D388</Address>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>27</ID>
+              <Description>"Firefighter"</Description>
+              <Options moHideChildren="1"/>
+              <LastState Value="" RealAddress="00000000"/>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>14</ID>
+                  <Description>"Fires"</Description>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>LibertyCity.exe+4E1E30C</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>31</ID>
+                  <Description>"Firefighter Timer"</Description>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>LibertyCity.exe+4E1E2F8</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>32</ID>
+                  <Description>"Fires Extinguish (1)"</Description>
+                  <Options moHideChildren="1" moRecursiveSetValue="1"/>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>LibertyCity.exe+4E990E4</Address>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>33</ID>
+                      <Description>"Fires Extinguish (1)"</Description>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>LibertyCity.exe+4E9AFCC</Address>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>28</ID>
+              <Description>"Police"</Description>
+              <Options moHideChildren="1"/>
+              <LastState Value="" RealAddress="00000000"/>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>10</ID>
+                  <Description>"Criminals Killed"</Description>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>LibertyCity.exe+4E1E3BC</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>38</ID>
+                  <Description>"Police Timer"</Description>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>LibertyCity.exe+4E1E3D4</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>40</ID>
+                  <Description>"Criminals Wasted on Missions"</Description>
+                  <Options moHideChildren="1" moRecursiveSetValue="1"/>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>LibertyCity.exe+4E990E8</Address>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>41</ID>
+                      <Description>"CWoM"</Description>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>LibertyCity.exe+4E9B1D4</Address>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>29</ID>
+              <Description>"Medic"</Description>
+              <Options moHideChildren="1"/>
+              <LastState Value="" RealAddress="00000000"/>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>6</ID>
+                  <Description>"Medic (Sprint-12)"</Description>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>LibertyCity.exe+4E1E1C8</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>35</ID>
+                  <Description>"Medic Timer"</Description>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>LibertyCity.exe+4E1E178</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>19</ID>
+                  <Description>"People Saved (78)"</Description>
+                  <Options moHideChildren="1" moRecursiveSetValue="1"/>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>LibertyCity.exe+4E1DE58</Address>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>36</ID>
+                      <Description>"People Saved"</Description>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>LibertyCity.exe+4E990E0</Address>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>8</ID>
+          <Description>"Side Missions"</Description>
+          <Options moHideChildren="1"/>
+          <LastState Value="" RealAddress="00000000"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>3</ID>
+              <Description>"RampageKills"</Description>
+              <VariableType>4 Bytes</VariableType>
+              <Address>LibertyCity.exe+4D49F0C</Address>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

@@ -1,0 +1,2 @@
+First log message: 6/15/2022
+TAutoSizeCtrlData.FixControlProperties :TCECheckBox a=akTop old=:TEdit new=nil

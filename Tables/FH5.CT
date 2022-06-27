@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="34">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>2</ID>
+      <Description>"1 = XP"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"ForzaHorizon5.exe"+08D2CBE0</Address>
+      <Offsets>
+        <Offset>A8</Offset>
+        <Offset>50</Offset>
+        <Offset>18</Offset>
+        <Offset>D0</Offset>
+        <Offset>50</Offset>
+        <Offset>48</Offset>
+        <Offset>50</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1069</ID>
+      <Description>"XP"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"ForzaHorizon5.exe"+08D2CBE0</Address>
+      <Offsets>
+        <Offset>AC</Offset>
+        <Offset>50</Offset>
+        <Offset>18</Offset>
+        <Offset>D0</Offset>
+        <Offset>50</Offset>
+        <Offset>48</Offset>
+        <Offset>50</Offset>
+      </Offsets>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

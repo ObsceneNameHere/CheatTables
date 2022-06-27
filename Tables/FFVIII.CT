@@ -1,0 +1,2988 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="26">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>1</ID>
+      <Description>"Final Fantasy 8 Remaster (Steam)"</Description>
+      <Options moHideChildren="1"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>10</ID>
+          <Description>"Enable"</Description>
+          <Options moHideChildren="1"/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+{$lua}
+
+local al = getAddressList()
+
+-- Load Ability List from Character Editor Dropdowns
+local AbilityList = {
+"1:HP-J",
+"2:Str-J",
+"3:Vit-J",
+"4:Mag-J",
+"5:Spr-J",
+"6:Spd-J",
+"7:Eva-J",
+"8:Hit-J",
+"9:Luck-J",
+"10:Elem-Atk-J",
+"11:ST-Atk-J",
+"12:Elem-Def-J",
+"13:ST-Def-J",
+"14:Elem-Defx2",
+"15:Elem-Defx4",
+"16:ST-Def-Jx2",
+"17:ST-Def-Jx4",
+"18:Abilityx3",
+"19:Abilityx4",
+"20:Magic",
+"21:GF",
+"22:Draw",
+"23:Item",
+"24:Empty",
+"25:Card",
+"26:Doom",
+"27:Mad Rush",
+"28:Treatment",
+"29:Defend",
+"30:Darkside",
+"31:Recover",
+"32:Absorb",
+"33:Revive",
+"34:LV Down",
+"35:LV Up",
+"36:Kamikaze",
+"37:Devour",
+"38:MiniMog",
+"39:HP+20%",
+"40:HP+40%",
+"41:HP+80%",
+"42:Str+20%",
+"43:Str+40%",
+"44:Str+60%",
+"45:Vit+20%",
+"46:Vit+40%",
+"47:Vit+60%",
+"48:Mag+20%",
+"49:Mag+40%",
+"50:Mag+60%",
+"51:Spr+20%",
+"52:Spr+40%",
+"53:Spr+60%",
+"54:Spd+20%",
+"55:Spd+40%",
+"56:Eva+30%",
+"57:Luck+50%",
+"58:Mug",
+"59:Med Data",
+"60:Counter",
+"61:Return Damage",
+"62:Cover",
+"63:Initiative",
+"64:Move-HP Up",
+"65:HP Bonus",
+"66:Str Bonus",
+"67:Vit Bonus",
+"68:Mag Bonus",
+"69:Spr Bonus",
+"70:Auto Protect",
+"71:Auto Shell",
+"72:Auto Reflect",
+"73:Auto Haste",
+"74:Auto Potion",
+"75:Expendx2-1",
+"76:Expendx3-1",
+"77:Ribbon",
+"78:Alert",
+"79:Move-Find",
+"80:Enc-Half",
+"81:Enc-None",
+"82:Rare Item",
+"83:SumMag+10%",
+"84:SumMag+20%",
+"85:SumMag+30%",
+"86:SumMag+40%",
+"87:GFHP+10%",
+"88:GFHP+20%",
+"89:GFHP+30%",
+"90:GFHP+40%",
+"91:Boost",
+"92:Haggle",
+"93:Sell-High",
+"94:Familiar",
+"95:Call Shop",
+"96:Junk Shop",
+"97:T Mag-RF",
+"98:I Mag-RF",
+"99:F Mag-RF",
+"100:L Mag-RF",
+"101:Time Mag-RF",
+"102:ST Mag-RF",
+"103:Supt Mag-RF",
+"104:Forbid Mag-RF",
+"105:Recov Med-RF",
+"106:ST Med-RF",
+"107:Ammo-RF",
+"108:Tool-RF",
+"109:Forbid Med-RF",
+"110:GF Recov Med-RF",
+"111:GF Abl Med-RF",
+"112:Mid Mag-RF",
+"113:High Mag-RF",
+"114:Med LV Up",
+"115:Card Mod"
+}
+
+local DropDownListABL = createStringlist()
+for i,j in ipairs(AbilityList) do
+	DropDownListABL.add(string.format("%s",j))
+end
+
+local mr = al.getMemoryRecordByDescription("Abilities")
+for i=0,7-1,1 do
+	al[mr.Index+1+i].DropDownList.Text = DropDownListABL.Text
+	al[mr.Index+1+i].DropDownReadOnly = false
+	al[mr.Index+1+i].DropDownDescriptionOnly = true
+	al[mr.Index+1+i].DisplayAsDropDownListItem = true
+end
+
+{$asm}
+//aobscanmodule(HighlightedItemAOB,"FFVIII_EFIGS.dll",8B 04 85 ?? ?? ?? ?? 8A 04 01 C3) // should be unique
+aobscanmodule(HighlightedItemAOB,"FFVIII_EFIGS.dll",8B 04 85 ?? ?? ?? ?? 8A 04 01 5D C3) // should be unique
+registersymbol(HighlightedItemAOB)
+alloc(newmem,1024,HighlightedItemAOB)
+
+{
+///
+aobscanmodule(HighlightedCharAOB,"FFVIII_EFIGS.dll",8A 04 01 8B 4F 2C 88 47 08 8B 44 11 14) // should be unique
+registersymbol(HighlightedCharAOB)
+alloc(newmem2,1024,HighlightedCharAOB)
+}
+
+///
+label(return)
+label(originalcode)
+label(HighlightedItemPtr)
+registersymbol(HighlightedItemPtr)
+
+{
+///
+label(return2)
+label(originalcode2)
+label(HighlightedCharPtr)
+registersymbol(HighlightedCharPtr)
+label(HighlightedMagicPtr)
+registersymbol(HighlightedMagicPtr)
+}
+
+///
+label(BaseItemPtr)
+registersymbol(BaseItemPtr)
+label(BaseItemPtrOffset)
+registersymbol(BaseItemPtrOffset)
+label(SetItemQty)
+registersymbol(SetItemQty)
+label(ManuallySelectedChar)
+registersymbol(ManuallySelectedChar)
+
+///
+label(BaseCardAddrOffset)
+registersymbol(BaseCardAddrOffset)
+label(BaseCardRulesOffset)
+registersymbol(BaseCardRulesOffset)
+label(TradingRule)
+registersymbol(TradingRule)
+label(CardRules)
+registersymbol(CardRules)
+
+///
+label(BaseSaveAnywherePtr)
+registersymbol(BaseSaveAnywherePtr)
+label(BaseSaveAnywhereOffset)
+registersymbol(BaseSaveAnywhereOffset)
+
+///FFVIII_EFIGS.dll+01770558:
+FFVIII_EFIGS.dll+0188EDB0:
+BaseItemPtr:
+
+///FFVIII_EFIGS.dll+017704F0:
+FFVIII_EFIGS.dll+0188ED48:
+BaseSaveAnywherePtr:
+
+newmem:
+  cmp edx,D1D
+  jne originalcode
+  cmp ecx,79C
+  jl SkipHighlightedItem
+  push ecx
+  shr ecx
+  pop ecx
+  jc originalcode
+  mov [HighlightedItemPtr],ecx
+  add [HighlightedItemPtr],eax
+  jmp originalcode
+SkipHighlightedItem:
+  cmp ecx,F8
+  jl originalcode
+  push ecx
+  shr ecx
+  pop ecx
+  jc originalcode
+  mov [HighlightedMagicPtr],ecx
+  add [HighlightedMagicPtr],eax
+  
+originalcode:
+  mov al,[ecx+eax]
+  pop ebp
+  ret
+  
+HighlightedItemPtr:
+dq 0
+HighlightedMagicPtr:
+dq 0
+BaseItemPtrOffset:
+dq 79C
+SetItemQty:
+dq #25
+BaseCardAddrOffset:
+dq F38
+BaseCardRulesOffset:
+dq AC8
+TradingRule:
+dd 4
+CardRules:
+dd 1
+BaseSaveAnywhereOffset:
+dq 90B
+ManuallySelectedChar:
+dq 0
+
+{
+newmem2:
+  mov [HighlightedCharPtr],ecx
+  add [HighlightedCharPtr],eax
+  sub [HighlightedCharPtr],8
+  
+originalcode2:
+  mov al,[ecx+eax]
+  mov ecx,[edi+2C]
+  jmp return2
+  
+HighlightedCharPtr:
+dq 0
+}
+
+HighlightedItemAOB+7:
+  jmp newmem
+  return:
+
+{  
+HighlightedCharAOB:
+  jmp newmem2
+  nop
+  return2:
+}
+ 
+[DISABLE]
+
+HighlightedItemAOB+7:
+  db 8A 04 01 5D C3
+  
+unregistersymbol(HighlightedItemAOB)
+unregistersymbol(HighlightedItemPtr)
+unregistersymbol(HighlightedMagicPtr)
+
+
+{
+///
+HighlightedCharAOB:
+  db 8A 04 01 8B 4F 2C
+  
+unregistersymbol(HighlightedCharAOB)
+unregistersymbol(HighlightedCharPtr)
+}
+
+///
+unregistersymbol(BaseItemPtr)
+unregistersymbol(BaseItemPtrOffset)
+unregistersymbol(SetItemQty)
+
+///
+unregistersymbol(BaseCardAddrOffset)
+unregistersymbol(BaseCardRulesOffset)
+unregistersymbol(TradingRule)
+unregistersymbol(CardRules)
+
+///
+unregistersymbol(BaseSaveAnywhereOffset)
+unregistersymbol(BaseSaveAnywherePtr)
+
+dealloc(newmem)
+dealloc(newmem2)
+</AssemblerScript>
+		  <CheatEntries>
+			<CheatEntry>
+              <ID>100</ID>
+              <Description>"[Scripts]"</Description>
+              <Options moHideChildren="1"/>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>200</ID>
+                  <Description>"Inf HP In Battle"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState/>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>[ENABLE]
+
+//aobscanmodule(DamageModAOB,"FFVIII_EFIGS.dll",8B CE 66 2B C2 C1 E9 0C 23 F3 BA 72 01 00 00) // should be unique
+aobscanmodule(DamageModAOB,"FFVIII_EFIGS.dll",0F B7 C0 66 2B 46 0C 0F B7 C0 50 8B 06 05 72 01 00 00 50) // should be unique
+registersymbol(DamageModAOB)
+
+DamageModAOB+3:
+  db 90 90 90 90
+
+[DISABLE]
+
+DamageModAOB+3:
+  db 66 2B 46 0C
+
+unregistersymbol(DamageModAOB)
+</AssemblerScript>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>205</ID>
+                  <Description>"One Hit Kill/Enemy Damage Multiplier"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState/>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>[ENABLE]
+
+aobscanmodule(DamageModAOB2,"FFVIII_EFIGS.dll",8B 4F 04 2B 4F 30 0F 98 C0 88 47 45) // should be unique
+registersymbol(DamageModAOB2)
+alloc(newmem,1024,DamageModAOB2)
+
+aobscanmodule(DamageModAOB3,"FFVIII_EFIGS.dll",8B 04 01 8B 4F 28 89 47 04 8D 51 FD) // should be unique
+registersymbol(DamageModAOB3)
+alloc(newmem2,1024,DamageModAOB3)
+
+///
+label(return)
+label(fEnemyDamageMult)
+registersymbol(fEnemyDamageMult)
+label(OneHitKill)
+registersymbol(OneHitKill)
+
+///
+label(return2)
+label(HeroHit)
+registersymbol(HeroHit)
+
+newmem:
+  cmp [HeroHit],1
+  je originalcode
+  mov ecx,[edi+04]
+  cmp [OneHitKill],1
+  jne SkipOneHitKill
+  cmp [edi+30],0
+  jle SkipOneHitKill
+  mov [edi+30],ecx
+  jmp originalcode
+SkipOneHitKill:
+  cmp [fEnemyDamageMult],(float)0.0
+  je originalcode
+  push ebx
+  mov ebx,[edi+30]
+  push ebx
+  fild dword ptr [esp]
+  fmul dword ptr [fEnemyDamageMult]
+  fistp dword ptr [esp]
+  pop ebx
+  mov [edi+30],ebx
+  pop ebx
+  
+originalcode:
+  sub ecx,[edi+30]
+  jmp return
+
+fEnemyDamageMult:
+dd (float)2.0
+OneHitKill:
+dd 0
+
+newmem2:
+  cmp word ptr [ecx+eax+78],'dd'
+  jne EnemyHit
+  mov [HeroHit],1
+  jmp originalcode2
+EnemyHit:
+  mov [HeroHit],0
+  jmp originalcode2
+  
+originalcode2:
+  mov eax,[ecx+eax]
+  mov ecx,[edi+28]
+  jmp return2
+  
+HeroHit:
+dq 0
+
+DamageModAOB2:
+  jmp newmem
+  nop
+  return:
+
+DamageModAOB3:
+  jmp newmem2
+  nop
+  return2:
+
+[DISABLE]
+
+DamageModAOB2:
+  db 8B 4F 04 2B 4F 30
+
+unregistersymbol(DamageModAOB2)
+unregistersymbol(fEnemyDamageMult)
+unregistersymbol(OneHitKill)
+
+DamageModAOB3:
+  db 8B 04 01 8B 4F 28
+  
+unregistersymbol(DamageModAOB3)
+unregistersymbol(HeroHit)
+
+dealloc(newmem)
+dealloc(newmem2)
+</AssemblerScript>
+				  <CheatEntries>
+					<CheatEntry>
+					  <ID>206</ID>
+					  <Description>"One Hit Kill"</Description>
+					  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+					  <VariableType>4 Bytes</VariableType>
+					  <Address>OneHitKill</Address>
+					</CheatEntry>
+					<CheatEntry>
+					  <ID>207</ID>
+					  <Description>"Enemy Damage Multiplier (Set to Zero = Off; Otherwise multiplier to damage you deal to enemies)"</Description>
+					  <VariableType>Float</VariableType>
+					  <Address>fEnemyDamageMult</Address>
+					</CheatEntry>
+				  </CheatEntries>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>208</ID>
+                  <Description>"ATB Multiplier for Allies and Enemies"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState/>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>[ENABLE]
+
+aobscanmodule(ATBMultAOB,"FFVIII_EFIGS.dll",8B 04 01 89 47 08 8D 0C 02 8B C6) // should be unique
+registersymbol(ATBMultAOB)
+alloc(newmem,1024,ATBMultAOB)
+
+label(return)
+label(AllyATBMult)
+registersymbol(AllyATBMult)
+label(EnemyATBMult)
+registersymbol(EnemyATBMult)
+
+newmem:
+  cmp word ptr [ecx+eax+7C],'dd'
+  jne EnemyATBHit
+HeroATBHit:
+  push edx
+  fild dword ptr [esp]
+  fmul dword ptr [AllyATBMult]
+  fistp dword ptr [esp]
+  pop edx
+  jmp originalcode
+EnemyATBHit:
+  push edx
+  fild dword ptr [esp]
+  fmul dword ptr [EnemyATBMult]
+  fistp dword ptr [esp]
+  pop edx
+  jmp originalcode
+    
+originalcode:
+  mov eax,[ecx+eax]
+  mov [edi+08],eax
+  jmp return
+
+AllyATBMult:
+dq (float)25.0
+EnemyATBMult:
+dq (float)0.5
+
+ATBMultAOB:
+  jmp newmem
+  nop
+  return:
+
+[DISABLE]
+
+ATBMultAOB:
+  db 8B 04 01 89 47 08
+
+unregistersymbol(ATBMultAOB)
+unregistersymbol(AllyATBMult)
+unregistersymbol(EnemyATBMult)
+
+dealloc(newmem)
+</AssemblerScript>
+				  <CheatEntries>
+					<CheatEntry>
+					  <ID>209</ID>
+					  <Description>"Ally ATB Multiplier (Higher for Faster Ally Turns)"</Description>
+					  <VariableType>Float</VariableType>
+					  <Address>AllyATBMult</Address>
+					</CheatEntry>
+					<CheatEntry>
+					  <ID>210</ID>
+					  <Description>"Enemy ATB Multiplier (Below 1 To Slow Enemy Turns, 0 To Stop Enemies)"</Description>
+					  <VariableType>Float</VariableType>
+					  <Address>EnemyATBMult</Address>
+					</CheatEntry>
+				  </CheatEntries>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>211</ID>
+                  <Description>"EXP Multiplier"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState/>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>[ENABLE]
+
+aobscanmodule(EXPMultAOB,"FFVIII_EFIGS.dll",8B 47 0C 01 07 83 67 0C 00 8B 07 C7 47 28 01 00 00 00) // should be unique
+registersymbol(EXPMultAOB)
+alloc(newmem,1024,EXPMultAOB)
+
+label(return)
+label(EXPMult)
+registersymbol(EXPMult)
+
+newmem:
+  mov eax,[edi+0C]
+  push eax
+  fild dword ptr [esp]
+  fmul dword ptr [EXPMult]
+  fistp dword ptr [esp]
+  pop eax
+  add [edi],eax
+  jmp return
+
+EXPMult:
+dq (float)0.0
+
+EXPMultAOB:
+  jmp newmem
+  return:
+
+[DISABLE]
+
+EXPMultAOB:
+  db 8B 47 0C 01 07
+
+unregistersymbol(EXPMultAOB)
+unregistersymbol(EXPMult)
+
+dealloc(newmem)
+</AssemblerScript>
+				  <CheatEntries>
+					<CheatEntry>
+					  <ID>212</ID>
+					  <Description>"EXP Multiplier"</Description>
+					  <VariableType>Float</VariableType>
+					  <Address>EXPMult</Address>
+					</CheatEntry>
+				  </CheatEntries>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>213</ID>
+                  <Description>"Inf Magic Use (In-Battle, Out of Battle)"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState/>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>[ENABLE]
+
+aobscanmodule(InfMagicUseAOB,"FFVIII_EFIGS.dll",8D 0C 45 F9 E0 CF 01 E8 ?? ?? ?? ?? FE C8 88 47 04) // should be unique
+registersymbol(InfMagicUseAOB)
+
+aobscanmodule(InfMagicUseAOB2,"FFVIII_EFIGS.dll",84 C0 75 9F 8A 56 08 FE CA 0F 94 C0) // should be unique
+registersymbol(InfMagicUseAOB2)
+alloc(newmem,1024,InfMagicUseAOB2)
+
+label(return)
+
+newmem:
+  mov dl,[esi+08]
+  inc dl
+  dec dl
+  jmp return
+
+InfMagicUseAOB+C:
+  db 90 90
+
+InfMagicUseAOB2+4:
+  jmp newmem
+  return:
+
+[DISABLE]
+
+InfMagicUseAOB+C:
+  db FE C8
+
+InfMagicUseAOB2+4:
+  db 8A 56 08 FE CA
+  
+unregistersymbol(InfMagicUseAOB)
+unregistersymbol(InfMagicUseAOB2)
+
+dealloc(newmem)
+</AssemblerScript>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>214</ID>
+                  <Description>"Inf Item Use/Set Minimum Amt On Use (In-Battle, Out of Battle)"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState/>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>[ENABLE]
+
+luaCall(lua_aobscan("InfItemUseAOB","FFVIII_EFIGS.dll","8B C1 75 2C 8B 08 49 0F 94 C0",2))
+alloc(newmem,1024,InfItemUseAOB)
+
+aobscanmodule(InfItemUseAOB2,"FFVIII_EFIGS.dll",89 0F 2B 4F 30 0F 98 C0) // should be unique
+registersymbol(InfItemUseAOB2)
+alloc(newmem2,1024,InfItemUseAOB2)
+
+label(return)
+label(SetMinAmt)
+registersymbol(SetMinAmt)
+
+label(return2)
+
+newmem:
+  inc [eax]
+  mov ecx,[eax]
+  cmp ecx,[SetMinAmt]
+  jg @F
+  mov ecx,[SetMinAmt]
+  inc ecx
+@@:
+  dec ecx
+  sete al
+  jmp return
+
+SetMinAmt:
+dq #25
+
+newmem2:
+  cmp ecx,0
+  jle SkipSetMinAmt
+  cmp [edi+30],0
+  jle SkipSetMinAmt
+  cmp ecx,[SetMinAmt]
+  jge SkipSetMinAmt
+  mov ecx,[SetMinAmt]
+SkipSetMinAmt:
+  mov [edi],ecx
+  sub ecx,0
+  jmp return2
+  
+InfItemUseAOB+4:
+  jmp newmem
+  nop
+  return:
+
+InfItemUseAOB2:
+  jmp newmem2
+  return2:
+  
+[DISABLE]
+
+InfItemUseAOB+4:
+  db 8B 08 49 0F 94 C0
+
+unregistersymbol(InfItemUseAOB)
+unregistersymbol(SetMinAmt)
+
+InfItemUseAOB2:
+  db 89 0F 2B 4F 30
+
+unregistersymbol(InfItemUseAOB2)
+  
+dealloc(newmem)
+dealloc(newmem2)
+</AssemblerScript>
+				  <CheatEntries>
+					<CheatEntry>
+					  <ID>215</ID>
+					  <Description>"Minimum Item Quantity"</Description>
+					  <VariableType>Byte</VariableType>
+					  <Address>SetMinAmt</Address>
+					</CheatEntry>
+				  </CheatEntries>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>216</ID>
+                  <Description>"AP Multiplier"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState/>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>[ENABLE]
+
+aobscanmodule(APMultAOB,"FFVIII_EFIGS.dll",66 89 46 32 8B 46 30 8D 0C CD 2C 7F CF 01) // should be unique
+registersymbol(APMultAOB)
+alloc(newmem,1024,APMultAOB)
+
+label(return)
+label(APMult)
+registersymbol(APMult)
+
+newmem:
+  mov [esi+32],ax
+  mov eax,[esi+30]
+  imul eax,[APMult]
+
+originalcode:
+  jmp return
+
+APMult:
+dq #100
+
+APMultAOB:
+  jmp newmem
+  nop
+  nop
+  return:
+
+[DISABLE]
+
+APMultAOB:
+  db 66 89 46 32 8B 46 30
+
+unregistersymbol(APMultAOB)
+unregistersymbol(APMult)
+
+dealloc(newmem)
+</AssemblerScript>
+				  <CheatEntries>
+					<CheatEntry>
+					  <ID>217</ID>
+					  <Description>"AP Multiplier"</Description>
+					  <VariableType>4 Bytes</VariableType>
+					  <Address>APMult</Address>
+					</CheatEntry>
+				  </CheatEntries>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>218</ID>
+                  <Description>"Draw Magic Multiplier"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState/>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>[ENABLE]
+
+aobscanmodule(DrawMultAOB,"FFVIII_EFIGS.dll",8B 46 2C FE 06 8A 16 8B 0C 38 83 C0 04 89 46 2C) // should be unique
+registersymbol(DrawMultAOB)
+alloc(newmem,1024,DrawMultAOB)
+
+label(return)
+label(DrawMult)
+registersymbol(DrawMult)
+
+newmem:
+  mov eax,[esi+2C]
+  push ebx
+  mov ebx,[DrawMult]
+  add [esi],bl
+  pop ebx
+  cmp byte ptr [esi],#100
+  jle originalcode
+  mov byte ptr [esi],#100
+  
+originalcode:
+  jmp return
+
+DrawMult:
+dq #100
+
+DrawMultAOB:
+  jmp newmem
+  return:
+
+[DISABLE]
+
+DrawMultAOB:
+  db 8B 46 2C FE 06
+
+unregistersymbol(DrawMultAOB)
+unregistersymbol(DrawMult)
+
+dealloc(newmem)
+</AssemblerScript>
+				  <CheatEntries>
+					<CheatEntry>
+					  <ID>219</ID>
+					  <Description>"Draw Multiplier"</Description>
+					  <VariableType>Byte</VariableType>
+					  <Address>DrawMult</Address>
+					</CheatEntry>
+				  </CheatEntries>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>220</ID>
+                  <Description>"Max Boost (Summon)"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState/>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>[ENABLE]
+
+aobscanmodule(MaxBoostAOB,"FFVIII_EFIGS.dll",66 8B 80 F0 0E 00 00 66 89 47 08) // should be unique
+registersymbol(MaxBoostAOB)
+alloc(newmem,1024,MaxBoostAOB)
+
+label(return)
+
+newmem:
+  mov word ptr [eax+00000EF0],#250
+  mov word ptr [eax+00000EF2],#250
+  
+originalcode:
+  mov ax,[eax+00000EF0]
+  jmp return
+
+MaxBoostAOB:
+  jmp newmem
+  nop
+  nop
+  return:
+
+[DISABLE]
+
+MaxBoostAOB:
+  db 66 8B 80 F0 0E 00 00
+
+unregistersymbol(MaxBoostAOB)
+
+dealloc(newmem)
+</AssemblerScript>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>221</ID>
+                  <Description>"Always Able to Limit Break Highest Level"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState/>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>[ENABLE]
+
+//aobscanmodule(LimitBreakAOB,"FFVIII_EFIGS.dll",C1 E8 0C 80 7F 44 00 74 05 80 E1 FB) // should be unique
+//aobscanmodule(LimitBreakAOB,"FFVIII_EFIGS.dll",8A 07 81 C2 DA 7B D2 01 8B CA) // should be unique
+aobscanmodule(LimitBreakAOB,"FFVIII_EFIGS.dll",88 04 0A 80 3F 00 0F 94 C0 88 47 44 8B 57 34 81 C2 21 F0 CF 01) // should be unique
+registersymbol(LimitBreakAOB)
+alloc(newmem,1024,LimitBreakAOB)
+
+label(return)
+
+newmem:
+  cmp byte ptr [edx+ecx-F],0
+  jne SkipSquallMaxLimit
+  mov al,4
+  mov [edi],al
+  jmp FinishTouch
+SkipSquallMaxLimit:
+  mov al,4
+  mov [edi],al
+  jmp FinishTouch
+FinishTouch:
+  mov byte ptr [edi+41],1
+  mov byte ptr [edi+43],1
+
+originalcode:
+  mov [edx+ecx],al
+  cmp byte ptr [edi],00
+  jmp return
+  
+LimitBreakAOB:
+  jmp newmem
+  nop
+  return:
+
+[DISABLE]
+
+LimitBreakAOB:
+  db 88 04 0A 80 3F 00
+
+unregistersymbol(LimitBreakAOB)
+</AssemblerScript>
+                </CheatEntry>
+				<CheatEntry>
+				  <ID>225</ID>
+				  <Description>"Have 100 of Each Level 1-7 Cards (Except Pupu)"</Description>
+                  <Options moHideChildren="1"/>
+				  <VariableType>Auto Assembler Script</VariableType>
+				  <AssemblerScript>[ENABLE]
+{$lua}
+  local MainAddr = ReadPointer(getAddress("BaseItemPtr") + (0x1CFE*4))
+  local CardOffset = ReadInteger(getAddress("BaseCardAddrOffset"))
+  if (MainAddr ~= nil) then
+    
+	local StartAddr = MainAddr + CardOffset
+	local CardNum = 0
+	
+	while (CardNum &lt; 0x2F) do
+		WriteBytes(StartAddr + (CardNum * 0x01),0xE4)
+		CardNum = CardNum + 1
+	end
+	
+	CardNum = 0
+
+	while (CardNum &lt; 0x1D) do
+		WriteBytes(StartAddr + (CardNum * 0x01) + 0x30,0xE4)
+		CardNum = CardNum + 1
+	end	
+  end
+{$asm}
+
+[DISABLE]
+</AssemblerScript>
+				</CheatEntry>
+				<CheatEntry>
+				  <ID>226</ID>
+				  <Description>"Have 1 Pupu Card"</Description>
+                  <Options moHideChildren="1"/>
+				  <VariableType>Auto Assembler Script</VariableType>
+				  <AssemblerScript>[ENABLE]
+{$lua}
+  local MainAddr = ReadPointer(getAddress("BaseItemPtr") + (0x1CFE*4))
+  local CardOffset = ReadInteger(getAddress("BaseCardAddrOffset"))
+  if (MainAddr ~= nil) then
+    
+	local StartAddr = MainAddr + CardOffset
+	local CardNum = 0x2F
+	WriteBytes(StartAddr + (CardNum * 0x01),0x81)
+	
+  end
+{$asm}
+
+[DISABLE]
+</AssemblerScript>
+				</CheatEntry>				
+				<CheatEntry>
+				  <ID>227</ID>
+				  <Description>"Have All Rare Cards"</Description>
+                  <Options moHideChildren="1"/>
+				  <VariableType>Auto Assembler Script</VariableType>
+				  <AssemblerScript>[ENABLE]
+{$lua}
+  local MainAddr = ReadPointer(getAddress("BaseItemPtr") + (0x1CFE*4))
+  local CardOffset = ReadInteger(getAddress("BaseCardAddrOffset"))
+  if (MainAddr ~= nil) then
+    
+	local StartAddr = MainAddr + CardOffset
+	local CardNum = 0
+	
+	WriteBytes(StartAddr + 0x6E,0xFF,0xFF,0xFF,0xFF,0x01)
+
+	while (CardNum &lt; 0x21) do
+		WriteBytes(StartAddr + (CardNum * 0x01) + 0x4D,0xF0)
+		CardNum = CardNum + 1
+	end
+	
+  end
+{$asm}
+
+[DISABLE]
+</AssemblerScript>
+				</CheatEntry>
+				<CheatEntry>
+				  <ID>230</ID>
+				  <Description>"Save Anywhere"</Description>
+                  <Options moHideChildren="1"/>
+				  <VariableType>Auto Assembler Script</VariableType>
+				  <AssemblerScript>[ENABLE]
+
+//aobscanmodule(SaveAnywhereAOB,"FFVIII_EFIGS.dll",8B 04 85 ?? ?? ?? ?? 88 14 01 C3) // should be unique
+aobscanmodule(SaveAnywhereAOB,"FFVIII_EFIGS.dll",8B 7D 08 8A D0 B9 0B 49 CE 01) // should be unique
+registersymbol(SaveAnywhereAOB)
+alloc(newmem,1024,SaveAnywhereAOB)
+
+///
+label(return)
+
+newmem:
+  mov al,1
+
+originalcode:
+  mov edi,[ebp+08]
+  mov dl,al
+  jmp return
+  
+SaveAnywhereAOB:
+  jmp newmem
+  return:
+
+[DISABLE]
+
+SaveAnywhereAOB:
+  db 8B 7D 08 8A D0
+  
+unregistersymbol(SaveAnywhereAOB)
+
+dealloc(newmem)
+</AssemblerScript>
+				</CheatEntry>
+                <CheatEntry>
+                  <ID>235</ID>
+                  <Description>"Unlock All GF (View GF Menu)"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState/>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>[ENABLE]
+
+aobscanmodule(UnlockGFAOB,"FFVIII_EFIGS.dll",8A 04 08 F6 D0 24 01 88 46 44 75 21 8A 46 08 C7 46 34 01 00 00 00) // should be unique
+registersymbol(UnlockGFAOB)
+alloc(newmem,1024,UnlockGFAOB)
+
+label(return)
+
+newmem:
+  mov byte ptr [eax+ecx],1
+  
+originalcode:
+  mov al,[eax+ecx]
+  not al
+  jmp return
+
+UnlockGFAOB:
+  jmp newmem
+  return:
+
+[DISABLE]
+
+UnlockGFAOB:
+  db 8A 04 08 F6 D0
+
+unregistersymbol(UnlockGFAOB)
+
+dealloc(newmem)
+</AssemblerScript>
+                </CheatEntry>				
+			  </CheatEntries>
+			</CheatEntry>
+            <CheatEntry>
+              <ID>4000</ID>
+              <Description>"Pointers"</Description>
+              <Options moHideChildren="1"/>
+			  <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+				<CheatEntry>
+				  <ID>4001</ID>
+				  <Description>"Gil"</Description>
+				  <VariableType>4 Bytes</VariableType>
+				  <Address>BaseItemPtr+1CFE*4</Address>
+				  <Offsets>
+					<Offset>764</Offset>
+				  </Offsets>
+				</CheatEntry>
+				<CheatEntry>
+				  <ID>4002</ID>
+				  <Description>"Item 1 ID"</Description>
+				  <VariableType>Byte</VariableType>
+				  <Address>BaseItemPtr+1CFE*4</Address>
+				  <Offsets>
+					<Offset>79C</Offset>
+				  </Offsets>
+				</CheatEntry>
+				<CheatEntry>
+				  <ID>4003</ID>
+				  <Description>"Item 1 Qty"</Description>
+				  <VariableType>Byte</VariableType>
+				  <Address>BaseItemPtr+1CFE*4</Address>
+				  <Offsets>
+					<Offset>79D</Offset>
+				  </Offsets>
+				</CheatEntry>
+				<CheatEntry>
+				  <ID>4002</ID>
+				  <Description>"Item Minimum Quantity"</Description>
+				  <VariableType>Byte</VariableType>
+				  <Address>SetItemQty</Address>
+				</CheatEntry>
+				<CheatEntry>
+				  <ID>4003</ID>
+				  <Description>"Set All Current Items To Minimum Amount"</Description>
+                  <Options moHideChildren="1"/>
+				  <VariableType>Auto Assembler Script</VariableType>
+				  <AssemblerScript>[ENABLE]
+{$lua}
+  local MainAddr = ReadPointer(getAddress("BaseItemPtr") + (0x1CFE * 4))
+  local InventoryOffset = ReadInteger(getAddress("BaseItemPtrOffset"))
+  local SetItemQty = ReadBytes(getAddress("SetItemQty"))
+  if (MainAddr ~= nil) then
+    
+	local StartAddr = MainAddr + InventoryOffset
+	local ItemNum = 0
+	local CurrentQty = ReadBytes(StartAddr + (ItemNum * 0x02) + 0x01)
+	
+	while (CurrentQty ~= 0 and ItemNum &lt; 198) do
+		WriteBytes(StartAddr+ (ItemNum * 0x02) + 0x01,SetItemQty)
+		ItemNum = ItemNum + 1
+		CurrentQty = ReadBytes(StartAddr + (ItemNum * 0x02) + 0x01)
+	end
+  end
+
+{$asm}
+
+[DISABLE]
+</AssemblerScript>
+				</CheatEntry>
+				<CheatEntry>
+				  <ID>4010</ID>
+				  <Description>"Highlighted Item"</Description>
+				  <GroupHeader>1</GroupHeader>
+				  <Options moHideChildren="1"/>
+				  <CheatEntries>
+					<CheatEntry>
+					  <ID>4011</ID>
+					  <Description>"Item ID"</Description>
+					  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Nothing
+1:Potion
+2:Potion+
+3:Hi-Potion
+4:Hi-Potion+
+5:X-Potion
+6:Mega Potion
+7:Phoenix Down
+8:Mega Phoenix
+9:Elixir
+10:Megalixir
+11:Antidote
+12:Soft
+13:Eye Drops
+14:Echo Screen
+15:Holy Water
+16:Remedy
+17:Remedy+
+18:Hero-Trial
+19:Hero
+20:Holy War-Trial
+21:Holy War
+22:Shell Stone
+23:Protect Stone
+24:Aura Stone
+25:Death Stone
+26:Holy Stone
+27:Flare Stone
+28:Meteor Stone
+29:Ultima Stone
+30:Gyshal Greens
+31:Phoenix Pinion
+32:Friendship
+33:Tent
+34:Pet House
+35:Cottage
+36:G-Potion
+37:G-Hi-Potion
+38:G-Mega-Potion
+39:G-Returner
+40:Rename Card
+41:Amnesia Greens
+42:HP-J Scroll
+43:Str-J Scroll
+44:Vit-J Scroll
+45:Mag-J Scroll
+46:Spr-J Scroll
+47:Spd-J Scroll
+48:Luck-J Scroll
+49:Aegis Amulet
+50:Elem Atk
+51:Elem Guard
+52:Status Atk
+53:Status Guard
+54:Rosetta Stone
+55:Magic Scroll
+56:GF Scroll
+57:Draw Scroll
+58:Item Scroll
+59:Gamblers Spirit
+60:Healing Ring
+61:Phoenix Spirit
+62:Med Kit
+63:Bomb Spirit
+64:Hungry Cookpot
+65:Mogs Amulet
+66:Steel Pipe
+67:Star Fragment
+68:Energy Crystal
+69:Samantha Soul
+70:Healing Mail
+71:Silver Mail
+72:Gold Armor
+73:Diamond Armor
+74:Regen Ring
+75:Giants Ring
+76:Gaeas Ring
+77:Strength Love
+78:Power Wrist
+79:Hyper Wrist
+80:Turtle Shell
+81:Orihalcon
+82:Adamantine
+83:Rune Armlet
+84:Force Armlet
+85:Magic Armlet
+86:Circlet
+87:Hypno Crown
+88:Royal Crown
+89:Jet Engine
+90:Rocket Engine
+91:Moon Curtain
+92:Steel Curtain
+93:Glow Curtain
+94:Accelerator
+95:Monks Code
+96:Knights Code
+97:Docs Code
+98:Hundred Needles
+99:Three Stars
+100:Ribbon
+101:Normal Ammo
+102:Shotgun Ammo
+103:Dark Ammo
+104:Fire Ammo
+105:Demolition Ammo
+106:Fast Ammo
+107:AP Ammo
+108:Pulse Ammo
+109:M-Stone Piece
+110:Magic Stone
+111:Wizard Stone
+112:Ochu Tentacle
+113:Healing Water
+114:Cockatrice Pinion
+115:Zombie Powder
+116:Lightweight
+117:Sharp Spike
+118:Screw
+119:Saw Blade 
+120:Mesmerize Blade
+121:Vampire Fang
+122:Fury Fragment
+123:Betrayal Sword
+124:Sleep Powder
+125:Life Ring
+126:Dragon Fang
+127:Spider Web
+128:Coral Fragment
+129:Curse Spike
+130:Black Hole
+131:Water Crystal
+132:Missle
+133:Mystery Fluid
+134:Running Fire
+135:Inferno Fang
+136:Malboro Tentacle
+137:Whisper
+138:Laser Cannon
+139:Barrier
+140:Power Generator
+141:Dark Matter
+142:Bomb Fragment
+143:Red Fang
+144:Artic Wind
+145:North Wind
+146:Dynamo Stone
+147:Shear Feather
+148:Venom Fang
+149:Steel Orb
+150:Moon Stone
+151:Dino Bone
+152:Windmill
+153:Dragon Skin
+154:Fish Fin
+155:Dragon Fin
+156:Silence Powder
+157:Poison Powder
+158:Dead Spirit
+159:Chefs Knife
+160:Cactus Thorn
+161:Shaman Stone
+162:Fuel
+163:Girl Next Door
+164:Sorceress Letter
+165:Chocobos Tag
+166:Pet Nametag
+167:Solomon Ring
+168:Magic Lamp
+169:HP Up
+170:Str Up
+171:Vit Up
+172:Mag Up
+173:Spr Up
+174:Spd Up
+175:Luck Up
+176:LuvLuv G
+177:Weapons Mon 1st
+178:Weapons Mon Mar
+179:Weapons Mon Apr
+180:Weapons Mon May
+181:Weapons Mon Jun
+182:Weapons Mon Jul
+183:Weapons Mon Aug
+184:Combat King 001
+185:Combat King 002
+186:Combat King 003
+187:Combat King 004
+188:Combat King 005
+189:Pet Pals Vol 1
+190:Pet Pals Vol 2
+191:Pet Pals Vol 3
+192:Pet Pals Vol 4
+193:Pet Pals Vol 5
+194:Pet Pals Vol 6
+195:Occult Fan 1
+196:Occult Fan 2
+197:Occult Fan 3
+198:Occult Fan 4
+</DropDownList>
+					  <VariableType>Byte</VariableType>
+					  <Address>HighlightedItemPtr</Address>
+					  <Offsets>
+						<Offset>0</Offset>
+					  </Offsets>
+					</CheatEntry>
+					<CheatEntry>
+					  <ID>4012</ID>
+					  <Description>"Item Qty"</Description>
+					  <VariableType>Byte</VariableType>
+					  <Address>HighlightedItemPtr</Address>
+					  <Offsets>
+						<Offset>1</Offset>
+					  </Offsets>
+					</CheatEntry>						
+				  </CheatEntries>
+				</CheatEntry>
+				<CheatEntry>
+				  <ID>4020</ID>
+				  <Description>"Highlighted Magic"</Description>
+				  <GroupHeader>1</GroupHeader>
+				  <Options moHideChildren="1"/>
+				  <CheatEntries>
+					<CheatEntry>
+					  <ID>4021</ID>
+					  <Description>"Magic ID"</Description>
+					  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Nothing
+1:Fire
+2:Fira
+3:Firaga
+4:Blizzard
+5:Blizzara
+6:Blizzaga
+7:Thunder
+8:Thundara
+9:Thundaga
+10:Water
+11:Aero
+12:Bio
+13:Demi
+14:Holy
+15:Flare
+16:Meteor
+17:Quake
+18:Tornado
+19:Ultima
+20:Apocalypse
+21:Cure
+22:Cura
+23:Curaga
+24:Life
+25:Full-Life
+26:Regen
+27:Esuna
+28:Dispel
+29:Protect
+30:Shell
+31:Reflect
+32:Aura
+33:Double
+34:Triple
+35:Haste
+36:Slow
+37:Stop
+38:Blind
+39:Confuse
+40:Sleep
+41:Silence
+42:Break
+43:Death
+44:Drain
+45:Pain
+46:Berserk
+47:Float
+48:Zombie
+49:Meltdown
+50:Scan
+51:Full-Cure
+52:Wall
+53:Rapture
+54:Percent
+55:Catastrophe
+56:The End
+----DONT USE----
+64:Quezacotl
+65:Shiva
+66:Ifrit
+67:Siren
+68:Brothers
+69:Diablos
+70:Carbuncle
+71:Leviathan
+72:Pandemona
+73:Cerberus
+74:Alexander
+75:Doomtrain
+76:Bahamut
+77:Cactuar
+78:Tonberry
+79:Eden
+</DropDownList>
+					  <VariableType>Byte</VariableType>
+					  <Address>HighlightedMagicPtr</Address>
+					  <Offsets>
+						<Offset>0</Offset>
+					  </Offsets>
+					</CheatEntry>
+					<CheatEntry>
+					  <ID>4022</ID>
+					  <Description>"Magic Qty"</Description>
+					  <VariableType>Byte</VariableType>
+					  <Address>HighlightedMagicPtr</Address>
+					  <Offsets>
+						<Offset>1</Offset>
+					  </Offsets>
+					</CheatEntry>						
+				  </CheatEntries>
+				</CheatEntry>
+				<CheatEntry>
+				  <ID>4100</ID>
+				  <Description>"Highlighted Character (Select Char Manually)"</Description>
+				  <GroupHeader>1</GroupHeader>
+				  <Options moHideChildren="1"/>
+				  <CheatEntries>
+					<CheatEntry>
+					  <ID>4101</ID>
+					  <Description>"Selected Character"</Description>
+					  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Squall
+1:Zell
+2:Irvine
+3:Quistis
+4:Rinoa
+5:Selphie
+6:Seifer
+7:Edea
+8:Laguna
+9:Kiros
+10:Ward
+</DropDownList>
+					  <VariableType>2 Bytes</VariableType>
+					  <Address>ManuallySelectedChar</Address>
+					</CheatEntry>
+					<CheatEntry>
+					  <ID>4101</ID>
+					  <Description>"Current HP"</Description>
+					  <VariableType>2 Bytes</VariableType>
+					  <Address>BaseItemPtr + 1CFE * 4</Address>
+					  <Offsets>
+						<Offset>[ManuallySelectedChar] * 98 + E8</Offset>
+					  </Offsets>
+					</CheatEntry>
+					<CheatEntry>
+					  <ID>4102</ID>
+					  <Description>"Total Exp"</Description>
+					  <VariableType>2 Bytes</VariableType>
+					  <Address>BaseItemPtr + 1CFE * 4</Address>
+					  <Offsets>
+						<Offset>[ManuallySelectedChar] * 98 + E8 + 4</Offset>
+					  </Offsets>
+					</CheatEntry>
+					<CheatEntry>
+					  <ID>4103</ID>
+					  <Description>"Character ID"</Description>
+					  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Squall
+1:Zell
+2:Irvine
+3:Quistis
+4:Rinoa
+5:Selphie
+6:Seifer
+7:Edea
+8:Laguna
+9:Kiros
+10:Ward
+</DropDownList>
+					  <VariableType>Byte</VariableType>
+					  <Address>BaseItemPtr + 1CFE * 4</Address>
+					  <Offsets>
+						<Offset>[ManuallySelectedChar] * 98 + E8 + 8</Offset>
+					  </Offsets>
+					</CheatEntry>
+					<CheatEntry>
+					  <ID>4104</ID>
+					  <Description>"Weapon/Limit Break"</Description>
+					  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">---Squall---
+0:Revolver
+1:Shear Trigger
+2:Cutting Trigger
+3:Flame Saber
+4:Twin Lance
+5:Punishment
+6:Lion Heart
+---Zell---
+7:Metal Knuckle
+8:Maverick
+9:Gauntlet
+10:Ehrgeiz
+---Irvine---
+11:Valiant
+12:Ulysses
+13:Bismarck
+14:Exeter
+---Quistis---
+15:Chain Whip
+16:Slaying Tail
+17:Red Scorpion
+18:Save The Queen
+---Rinoa---
+19:Pinwheel
+20:Valkyrie
+21:Rising Sun
+22:Cardinal
+23:Shooting Star
+---Selphie---
+24:Flail
+25:Morning Star
+26:Crescent Wish
+27:Strange Vision
+---Seifer---
+28:Hyperion
+---Edea---
+29:None (Should be Edea's Weapon)
+---Laguna---
+30:Machine Gun
+---Kiros---
+31:Katal
+---Ward---
+32:Harpoon
+</DropDownList>
+					  <VariableType>Byte</VariableType>
+					  <Address>BaseItemPtr + 1CFE * 4</Address>
+					  <Offsets>
+						<Offset>[ManuallySelectedChar] * 98 + E8 + 9</Offset>
+					  </Offsets>
+					</CheatEntry>
+					<CheatEntry>
+					  <ID>4105</ID>
+					  <Description>"Hp Mod"</Description>
+					  <VariableType>2 Bytes</VariableType>
+					  <Address>BaseItemPtr + 1CFE * 4</Address>
+					  <Offsets>
+						<Offset>[ManuallySelectedChar] * 98 + E8 + 2</Offset>
+					  </Offsets>
+					</CheatEntry>
+					<CheatEntry>
+					  <ID>4106</ID>
+					  <Description>"Str Mod"</Description>
+					  <VariableType>Byte</VariableType>
+					  <Address>BaseItemPtr + 1CFE * 4</Address>
+					  <Offsets>
+						<Offset>[ManuallySelectedChar] * 98 + E8 + A</Offset>
+					  </Offsets>
+					</CheatEntry>
+					<CheatEntry>
+					  <ID>4107</ID>
+					  <Description>"Vit Mod"</Description>
+					  <VariableType>Byte</VariableType>
+					  <Address>BaseItemPtr + 1CFE * 4</Address>
+					  <Offsets>
+						<Offset>[ManuallySelectedChar] * 98 + E8 + B</Offset>
+					  </Offsets>
+					</CheatEntry>
+					<CheatEntry>
+					  <ID>4108</ID>
+					  <Description>"Mag Mod"</Description>
+					  <VariableType>Byte</VariableType>
+					  <Address>BaseItemPtr + 1CFE * 4</Address>
+					  <Offsets>
+						<Offset>[ManuallySelectedChar] * 98 + E8 + C</Offset>
+					  </Offsets>
+					</CheatEntry>
+					<CheatEntry>
+					  <ID>4109</ID>
+					  <Description>"Spr Mod"</Description>
+					  <VariableType>Byte</VariableType>
+					  <Address>BaseItemPtr + 1CFE * 4</Address>
+					  <Offsets>
+						<Offset>[ManuallySelectedChar] * 98 + E8 + D</Offset>
+					  </Offsets>
+					</CheatEntry>
+					<CheatEntry>
+					  <ID>4110</ID>
+					  <Description>"Spd Mod"</Description>
+					  <VariableType>Byte</VariableType>
+					  <Address>BaseItemPtr + 1CFE * 4</Address>
+					  <Offsets>
+						<Offset>[ManuallySelectedChar] * 98 + E8 + E</Offset>
+					  </Offsets>
+					</CheatEntry>
+					<CheatEntry>
+					  <ID>4111</ID>
+					  <Description>"Luck Mod"</Description>
+					  <VariableType>Byte</VariableType>
+					  <Address>BaseItemPtr + 1CFE * 4</Address>
+					  <Offsets>
+						<Offset>[ManuallySelectedChar] * 98 + E8 + F</Offset>
+					  </Offsets>
+					</CheatEntry>
+					<CheatEntry>
+					  <ID>4120</ID>
+					  <Description>"Abilities"</Description>
+					  <Options moHideChildren="1"/>
+					  <GroupHeader>1</GroupHeader>
+					  <CheatEntries>
+						<CheatEntry>
+						  <ID>4121</ID>
+						  <Description>"Ability 1"</Description>
+						  <VariableType>Byte</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[ManuallySelectedChar] * 98 + E8 + 50</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4122</ID>
+						  <Description>"Ability 2"</Description>
+						  <VariableType>Byte</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[ManuallySelectedChar] * 98 + E8 + 51</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4123</ID>
+						  <Description>"Ability 3"</Description>
+						  <VariableType>Byte</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[ManuallySelectedChar] * 98 + E8 + 52</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4124</ID>
+						  <Description>"Ability 4"</Description>
+						  <VariableType>Byte</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[ManuallySelectedChar] * 98 + E8 + 54</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4125</ID>
+						  <Description>"Ability 5"</Description>
+						  <VariableType>Byte</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[ManuallySelectedChar] * 98 + E8 + 55</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4126</ID>
+						  <Description>"Ability 6"</Description>
+						  <VariableType>Byte</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[ManuallySelectedChar] * 98 + E8 + 56</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4127</ID>
+						  <Description>"Ability 7"</Description>
+						  <VariableType>Byte</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[ManuallySelectedChar] * 98 + E8 + 57</Offset>
+						  </Offsets>
+						</CheatEntry>
+					  </CheatEntries>
+					</CheatEntry>
+					<CheatEntry>
+					  <ID>4130</ID>
+					  <Description>"GF Compatibility"</Description>
+					  <Options moHideChildren="1" moRecursiveSetValue="1"/>
+					  <GroupHeader>1</GroupHeader>
+					  <CheatEntries>
+						<CheatEntry>
+						  <ID>4131</ID>
+						  <Description>"Quezacotl"</Description>
+						  <VariableType>2 Bytes</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[ManuallySelectedChar] * 98 + E8 + 70</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4132</ID>
+						  <Description>"Shiva"</Description>
+						  <VariableType>2 Bytes</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[ManuallySelectedChar] * 98 + E8 + 72</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4133</ID>
+						  <Description>"Ifrit"</Description>
+						  <VariableType>2 Bytes</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[ManuallySelectedChar] * 98 + E8 + 74</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4134</ID>
+						  <Description>"Siren"</Description>
+						  <VariableType>2 Bytes</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[ManuallySelectedChar] * 98 + E8 + 76</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4135</ID>
+						  <Description>"Brothers"</Description>
+						  <VariableType>2 Bytes</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[ManuallySelectedChar] * 98 + E8 + 78</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4136</ID>
+						  <Description>"Diablos"</Description>
+						  <VariableType>2 Bytes</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[ManuallySelectedChar] * 98 + E8 + 7A</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4137</ID>
+						  <Description>"Carbuncle"</Description>
+						  <VariableType>2 Bytes</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[ManuallySelectedChar] * 98 + E8 + 7C</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4138</ID>
+						  <Description>"Leviathan"</Description>
+						  <VariableType>2 Bytes</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[ManuallySelectedChar] * 98 + E8 + 7E</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4139</ID>
+						  <Description>"Pandemona"</Description>
+						  <VariableType>2 Bytes</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[ManuallySelectedChar] * 98 + E8 + 80</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4140</ID>
+						  <Description>"Cerberus"</Description>
+						  <VariableType>2 Bytes</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[ManuallySelectedChar] * 98 + E8 + 82</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4141</ID>
+						  <Description>"Alexander"</Description>
+						  <VariableType>2 Bytes</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[ManuallySelectedChar] * 98 + E8 + 84</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4142</ID>
+						  <Description>"Doomtrain"</Description>
+						  <VariableType>2 Bytes</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[ManuallySelectedChar] * 98 + E8 + 86</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4143</ID>
+						  <Description>"Bahamut"</Description>
+						  <VariableType>2 Bytes</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[ManuallySelectedChar] * 98 + E8 + 86</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4144</ID>
+						  <Description>"Cactuar"</Description>
+						  <VariableType>2 Bytes</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[ManuallySelectedChar] * 98 + E8 + 86</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4145</ID>
+						  <Description>"Tonberry"</Description>
+						  <VariableType>2 Bytes</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[ManuallySelectedChar] * 98 + E8 + 86</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4146</ID>
+						  <Description>"Eden"</Description>
+						  <VariableType>2 Bytes</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[ManuallySelectedChar] * 98 + E8 + 86</Offset>
+						  </Offsets>
+						</CheatEntry>
+					  </CheatEntries>
+					</CheatEntry>
+				  </CheatEntries>
+				</CheatEntry>
+				<CheatEntry>
+				  <ID>4200</ID>
+				  <Description>"Card Options"</Description>
+				  <GroupHeader>1</GroupHeader>
+				  <Options moHideChildren="1"/>
+				  <CheatEntries>
+					<CheatEntry>
+					  <ID>4201</ID>
+					  <Description>"Trading Rules"</Description>
+					  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">1:One
+2:Diff
+3:Direct
+4:All
+</DropDownList>
+					  <Options moHideChildren="1" moRecursiveSetValue="1"/>
+					  <GroupHeader>1</GroupHeader>
+					  <CheatEntries>
+						<CheatEntry>
+						  <ID>4201</ID>
+						  <Description>"Balamb"</Description>					  
+						  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">1:One
+2:Diff
+3:Direct
+4:All
+</DropDownList>
+						  <VariableType>Byte</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[BaseCardRulesOffset]+8</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4202</ID>
+						  <Description>"Galbadia"</Description>					  
+						  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">1:One
+2:Diff
+3:Direct
+4:All
+</DropDownList>
+						  <VariableType>Byte</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[BaseCardRulesOffset]+9</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4203</ID>
+						  <Description>"Trabia"</Description>					  
+						  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">1:One
+2:Diff
+3:Direct
+4:All
+</DropDownList>
+						  <VariableType>Byte</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[BaseCardRulesOffset]+A</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4204</ID>
+						  <Description>"Centra"</Description>					  
+						  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">1:One
+2:Diff
+3:Direct
+4:All
+</DropDownList>
+						  <VariableType>Byte</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[BaseCardRulesOffset]+B</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4205</ID>
+						  <Description>"Dollet"</Description>					  
+						  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">1:One
+2:Diff
+3:Direct
+4:All
+</DropDownList>
+						  <VariableType>Byte</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[BaseCardRulesOffset]+C</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4206</ID>
+						  <Description>"Fishermans Horizon"</Description>					  
+						  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">1:One
+2:Diff
+3:Direct
+4:All
+</DropDownList>
+						  <VariableType>Byte</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[BaseCardRulesOffset]+D</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4207</ID>
+						  <Description>"Lunar Gate"</Description>					  
+						  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">1:One
+2:Diff
+3:Direct
+4:All
+</DropDownList>
+						  <VariableType>Byte</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[BaseCardRulesOffset]+E</Offset>
+						  </Offsets>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>4208</ID>
+						  <Description>"Esthar"</Description>					  
+						  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">1:One
+2:Diff
+3:Direct
+4:All
+</DropDownList>
+						  <VariableType>Byte</VariableType>
+						  <Address>BaseItemPtr + 1CFE * 4</Address>
+						  <Offsets>
+							<Offset>[BaseCardRulesOffset]+F</Offset>
+						  </Offsets>
+						</CheatEntry>
+					  </CheatEntries>
+					</CheatEntry>
+					<CheatEntry>
+					  <ID>499</ID>
+					  <Description>"Card Game Rules"</Description>
+					  <Options moHideChildren="1"/>
+					  <GroupHeader>1</GroupHeader>
+					  <CheatEntries>
+						<CheatEntry>
+						  <ID>500</ID>
+						  <Description>"Balamb"</Description>
+						  <Options moHideChildren="1"/>
+						  <GroupHeader>1</GroupHeader>
+						  <CheatEntries>
+							<CheatEntry>
+							  <ID>501</ID>
+							  <Description>"Open"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>0</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+0</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>502</ID>
+							  <Description>"Same"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>1</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+0</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>503</ID>
+							  <Description>"Plus"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>2</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+0</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>504</ID>
+							  <Description>"Random"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>3</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+0</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>505</ID>
+							  <Description>"Sudden Death"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>4</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+0</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>506</ID>
+							  <Description>"Same Wall"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>6</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+0</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>507</ID>
+							  <Description>"Elemental"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>7</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+0</Offset>
+							  </Offsets>
+							</CheatEntry>
+						  </CheatEntries>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>500</ID>
+						  <Description>"Galbadia"</Description>
+						  <Options moHideChildren="1"/>
+						  <GroupHeader>1</GroupHeader>
+						  <CheatEntries>
+							<CheatEntry>
+							  <ID>501</ID>
+							  <Description>"Open"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>0</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+1</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>502</ID>
+							  <Description>"Same"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>1</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+1</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>503</ID>
+							  <Description>"Plus"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>2</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+1</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>504</ID>
+							  <Description>"Random"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>3</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+1</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>505</ID>
+							  <Description>"Sudden Death"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>4</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+1</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>506</ID>
+							  <Description>"Same Wall"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>6</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+1</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>507</ID>
+							  <Description>"Elemental"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>7</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+1</Offset>
+							  </Offsets>
+							</CheatEntry>
+						  </CheatEntries>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>500</ID>
+						  <Description>"Trabia"</Description>
+						  <Options moHideChildren="1"/>
+						  <GroupHeader>1</GroupHeader>
+						  <CheatEntries>
+							<CheatEntry>
+							  <ID>501</ID>
+							  <Description>"Open"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>0</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+2</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>502</ID>
+							  <Description>"Same"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>1</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+2</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>503</ID>
+							  <Description>"Plus"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>2</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+2</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>504</ID>
+							  <Description>"Random"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>3</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+2</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>505</ID>
+							  <Description>"Sudden Death"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>4</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+2</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>506</ID>
+							  <Description>"Same Wall"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>6</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+2</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>507</ID>
+							  <Description>"Elemental"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>7</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+2</Offset>
+							  </Offsets>
+							</CheatEntry>
+						  </CheatEntries>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>500</ID>
+						  <Description>"Centra"</Description>
+						  <Options moHideChildren="1"/>
+						  <GroupHeader>1</GroupHeader>
+						  <CheatEntries>
+							<CheatEntry>
+							  <ID>501</ID>
+							  <Description>"Open"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>0</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+3</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>502</ID>
+							  <Description>"Same"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>1</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+3</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>503</ID>
+							  <Description>"Plus"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>2</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+3</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>504</ID>
+							  <Description>"Random"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>3</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+3</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>505</ID>
+							  <Description>"Sudden Death"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>4</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+3</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>506</ID>
+							  <Description>"Same Wall"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>6</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+3</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>507</ID>
+							  <Description>"Elemental"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>7</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+3</Offset>
+							  </Offsets>
+							</CheatEntry>
+						  </CheatEntries>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>500</ID>
+						  <Description>"Dollet"</Description>
+						  <Options moHideChildren="1"/>
+						  <GroupHeader>1</GroupHeader>
+						  <CheatEntries>
+							<CheatEntry>
+							  <ID>501</ID>
+							  <Description>"Open"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>0</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+4</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>502</ID>
+							  <Description>"Same"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>1</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+4</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>503</ID>
+							  <Description>"Plus"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>2</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+4</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>504</ID>
+							  <Description>"Random"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>3</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+4</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>505</ID>
+							  <Description>"Sudden Death"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>4</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+4</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>506</ID>
+							  <Description>"Same Wall"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>6</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+4</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>507</ID>
+							  <Description>"Elemental"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>7</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+4</Offset>
+							  </Offsets>
+							</CheatEntry>
+						  </CheatEntries>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>500</ID>
+						  <Description>"Fishermans Horizon"</Description>
+						  <Options moHideChildren="1"/>
+						  <GroupHeader>1</GroupHeader>
+						  <CheatEntries>
+							<CheatEntry>
+							  <ID>501</ID>
+							  <Description>"Open"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>0</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+5</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>502</ID>
+							  <Description>"Same"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>1</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+5</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>503</ID>
+							  <Description>"Plus"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>2</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+5</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>504</ID>
+							  <Description>"Random"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>3</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+5</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>505</ID>
+							  <Description>"Sudden Death"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>4</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+5</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>506</ID>
+							  <Description>"Same Wall"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>6</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+5</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>507</ID>
+							  <Description>"Elemental"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>7</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+5</Offset>
+							  </Offsets>
+							</CheatEntry>
+						  </CheatEntries>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>500</ID>
+						  <Description>"Lunar Gate"</Description>
+						  <Options moHideChildren="1"/>
+						  <GroupHeader>1</GroupHeader>
+						  <CheatEntries>
+							<CheatEntry>
+							  <ID>501</ID>
+							  <Description>"Open"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>0</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+6</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>502</ID>
+							  <Description>"Same"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>1</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+6</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>503</ID>
+							  <Description>"Plus"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>2</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+6</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>504</ID>
+							  <Description>"Random"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>3</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+6</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>505</ID>
+							  <Description>"Sudden Death"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>4</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+6</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>506</ID>
+							  <Description>"Same Wall"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>6</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+6</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>507</ID>
+							  <Description>"Elemental"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>7</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+6</Offset>
+							  </Offsets>
+							</CheatEntry>
+						  </CheatEntries>
+						</CheatEntry>
+						<CheatEntry>
+						  <ID>500</ID>
+						  <Description>"Esthar"</Description>
+						  <Options moHideChildren="1"/>
+						  <GroupHeader>1</GroupHeader>
+						  <CheatEntries>
+							<CheatEntry>
+							  <ID>501</ID>
+							  <Description>"Open"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>0</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+7</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>502</ID>
+							  <Description>"Same"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>1</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+7</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>503</ID>
+							  <Description>"Plus"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>2</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+7</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>504</ID>
+							  <Description>"Random"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>3</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+7</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>505</ID>
+							  <Description>"Sudden Death"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>4</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+7</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>506</ID>
+							  <Description>"Same Wall"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>6</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+7</Offset>
+							  </Offsets>
+							</CheatEntry>
+							<CheatEntry>
+							  <ID>507</ID>
+							  <Description>"Elemental"</Description>
+							  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">0:Off
+1:On
+</DropDownList>
+							  <VariableType>Binary</VariableType>
+							  <BitStart>7</BitStart>
+							  <BitLength>1</BitLength>
+							  <ShowAsBinary>0</ShowAsBinary>
+							  <Address>BaseItemPtr + 1CFE * 4</Address>
+							  <Offsets>
+								<Offset>[BaseCardRulesOffset]+7</Offset>
+							  </Offsets>
+							</CheatEntry>
+						  </CheatEntries>
+						</CheatEntry>
+					  </CheatEntries>
+					</CheatEntry>					
+					<CheatEntry>
+					  <ID>4230</ID>
+					  <Description>"Queen of Card Location"</Description>
+					  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">1:Balamb
+2:Galbadia
+3:Trabia
+4:Centra
+5:Dollet
+6:Fishermans Horizon
+7:Lunar Gate
+8:Esthar
+</DropDownList>
+					  <VariableType>Byte</VariableType>
+					  <Address>BaseItemPtr + 1CFE * 4</Address>
+					  <Offsets>
+					    <Offset>[BaseCardRulesOffset]+17</Offset>
+					  </Offsets>
+					</CheatEntry>
+				  </CheatEntries>
+				</CheatEntry>				
+			  </CheatEntries>
+			</CheatEntry>
+		</CheatEntries>
+		</CheatEntry>
+	   </CheatEntries>
+	</CheatEntry>
+	</CheatEntries>
+<LuaScript>function lua_aobscan(name,module,bytes,index)
+  index = index - 1
+  if(module == "") then
+    local resultSet = AOBScan(bytes)
+      if(resultSet == nil) then
+        unregisterSymbol(name)
+        print(name.." not found")
+      else
+        unregisterSymbol(name)
+        registerSymbol(name,resultSet[index])
+        resultSet.destroy()
+      end
+  else
+    if(getModuleSize(module) == nil) then
+      print("Module "..module.." not found")
+    else
+      local memScanner = createMemScan()
+      local memFoundList = createFoundList(memScanner)
+      memScanner.firstScan(
+        soExactValue,vtByteArray,rtRounded,bytes,nil,
+        getAddress(module),(getAddress(module)+getModuleSize(module)),"",
+        fsmNotAligned,"",true,false,false,false)
+      memScanner.waitTillDone()
+      memFoundList.initialize()
+        if(memFoundList.Count == 0) then
+          unregisterSymbol(name)
+          print(name.." in module "..module.." not found")
+        else
+          unregisterSymbol(name)
+          registerSymbol(name,memFoundList.Address[index])
+        end
+      memScanner.destroy()
+      memFoundList.destroy()
+    end
+  end
+end
+</LuaScript>	
+</CheatTable>

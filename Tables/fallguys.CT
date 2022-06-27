@@ -1,0 +1,2497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="31">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>185</ID>
+      <Description>"Base Pointer(active this!)"</Description>
+      <Options moHideChildren="1"/>
+      <LastState Value="" Activated="1" RealAddress="247D7770000"/>
+      <GroupHeader>1</GroupHeader>
+      <Address>"GameAssembly.dll"+02BC6B88</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>5C8</Offset>
+        <Offset>158</Offset>
+      </Offsets>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>6</ID>
+          <Description>"normalMaxSpeed"</Description>
+          <LastState Value="9.5" RealAddress="247D7770018"/>
+          <VariableType>Float</VariableType>
+          <Address>+18</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>5</ID>
+          <Description>"getUpMaxSpeed"</Description>
+          <LastState Value="9.5" RealAddress="247D777001C"/>
+          <VariableType>Float</VariableType>
+          <Address>+1C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>7</ID>
+          <Description>"rollingMaxSpeed"</Description>
+          <LastState Value="7" RealAddress="247D7770020"/>
+          <VariableType>Float</VariableType>
+          <Address>+20</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>8</ID>
+          <Description>"rollingInAirMaxSpeed"</Description>
+          <LastState Value="0.200000003" RealAddress="247D7770024"/>
+          <VariableType>Float</VariableType>
+          <Address>+24</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>9</ID>
+          <Description>"grabbingMaxSpeed"</Description>
+          <LastState Value="5" RealAddress="247D7770028"/>
+          <VariableType>Float</VariableType>
+          <Address>+28</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>10</ID>
+          <Description>"grabbingAttemptMaxSpeed"</Description>
+          <LastState Value="7" RealAddress="247D777002C"/>
+          <VariableType>Float</VariableType>
+          <Address>+2C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>11</ID>
+          <Description>"carryMaxSpeed"</Description>
+          <LastState Value="8" RealAddress="247D7770030"/>
+          <VariableType>Float</VariableType>
+          <Address>+30</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>12</ID>
+          <Description>"normalTurnSpeed"</Description>
+          <LastState Value="8" RealAddress="247D7770034"/>
+          <VariableType>Float</VariableType>
+          <Address>+34</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>13</ID>
+          <Description>"aerialTurnSpeed"</Description>
+          <LastState Value="4" RealAddress="247D7770038"/>
+          <VariableType>Float</VariableType>
+          <Address>+38</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>14</ID>
+          <Description>"diveTurnSpeed"</Description>
+          <LastState Value="1.100000024" RealAddress="247D777003C"/>
+          <VariableType>Float</VariableType>
+          <Address>+3C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>15</ID>
+          <Description>"rollingTurnSpeed"</Description>
+          <LastState Value="3" RealAddress="247D7770040"/>
+          <VariableType>Float</VariableType>
+          <Address>+40</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>16</ID>
+          <Description>"rollingInAirTurnSpeed"</Description>
+          <LastState Value="0.3000000119" RealAddress="247D7770044"/>
+          <VariableType>Float</VariableType>
+          <Address>+44</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>17</ID>
+          <Description>"grabbingTurnSpeed"</Description>
+          <LastState Value="4" RealAddress="247D7770048"/>
+          <VariableType>Float</VariableType>
+          <Address>+48</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>18</ID>
+          <Description>"grabbingAttemptTurnSpeed"</Description>
+          <LastState Value="6" RealAddress="247D777004C"/>
+          <VariableType>Float</VariableType>
+          <Address>+4C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>19</ID>
+          <Description>"grabbedTurnSpeed"</Description>
+          <LastState Value="0.5" RealAddress="247D7770050"/>
+          <VariableType>Float</VariableType>
+          <Address>+50</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>31</ID>
+          <Description>"maxSlopeIncline"</Description>
+          <LastState Value="48" RealAddress="247D77700B0"/>
+          <VariableType>Float</VariableType>
+          <Address>+B0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>32</ID>
+          <Description>"maxSlopeInclineForAnim"</Description>
+          <LastState Value="30" RealAddress="247D77700B4"/>
+          <VariableType>Float</VariableType>
+          <Address>+B4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>33</ID>
+          <Description>"gravityScale"</Description>
+          <LastState Value="1.5" RealAddress="247D77700B8"/>
+          <VariableType>Float</VariableType>
+          <Address>+B8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>34</ID>
+          <Description>"maxGravityVelocity"</Description>
+          <LastState Value="40" RealAddress="247D77700BC"/>
+          <VariableType>Float</VariableType>
+          <Address>+BC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>35</ID>
+          <Description>"unintentionalMoveSpeedThreshold"</Description>
+          <LastState Value="0.75" RealAddress="247D77700C0"/>
+          <VariableType>Float</VariableType>
+          <Address>+C0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>36</ID>
+          <Description>"unintentionalMoveSpeedThresholdDuringEmote"</Description>
+          <LastState Value="1.5" RealAddress="247D77700C4"/>
+          <VariableType>Float</VariableType>
+          <Address>+C4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>37</ID>
+          <Description>"jumpForce"</Description>
+          <LastState Value="0" RealAddress="247D77700C8"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+C8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>38</ID>
+          <Description>"grabbedJumpForce"</Description>
+          <LastState Value="0" RealAddress="247D77700D4"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+D4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>39</ID>
+          <Description>"groundCheckLayers"</Description>
+          <LastState Value="257" RealAddress="247D77700E0"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+E0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>40</ID>
+          <Description>"groundedJumpTimeTolerance"</Description>
+          <LastState Value="0.200000003" RealAddress="247D77700E4"/>
+          <VariableType>Float</VariableType>
+          <Address>+E4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>41</ID>
+          <Description>"jumpSlopeFactor"</Description>
+          <LastState Value="0.8000000119" RealAddress="247D77700E8"/>
+          <VariableType>Float</VariableType>
+          <Address>+E8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>42</ID>
+          <Description>"landingJumpDelay"</Description>
+          <LastState Value="0.05000000075" RealAddress="247D77700EC"/>
+          <VariableType>Float</VariableType>
+          <Address>+EC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>43</ID>
+          <Description>"shouldRightCheckDistance"</Description>
+          <LastState Value="0.25" RealAddress="247D77700F0"/>
+          <VariableType>Float</VariableType>
+          <Address>+F0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>44</ID>
+          <Description>"groundCheckInset"</Description>
+          <LastState Value="0.5" RealAddress="247D77700F4"/>
+          <VariableType>Float</VariableType>
+          <Address>+F4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>45</ID>
+          <Description>"fallingBufferExtraDistanceCheck"</Description>
+          <LastState Value="0.400000006" RealAddress="247D77700F8"/>
+          <VariableType>Float</VariableType>
+          <Address>+F8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>46</ID>
+          <Description>"diveAngleInDegrees"</Description>
+          <LastState Value="50" RealAddress="247D77700FC"/>
+          <VariableType>Float</VariableType>
+          <Address>+FC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>47</ID>
+          <Description>"diveForce"</Description>
+          <LastState Value="16.5" RealAddress="247D7770100"/>
+          <VariableType>Float</VariableType>
+          <Address>+100</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>48</ID>
+          <Description>"airDiveAngleInDegrees"</Description>
+          <LastState Value="60" RealAddress="247D7770104"/>
+          <VariableType>Float</VariableType>
+          <Address>+104</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>49</ID>
+          <Description>"airDiveForce"</Description>
+          <LastState Value="7" RealAddress="247D7770108"/>
+          <VariableType>Float</VariableType>
+          <Address>+108</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>50</ID>
+          <Description>"diveCurveTurnSpeed"</Description>
+          <LastState Value="5.5" RealAddress="247D777010C"/>
+          <VariableType>Float</VariableType>
+          <Address>+10C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>52</ID>
+          <Description>"diveApplyForceAfterTime"</Description>
+          <LastState Value="0.09000000358" RealAddress="247D7770118"/>
+          <VariableType>Float</VariableType>
+          <Address>+118</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>53</ID>
+          <Description>"diveStartGetUpAfterTime"</Description>
+          <LastState Value="0.03999999911" RealAddress="247D777011C"/>
+          <VariableType>Float</VariableType>
+          <Address>+11C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>54</ID>
+          <Description>"diveSlopeFactor"</Description>
+          <LastState Value="3" RealAddress="247D7770120"/>
+          <VariableType>Float</VariableType>
+          <Address>+120</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>55</ID>
+          <Description>"grabRaycastFudgeDistance"</Description>
+          <LastState Value="0.009999999776" RealAddress="247D7770124"/>
+          <VariableType>Float</VariableType>
+          <Address>+124</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>56</ID>
+          <Description>"grabbableLayers"</Description>
+          <LastState Value="513" RealAddress="247D7770128"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+128</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>57</ID>
+          <Description>"grabBlockingLayers"</Description>
+          <LastState Value="4217601" RealAddress="247D777012C"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+12C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>58</ID>
+          <Description>"breakGrabAngle"</Description>
+          <LastState Value="75" RealAddress="247D7770130"/>
+          <VariableType>Float</VariableType>
+          <Address>+130</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>59</ID>
+          <Description>"armLength"</Description>
+          <LastState Value="1" RealAddress="247D7770134"/>
+          <VariableType>Float</VariableType>
+          <Address>+134</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>60</ID>
+          <Description>"minimumArmLength"</Description>
+          <LastState Value="0.8000000119" RealAddress="247D7770138"/>
+          <VariableType>Float</VariableType>
+          <Address>+138</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>61</ID>
+          <Description>"armBoundsForce"</Description>
+          <LastState Value="400" RealAddress="247D777013C"/>
+          <VariableType>Float</VariableType>
+          <Address>+13C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>62</ID>
+          <Description>"armBoundsTorque"</Description>
+          <LastState Value="1000" RealAddress="247D7770140"/>
+          <VariableType>Float</VariableType>
+          <Address>+140</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>63</ID>
+          <Description>"leftArmBounds"</Description>
+          <LastState Value="1099956224" RealAddress="247D7770144"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+144</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>64</ID>
+          <Description>"rightArmBounds"</Description>
+          <LastState Value="1124204544" RealAddress="247D7770154"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+154</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>65</ID>
+          <Description>"objectAngularDragWhenGrabbed"</Description>
+          <LastState Value="0" RealAddress="247D7770164"/>
+          <VariableType>Float</VariableType>
+          <Address>+164</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>66</ID>
+          <Description>"armSpringDamper"</Description>
+          <LastState Value="1000" RealAddress="247D7770168"/>
+          <VariableType>Float</VariableType>
+          <Address>+168</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>67</ID>
+          <Description>"armSpringValue"</Description>
+          <LastState Value="5000" RealAddress="247D777016C"/>
+          <VariableType>Float</VariableType>
+          <Address>+16C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>68</ID>
+          <Description>"forceReleaseRegrabCooldown"</Description>
+          <LastState Value="1" RealAddress="247D7770170"/>
+          <VariableType>Float</VariableType>
+          <Address>+170</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>69</ID>
+          <Description>"stillGrabbingAfterSlideCastRadius"</Description>
+          <LastState Value="0.200000003" RealAddress="247D7770174"/>
+          <VariableType>Float</VariableType>
+          <Address>+174</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>70</ID>
+          <Description>"playerGrabBreakForce"</Description>
+          <LastState Value="+Inf" RealAddress="247D7770178"/>
+          <VariableType>Float</VariableType>
+          <Address>+178</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>71</ID>
+          <Description>"grabCooldown"</Description>
+          <LastState Value="0.5" RealAddress="247D777017C"/>
+          <VariableType>Float</VariableType>
+          <Address>+17C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>72</ID>
+          <Description>"objectGrabAdditionalForceScale"</Description>
+          <LastState Value="10" RealAddress="247D7770180"/>
+          <VariableType>Float</VariableType>
+          <Address>+180</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>73</ID>
+          <Description>"objectGrabAdditionalPushForceScale"</Description>
+          <LastState Value="3" RealAddress="247D7770184"/>
+          <VariableType>Float</VariableType>
+          <Address>+184</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>74</ID>
+          <Description>"carryPickupDuration"</Description>
+          <LastState Value="0.1000000015" RealAddress="247D7770188"/>
+          <VariableType>Float</VariableType>
+          <Address>+188</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>75</ID>
+          <Description>"carryNormalDropForce"</Description>
+          <LastState Value="50" RealAddress="247D777018C"/>
+          <VariableType>Float</VariableType>
+          <Address>+18C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>76</ID>
+          <Description>"carryDiveDropForce"</Description>
+          <LastState Value="90" RealAddress="247D7770190"/>
+          <VariableType>Float</VariableType>
+          <Address>+190</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>77</ID>
+          <Description>"carryTussleReleaseForce"</Description>
+          <LastState Value="150" RealAddress="247D7770194"/>
+          <VariableType>Float</VariableType>
+          <Address>+194</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>78</ID>
+          <Description>"carryTussleRandomAngleOffset"</Description>
+          <LastState Value="10" RealAddress="247D7770198"/>
+          <VariableType>Float</VariableType>
+          <Address>+198</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>79</ID>
+          <Description>"carryTussleObjectImmunityDuration"</Description>
+          <LastState Value="0.6999999881" RealAddress="247D777019C"/>
+          <VariableType>Float</VariableType>
+          <Address>+19C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>80</ID>
+          <Description>"carryDropPlayerForceInfluence"</Description>
+          <LastState Value="10" RealAddress="247D77701A0"/>
+          <VariableType>Float</VariableType>
+          <Address>+1A0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>81</ID>
+          <Description>"carryAlwaysLoseTussleWhenGrabbed"</Description>
+          <LastState Value="1" RealAddress="247D77701A4"/>
+          <VariableType>Byte</VariableType>
+          <Address>+1A4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>82</ID>
+          <Description>"playerGrabDetectRadius"</Description>
+          <LastState Value="6" RealAddress="247D77701A8"/>
+          <VariableType>Float</VariableType>
+          <Address>+1A8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>83</ID>
+          <Description>"playerGrabCheckDistance"</Description>
+          <LastState Value="2" RealAddress="247D77701AC"/>
+          <VariableType>Float</VariableType>
+          <Address>+1AC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>84</ID>
+          <Description>"playerGrabCheckPredictionBase"</Description>
+          <LastState Value="0.1000000015" RealAddress="247D77701B0"/>
+          <VariableType>Float</VariableType>
+          <Address>+1B0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>85</ID>
+          <Description>"playerGrabCheckPredictionLagFactor"</Description>
+          <LastState Value="0.5" RealAddress="247D77701B4"/>
+          <VariableType>Float</VariableType>
+          <Address>+1B4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>86</ID>
+          <Description>"playerGrabCheckPredictionLocalScale"</Description>
+          <LastState Value="0" RealAddress="247D77701B8"/>
+          <VariableType>Float</VariableType>
+          <Address>+1B8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>87</ID>
+          <Description>"playerGrabAngle"</Description>
+          <LastState Value="45" RealAddress="247D77701BC"/>
+          <VariableType>Float</VariableType>
+          <Address>+1BC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>88</ID>
+          <Description>"playerGrabCarryTussleAngle"</Description>
+          <LastState Value="60" RealAddress="247D77701C0"/>
+          <VariableType>Float</VariableType>
+          <Address>+1C0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>89</ID>
+          <Description>"playerGrabBreakTime"</Description>
+          <LastState Value="1.200000048" RealAddress="247D77701C4"/>
+          <VariableType>Float</VariableType>
+          <Address>+1C4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>90</ID>
+          <Description>"playerGrabBreakTimeJumpInfluence"</Description>
+          <LastState Value="0.01999999955" RealAddress="247D77701C8"/>
+          <VariableType>Float</VariableType>
+          <Address>+1C8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>92</ID>
+          <Description>"playerGrabIntialVibration"</Description>
+          <LastState Value="0.5" RealAddress="247D77701D8"/>
+          <VariableType>Float</VariableType>
+          <Address>+1D8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>93</ID>
+          <Description>"playerGrabBreakFinalVibration"</Description>
+          <LastState Value="1" RealAddress="247D77701DC"/>
+          <VariableType>Float</VariableType>
+          <Address>+1DC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>94</ID>
+          <Description>"playerGrabBreakSeparationForce"</Description>
+          <LastState Value="7" RealAddress="247D77701E0"/>
+          <VariableType>Float</VariableType>
+          <Address>+1E0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>95</ID>
+          <Description>"playerGrabRegrabDelay"</Description>
+          <LastState Value="2" RealAddress="247D77701E4"/>
+          <VariableType>Float</VariableType>
+          <Address>+1E4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>96</ID>
+          <Description>"playerGrabbeeInvulnerabilityWindow"</Description>
+          <LastState Value="1.5" RealAddress="247D77701E8"/>
+          <VariableType>Float</VariableType>
+          <Address>+1E8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>97</ID>
+          <Description>"playerGrabOffset"</Description>
+          <LastState Value="1053609165" RealAddress="247D77701EC"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+1EC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>98</ID>
+          <Description>"playerGrabPositionPrediction"</Description>
+          <LastState Value="0.150000006" RealAddress="247D77701F8"/>
+          <VariableType>Float</VariableType>
+          <Address>+1F8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>99</ID>
+          <Description>"playerGrabTargetOffset"</Description>
+          <LastState Value="1.25" RealAddress="247D77701FC"/>
+          <VariableType>Float</VariableType>
+          <Address>+1FC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>100</ID>
+          <Description>"playerGrabTimeOfArrival"</Description>
+          <LastState Value="0.5" RealAddress="247D7770200"/>
+          <VariableType>Float</VariableType>
+          <Address>+200</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>101</ID>
+          <Description>"playerGrabberVelocityComponent"</Description>
+          <LastState Value="0.1000000015" RealAddress="247D7770204"/>
+          <VariableType>Float</VariableType>
+          <Address>+204</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>102</ID>
+          <Description>"playerGrabbeeVelocityComponent"</Description>
+          <LastState Value="0.200000003" RealAddress="247D7770208"/>
+          <VariableType>Float</VariableType>
+          <Address>+208</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>103</ID>
+          <Description>"playerGrabberMaxForce"</Description>
+          <LastState Value="0.6000000238" RealAddress="247D777020C"/>
+          <VariableType>Float</VariableType>
+          <Address>+20C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>104</ID>
+          <Description>"playerGrabbeeMaxForce"</Description>
+          <LastState Value="1" RealAddress="247D7770210"/>
+          <VariableType>Float</VariableType>
+          <Address>+210</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>105</ID>
+          <Description>"playerGrabberDragDirectionContribution"</Description>
+          <LastState Value="0.5" RealAddress="247D7770214"/>
+          <VariableType>Float</VariableType>
+          <Address>+214</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>106</ID>
+          <Description>"playerGrabImmediateVelocityReduction"</Description>
+          <LastState Value="0.5" RealAddress="247D7770218"/>
+          <VariableType>Float</VariableType>
+          <Address>+218</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>107</ID>
+          <Description>"playerGrabMaxHeightDifference"</Description>
+          <LastState Value="0.75" RealAddress="247D777021C"/>
+          <VariableType>Float</VariableType>
+          <Address>+21C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>108</ID>
+          <Description>"playerGrabServerConfirmationWindow"</Description>
+          <LastState Value="0.5" RealAddress="247D7770220"/>
+          <VariableType>Float</VariableType>
+          <Address>+220</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>109</ID>
+          <Description>"mantleableLayers"</Description>
+          <LastState Value="1" RealAddress="247D7770224"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+224</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>110</ID>
+          <Description>"mantleBlockingLayers"</Description>
+          <LastState Value="4217601" RealAddress="247D7770228"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+228</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>111</ID>
+          <Description>"mantleDownwardBlockingLayers"</Description>
+          <LastState Value="6401" RealAddress="247D777022C"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+22C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>112</ID>
+          <Description>"maxMantleTimeout"</Description>
+          <LastState Value="10" RealAddress="247D7770230"/>
+          <VariableType>Float</VariableType>
+          <Address>+230</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>115</ID>
+          <Description>"mantleCheckPosition"</Description>
+          <LastState Value="0" RealAddress="247D7770248"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+248</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>116</ID>
+          <Description>"mantleDirectionCheckPosition"</Description>
+          <LastState Value="0" RealAddress="247D7770254"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+254</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>117</ID>
+          <Description>"mantleCheckDistance"</Description>
+          <LastState Value="1" RealAddress="247D7770260"/>
+          <VariableType>Float</VariableType>
+          <Address>+260</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>118</ID>
+          <Description>"mantleCheckHeight"</Description>
+          <LastState Value="1.799999952" RealAddress="247D7770264"/>
+          <VariableType>Float</VariableType>
+          <Address>+264</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>119</ID>
+          <Description>"mantleHandsSpacing"</Description>
+          <LastState Value="1.100000024" RealAddress="247D7770268"/>
+          <VariableType>Float</VariableType>
+          <Address>+268</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>120</ID>
+          <Description>"mantleMaxHandsHeightDifference"</Description>
+          <LastState Value="0.200000003" RealAddress="247D777026C"/>
+          <VariableType>Float</VariableType>
+          <Address>+26C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>121</ID>
+          <Description>"mantleGrabOffset"</Description>
+          <LastState Value="0" RealAddress="247D7770270"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+270</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>122</ID>
+          <Description>"mantleGrabCooldown"</Description>
+          <LastState Value="0" RealAddress="247D777027C"/>
+          <VariableType>Float</VariableType>
+          <Address>+27C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>123</ID>
+          <Description>"mantleForwardThreshold"</Description>
+          <LastState Value="45" RealAddress="247D7770280"/>
+          <VariableType>Float</VariableType>
+          <Address>+280</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>124</ID>
+          <Description>"mantlePauseBeforeClimbDuration"</Description>
+          <LastState Value="0.1000000015" RealAddress="247D7770284"/>
+          <VariableType>Float</VariableType>
+          <Address>+284</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>125</ID>
+          <Description>"mantleForwardForce"</Description>
+          <LastState Value="0" RealAddress="247D7770288"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+288</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>126</ID>
+          <Description>"mantleTopClearance"</Description>
+          <LastState Value="0.1000000015" RealAddress="247D7770294"/>
+          <VariableType>Float</VariableType>
+          <Address>+294</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>127</ID>
+          <Description>"mantleEdgeClearance"</Description>
+          <LastState Value="0.6000000238" RealAddress="247D7770298"/>
+          <VariableType>Float</VariableType>
+          <Address>+298</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>128</ID>
+          <Description>"mantleClimbUpMinDuration"</Description>
+          <LastState Value="1.600000024" RealAddress="247D777029C"/>
+          <VariableType>Float</VariableType>
+          <Address>+29C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>129</ID>
+          <Description>"nonMantleSlideGravity"</Description>
+          <LastState Value="0" RealAddress="247D77702A0"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+2A0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>130</ID>
+          <Description>"minimumHandHeightForMantle"</Description>
+          <LastState Value="1" RealAddress="247D77702AC"/>
+          <VariableType>Float</VariableType>
+          <Address>+2AC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>131</ID>
+          <Description>"proportionOfMaxArmLengthForSlide"</Description>
+          <LastState Value="1" RealAddress="247D77702B0"/>
+          <VariableType>Float</VariableType>
+          <Address>+2B0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>132</ID>
+          <Description>"maxMantleFudgeRotation"</Description>
+          <LastState Value="30" RealAddress="247D77702B4"/>
+          <VariableType>Float</VariableType>
+          <Address>+2B4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>133</ID>
+          <Description>"braceCheckPositionOffset"</Description>
+          <LastState Value="0" RealAddress="247D77702B8"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+2B8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>134</ID>
+          <Description>"braceMinCheckDistance"</Description>
+          <LastState Value="1.5" RealAddress="247D77702C4"/>
+          <VariableType>Float</VariableType>
+          <Address>+2C4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>135</ID>
+          <Description>"braceMaxCheckDistance"</Description>
+          <LastState Value="5" RealAddress="247D77702C8"/>
+          <VariableType>Float</VariableType>
+          <Address>+2C8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>136</ID>
+          <Description>"braceCheckLayers"</Description>
+          <LastState Value="4096" RealAddress="247D77702CC"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+2CC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>137</ID>
+          <Description>"bracePushForce"</Description>
+          <LastState Value="8.5" RealAddress="247D77702D0"/>
+          <VariableType>Float</VariableType>
+          <Address>+2D0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>138</ID>
+          <Description>"bracePushForceMode"</Description>
+          <LastState Value="5" RealAddress="247D77702D4"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+2D4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>140</ID>
+          <Description>"bracePushCheckOffsetHigh"</Description>
+          <LastState Value="0" RealAddress="247D77702E0"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+2E0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>141</ID>
+          <Description>"bracePushCheckOffsetLow"</Description>
+          <LastState Value="0" RealAddress="247D77702EC"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+2EC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>142</ID>
+          <Description>"staggerForce"</Description>
+          <LastState Value="0.8000000119" RealAddress="247D77702F8"/>
+          <VariableType>Float</VariableType>
+          <Address>+2F8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>145</ID>
+          <Description>"stumbleBackAngle"</Description>
+          <LastState Value="80" RealAddress="247D7770310"/>
+          <VariableType>Float</VariableType>
+          <Address>+310</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>146</ID>
+          <Description>"fallOverAngle"</Description>
+          <LastState Value="30" RealAddress="247D7770314"/>
+          <VariableType>Float</VariableType>
+          <Address>+314</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>147</ID>
+          <Description>"dynamicCollisionStunForce"</Description>
+          <LastState Value="10" RealAddress="247D7770318"/>
+          <VariableType>Float</VariableType>
+          <Address>+318</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>148</ID>
+          <Description>"anyCollisionStunForce"</Description>
+          <LastState Value="28" RealAddress="247D777031C"/>
+          <VariableType>Float</VariableType>
+          <Address>+31C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>149</ID>
+          <Description>"pinThresholdToReact"</Description>
+          <LastState Value="0.6999999881" RealAddress="247D7770320"/>
+          <VariableType>Float</VariableType>
+          <Address>+320</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>150</ID>
+          <Description>"collisionPlayerToPlayerUnpinMultiplier"</Description>
+          <LastState Value="0.200000003" RealAddress="247D7770324"/>
+          <VariableType>Float</VariableType>
+          <Address>+324</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>151</ID>
+          <Description>"minStunTime"</Description>
+          <LastState Value="0.1000000015" RealAddress="247D7770328"/>
+          <VariableType>Float</VariableType>
+          <Address>+328</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>152</ID>
+          <Description>"maxGroundedStunTime"</Description>
+          <LastState Value="5" RealAddress="247D777032C"/>
+          <VariableType>Float</VariableType>
+          <Address>+32C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>154</ID>
+          <Description>"stunnedGroundMovementMinAngle"</Description>
+          <LastState Value="70" RealAddress="247D7770338"/>
+          <VariableType>Float</VariableType>
+          <Address>+338</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>155</ID>
+          <Description>"stunnedGroundRollVsMoveAngle"</Description>
+          <LastState Value="45" RealAddress="247D777033C"/>
+          <VariableType>Float</VariableType>
+          <Address>+33C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>156</ID>
+          <Description>"stunnedMovementDelay"</Description>
+          <LastState Value="0.200000003" RealAddress="247D7770340"/>
+          <VariableType>Float</VariableType>
+          <Address>+340</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>157</ID>
+          <Description>"stunnedMovementAcceleration"</Description>
+          <LastState Value="5.5" RealAddress="247D7770344"/>
+          <VariableType>Float</VariableType>
+          <Address>+344</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>158</ID>
+          <Description>"stunnedFlailAboveGroundHeight"</Description>
+          <LastState Value="1" RealAddress="247D7770348"/>
+          <VariableType>Float</VariableType>
+          <Address>+348</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>159</ID>
+          <Description>"stunnedFlailDelay"</Description>
+          <LastState Value="0.400000006" RealAddress="247D777034C"/>
+          <VariableType>Float</VariableType>
+          <Address>+34C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>160</ID>
+          <Description>"stunnedFlailRagdollBlend"</Description>
+          <LastState Value="0.5" RealAddress="247D7770350"/>
+          <VariableType>Float</VariableType>
+          <Address>+350</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>161</ID>
+          <Description>"getUpSpeedThreshold"</Description>
+          <LastState Value="2" RealAddress="247D7770354"/>
+          <VariableType>Float</VariableType>
+          <Address>+354</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>163</ID>
+          <Description>"getUpDelay"</Description>
+          <LastState Value="0" RealAddress="247D7770360"/>
+          <VariableType>Float</VariableType>
+          <Address>+360</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>164</ID>
+          <Description>"getUpBlendOutRagdollDuration"</Description>
+          <LastState Value="0.3000000119" RealAddress="247D7770364"/>
+          <VariableType>Float</VariableType>
+          <Address>+364</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>165</ID>
+          <Description>"getUpRollOverRotationSpeed"</Description>
+          <LastState Value="4" RealAddress="247D7770368"/>
+          <VariableType>Float</VariableType>
+          <Address>+368</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>167</ID>
+          <Description>"getUpRollOverAngleThreshold"</Description>
+          <LastState Value="30" RealAddress="247D7770378"/>
+          <VariableType>Float</VariableType>
+          <Address>+378</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>168</ID>
+          <Description>"getUpRollOverMaxDuration"</Description>
+          <LastState Value="0.5" RealAddress="247D777037C"/>
+          <VariableType>Float</VariableType>
+          <Address>+37C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>169</ID>
+          <Description>"getUpStandUprightRotationSpeed"</Description>
+          <LastState Value="3" RealAddress="247D7770380"/>
+          <VariableType>Float</VariableType>
+          <Address>+380</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>172</ID>
+          <Description>"getUpStandUprightAngleThreshold"</Description>
+          <LastState Value="15" RealAddress="247D7770398"/>
+          <VariableType>Float</VariableType>
+          <Address>+398</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>174</ID>
+          <Description>"getUpJumpInterruptTime"</Description>
+          <LastState Value="0.200000003" RealAddress="247D77703A8"/>
+          <VariableType>Float</VariableType>
+          <Address>+3A8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>175</ID>
+          <Description>"jostleDetectRadius"</Description>
+          <LastState Value="3" RealAddress="247D77703AC"/>
+          <VariableType>Float</VariableType>
+          <Address>+3AC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>176</ID>
+          <Description>"jostleInnerRadius"</Description>
+          <LastState Value="1" RealAddress="247D77703B0"/>
+          <VariableType>Float</VariableType>
+          <Address>+3B0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>177</ID>
+          <Description>"jostleOuterRadius"</Description>
+          <LastState Value="1.5" RealAddress="247D77703B4"/>
+          <VariableType>Float</VariableType>
+          <Address>+3B4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>178</ID>
+          <Description>"jostleSeparationScale"</Description>
+          <LastState Value="1" RealAddress="247D77703B8"/>
+          <VariableType>Float</VariableType>
+          <Address>+3B8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>179</ID>
+          <Description>"jostlePositionPrediction"</Description>
+          <LastState Value="3" RealAddress="247D77703BC"/>
+          <VariableType>Float</VariableType>
+          <Address>+3BC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>180</ID>
+          <Description>"TeleportVerticalOffset"</Description>
+          <LastState Value="0" RealAddress="247D77703C0"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+3C0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>181</ID>
+          <Description>"LandingFXMinForce"</Description>
+          <LastState Value="18" RealAddress="247D77703CC"/>
+          <VariableType>Float</VariableType>
+          <Address>+3CC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>182</ID>
+          <Description>"SmallImpactMinForceThreshold"</Description>
+          <LastState Value="8" RealAddress="247D77703D0"/>
+          <VariableType>Float</VariableType>
+          <Address>+3D0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>183</ID>
+          <Description>"MediumImpactMinForceThreshold"</Description>
+          <LastState Value="10" RealAddress="247D77703D4"/>
+          <VariableType>Float</VariableType>
+          <Address>+3D4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>184</ID>
+          <Description>"LargeImpactMinForceThreshold"</Description>
+          <LastState Value="2000" RealAddress="247D77703D8"/>
+          <VariableType>Float</VariableType>
+          <Address>+3D8</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+  <Structures StructVersion="2">
+    <Structure Name="String" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+      <Elements>
+        <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="Length" DisplayMethod="无符号整数"/>
+        <Element Offset="20" Vartype="Unicode String" Bytesize="128" Description="Value" DisplayMethod="无符号整数"/>
+      </Elements>
+    </Structure>
+    <Structure Name="GlobalGameStateClient" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+      <Elements>
+        <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+        <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="logLevel" DisplayMethod="无符号整数"/>
+        <Element Offset="32" Vartype="Float" Bytesize="4" Description="NetworkMetricsLoggingPeriod" DisplayMethod="无符号整数"/>
+        <Element Offset="36" Vartype="Float" Bytesize="4" Description="CpuMetricsLoggingPeriod" DisplayMethod="无符号整数"/>
+        <Element Offset="40" Vartype="Byte" Bytesize="1" Description="IsAutomatedClient" DisplayMethod="无符号整数"/>
+        <Element Offset="41" Vartype="Byte" Bytesize="1" Description="_isInServerProcess" DisplayMethod="无符号整数"/>
+        <Element Offset="42" Vartype="Byte" Bytesize="1" Description="_hasReceivedDisconnectionWarning" DisplayMethod="无符号整数"/>
+        <Element Offset="44" Vartype="Float" Bytesize="4" Description="_desiredReconnectTime" DisplayMethod="无符号整数"/>
+        <Element Offset="48" Vartype="Float" Bytesize="4" Description="_selfDestructTimer" DisplayMethod="无符号整数"/>
+        <Element Offset="52" Vartype="Byte" Bytesize="1" Description="_haveAttemptedDisconnection" DisplayMethod="无符号整数"/>
+        <Element Offset="56" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="UserName" DisplayMethod="无符号整数"/>
+        <Element Offset="64" Vartype="Byte" Bytesize="1" Description="WantsToContinue" DisplayMethod="无符号整数"/>
+        <Element Offset="65" Vartype="Byte" Bytesize="1" Description="SkipSplashScreen" DisplayMethod="无符号整数"/>
+        <Element Offset="72" Vartype="Pointer" Bytesize="8" Description="CustomisationSelections" DisplayMethod="无符号整数">
+          <Structure Name="CustomisationSelections" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+            <Elements>
+              <Element Offset="16" Vartype="Pointer" Bytesize="8" Description="ColourOption" DisplayMethod="无符号整数"/>
+              <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="PatternOption" DisplayMethod="无符号整数"/>
+              <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="CostumeTopOption" DisplayMethod="无符号整数"/>
+              <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="CostumeBottomOption" DisplayMethod="无符号整数"/>
+              <Element Offset="48" Vartype="Pointer" Bytesize="8" Description="CostumeFullOption" DisplayMethod="无符号整数"/>
+              <Element Offset="56" Vartype="Pointer" Bytesize="8" Description="FaceplateOption" DisplayMethod="无符号整数"/>
+              <Element Offset="64" Vartype="Pointer" Bytesize="8" Description="VictoryPoseOption" DisplayMethod="无符号整数"/>
+              <Element Offset="72" Vartype="Pointer" Bytesize="8" Description="NicknameOption" DisplayMethod="无符号整数">
+                <Structure Name="NicknameOption" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="&lt;ItemId&gt;k__BackingField" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="&lt;CMSData&gt;k__BackingField" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="&lt;DisplayName&gt;k__BackingField" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="80" Vartype="Pointer" Bytesize="8" Description="EmoteTopOption" DisplayMethod="无符号整数">
+                <Structure Name="EmotesOption" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="_itemId" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="_menuDisplaySprite" DisplayMethod="无符号整数"/>
+                    <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="&lt;CMSData&gt;k__BackingField" DisplayMethod="无符号整数"/>
+                    <Element Offset="48" Vartype="4 Bytes" Bytesize="4" Description="AnimatorStateId" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="88" Vartype="Pointer" Bytesize="8" Description="EmoteRightOption" DisplayMethod="无符号整数"/>
+              <Element Offset="96" Vartype="Pointer" Bytesize="8" Description="EmoteBottomOption" DisplayMethod="无符号整数"/>
+              <Element Offset="104" Vartype="Pointer" Bytesize="8" Description="EmoteLeftOption" DisplayMethod="无符号整数"/>
+            </Elements>
+          </Structure>
+        </Element>
+        <Element Offset="80" Vartype="Pointer" Bytesize="8" Description="_clientDebugCommandHandler" DisplayMethod="无符号整数"/>
+        <Element Offset="88" Vartype="4 Bytes" Bytesize="4" Description="&lt;UnsuccessfulLoginCount&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="96" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="&lt;LastConnectedServerAddress&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="104" Vartype="4 Bytes" Bytesize="4" Description="&lt;LastConnectedServerPort&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="112" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="&lt;LastConnectedEntryToken&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="120" Vartype="Pointer" Bytesize="8" Description="&lt;CurrentMenuFallGuy&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="128" Vartype="Pointer" Bytesize="8" Description="&lt;CachedAdmissionTicket&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="136" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="&lt;CachedEpisodeGuid&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="144" Vartype="Pointer" Bytesize="8" Description="&lt;CachedCompleteEpisodeDto&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="152" Vartype="Pointer" Bytesize="8" Description="&lt;GameStateView&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="160" Vartype="Pointer" Bytesize="8" Description="_configuration" DisplayMethod="无符号整数">
+          <Structure Name="CommonConfig" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+            <Elements>
+              <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+              <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="VFXPrefabs" DisplayMethod="无符号整数"/>
+              <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="networkedObjectPrefabs" DisplayMethod="无符号整数"/>
+              <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="materials" DisplayMethod="无符号整数"/>
+              <Element Offset="48" Vartype="Pointer" Bytesize="8" Description="gameServerHosts" DisplayMethod="无符号整数">
+                <Structure Name="List`1" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="Pointer" Bytesize="8" Description="_items" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="_size" DisplayMethod="无符号整数"/>
+                    <Element Offset="28" Vartype="4 Bytes" Bytesize="4" Description="_version" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="4 Bytes" Bytesize="4" Description="_syncRoot" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="56" Vartype="4 Bytes" Bytesize="4" Description="secondsBetweenReconnects" DisplayMethod="无符号整数"/>
+              <Element Offset="60" Vartype="4 Bytes" Bytesize="4" Description="maxReconnects" DisplayMethod="无符号整数"/>
+              <Element Offset="64" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="hostAddress" DisplayMethod="无符号整数"/>
+              <Element Offset="72" Vartype="4 Bytes" Bytesize="4" Description="hostPort" DisplayMethod="无符号整数"/>
+              <Element Offset="76" Vartype="Float" Bytesize="4" Description="defaultRoundTimer" DisplayMethod="无符号整数"/>
+              <Element Offset="80" Vartype="Pointer" Bytesize="8" Description="buildInfo" DisplayMethod="无符号整数"/>
+              <Element Offset="88" Vartype="Pointer" Bytesize="8" Description="currencies" DisplayMethod="无符号整数"/>
+              <Element Offset="96" Vartype="Pointer" Bytesize="8" Description="colourOptions" DisplayMethod="无符号整数"/>
+              <Element Offset="104" Vartype="Pointer" Bytesize="8" Description="teamColourOptions" DisplayMethod="无符号整数"/>
+              <Element Offset="112" Vartype="Pointer" Bytesize="8" Description="patternOptions" DisplayMethod="无符号整数"/>
+              <Element Offset="120" Vartype="Pointer" Bytesize="8" Description="bottomCostumes" DisplayMethod="无符号整数"/>
+              <Element Offset="128" Vartype="Pointer" Bytesize="8" Description="topCostumes" DisplayMethod="无符号整数"/>
+              <Element Offset="136" Vartype="Pointer" Bytesize="8" Description="fullCostumes" DisplayMethod="无符号整数"/>
+              <Element Offset="144" Vartype="Pointer" Bytesize="8" Description="emoteOptions" DisplayMethod="无符号整数"/>
+              <Element Offset="152" Vartype="Pointer" Bytesize="8" Description="faceplateOptions" DisplayMethod="无符号整数"/>
+              <Element Offset="160" Vartype="Pointer" Bytesize="8" Description="victoryOptions" DisplayMethod="无符号整数"/>
+              <Element Offset="168" Vartype="Pointer" Bytesize="8" Description="_itemDatabases" DisplayMethod="无符号整数"/>
+            </Elements>
+          </Structure>
+        </Element>
+        <Element Offset="168" Vartype="Pointer" Bytesize="8" Description="_playerProfile" DisplayMethod="无符号整数">
+          <Structure Name="自动创建 从 1D9B44480C0" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+            <Elements>
+              <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+              <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="platformServicesSo" DisplayMethod="无符号整数">
+                <Structure Name="PlatformServices" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="_identityProvider" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="_achievements" DisplayMethod="无符号整数">
+                      <Structure Name="SteamAchievements" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                        <Elements>
+                          <Element Offset="16" Vartype="Float" Bytesize="4" Description="_cooldownToRetryStoreStats" DisplayMethod="无符号整数"/>
+                        </Elements>
+                      </Structure>
+                    </Element>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="_PCPostProcessProfile" DisplayMethod="无符号整数">
+                <Structure Name="PostProcessProfile" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="settings" DisplayMethod="无符号整数">
+                      <Structure Name="List`1" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                        <Elements>
+                          <Element Offset="16" Vartype="Pointer" Bytesize="8" Description="_items" DisplayMethod="无符号整数"/>
+                          <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="_size" DisplayMethod="无符号整数"/>
+                          <Element Offset="28" Vartype="4 Bytes" Bytesize="4" Description="_version" DisplayMethod="无符号整数"/>
+                          <Element Offset="32" Vartype="4 Bytes" Bytesize="4" Description="_syncRoot" DisplayMethod="无符号整数"/>
+                        </Elements>
+                      </Structure>
+                    </Element>
+                    <Element Offset="32" Vartype="Byte" Bytesize="1" Description="isDirty" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="CustomisationSelections" DisplayMethod="无符号整数">
+                <Structure Name="CustomisationSelections" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="Pointer" Bytesize="8" Description="ColourOption" DisplayMethod="无符号整数">
+                      <Structure Name="ColourOption" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                        <Elements>
+                          <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+                          <Element Offset="24" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="_itemId" DisplayMethod="无符号整数"/>
+                          <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="_menuDisplaySprite" DisplayMethod="无符号整数"/>
+                          <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="&lt;CMSData&gt;k__BackingField" DisplayMethod="无符号整数"/>
+                          <Element Offset="48" Vartype="4 Bytes" Bytesize="4" Description="primaryColour" DisplayMethod="无符号整数"/>
+                          <Element Offset="64" Vartype="4 Bytes" Bytesize="4" Description="secondaryColour" DisplayMethod="无符号整数"/>
+                          <Element Offset="80" Vartype="Float" Bytesize="4" Description="primarySmoothness" DisplayMethod="无符号整数"/>
+                          <Element Offset="84" Vartype="Float" Bytesize="4" Description="secondarySmoothness" DisplayMethod="无符号整数"/>
+                          <Element Offset="88" Vartype="Float" Bytesize="4" Description="primaryMetallic" DisplayMethod="无符号整数"/>
+                          <Element Offset="92" Vartype="Float" Bytesize="4" Description="secondaryMetallic" DisplayMethod="无符号整数"/>
+                          <Element Offset="96" Vartype="4 Bytes" Bytesize="4" Description="rimColor" DisplayMethod="无符号整数"/>
+                          <Element Offset="112" Vartype="Float" Bytesize="4" Description="rimPower" DisplayMethod="无符号整数"/>
+                        </Elements>
+                      </Structure>
+                    </Element>
+                    <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="PatternOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="CostumeTopOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="CostumeBottomOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="48" Vartype="Pointer" Bytesize="8" Description="CostumeFullOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="56" Vartype="Pointer" Bytesize="8" Description="FaceplateOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="64" Vartype="Pointer" Bytesize="8" Description="VictoryPoseOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="72" Vartype="Pointer" Bytesize="8" Description="NicknameOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="80" Vartype="Pointer" Bytesize="8" Description="EmoteTopOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="88" Vartype="Pointer" Bytesize="8" Description="EmoteRightOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="96" Vartype="Pointer" Bytesize="8" Description="EmoteBottomOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="104" Vartype="Pointer" Bytesize="8" Description="EmoteLeftOption" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="48" Vartype="Pointer" Bytesize="8" Description="serverSettings" DisplayMethod="无符号整数">
+                <Structure Name="ServerSettings" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="ServerAddress" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="ServerPort" DisplayMethod="无符号整数"/>
+                    <Element Offset="28" Vartype="4 Bytes" Bytesize="4" Description="MatchmakingEnv" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="MatchmakingEntryCode" DisplayMethod="无符号整数"/>
+                    <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="clientConfig" DisplayMethod="无符号整数">
+                      <Structure Name="ClientConfig" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                        <Elements>
+                          <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+                          <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="defaultMatchEnvironment" DisplayMethod="无符号整数"/>
+                        </Elements>
+                      </Structure>
+                    </Element>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="56" Vartype="Pointer" Bytesize="8" Description="&lt;GraphicsSettings&gt;k__BackingField" DisplayMethod="无符号整数">
+                <Structure Name="GraphicsSettings" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="GraphicPreset" DisplayMethod="无符号整数"/>
+                    <Element Offset="20" Vartype="4 Bytes" Bytesize="4" Description="ResolutionW" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="ResolutionH" DisplayMethod="无符号整数"/>
+                    <Element Offset="28" Vartype="4 Bytes" Bytesize="4" Description="ResolutionHz" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Byte" Bytesize="1" Description="Windowed" DisplayMethod="无符号整数"/>
+                    <Element Offset="33" Vartype="Byte" Bytesize="1" Description="VSync" DisplayMethod="无符号整数"/>
+                    <Element Offset="36" Vartype="4 Bytes" Bytesize="4" Description="TextureQuality" DisplayMethod="无符号整数"/>
+                    <Element Offset="40" Vartype="4 Bytes" Bytesize="4" Description="ShadowsQuality" DisplayMethod="无符号整数"/>
+                    <Element Offset="44" Vartype="Byte" Bytesize="1" Description="MotionBlur" DisplayMethod="无符号整数"/>
+                    <Element Offset="45" Vartype="Byte" Bytesize="1" Description="Bloom" DisplayMethod="无符号整数"/>
+                    <Element Offset="46" Vartype="Byte" Bytesize="1" Description="DepthOfField" DisplayMethod="无符号整数"/>
+                    <Element Offset="48" Vartype="4 Bytes" Bytesize="4" Description="AmbientOcclusion" DisplayMethod="无符号整数"/>
+                    <Element Offset="52" Vartype="4 Bytes" Bytesize="4" Description="Antialiasing" DisplayMethod="无符号整数"/>
+                    <Element Offset="56" Vartype="4 Bytes" Bytesize="4" Description="ScreenSpaceReflections" DisplayMethod="无符号整数"/>
+                    <Element Offset="60" Vartype="Byte" Bytesize="1" Description="AnisotropicFiltering" DisplayMethod="无符号整数"/>
+                    <Element Offset="64" Vartype="Pointer" Bytesize="8" Description="_PCPostProcessProfile" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="64" Vartype="Pointer" Bytesize="8" Description="&lt;AudioSettings&gt;k__BackingField" DisplayMethod="无符号整数">
+                <Structure Name="AudioSettings" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="Float" Bytesize="4" Description="MasterVolume" DisplayMethod="无符号整数"/>
+                    <Element Offset="20" Vartype="Float" Bytesize="4" Description="MusicVolume" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="Float" Bytesize="4" Description="SFXVolume" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="_applyInitialAudioSettings" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="72" Vartype="Pointer" Bytesize="8" Description="&lt;ExtraControlsSettings&gt;k__BackingField" DisplayMethod="无符号整数"/>
+            </Elements>
+          </Structure>
+        </Element>
+        <Element Offset="176" Vartype="Pointer" Bytesize="8" Description="_netObjectManager" DisplayMethod="无符号整数">
+          <Structure Name="MPGNetObjectManager" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+            <Elements>
+              <Element Offset="16" Vartype="Pointer" Bytesize="8" Description="_netObjects" DisplayMethod="无符号整数"/>
+              <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="_deadNetObjects" DisplayMethod="无符号整数"/>
+              <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="_netIDCache" DisplayMethod="无符号整数"/>
+              <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="_previouslySpawnedObjects" DisplayMethod="无符号整数"/>
+              <Element Offset="48" Vartype="Pointer" Bytesize="8" Description="_networkedObjectPrefabs" DisplayMethod="无符号整数"/>
+              <Element Offset="56" Vartype="Pointer" Bytesize="8" Description="_networkedObjectMaterials" DisplayMethod="无符号整数"/>
+              <Element Offset="64" Vartype="Pointer" Bytesize="8" Description="OnSpawnNetObject" DisplayMethod="无符号整数"/>
+              <Element Offset="72" Vartype="Pointer" Bytesize="8" Description="OnUnspawnNetObject" DisplayMethod="无符号整数"/>
+              <Element Offset="80" Vartype="Pointer" Bytesize="8" Description="OnPlayerSpawned" DisplayMethod="无符号整数"/>
+              <Element Offset="88" Vartype="Pointer" Bytesize="8" Description="OnNPCSpawned" DisplayMethod="无符号整数"/>
+              <Element Offset="96" Vartype="4 Bytes" Bytesize="4" Description="_networkMode" DisplayMethod="无符号整数"/>
+              <Element Offset="100" Vartype="4 Bytes" Bytesize="4" Description="_nextNetID" DisplayMethod="无符号整数"/>
+              <Element Offset="104" Vartype="Pointer" Bytesize="8" Description="_transformSnapshotRelay" DisplayMethod="无符号整数"/>
+              <Element Offset="112" Vartype="Pointer" Bytesize="8" Description="_fullTransformSnapshotRelay" DisplayMethod="无符号整数"/>
+              <Element Offset="120" Vartype="Pointer" Bytesize="8" Description="_keysToRemove" DisplayMethod="无符号整数"/>
+            </Elements>
+          </Structure>
+        </Element>
+        <Element Offset="184" Vartype="Pointer" Bytesize="8" Description="_gameStateMachine" DisplayMethod="无符号整数"/>
+        <Element Offset="192" Vartype="Pointer" Bytesize="8" Description="_eventSystem" DisplayMethod="无符号整数"/>
+        <Element Offset="200" Vartype="4 Bytes" Bytesize="4" Description="_showModalMessageEventHandler" DisplayMethod="无符号整数"/>
+        <Element Offset="216" Vartype="4 Bytes" Bytesize="4" Description="_reloadGameEventHandler" DisplayMethod="无符号整数"/>
+        <Element Offset="232" Vartype="4 Bytes" Bytesize="4" Description="_completeEpisodeReceivedEventHandler" DisplayMethod="无符号整数"/>
+        <Element Offset="248" Vartype="4 Bytes" Bytesize="4" Description="_successfulLoginHandle" DisplayMethod="无符号整数"/>
+        <Element Offset="264" Vartype="4 Bytes" Bytesize="4" Description="_unsuccessfulLoginHandle" DisplayMethod="无符号整数"/>
+        <Element Offset="280" Vartype="4 Bytes" Bytesize="4" Description="_disconnectFromServerHandle" DisplayMethod="无符号整数"/>
+        <Element Offset="296" Vartype="Pointer" Bytesize="8" Description="_canvas" DisplayMethod="无符号整数">
+          <Structure Name="Canvas" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+            <Elements>
+              <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+            </Elements>
+          </Structure>
+        </Element>
+        <Element Offset="304" Vartype="Pointer" Bytesize="8" Description="_screenManager" DisplayMethod="无符号整数">
+          <Structure Name="ScreenManager" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+            <Elements>
+              <Element Offset="16" Vartype="Pointer" Bytesize="8" Description="_pExistingScreen" DisplayMethod="无符号整数"/>
+              <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="_canvas" DisplayMethod="无符号整数">
+                <Structure Name="Canvas" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="_uiPrefabs" DisplayMethod="无符号整数">
+                <Structure Name="Dictionary`2" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="Pointer" Bytesize="8" Description="buckets" DisplayMethod="无符号整数">
+                      <Structure Name="Int32[]" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                        <Elements>
+                          <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="Count" DisplayMethod="无符号整数"/>
+                          <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="Item[0]" DisplayMethod="无符号整数">
+                            <Structure Name="System.Int32" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                              <Elements>
+                                <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_value" DisplayMethod="无符号整数"/>
+                              </Elements>
+                            </Structure>
+                          </Element>
+                          <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="Item[1]" DisplayMethod="无符号整数">
+                            <Structure Name="System.Int32" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                              <Elements>
+                                <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_value" DisplayMethod="无符号整数"/>
+                              </Elements>
+                            </Structure>
+                          </Element>
+                          <Element Offset="48" Vartype="Pointer" Bytesize="8" Description="Item[2]" DisplayMethod="无符号整数">
+                            <Structure Name="System.Int32" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                              <Elements>
+                                <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_value" DisplayMethod="无符号整数"/>
+                              </Elements>
+                            </Structure>
+                          </Element>
+                          <Element Offset="56" Vartype="Pointer" Bytesize="8" Description="Item[3]" DisplayMethod="无符号整数">
+                            <Structure Name="System.Int32" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                              <Elements>
+                                <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_value" DisplayMethod="无符号整数"/>
+                              </Elements>
+                            </Structure>
+                          </Element>
+                          <Element Offset="64" Vartype="Pointer" Bytesize="8" Description="Item[4]" DisplayMethod="无符号整数">
+                            <Structure Name="System.Int32" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                              <Elements>
+                                <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_value" DisplayMethod="无符号整数"/>
+                              </Elements>
+                            </Structure>
+                          </Element>
+                          <Element Offset="72" Vartype="Pointer" Bytesize="8" Description="Item[5]" DisplayMethod="无符号整数">
+                            <Structure Name="System.Int32" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                              <Elements>
+                                <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_value" DisplayMethod="无符号整数"/>
+                              </Elements>
+                            </Structure>
+                          </Element>
+                          <Element Offset="80" Vartype="Pointer" Bytesize="8" Description="Item[6]" DisplayMethod="无符号整数">
+                            <Structure Name="System.Int32" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                              <Elements>
+                                <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_value" DisplayMethod="无符号整数"/>
+                              </Elements>
+                            </Structure>
+                          </Element>
+                          <Element Offset="88" Vartype="Pointer" Bytesize="8" Description="Item[7]" DisplayMethod="无符号整数">
+                            <Structure Name="System.Int32" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                              <Elements>
+                                <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_value" DisplayMethod="无符号整数"/>
+                              </Elements>
+                            </Structure>
+                          </Element>
+                          <Element Offset="96" Vartype="Pointer" Bytesize="8" Description="Item[8]" DisplayMethod="无符号整数">
+                            <Structure Name="System.Int32" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                              <Elements>
+                                <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_value" DisplayMethod="无符号整数"/>
+                              </Elements>
+                            </Structure>
+                          </Element>
+                          <Element Offset="104" Vartype="Pointer" Bytesize="8" Description="Item[9]" DisplayMethod="无符号整数">
+                            <Structure Name="System.Int32" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                              <Elements>
+                                <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_value" DisplayMethod="无符号整数"/>
+                              </Elements>
+                            </Structure>
+                          </Element>
+                        </Elements>
+                      </Structure>
+                    </Element>
+                    <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="entries" DisplayMethod="无符号整数">
+                      <Structure Name="Entry[]" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                        <Elements>
+                          <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="Count" DisplayMethod="无符号整数"/>
+                          <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="Item[0]" DisplayMethod="无符号整数">
+                            <Structure Name="System.Collections.Generic.Dictionary.Entry&lt;System.String,UnityEngine.GameObject&gt;" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                              <Elements>
+                                <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="hashCode" DisplayMethod="无符号整数"/>
+                                <Element Offset="20" Vartype="4 Bytes" Bytesize="4" Description="next" DisplayMethod="无符号整数"/>
+                                <Element Offset="24" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="key" DisplayMethod="无符号整数"/>
+                                <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="value" DisplayMethod="无符号整数"/>
+                              </Elements>
+                            </Structure>
+                          </Element>
+                          <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="Item[1]" DisplayMethod="无符号整数">
+                            <Structure Name="System.Collections.Generic.Dictionary.Entry&lt;System.String,UnityEngine.GameObject&gt;" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                              <Elements>
+                                <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="hashCode" DisplayMethod="无符号整数"/>
+                                <Element Offset="20" Vartype="4 Bytes" Bytesize="4" Description="next" DisplayMethod="无符号整数"/>
+                                <Element Offset="24" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="key" DisplayMethod="无符号整数"/>
+                                <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="value" DisplayMethod="无符号整数"/>
+                              </Elements>
+                            </Structure>
+                          </Element>
+                          <Element Offset="48" Vartype="Pointer" Bytesize="8" Description="Item[2]" DisplayMethod="无符号整数">
+                            <Structure Name="System.Collections.Generic.Dictionary.Entry&lt;System.String,UnityEngine.GameObject&gt;" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                              <Elements>
+                                <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="hashCode" DisplayMethod="无符号整数"/>
+                                <Element Offset="20" Vartype="4 Bytes" Bytesize="4" Description="next" DisplayMethod="无符号整数"/>
+                                <Element Offset="24" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="key" DisplayMethod="无符号整数"/>
+                                <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="value" DisplayMethod="无符号整数"/>
+                              </Elements>
+                            </Structure>
+                          </Element>
+                          <Element Offset="56" Vartype="Pointer" Bytesize="8" Description="Item[3]" DisplayMethod="无符号整数">
+                            <Structure Name="System.Collections.Generic.Dictionary.Entry&lt;System.String,UnityEngine.GameObject&gt;" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                              <Elements>
+                                <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="hashCode" DisplayMethod="无符号整数"/>
+                                <Element Offset="20" Vartype="4 Bytes" Bytesize="4" Description="next" DisplayMethod="无符号整数"/>
+                                <Element Offset="24" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="key" DisplayMethod="无符号整数"/>
+                                <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="value" DisplayMethod="无符号整数"/>
+                              </Elements>
+                            </Structure>
+                          </Element>
+                          <Element Offset="64" Vartype="Pointer" Bytesize="8" Description="Item[4]" DisplayMethod="无符号整数">
+                            <Structure Name="System.Collections.Generic.Dictionary.Entry&lt;System.String,UnityEngine.GameObject&gt;" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                              <Elements>
+                                <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="hashCode" DisplayMethod="无符号整数"/>
+                                <Element Offset="20" Vartype="4 Bytes" Bytesize="4" Description="next" DisplayMethod="无符号整数"/>
+                                <Element Offset="24" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="key" DisplayMethod="无符号整数"/>
+                                <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="value" DisplayMethod="无符号整数"/>
+                              </Elements>
+                            </Structure>
+                          </Element>
+                          <Element Offset="72" Vartype="Pointer" Bytesize="8" Description="Item[5]" DisplayMethod="无符号整数">
+                            <Structure Name="System.Collections.Generic.Dictionary.Entry&lt;System.String,UnityEngine.GameObject&gt;" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                              <Elements>
+                                <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="hashCode" DisplayMethod="无符号整数"/>
+                                <Element Offset="20" Vartype="4 Bytes" Bytesize="4" Description="next" DisplayMethod="无符号整数"/>
+                                <Element Offset="24" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="key" DisplayMethod="无符号整数"/>
+                                <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="value" DisplayMethod="无符号整数"/>
+                              </Elements>
+                            </Structure>
+                          </Element>
+                          <Element Offset="80" Vartype="Pointer" Bytesize="8" Description="Item[6]" DisplayMethod="无符号整数">
+                            <Structure Name="System.Collections.Generic.Dictionary.Entry&lt;System.String,UnityEngine.GameObject&gt;" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                              <Elements>
+                                <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="hashCode" DisplayMethod="无符号整数"/>
+                                <Element Offset="20" Vartype="4 Bytes" Bytesize="4" Description="next" DisplayMethod="无符号整数"/>
+                                <Element Offset="24" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="key" DisplayMethod="无符号整数"/>
+                                <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="value" DisplayMethod="无符号整数"/>
+                              </Elements>
+                            </Structure>
+                          </Element>
+                          <Element Offset="88" Vartype="Pointer" Bytesize="8" Description="Item[7]" DisplayMethod="无符号整数">
+                            <Structure Name="System.Collections.Generic.Dictionary.Entry&lt;System.String,UnityEngine.GameObject&gt;" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                              <Elements>
+                                <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="hashCode" DisplayMethod="无符号整数"/>
+                                <Element Offset="20" Vartype="4 Bytes" Bytesize="4" Description="next" DisplayMethod="无符号整数"/>
+                                <Element Offset="24" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="key" DisplayMethod="无符号整数"/>
+                                <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="value" DisplayMethod="无符号整数"/>
+                              </Elements>
+                            </Structure>
+                          </Element>
+                          <Element Offset="96" Vartype="Pointer" Bytesize="8" Description="Item[8]" DisplayMethod="无符号整数">
+                            <Structure Name="System.Collections.Generic.Dictionary.Entry&lt;System.String,UnityEngine.GameObject&gt;" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                              <Elements>
+                                <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="hashCode" DisplayMethod="无符号整数"/>
+                                <Element Offset="20" Vartype="4 Bytes" Bytesize="4" Description="next" DisplayMethod="无符号整数"/>
+                                <Element Offset="24" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="key" DisplayMethod="无符号整数"/>
+                                <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="value" DisplayMethod="无符号整数"/>
+                              </Elements>
+                            </Structure>
+                          </Element>
+                          <Element Offset="104" Vartype="Pointer" Bytesize="8" Description="Item[9]" DisplayMethod="无符号整数">
+                            <Structure Name="System.Collections.Generic.Dictionary.Entry&lt;System.String,UnityEngine.GameObject&gt;" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                              <Elements>
+                                <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="hashCode" DisplayMethod="无符号整数"/>
+                                <Element Offset="20" Vartype="4 Bytes" Bytesize="4" Description="next" DisplayMethod="无符号整数"/>
+                                <Element Offset="24" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="key" DisplayMethod="无符号整数"/>
+                                <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="value" DisplayMethod="无符号整数"/>
+                              </Elements>
+                            </Structure>
+                          </Element>
+                        </Elements>
+                      </Structure>
+                    </Element>
+                    <Element Offset="32" Vartype="4 Bytes" Bytesize="4" Description="count" DisplayMethod="无符号整数"/>
+                    <Element Offset="36" Vartype="4 Bytes" Bytesize="4" Description="version" DisplayMethod="无符号整数"/>
+                    <Element Offset="40" Vartype="4 Bytes" Bytesize="4" Description="freeList" DisplayMethod="无符号整数"/>
+                    <Element Offset="44" Vartype="4 Bytes" Bytesize="4" Description="freeCount" DisplayMethod="无符号整数"/>
+                    <Element Offset="48" Vartype="Pointer" Bytesize="8" Description="comparer" DisplayMethod="无符号整数"/>
+                    <Element Offset="56" Vartype="Pointer" Bytesize="8" Description="keys" DisplayMethod="无符号整数"/>
+                    <Element Offset="64" Vartype="Pointer" Bytesize="8" Description="values" DisplayMethod="无符号整数"/>
+                    <Element Offset="72" Vartype="4 Bytes" Bytesize="4" Description="_syncRoot" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="_pModalClosedCB" DisplayMethod="无符号整数"/>
+              <Element Offset="48" Vartype="Pointer" Bytesize="8" Description="_currentPopupMessage" DisplayMethod="无符号整数"/>
+            </Elements>
+          </Structure>
+        </Element>
+        <Element Offset="312" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="_SceneToLoad" DisplayMethod="无符号整数"/>
+        <Element Offset="320" Vartype="4 Bytes" Bytesize="4" Description="_localClientNetworkID" DisplayMethod="无符号整数"/>
+        <Element Offset="328" Vartype="Pointer" Bytesize="8" Description="_networkManager" DisplayMethod="无符号整数"/>
+        <Element Offset="336" Vartype="Float" Bytesize="4" Description="_TimeBetweenTransformMessages" DisplayMethod="无符号整数"/>
+        <Element Offset="344" Vartype="Pointer" Bytesize="8" Description="_episodesSO" DisplayMethod="无符号整数"/>
+        <Element Offset="352" Vartype="Pointer" Bytesize="8" Description="_nicknamesSO" DisplayMethod="无符号整数"/>
+        <Element Offset="360" Vartype="Pointer" Bytesize="8" Description="_localPlayers" DisplayMethod="无符号整数">
+          <Structure Name="List`1" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+            <Elements>
+              <Element Offset="16" Vartype="Pointer" Bytesize="8" Description="_items" DisplayMethod="无符号整数"/>
+              <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="_size" DisplayMethod="无符号整数"/>
+              <Element Offset="28" Vartype="4 Bytes" Bytesize="4" Description="_version" DisplayMethod="无符号整数"/>
+              <Element Offset="32" Vartype="4 Bytes" Bytesize="4" Description="_syncRoot" DisplayMethod="无符号整数"/>
+            </Elements>
+          </Structure>
+        </Element>
+        <Element Offset="368" Vartype="Byte" Bytesize="1" Description="_ready" DisplayMethod="无符号整数"/>
+        <Element Offset="369" Vartype="Byte" Bytesize="1" Description="_extraLatencySimulationEnabled" DisplayMethod="无符号整数"/>
+        <Element Offset="376" Vartype="Pointer" Bytesize="8" Description="&lt;QosManager&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="384" Vartype="4 Bytes" Bytesize="4" Description="&lt;MatchmakingEnv&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="388" Vartype="Byte" Bytesize="1" Description="&lt;AttemptingToMatchMakeIntoEpisode&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="392" Vartype="Float" Bytesize="4" Description="&lt;SimulatedExtraLatency&gt;k__BackingField" DisplayMethod="无符号整数"/>
+      </Elements>
+    </Structure>
+    <Structure Name="GlobalGameStateClient" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+      <Elements>
+        <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+        <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="logLevel" DisplayMethod="无符号整数"/>
+        <Element Offset="32" Vartype="Float" Bytesize="4" Description="NetworkMetricsLoggingPeriod" DisplayMethod="无符号整数"/>
+        <Element Offset="36" Vartype="Float" Bytesize="4" Description="CpuMetricsLoggingPeriod" DisplayMethod="无符号整数"/>
+        <Element Offset="40" Vartype="Byte" Bytesize="1" Description="IsAutomatedClient" DisplayMethod="无符号整数"/>
+        <Element Offset="41" Vartype="Byte" Bytesize="1" Description="_isInServerProcess" DisplayMethod="无符号整数"/>
+        <Element Offset="42" Vartype="Byte" Bytesize="1" Description="_hasReceivedDisconnectionWarning" DisplayMethod="无符号整数"/>
+        <Element Offset="44" Vartype="Float" Bytesize="4" Description="_desiredReconnectTime" DisplayMethod="无符号整数"/>
+        <Element Offset="48" Vartype="Float" Bytesize="4" Description="_selfDestructTimer" DisplayMethod="无符号整数"/>
+        <Element Offset="52" Vartype="Byte" Bytesize="1" Description="_haveAttemptedDisconnection" DisplayMethod="无符号整数"/>
+        <Element Offset="56" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="UserName" DisplayMethod="无符号整数"/>
+        <Element Offset="64" Vartype="Byte" Bytesize="1" Description="WantsToContinue" DisplayMethod="无符号整数"/>
+        <Element Offset="65" Vartype="Byte" Bytesize="1" Description="SkipSplashScreen" DisplayMethod="无符号整数"/>
+        <Element Offset="72" Vartype="Pointer" Bytesize="8" Description="CustomisationSelections" DisplayMethod="无符号整数">
+          <Structure Name="CustomisationSelections" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+            <Elements>
+              <Element Offset="16" Vartype="Pointer" Bytesize="8" Description="ColourOption" DisplayMethod="无符号整数"/>
+              <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="PatternOption" DisplayMethod="无符号整数"/>
+              <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="CostumeTopOption" DisplayMethod="无符号整数"/>
+              <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="CostumeBottomOption" DisplayMethod="无符号整数"/>
+              <Element Offset="48" Vartype="Pointer" Bytesize="8" Description="CostumeFullOption" DisplayMethod="无符号整数"/>
+              <Element Offset="56" Vartype="Pointer" Bytesize="8" Description="FaceplateOption" DisplayMethod="无符号整数"/>
+              <Element Offset="64" Vartype="Pointer" Bytesize="8" Description="VictoryPoseOption" DisplayMethod="无符号整数"/>
+              <Element Offset="72" Vartype="Pointer" Bytesize="8" Description="NicknameOption" DisplayMethod="无符号整数">
+                <Structure Name="NicknameOption" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="&lt;ItemId&gt;k__BackingField" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="&lt;CMSData&gt;k__BackingField" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="&lt;DisplayName&gt;k__BackingField" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="80" Vartype="Pointer" Bytesize="8" Description="EmoteTopOption" DisplayMethod="无符号整数"/>
+              <Element Offset="88" Vartype="Pointer" Bytesize="8" Description="EmoteRightOption" DisplayMethod="无符号整数"/>
+              <Element Offset="96" Vartype="Pointer" Bytesize="8" Description="EmoteBottomOption" DisplayMethod="无符号整数"/>
+              <Element Offset="104" Vartype="Pointer" Bytesize="8" Description="EmoteLeftOption" DisplayMethod="无符号整数"/>
+            </Elements>
+          </Structure>
+        </Element>
+        <Element Offset="80" Vartype="Pointer" Bytesize="8" Description="_clientDebugCommandHandler" DisplayMethod="无符号整数"/>
+        <Element Offset="88" Vartype="4 Bytes" Bytesize="4" Description="&lt;UnsuccessfulLoginCount&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="96" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="&lt;LastConnectedServerAddress&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="104" Vartype="4 Bytes" Bytesize="4" Description="&lt;LastConnectedServerPort&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="112" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="&lt;LastConnectedEntryToken&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="120" Vartype="Pointer" Bytesize="8" Description="&lt;CurrentMenuFallGuy&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="128" Vartype="Pointer" Bytesize="8" Description="&lt;CachedAdmissionTicket&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="136" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="&lt;CachedEpisodeGuid&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="144" Vartype="Pointer" Bytesize="8" Description="&lt;CachedCompleteEpisodeDto&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="152" Vartype="Pointer" Bytesize="8" Description="&lt;GameStateView&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="160" Vartype="Pointer" Bytesize="8" Description="_configuration" DisplayMethod="无符号整数"/>
+        <Element Offset="168" Vartype="Pointer" Bytesize="8" Description="_playerProfile" DisplayMethod="无符号整数">
+          <Structure Name="自动创建 从 1D9B44480C0" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+            <Elements>
+              <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+              <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="platformServicesSo" DisplayMethod="无符号整数">
+                <Structure Name="PlatformServices" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="_identityProvider" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="_achievements" DisplayMethod="无符号整数">
+                      <Structure Name="SteamAchievements" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                        <Elements>
+                          <Element Offset="16" Vartype="Float" Bytesize="4" Description="_cooldownToRetryStoreStats" DisplayMethod="无符号整数"/>
+                        </Elements>
+                      </Structure>
+                    </Element>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="_PCPostProcessProfile" DisplayMethod="无符号整数">
+                <Structure Name="PostProcessProfile" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="settings" DisplayMethod="无符号整数">
+                      <Structure Name="List`1" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                        <Elements>
+                          <Element Offset="16" Vartype="Pointer" Bytesize="8" Description="_items" DisplayMethod="无符号整数"/>
+                          <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="_size" DisplayMethod="无符号整数"/>
+                          <Element Offset="28" Vartype="4 Bytes" Bytesize="4" Description="_version" DisplayMethod="无符号整数"/>
+                          <Element Offset="32" Vartype="4 Bytes" Bytesize="4" Description="_syncRoot" DisplayMethod="无符号整数"/>
+                        </Elements>
+                      </Structure>
+                    </Element>
+                    <Element Offset="32" Vartype="Byte" Bytesize="1" Description="isDirty" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="CustomisationSelections" DisplayMethod="无符号整数">
+                <Structure Name="CustomisationSelections" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="Pointer" Bytesize="8" Description="ColourOption" DisplayMethod="无符号整数">
+                      <Structure Name="ColourOption" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                        <Elements>
+                          <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+                          <Element Offset="24" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="_itemId" DisplayMethod="无符号整数"/>
+                          <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="_menuDisplaySprite" DisplayMethod="无符号整数"/>
+                          <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="&lt;CMSData&gt;k__BackingField" DisplayMethod="无符号整数"/>
+                          <Element Offset="48" Vartype="4 Bytes" Bytesize="4" Description="primaryColour" DisplayMethod="无符号整数"/>
+                          <Element Offset="64" Vartype="4 Bytes" Bytesize="4" Description="secondaryColour" DisplayMethod="无符号整数"/>
+                          <Element Offset="80" Vartype="Float" Bytesize="4" Description="primarySmoothness" DisplayMethod="无符号整数"/>
+                          <Element Offset="84" Vartype="Float" Bytesize="4" Description="secondarySmoothness" DisplayMethod="无符号整数"/>
+                          <Element Offset="88" Vartype="Float" Bytesize="4" Description="primaryMetallic" DisplayMethod="无符号整数"/>
+                          <Element Offset="92" Vartype="Float" Bytesize="4" Description="secondaryMetallic" DisplayMethod="无符号整数"/>
+                          <Element Offset="96" Vartype="4 Bytes" Bytesize="4" Description="rimColor" DisplayMethod="无符号整数"/>
+                          <Element Offset="112" Vartype="Float" Bytesize="4" Description="rimPower" DisplayMethod="无符号整数"/>
+                        </Elements>
+                      </Structure>
+                    </Element>
+                    <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="PatternOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="CostumeTopOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="CostumeBottomOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="48" Vartype="Pointer" Bytesize="8" Description="CostumeFullOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="56" Vartype="Pointer" Bytesize="8" Description="FaceplateOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="64" Vartype="Pointer" Bytesize="8" Description="VictoryPoseOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="72" Vartype="Pointer" Bytesize="8" Description="NicknameOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="80" Vartype="Pointer" Bytesize="8" Description="EmoteTopOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="88" Vartype="Pointer" Bytesize="8" Description="EmoteRightOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="96" Vartype="Pointer" Bytesize="8" Description="EmoteBottomOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="104" Vartype="Pointer" Bytesize="8" Description="EmoteLeftOption" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="48" Vartype="Pointer" Bytesize="8" Description="serverSettings" DisplayMethod="无符号整数">
+                <Structure Name="ServerSettings" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="ServerAddress" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="ServerPort" DisplayMethod="无符号整数"/>
+                    <Element Offset="28" Vartype="4 Bytes" Bytesize="4" Description="MatchmakingEnv" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="MatchmakingEntryCode" DisplayMethod="无符号整数"/>
+                    <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="clientConfig" DisplayMethod="无符号整数">
+                      <Structure Name="ClientConfig" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                        <Elements>
+                          <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+                          <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="defaultMatchEnvironment" DisplayMethod="无符号整数"/>
+                        </Elements>
+                      </Structure>
+                    </Element>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="56" Vartype="Pointer" Bytesize="8" Description="&lt;GraphicsSettings&gt;k__BackingField" DisplayMethod="无符号整数">
+                <Structure Name="GraphicsSettings" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="GraphicPreset" DisplayMethod="无符号整数"/>
+                    <Element Offset="20" Vartype="4 Bytes" Bytesize="4" Description="ResolutionW" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="ResolutionH" DisplayMethod="无符号整数"/>
+                    <Element Offset="28" Vartype="4 Bytes" Bytesize="4" Description="ResolutionHz" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Byte" Bytesize="1" Description="Windowed" DisplayMethod="无符号整数"/>
+                    <Element Offset="33" Vartype="Byte" Bytesize="1" Description="VSync" DisplayMethod="无符号整数"/>
+                    <Element Offset="36" Vartype="4 Bytes" Bytesize="4" Description="TextureQuality" DisplayMethod="无符号整数"/>
+                    <Element Offset="40" Vartype="4 Bytes" Bytesize="4" Description="ShadowsQuality" DisplayMethod="无符号整数"/>
+                    <Element Offset="44" Vartype="Byte" Bytesize="1" Description="MotionBlur" DisplayMethod="无符号整数"/>
+                    <Element Offset="45" Vartype="Byte" Bytesize="1" Description="Bloom" DisplayMethod="无符号整数"/>
+                    <Element Offset="46" Vartype="Byte" Bytesize="1" Description="DepthOfField" DisplayMethod="无符号整数"/>
+                    <Element Offset="48" Vartype="4 Bytes" Bytesize="4" Description="AmbientOcclusion" DisplayMethod="无符号整数"/>
+                    <Element Offset="52" Vartype="4 Bytes" Bytesize="4" Description="Antialiasing" DisplayMethod="无符号整数"/>
+                    <Element Offset="56" Vartype="4 Bytes" Bytesize="4" Description="ScreenSpaceReflections" DisplayMethod="无符号整数"/>
+                    <Element Offset="60" Vartype="Byte" Bytesize="1" Description="AnisotropicFiltering" DisplayMethod="无符号整数"/>
+                    <Element Offset="64" Vartype="Pointer" Bytesize="8" Description="_PCPostProcessProfile" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="64" Vartype="Pointer" Bytesize="8" Description="&lt;AudioSettings&gt;k__BackingField" DisplayMethod="无符号整数">
+                <Structure Name="AudioSettings" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="Float" Bytesize="4" Description="MasterVolume" DisplayMethod="无符号整数"/>
+                    <Element Offset="20" Vartype="Float" Bytesize="4" Description="MusicVolume" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="Float" Bytesize="4" Description="SFXVolume" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="_applyInitialAudioSettings" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="72" Vartype="Pointer" Bytesize="8" Description="&lt;ExtraControlsSettings&gt;k__BackingField" DisplayMethod="无符号整数"/>
+            </Elements>
+          </Structure>
+        </Element>
+        <Element Offset="176" Vartype="Pointer" Bytesize="8" Description="_netObjectManager" DisplayMethod="无符号整数">
+          <Structure Name="MPGNetObjectManager" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+            <Elements>
+              <Element Offset="16" Vartype="Pointer" Bytesize="8" Description="_netObjects" DisplayMethod="无符号整数"/>
+              <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="_deadNetObjects" DisplayMethod="无符号整数"/>
+              <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="_netIDCache" DisplayMethod="无符号整数"/>
+              <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="_previouslySpawnedObjects" DisplayMethod="无符号整数"/>
+              <Element Offset="48" Vartype="Pointer" Bytesize="8" Description="_networkedObjectPrefabs" DisplayMethod="无符号整数"/>
+              <Element Offset="56" Vartype="Pointer" Bytesize="8" Description="_networkedObjectMaterials" DisplayMethod="无符号整数"/>
+              <Element Offset="64" Vartype="Pointer" Bytesize="8" Description="OnSpawnNetObject" DisplayMethod="无符号整数"/>
+              <Element Offset="72" Vartype="Pointer" Bytesize="8" Description="OnUnspawnNetObject" DisplayMethod="无符号整数"/>
+              <Element Offset="80" Vartype="Pointer" Bytesize="8" Description="OnPlayerSpawned" DisplayMethod="无符号整数"/>
+              <Element Offset="88" Vartype="Pointer" Bytesize="8" Description="OnNPCSpawned" DisplayMethod="无符号整数"/>
+              <Element Offset="96" Vartype="4 Bytes" Bytesize="4" Description="_networkMode" DisplayMethod="无符号整数"/>
+              <Element Offset="100" Vartype="4 Bytes" Bytesize="4" Description="_nextNetID" DisplayMethod="无符号整数"/>
+              <Element Offset="104" Vartype="Pointer" Bytesize="8" Description="_transformSnapshotRelay" DisplayMethod="无符号整数"/>
+              <Element Offset="112" Vartype="Pointer" Bytesize="8" Description="_fullTransformSnapshotRelay" DisplayMethod="无符号整数"/>
+              <Element Offset="120" Vartype="Pointer" Bytesize="8" Description="_keysToRemove" DisplayMethod="无符号整数"/>
+            </Elements>
+          </Structure>
+        </Element>
+        <Element Offset="184" Vartype="Pointer" Bytesize="8" Description="_gameStateMachine" DisplayMethod="无符号整数"/>
+        <Element Offset="192" Vartype="Pointer" Bytesize="8" Description="_eventSystem" DisplayMethod="无符号整数"/>
+        <Element Offset="200" Vartype="4 Bytes" Bytesize="4" Description="_showModalMessageEventHandler" DisplayMethod="无符号整数"/>
+        <Element Offset="216" Vartype="4 Bytes" Bytesize="4" Description="_reloadGameEventHandler" DisplayMethod="无符号整数"/>
+        <Element Offset="232" Vartype="4 Bytes" Bytesize="4" Description="_completeEpisodeReceivedEventHandler" DisplayMethod="无符号整数"/>
+        <Element Offset="248" Vartype="4 Bytes" Bytesize="4" Description="_successfulLoginHandle" DisplayMethod="无符号整数"/>
+        <Element Offset="264" Vartype="4 Bytes" Bytesize="4" Description="_unsuccessfulLoginHandle" DisplayMethod="无符号整数"/>
+        <Element Offset="280" Vartype="4 Bytes" Bytesize="4" Description="_disconnectFromServerHandle" DisplayMethod="无符号整数"/>
+        <Element Offset="296" Vartype="Pointer" Bytesize="8" Description="_canvas" DisplayMethod="无符号整数"/>
+        <Element Offset="304" Vartype="Pointer" Bytesize="8" Description="_screenManager" DisplayMethod="无符号整数"/>
+        <Element Offset="312" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="_SceneToLoad" DisplayMethod="无符号整数"/>
+        <Element Offset="320" Vartype="4 Bytes" Bytesize="4" Description="_localClientNetworkID" DisplayMethod="无符号整数"/>
+        <Element Offset="328" Vartype="Pointer" Bytesize="8" Description="_networkManager" DisplayMethod="无符号整数"/>
+        <Element Offset="336" Vartype="Float" Bytesize="4" Description="_TimeBetweenTransformMessages" DisplayMethod="无符号整数"/>
+        <Element Offset="344" Vartype="Pointer" Bytesize="8" Description="_episodesSO" DisplayMethod="无符号整数"/>
+        <Element Offset="352" Vartype="Pointer" Bytesize="8" Description="_nicknamesSO" DisplayMethod="无符号整数"/>
+        <Element Offset="360" Vartype="Pointer" Bytesize="8" Description="_localPlayers" DisplayMethod="无符号整数">
+          <Structure Name="List`1" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+            <Elements>
+              <Element Offset="16" Vartype="Pointer" Bytesize="8" Description="_items" DisplayMethod="无符号整数"/>
+              <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="_size" DisplayMethod="无符号整数"/>
+              <Element Offset="28" Vartype="4 Bytes" Bytesize="4" Description="_version" DisplayMethod="无符号整数"/>
+              <Element Offset="32" Vartype="4 Bytes" Bytesize="4" Description="_syncRoot" DisplayMethod="无符号整数"/>
+            </Elements>
+          </Structure>
+        </Element>
+        <Element Offset="368" Vartype="Byte" Bytesize="1" Description="_ready" DisplayMethod="无符号整数"/>
+        <Element Offset="369" Vartype="Byte" Bytesize="1" Description="_extraLatencySimulationEnabled" DisplayMethod="无符号整数"/>
+        <Element Offset="376" Vartype="Pointer" Bytesize="8" Description="&lt;QosManager&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="384" Vartype="4 Bytes" Bytesize="4" Description="&lt;MatchmakingEnv&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="388" Vartype="Byte" Bytesize="1" Description="&lt;AttemptingToMatchMakeIntoEpisode&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="392" Vartype="Float" Bytesize="4" Description="&lt;SimulatedExtraLatency&gt;k__BackingField" DisplayMethod="无符号整数"/>
+      </Elements>
+    </Structure>
+    <Structure Name="GlobalGameStateClient 2" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+      <Elements>
+        <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+        <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="logLevel" DisplayMethod="无符号整数"/>
+        <Element Offset="32" Vartype="Float" Bytesize="4" Description="NetworkMetricsLoggingPeriod" DisplayMethod="无符号整数"/>
+        <Element Offset="36" Vartype="Float" Bytesize="4" Description="CpuMetricsLoggingPeriod" DisplayMethod="无符号整数"/>
+        <Element Offset="40" Vartype="Byte" Bytesize="1" Description="IsAutomatedClient" DisplayMethod="无符号整数"/>
+        <Element Offset="41" Vartype="Byte" Bytesize="1" Description="_isInServerProcess" DisplayMethod="无符号整数"/>
+        <Element Offset="42" Vartype="Byte" Bytesize="1" Description="_hasReceivedDisconnectionWarning" DisplayMethod="无符号整数"/>
+        <Element Offset="44" Vartype="Float" Bytesize="4" Description="_desiredReconnectTime" DisplayMethod="无符号整数"/>
+        <Element Offset="48" Vartype="Float" Bytesize="4" Description="_selfDestructTimer" DisplayMethod="无符号整数"/>
+        <Element Offset="52" Vartype="Byte" Bytesize="1" Description="_haveAttemptedDisconnection" DisplayMethod="无符号整数"/>
+        <Element Offset="56" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="UserName" DisplayMethod="无符号整数"/>
+        <Element Offset="64" Vartype="Byte" Bytesize="1" Description="WantsToContinue" DisplayMethod="无符号整数"/>
+        <Element Offset="65" Vartype="Byte" Bytesize="1" Description="SkipSplashScreen" DisplayMethod="无符号整数"/>
+        <Element Offset="72" Vartype="Pointer" Bytesize="8" Description="CustomisationSelections" DisplayMethod="无符号整数"/>
+        <Element Offset="80" Vartype="Pointer" Bytesize="8" Description="_clientDebugCommandHandler" DisplayMethod="无符号整数"/>
+        <Element Offset="88" Vartype="4 Bytes" Bytesize="4" Description="&lt;UnsuccessfulLoginCount&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="96" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="&lt;LastConnectedServerAddress&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="104" Vartype="4 Bytes" Bytesize="4" Description="&lt;LastConnectedServerPort&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="112" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="&lt;LastConnectedEntryToken&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="120" Vartype="Pointer" Bytesize="8" Description="&lt;CurrentMenuFallGuy&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="128" Vartype="Pointer" Bytesize="8" Description="&lt;CachedAdmissionTicket&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="136" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="&lt;CachedEpisodeGuid&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="144" Vartype="Pointer" Bytesize="8" Description="&lt;CachedCompleteEpisodeDto&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="152" Vartype="Pointer" Bytesize="8" Description="&lt;GameStateView&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="160" Vartype="Pointer" Bytesize="8" Description="_configuration" DisplayMethod="无符号整数"/>
+        <Element Offset="168" Vartype="Pointer" Bytesize="8" Description="_playerProfile" DisplayMethod="无符号整数">
+          <Structure Name="PlayerProfile" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+            <Elements>
+              <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+              <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="platformServicesSo" DisplayMethod="无符号整数">
+                <Structure Name="PlatformServices" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="_identityProvider" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="_achievements" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="_PCPostProcessProfile" DisplayMethod="无符号整数">
+                <Structure Name="PostProcessProfile" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="settings" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Byte" Bytesize="1" Description="isDirty" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="CustomisationSelections" DisplayMethod="无符号整数"/>
+              <Element Offset="48" Vartype="Pointer" Bytesize="8" Description="serverSettings" DisplayMethod="无符号整数">
+                <Structure Name="ServerSettings" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="ServerAddress" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="ServerPort" DisplayMethod="无符号整数"/>
+                    <Element Offset="28" Vartype="4 Bytes" Bytesize="4" Description="MatchmakingEnv" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="MatchmakingEntryCode" DisplayMethod="无符号整数"/>
+                    <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="clientConfig" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="56" Vartype="Pointer" Bytesize="8" Description="&lt;GraphicsSettings&gt;k__BackingField" DisplayMethod="无符号整数">
+                <Structure Name="GraphicsSettings" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="GraphicPreset" DisplayMethod="无符号整数"/>
+                    <Element Offset="20" Vartype="4 Bytes" Bytesize="4" Description="ResolutionW" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="ResolutionH" DisplayMethod="无符号整数"/>
+                    <Element Offset="28" Vartype="4 Bytes" Bytesize="4" Description="ResolutionHz" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Byte" Bytesize="1" Description="Windowed" DisplayMethod="无符号整数"/>
+                    <Element Offset="33" Vartype="Byte" Bytesize="1" Description="VSync" DisplayMethod="无符号整数"/>
+                    <Element Offset="36" Vartype="4 Bytes" Bytesize="4" Description="TextureQuality" DisplayMethod="无符号整数"/>
+                    <Element Offset="40" Vartype="4 Bytes" Bytesize="4" Description="ShadowsQuality" DisplayMethod="无符号整数"/>
+                    <Element Offset="44" Vartype="Byte" Bytesize="1" Description="MotionBlur" DisplayMethod="无符号整数"/>
+                    <Element Offset="45" Vartype="Byte" Bytesize="1" Description="Bloom" DisplayMethod="无符号整数"/>
+                    <Element Offset="46" Vartype="Byte" Bytesize="1" Description="DepthOfField" DisplayMethod="无符号整数"/>
+                    <Element Offset="48" Vartype="4 Bytes" Bytesize="4" Description="AmbientOcclusion" DisplayMethod="无符号整数"/>
+                    <Element Offset="52" Vartype="4 Bytes" Bytesize="4" Description="Antialiasing" DisplayMethod="无符号整数"/>
+                    <Element Offset="56" Vartype="4 Bytes" Bytesize="4" Description="ScreenSpaceReflections" DisplayMethod="无符号整数"/>
+                    <Element Offset="60" Vartype="Byte" Bytesize="1" Description="AnisotropicFiltering" DisplayMethod="无符号整数"/>
+                    <Element Offset="64" Vartype="Pointer" Bytesize="8" Description="_PCPostProcessProfile" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="64" Vartype="Pointer" Bytesize="8" Description="&lt;AudioSettings&gt;k__BackingField" DisplayMethod="无符号整数"/>
+              <Element Offset="72" Vartype="Pointer" Bytesize="8" Description="&lt;ExtraControlsSettings&gt;k__BackingField" DisplayMethod="无符号整数"/>
+            </Elements>
+          </Structure>
+        </Element>
+        <Element Offset="176" Vartype="Pointer" Bytesize="8" Description="_netObjectManager" DisplayMethod="无符号整数">
+          <Structure Name="MPGNetObjectManager" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+            <Elements>
+              <Element Offset="16" Vartype="Pointer" Bytesize="8" Description="_netObjects" DisplayMethod="无符号整数"/>
+              <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="_deadNetObjects" DisplayMethod="无符号整数"/>
+              <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="_netIDCache" DisplayMethod="无符号整数"/>
+              <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="_previouslySpawnedObjects" DisplayMethod="无符号整数"/>
+              <Element Offset="48" Vartype="Pointer" Bytesize="8" Description="_networkedObjectPrefabs" DisplayMethod="无符号整数"/>
+              <Element Offset="56" Vartype="Pointer" Bytesize="8" Description="_networkedObjectMaterials" DisplayMethod="无符号整数"/>
+              <Element Offset="64" Vartype="Pointer" Bytesize="8" Description="OnSpawnNetObject" DisplayMethod="无符号整数"/>
+              <Element Offset="72" Vartype="Pointer" Bytesize="8" Description="OnUnspawnNetObject" DisplayMethod="无符号整数"/>
+              <Element Offset="80" Vartype="Pointer" Bytesize="8" Description="OnPlayerSpawned" DisplayMethod="无符号整数"/>
+              <Element Offset="88" Vartype="Pointer" Bytesize="8" Description="OnNPCSpawned" DisplayMethod="无符号整数"/>
+              <Element Offset="96" Vartype="4 Bytes" Bytesize="4" Description="_networkMode" DisplayMethod="无符号整数"/>
+              <Element Offset="100" Vartype="4 Bytes" Bytesize="4" Description="_nextNetID" DisplayMethod="无符号整数"/>
+              <Element Offset="104" Vartype="Pointer" Bytesize="8" Description="_transformSnapshotRelay" DisplayMethod="无符号整数"/>
+              <Element Offset="112" Vartype="Pointer" Bytesize="8" Description="_fullTransformSnapshotRelay" DisplayMethod="无符号整数"/>
+              <Element Offset="120" Vartype="Pointer" Bytesize="8" Description="_keysToRemove" DisplayMethod="无符号整数"/>
+            </Elements>
+          </Structure>
+        </Element>
+        <Element Offset="184" Vartype="Pointer" Bytesize="8" Description="_gameStateMachine" DisplayMethod="无符号整数">
+          <Structure Name="GameStateMachine" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+            <Elements>
+              <Element Offset="16" Vartype="Pointer" Bytesize="8" Description="_currentState" DisplayMethod="无符号整数"/>
+            </Elements>
+          </Structure>
+        </Element>
+        <Element Offset="192" Vartype="Pointer" Bytesize="8" Description="_eventSystem" DisplayMethod="无符号整数">
+          <Structure Name="EventSystem" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+            <Elements>
+              <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+              <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="m_SystemInputModules" DisplayMethod="无符号整数"/>
+              <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="m_CurrentInputModule" DisplayMethod="无符号整数"/>
+              <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="m_FirstSelected" DisplayMethod="无符号整数"/>
+              <Element Offset="48" Vartype="Byte" Bytesize="1" Description="m_sendNavigationEvents" DisplayMethod="无符号整数"/>
+              <Element Offset="52" Vartype="4 Bytes" Bytesize="4" Description="m_DragThreshold" DisplayMethod="无符号整数"/>
+              <Element Offset="56" Vartype="Pointer" Bytesize="8" Description="m_CurrentSelected" DisplayMethod="无符号整数"/>
+              <Element Offset="64" Vartype="Byte" Bytesize="1" Description="m_HasFocus" DisplayMethod="无符号整数"/>
+              <Element Offset="65" Vartype="Byte" Bytesize="1" Description="m_SelectionGuard" DisplayMethod="无符号整数"/>
+              <Element Offset="72" Vartype="Pointer" Bytesize="8" Description="m_DummyData" DisplayMethod="无符号整数"/>
+            </Elements>
+          </Structure>
+        </Element>
+        <Element Offset="200" Vartype="4 Bytes" Bytesize="4" Description="_showModalMessageEventHandler" DisplayMethod="无符号整数"/>
+        <Element Offset="216" Vartype="4 Bytes" Bytesize="4" Description="_reloadGameEventHandler" DisplayMethod="无符号整数"/>
+        <Element Offset="232" Vartype="4 Bytes" Bytesize="4" Description="_completeEpisodeReceivedEventHandler" DisplayMethod="无符号整数"/>
+        <Element Offset="248" Vartype="4 Bytes" Bytesize="4" Description="_successfulLoginHandle" DisplayMethod="无符号整数"/>
+        <Element Offset="264" Vartype="4 Bytes" Bytesize="4" Description="_unsuccessfulLoginHandle" DisplayMethod="无符号整数"/>
+        <Element Offset="280" Vartype="4 Bytes" Bytesize="4" Description="_disconnectFromServerHandle" DisplayMethod="无符号整数"/>
+        <Element Offset="296" Vartype="Pointer" Bytesize="8" Description="_canvas" DisplayMethod="无符号整数">
+          <Structure Name="Canvas" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+            <Elements>
+              <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+            </Elements>
+          </Structure>
+        </Element>
+        <Element Offset="304" Vartype="Pointer" Bytesize="8" Description="_screenManager" DisplayMethod="无符号整数">
+          <Structure Name="ScreenManager" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+            <Elements>
+              <Element Offset="16" Vartype="Pointer" Bytesize="8" Description="_pExistingScreen" DisplayMethod="无符号整数"/>
+              <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="_canvas" DisplayMethod="无符号整数">
+                <Structure Name="Canvas" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="_uiPrefabs" DisplayMethod="无符号整数">
+                <Structure Name="Dictionary`2" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="Pointer" Bytesize="8" Description="buckets" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="entries" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="4 Bytes" Bytesize="4" Description="count" DisplayMethod="无符号整数"/>
+                    <Element Offset="36" Vartype="4 Bytes" Bytesize="4" Description="version" DisplayMethod="无符号整数"/>
+                    <Element Offset="40" Vartype="4 Bytes" Bytesize="4" Description="freeList" DisplayMethod="无符号整数"/>
+                    <Element Offset="44" Vartype="4 Bytes" Bytesize="4" Description="freeCount" DisplayMethod="无符号整数"/>
+                    <Element Offset="48" Vartype="Pointer" Bytesize="8" Description="comparer" DisplayMethod="无符号整数"/>
+                    <Element Offset="56" Vartype="Pointer" Bytesize="8" Description="keys" DisplayMethod="无符号整数"/>
+                    <Element Offset="64" Vartype="Pointer" Bytesize="8" Description="values" DisplayMethod="无符号整数"/>
+                    <Element Offset="72" Vartype="4 Bytes" Bytesize="4" Description="_syncRoot" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="_pModalClosedCB" DisplayMethod="无符号整数"/>
+              <Element Offset="48" Vartype="Pointer" Bytesize="8" Description="_currentPopupMessage" DisplayMethod="无符号整数"/>
+            </Elements>
+          </Structure>
+        </Element>
+        <Element Offset="312" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="_SceneToLoad" DisplayMethod="无符号整数"/>
+        <Element Offset="320" Vartype="4 Bytes" Bytesize="4" Description="_localClientNetworkID" DisplayMethod="无符号整数"/>
+        <Element Offset="328" Vartype="Pointer" Bytesize="8" Description="_networkManager" DisplayMethod="无符号整数"/>
+        <Element Offset="336" Vartype="Float" Bytesize="4" Description="_TimeBetweenTransformMessages" DisplayMethod="无符号整数"/>
+        <Element Offset="344" Vartype="Pointer" Bytesize="8" Description="_episodesSO" DisplayMethod="无符号整数"/>
+        <Element Offset="352" Vartype="Pointer" Bytesize="8" Description="_nicknamesSO" DisplayMethod="无符号整数">
+          <Structure Name="NicknamesSO" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+            <Elements>
+              <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+              <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="&lt;Nicknames&gt;k__BackingField" DisplayMethod="无符号整数"/>
+            </Elements>
+          </Structure>
+        </Element>
+        <Element Offset="360" Vartype="Pointer" Bytesize="8" Description="_localPlayers" DisplayMethod="无符号整数">
+          <Structure Name="List`1" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+            <Elements>
+              <Element Offset="16" Vartype="Pointer" Bytesize="8" Description="_items" DisplayMethod="无符号整数">
+                <Structure Name="LocalPlayer[]" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="Count" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="Item[0]" DisplayMethod="无符号整数">
+                      <Structure Name="FGClient.LocalPlayer" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                        <Elements>
+                          <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="playerID" DisplayMethod="无符号整数"/>
+                          <Element Offset="24" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="playerName" DisplayMethod="无符号整数"/>
+                        </Elements>
+                      </Structure>
+                    </Element>
+                    <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="Item[1]" DisplayMethod="无符号整数">
+                      <Structure Name="FGClient.LocalPlayer" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                        <Elements>
+                          <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="playerID" DisplayMethod="无符号整数"/>
+                          <Element Offset="24" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="playerName" DisplayMethod="无符号整数"/>
+                        </Elements>
+                      </Structure>
+                    </Element>
+                    <Element Offset="48" Vartype="Pointer" Bytesize="8" Description="Item[2]" DisplayMethod="无符号整数">
+                      <Structure Name="FGClient.LocalPlayer" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                        <Elements>
+                          <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="playerID" DisplayMethod="无符号整数"/>
+                          <Element Offset="24" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="playerName" DisplayMethod="无符号整数"/>
+                        </Elements>
+                      </Structure>
+                    </Element>
+                    <Element Offset="56" Vartype="Pointer" Bytesize="8" Description="Item[3]" DisplayMethod="无符号整数">
+                      <Structure Name="FGClient.LocalPlayer" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                        <Elements>
+                          <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="playerID" DisplayMethod="无符号整数"/>
+                          <Element Offset="24" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="playerName" DisplayMethod="无符号整数"/>
+                        </Elements>
+                      </Structure>
+                    </Element>
+                    <Element Offset="64" Vartype="Pointer" Bytesize="8" Description="Item[4]" DisplayMethod="无符号整数">
+                      <Structure Name="FGClient.LocalPlayer" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                        <Elements>
+                          <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="playerID" DisplayMethod="无符号整数"/>
+                          <Element Offset="24" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="playerName" DisplayMethod="无符号整数"/>
+                        </Elements>
+                      </Structure>
+                    </Element>
+                    <Element Offset="72" Vartype="Pointer" Bytesize="8" Description="Item[5]" DisplayMethod="无符号整数">
+                      <Structure Name="FGClient.LocalPlayer" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                        <Elements>
+                          <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="playerID" DisplayMethod="无符号整数"/>
+                          <Element Offset="24" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="playerName" DisplayMethod="无符号整数"/>
+                        </Elements>
+                      </Structure>
+                    </Element>
+                    <Element Offset="80" Vartype="Pointer" Bytesize="8" Description="Item[6]" DisplayMethod="无符号整数">
+                      <Structure Name="FGClient.LocalPlayer" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                        <Elements>
+                          <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="playerID" DisplayMethod="无符号整数"/>
+                          <Element Offset="24" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="playerName" DisplayMethod="无符号整数"/>
+                        </Elements>
+                      </Structure>
+                    </Element>
+                    <Element Offset="88" Vartype="Pointer" Bytesize="8" Description="Item[7]" DisplayMethod="无符号整数">
+                      <Structure Name="FGClient.LocalPlayer" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                        <Elements>
+                          <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="playerID" DisplayMethod="无符号整数"/>
+                          <Element Offset="24" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="playerName" DisplayMethod="无符号整数"/>
+                        </Elements>
+                      </Structure>
+                    </Element>
+                    <Element Offset="96" Vartype="Pointer" Bytesize="8" Description="Item[8]" DisplayMethod="无符号整数">
+                      <Structure Name="FGClient.LocalPlayer" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                        <Elements>
+                          <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="playerID" DisplayMethod="无符号整数"/>
+                          <Element Offset="24" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="playerName" DisplayMethod="无符号整数"/>
+                        </Elements>
+                      </Structure>
+                    </Element>
+                    <Element Offset="104" Vartype="Pointer" Bytesize="8" Description="Item[9]" DisplayMethod="无符号整数">
+                      <Structure Name="FGClient.LocalPlayer" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                        <Elements>
+                          <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="playerID" DisplayMethod="无符号整数"/>
+                          <Element Offset="24" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="playerName" DisplayMethod="无符号整数"/>
+                        </Elements>
+                      </Structure>
+                    </Element>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="_size" DisplayMethod="无符号整数"/>
+              <Element Offset="28" Vartype="4 Bytes" Bytesize="4" Description="_version" DisplayMethod="无符号整数"/>
+              <Element Offset="32" Vartype="4 Bytes" Bytesize="4" Description="_syncRoot" DisplayMethod="无符号整数"/>
+            </Elements>
+          </Structure>
+        </Element>
+        <Element Offset="368" Vartype="Byte" Bytesize="1" Description="_ready" DisplayMethod="无符号整数"/>
+        <Element Offset="369" Vartype="Byte" Bytesize="1" Description="_extraLatencySimulationEnabled" DisplayMethod="无符号整数"/>
+        <Element Offset="376" Vartype="Pointer" Bytesize="8" Description="&lt;QosManager&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="384" Vartype="4 Bytes" Bytesize="4" Description="&lt;MatchmakingEnv&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="388" Vartype="Byte" Bytesize="1" Description="&lt;AttemptingToMatchMakeIntoEpisode&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="392" Vartype="Float" Bytesize="4" Description="&lt;SimulatedExtraLatency&gt;k__BackingField" DisplayMethod="无符号整数"/>
+      </Elements>
+    </Structure>
+    <Structure Name="GlobalGameStateClient" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+      <Elements>
+        <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+        <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="logLevel" DisplayMethod="无符号整数"/>
+        <Element Offset="32" Vartype="Float" Bytesize="4" Description="NetworkMetricsLoggingPeriod" DisplayMethod="无符号整数"/>
+        <Element Offset="36" Vartype="Float" Bytesize="4" Description="CpuMetricsLoggingPeriod" DisplayMethod="无符号整数"/>
+        <Element Offset="40" Vartype="Byte" Bytesize="1" Description="IsAutomatedClient" DisplayMethod="无符号整数"/>
+        <Element Offset="41" Vartype="Byte" Bytesize="1" Description="_isInServerProcess" DisplayMethod="无符号整数"/>
+        <Element Offset="42" Vartype="Byte" Bytesize="1" Description="_hasReceivedDisconnectionWarning" DisplayMethod="无符号整数"/>
+        <Element Offset="44" Vartype="Float" Bytesize="4" Description="_desiredReconnectTime" DisplayMethod="无符号整数"/>
+        <Element Offset="48" Vartype="Float" Bytesize="4" Description="_selfDestructTimer" DisplayMethod="无符号整数"/>
+        <Element Offset="52" Vartype="Byte" Bytesize="1" Description="_haveAttemptedDisconnection" DisplayMethod="无符号整数"/>
+        <Element Offset="56" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="UserName" DisplayMethod="无符号整数"/>
+        <Element Offset="64" Vartype="Byte" Bytesize="1" Description="WantsToContinue" DisplayMethod="无符号整数"/>
+        <Element Offset="65" Vartype="Byte" Bytesize="1" Description="SkipSplashScreen" DisplayMethod="无符号整数"/>
+        <Element Offset="72" Vartype="Pointer" Bytesize="8" Description="CustomisationSelections" DisplayMethod="无符号整数">
+          <Structure Name="CustomisationSelections" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+            <Elements>
+              <Element Offset="16" Vartype="Pointer" Bytesize="8" Description="ColourOption" DisplayMethod="无符号整数"/>
+              <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="PatternOption" DisplayMethod="无符号整数"/>
+              <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="CostumeTopOption" DisplayMethod="无符号整数"/>
+              <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="CostumeBottomOption" DisplayMethod="无符号整数"/>
+              <Element Offset="48" Vartype="Pointer" Bytesize="8" Description="CostumeFullOption" DisplayMethod="无符号整数"/>
+              <Element Offset="56" Vartype="Pointer" Bytesize="8" Description="FaceplateOption" DisplayMethod="无符号整数"/>
+              <Element Offset="64" Vartype="Pointer" Bytesize="8" Description="VictoryPoseOption" DisplayMethod="无符号整数"/>
+              <Element Offset="72" Vartype="Pointer" Bytesize="8" Description="NicknameOption" DisplayMethod="无符号整数">
+                <Structure Name="NicknameOption" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="&lt;ItemId&gt;k__BackingField" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="&lt;CMSData&gt;k__BackingField" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="&lt;DisplayName&gt;k__BackingField" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="80" Vartype="Pointer" Bytesize="8" Description="EmoteTopOption" DisplayMethod="无符号整数"/>
+              <Element Offset="88" Vartype="Pointer" Bytesize="8" Description="EmoteRightOption" DisplayMethod="无符号整数"/>
+              <Element Offset="96" Vartype="Pointer" Bytesize="8" Description="EmoteBottomOption" DisplayMethod="无符号整数"/>
+              <Element Offset="104" Vartype="Pointer" Bytesize="8" Description="EmoteLeftOption" DisplayMethod="无符号整数"/>
+            </Elements>
+          </Structure>
+        </Element>
+        <Element Offset="80" Vartype="Pointer" Bytesize="8" Description="_clientDebugCommandHandler" DisplayMethod="无符号整数"/>
+        <Element Offset="88" Vartype="4 Bytes" Bytesize="4" Description="&lt;UnsuccessfulLoginCount&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="96" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="&lt;LastConnectedServerAddress&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="104" Vartype="4 Bytes" Bytesize="4" Description="&lt;LastConnectedServerPort&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="112" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="&lt;LastConnectedEntryToken&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="120" Vartype="Pointer" Bytesize="8" Description="&lt;CurrentMenuFallGuy&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="128" Vartype="Pointer" Bytesize="8" Description="&lt;CachedAdmissionTicket&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="136" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="&lt;CachedEpisodeGuid&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="144" Vartype="Pointer" Bytesize="8" Description="&lt;CachedCompleteEpisodeDto&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="152" Vartype="Pointer" Bytesize="8" Description="&lt;GameStateView&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="160" Vartype="Pointer" Bytesize="8" Description="_configuration" DisplayMethod="无符号整数"/>
+        <Element Offset="168" Vartype="Pointer" Bytesize="8" Description="_playerProfile" DisplayMethod="无符号整数">
+          <Structure Name="自动创建 从 1D9B44480C0" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+            <Elements>
+              <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+              <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="platformServicesSo" DisplayMethod="无符号整数">
+                <Structure Name="PlatformServices" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="_identityProvider" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="_achievements" DisplayMethod="无符号整数">
+                      <Structure Name="SteamAchievements" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                        <Elements>
+                          <Element Offset="16" Vartype="Float" Bytesize="4" Description="_cooldownToRetryStoreStats" DisplayMethod="无符号整数"/>
+                        </Elements>
+                      </Structure>
+                    </Element>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="_PCPostProcessProfile" DisplayMethod="无符号整数">
+                <Structure Name="PostProcessProfile" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="settings" DisplayMethod="无符号整数">
+                      <Structure Name="List`1" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                        <Elements>
+                          <Element Offset="16" Vartype="Pointer" Bytesize="8" Description="_items" DisplayMethod="无符号整数"/>
+                          <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="_size" DisplayMethod="无符号整数"/>
+                          <Element Offset="28" Vartype="4 Bytes" Bytesize="4" Description="_version" DisplayMethod="无符号整数"/>
+                          <Element Offset="32" Vartype="4 Bytes" Bytesize="4" Description="_syncRoot" DisplayMethod="无符号整数"/>
+                        </Elements>
+                      </Structure>
+                    </Element>
+                    <Element Offset="32" Vartype="Byte" Bytesize="1" Description="isDirty" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="CustomisationSelections" DisplayMethod="无符号整数">
+                <Structure Name="CustomisationSelections" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="Pointer" Bytesize="8" Description="ColourOption" DisplayMethod="无符号整数">
+                      <Structure Name="ColourOption" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                        <Elements>
+                          <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+                          <Element Offset="24" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="_itemId" DisplayMethod="无符号整数"/>
+                          <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="_menuDisplaySprite" DisplayMethod="无符号整数"/>
+                          <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="&lt;CMSData&gt;k__BackingField" DisplayMethod="无符号整数"/>
+                          <Element Offset="48" Vartype="4 Bytes" Bytesize="4" Description="primaryColour" DisplayMethod="无符号整数"/>
+                          <Element Offset="64" Vartype="4 Bytes" Bytesize="4" Description="secondaryColour" DisplayMethod="无符号整数"/>
+                          <Element Offset="80" Vartype="Float" Bytesize="4" Description="primarySmoothness" DisplayMethod="无符号整数"/>
+                          <Element Offset="84" Vartype="Float" Bytesize="4" Description="secondarySmoothness" DisplayMethod="无符号整数"/>
+                          <Element Offset="88" Vartype="Float" Bytesize="4" Description="primaryMetallic" DisplayMethod="无符号整数"/>
+                          <Element Offset="92" Vartype="Float" Bytesize="4" Description="secondaryMetallic" DisplayMethod="无符号整数"/>
+                          <Element Offset="96" Vartype="4 Bytes" Bytesize="4" Description="rimColor" DisplayMethod="无符号整数"/>
+                          <Element Offset="112" Vartype="Float" Bytesize="4" Description="rimPower" DisplayMethod="无符号整数"/>
+                        </Elements>
+                      </Structure>
+                    </Element>
+                    <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="PatternOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="CostumeTopOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="CostumeBottomOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="48" Vartype="Pointer" Bytesize="8" Description="CostumeFullOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="56" Vartype="Pointer" Bytesize="8" Description="FaceplateOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="64" Vartype="Pointer" Bytesize="8" Description="VictoryPoseOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="72" Vartype="Pointer" Bytesize="8" Description="NicknameOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="80" Vartype="Pointer" Bytesize="8" Description="EmoteTopOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="88" Vartype="Pointer" Bytesize="8" Description="EmoteRightOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="96" Vartype="Pointer" Bytesize="8" Description="EmoteBottomOption" DisplayMethod="无符号整数"/>
+                    <Element Offset="104" Vartype="Pointer" Bytesize="8" Description="EmoteLeftOption" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="48" Vartype="Pointer" Bytesize="8" Description="serverSettings" DisplayMethod="无符号整数">
+                <Structure Name="ServerSettings" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="ServerAddress" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="ServerPort" DisplayMethod="无符号整数"/>
+                    <Element Offset="28" Vartype="4 Bytes" Bytesize="4" Description="MatchmakingEnv" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="MatchmakingEntryCode" DisplayMethod="无符号整数"/>
+                    <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="clientConfig" DisplayMethod="无符号整数">
+                      <Structure Name="ClientConfig" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                        <Elements>
+                          <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+                          <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="defaultMatchEnvironment" DisplayMethod="无符号整数"/>
+                        </Elements>
+                      </Structure>
+                    </Element>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="56" Vartype="Pointer" Bytesize="8" Description="&lt;GraphicsSettings&gt;k__BackingField" DisplayMethod="无符号整数">
+                <Structure Name="GraphicsSettings" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="GraphicPreset" DisplayMethod="无符号整数"/>
+                    <Element Offset="20" Vartype="4 Bytes" Bytesize="4" Description="ResolutionW" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="ResolutionH" DisplayMethod="无符号整数"/>
+                    <Element Offset="28" Vartype="4 Bytes" Bytesize="4" Description="ResolutionHz" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Byte" Bytesize="1" Description="Windowed" DisplayMethod="无符号整数"/>
+                    <Element Offset="33" Vartype="Byte" Bytesize="1" Description="VSync" DisplayMethod="无符号整数"/>
+                    <Element Offset="36" Vartype="4 Bytes" Bytesize="4" Description="TextureQuality" DisplayMethod="无符号整数"/>
+                    <Element Offset="40" Vartype="4 Bytes" Bytesize="4" Description="ShadowsQuality" DisplayMethod="无符号整数"/>
+                    <Element Offset="44" Vartype="Byte" Bytesize="1" Description="MotionBlur" DisplayMethod="无符号整数"/>
+                    <Element Offset="45" Vartype="Byte" Bytesize="1" Description="Bloom" DisplayMethod="无符号整数"/>
+                    <Element Offset="46" Vartype="Byte" Bytesize="1" Description="DepthOfField" DisplayMethod="无符号整数"/>
+                    <Element Offset="48" Vartype="4 Bytes" Bytesize="4" Description="AmbientOcclusion" DisplayMethod="无符号整数"/>
+                    <Element Offset="52" Vartype="4 Bytes" Bytesize="4" Description="Antialiasing" DisplayMethod="无符号整数"/>
+                    <Element Offset="56" Vartype="4 Bytes" Bytesize="4" Description="ScreenSpaceReflections" DisplayMethod="无符号整数"/>
+                    <Element Offset="60" Vartype="Byte" Bytesize="1" Description="AnisotropicFiltering" DisplayMethod="无符号整数"/>
+                    <Element Offset="64" Vartype="Pointer" Bytesize="8" Description="_PCPostProcessProfile" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="64" Vartype="Pointer" Bytesize="8" Description="&lt;AudioSettings&gt;k__BackingField" DisplayMethod="无符号整数">
+                <Structure Name="AudioSettings" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="Float" Bytesize="4" Description="MasterVolume" DisplayMethod="无符号整数"/>
+                    <Element Offset="20" Vartype="Float" Bytesize="4" Description="MusicVolume" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="Float" Bytesize="4" Description="SFXVolume" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="_applyInitialAudioSettings" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="72" Vartype="Pointer" Bytesize="8" Description="&lt;ExtraControlsSettings&gt;k__BackingField" DisplayMethod="无符号整数"/>
+            </Elements>
+          </Structure>
+        </Element>
+        <Element Offset="176" Vartype="Pointer" Bytesize="8" Description="_netObjectManager" DisplayMethod="无符号整数">
+          <Structure Name="MPGNetObjectManager" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+            <Elements>
+              <Element Offset="16" Vartype="Pointer" Bytesize="8" Description="_netObjects" DisplayMethod="无符号整数"/>
+              <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="_deadNetObjects" DisplayMethod="无符号整数"/>
+              <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="_netIDCache" DisplayMethod="无符号整数"/>
+              <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="_previouslySpawnedObjects" DisplayMethod="无符号整数"/>
+              <Element Offset="48" Vartype="Pointer" Bytesize="8" Description="_networkedObjectPrefabs" DisplayMethod="无符号整数"/>
+              <Element Offset="56" Vartype="Pointer" Bytesize="8" Description="_networkedObjectMaterials" DisplayMethod="无符号整数"/>
+              <Element Offset="64" Vartype="Pointer" Bytesize="8" Description="OnSpawnNetObject" DisplayMethod="无符号整数"/>
+              <Element Offset="72" Vartype="Pointer" Bytesize="8" Description="OnUnspawnNetObject" DisplayMethod="无符号整数"/>
+              <Element Offset="80" Vartype="Pointer" Bytesize="8" Description="OnPlayerSpawned" DisplayMethod="无符号整数"/>
+              <Element Offset="88" Vartype="Pointer" Bytesize="8" Description="OnNPCSpawned" DisplayMethod="无符号整数"/>
+              <Element Offset="96" Vartype="4 Bytes" Bytesize="4" Description="_networkMode" DisplayMethod="无符号整数"/>
+              <Element Offset="100" Vartype="4 Bytes" Bytesize="4" Description="_nextNetID" DisplayMethod="无符号整数"/>
+              <Element Offset="104" Vartype="Pointer" Bytesize="8" Description="_transformSnapshotRelay" DisplayMethod="无符号整数"/>
+              <Element Offset="112" Vartype="Pointer" Bytesize="8" Description="_fullTransformSnapshotRelay" DisplayMethod="无符号整数"/>
+              <Element Offset="120" Vartype="Pointer" Bytesize="8" Description="_keysToRemove" DisplayMethod="无符号整数"/>
+            </Elements>
+          </Structure>
+        </Element>
+        <Element Offset="184" Vartype="Pointer" Bytesize="8" Description="_gameStateMachine" DisplayMethod="无符号整数"/>
+        <Element Offset="192" Vartype="Pointer" Bytesize="8" Description="_eventSystem" DisplayMethod="无符号整数"/>
+        <Element Offset="200" Vartype="4 Bytes" Bytesize="4" Description="_showModalMessageEventHandler" DisplayMethod="无符号整数"/>
+        <Element Offset="216" Vartype="4 Bytes" Bytesize="4" Description="_reloadGameEventHandler" DisplayMethod="无符号整数"/>
+        <Element Offset="232" Vartype="4 Bytes" Bytesize="4" Description="_completeEpisodeReceivedEventHandler" DisplayMethod="无符号整数"/>
+        <Element Offset="248" Vartype="4 Bytes" Bytesize="4" Description="_successfulLoginHandle" DisplayMethod="无符号整数"/>
+        <Element Offset="264" Vartype="4 Bytes" Bytesize="4" Description="_unsuccessfulLoginHandle" DisplayMethod="无符号整数"/>
+        <Element Offset="280" Vartype="4 Bytes" Bytesize="4" Description="_disconnectFromServerHandle" DisplayMethod="无符号整数"/>
+        <Element Offset="296" Vartype="Pointer" Bytesize="8" Description="_canvas" DisplayMethod="无符号整数"/>
+        <Element Offset="304" Vartype="Pointer" Bytesize="8" Description="_screenManager" DisplayMethod="无符号整数"/>
+        <Element Offset="312" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="_SceneToLoad" DisplayMethod="无符号整数"/>
+        <Element Offset="320" Vartype="4 Bytes" Bytesize="4" Description="_localClientNetworkID" DisplayMethod="无符号整数"/>
+        <Element Offset="328" Vartype="Pointer" Bytesize="8" Description="_networkManager" DisplayMethod="无符号整数"/>
+        <Element Offset="336" Vartype="Float" Bytesize="4" Description="_TimeBetweenTransformMessages" DisplayMethod="无符号整数"/>
+        <Element Offset="344" Vartype="Pointer" Bytesize="8" Description="_episodesSO" DisplayMethod="无符号整数"/>
+        <Element Offset="352" Vartype="Pointer" Bytesize="8" Description="_nicknamesSO" DisplayMethod="无符号整数"/>
+        <Element Offset="360" Vartype="Pointer" Bytesize="8" Description="_localPlayers" DisplayMethod="无符号整数">
+          <Structure Name="List`1" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+            <Elements>
+              <Element Offset="16" Vartype="Pointer" Bytesize="8" Description="_items" DisplayMethod="无符号整数"/>
+              <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="_size" DisplayMethod="无符号整数"/>
+              <Element Offset="28" Vartype="4 Bytes" Bytesize="4" Description="_version" DisplayMethod="无符号整数"/>
+              <Element Offset="32" Vartype="4 Bytes" Bytesize="4" Description="_syncRoot" DisplayMethod="无符号整数"/>
+            </Elements>
+          </Structure>
+        </Element>
+        <Element Offset="368" Vartype="Byte" Bytesize="1" Description="_ready" DisplayMethod="无符号整数"/>
+        <Element Offset="369" Vartype="Byte" Bytesize="1" Description="_extraLatencySimulationEnabled" DisplayMethod="无符号整数"/>
+        <Element Offset="376" Vartype="Pointer" Bytesize="8" Description="&lt;QosManager&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="384" Vartype="4 Bytes" Bytesize="4" Description="&lt;MatchmakingEnv&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="388" Vartype="Byte" Bytesize="1" Description="&lt;AttemptingToMatchMakeIntoEpisode&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="392" Vartype="Float" Bytesize="4" Description="&lt;SimulatedExtraLatency&gt;k__BackingField" DisplayMethod="无符号整数"/>
+      </Elements>
+    </Structure>
+    <Structure Name="GlobalGameStateClient 3" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+      <Elements>
+        <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+        <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="logLevel" DisplayMethod="无符号整数"/>
+        <Element Offset="32" Vartype="Float" Bytesize="4" Description="NetworkMetricsLoggingPeriod" DisplayMethod="无符号整数"/>
+        <Element Offset="36" Vartype="Float" Bytesize="4" Description="CpuMetricsLoggingPeriod" DisplayMethod="无符号整数"/>
+        <Element Offset="40" Vartype="Byte" Bytesize="1" Description="IsAutomatedClient" DisplayMethod="无符号整数"/>
+        <Element Offset="41" Vartype="Byte" Bytesize="1" Description="_isInServerProcess" DisplayMethod="无符号整数"/>
+        <Element Offset="42" Vartype="Byte" Bytesize="1" Description="_hasReceivedDisconnectionWarning" DisplayMethod="无符号整数"/>
+        <Element Offset="44" Vartype="Float" Bytesize="4" Description="_desiredReconnectTime" DisplayMethod="无符号整数"/>
+        <Element Offset="48" Vartype="Float" Bytesize="4" Description="_selfDestructTimer" DisplayMethod="无符号整数"/>
+        <Element Offset="52" Vartype="Byte" Bytesize="1" Description="_haveAttemptedDisconnection" DisplayMethod="无符号整数"/>
+        <Element Offset="56" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="UserName" DisplayMethod="无符号整数"/>
+        <Element Offset="64" Vartype="Byte" Bytesize="1" Description="WantsToContinue" DisplayMethod="无符号整数"/>
+        <Element Offset="65" Vartype="Byte" Bytesize="1" Description="SkipSplashScreen" DisplayMethod="无符号整数"/>
+        <Element Offset="72" Vartype="Pointer" Bytesize="8" Description="CustomisationSelections" DisplayMethod="无符号整数"/>
+        <Element Offset="80" Vartype="Pointer" Bytesize="8" Description="_clientDebugCommandHandler" DisplayMethod="无符号整数"/>
+        <Element Offset="88" Vartype="4 Bytes" Bytesize="4" Description="&lt;UnsuccessfulLoginCount&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="96" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="&lt;LastConnectedServerAddress&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="104" Vartype="4 Bytes" Bytesize="4" Description="&lt;LastConnectedServerPort&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="112" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="&lt;LastConnectedEntryToken&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="120" Vartype="Pointer" Bytesize="8" Description="&lt;CurrentMenuFallGuy&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="128" Vartype="Pointer" Bytesize="8" Description="&lt;CachedAdmissionTicket&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="136" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="&lt;CachedEpisodeGuid&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="144" Vartype="Pointer" Bytesize="8" Description="&lt;CachedCompleteEpisodeDto&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="152" Vartype="Pointer" Bytesize="8" Description="&lt;GameStateView&gt;k__BackingField" DisplayMethod="无符号整数"/>
+        <Element Offset="160" Vartype="Pointer" Bytesize="8" Description="_configuration" DisplayMethod="无符号整数"/>
+        <Element Offset="168" Vartype="Pointer" Bytesize="8" Description="_playerProfile" DisplayMethod="无符号整数">
+          <Structure Name="PlayerProfile" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+            <Elements>
+              <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+              <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="platformServicesSo" DisplayMethod="无符号整数">
+                <Structure Name="PlatformServices" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="_identityProvider" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="_achievements" DisplayMethod="无符号整数">
+                      <Structure Name="SteamAchievements" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                        <Elements>
+                          <Element Offset="16" Vartype="Float" Bytesize="4" Description="_cooldownToRetryStoreStats" DisplayMethod="无符号整数"/>
+                        </Elements>
+                      </Structure>
+                    </Element>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="_PCPostProcessProfile" DisplayMethod="无符号整数">
+                <Structure Name="PostProcessProfile" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="Pointer" Bytesize="8" Description="settings" DisplayMethod="无符号整数">
+                      <Structure Name="List`1" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                        <Elements>
+                          <Element Offset="16" Vartype="Pointer" Bytesize="8" Description="_items" DisplayMethod="无符号整数"/>
+                          <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="_size" DisplayMethod="无符号整数"/>
+                          <Element Offset="28" Vartype="4 Bytes" Bytesize="4" Description="_version" DisplayMethod="无符号整数"/>
+                          <Element Offset="32" Vartype="4 Bytes" Bytesize="4" Description="_syncRoot" DisplayMethod="无符号整数"/>
+                        </Elements>
+                      </Structure>
+                    </Element>
+                    <Element Offset="32" Vartype="Byte" Bytesize="1" Description="isDirty" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="CustomisationSelections" DisplayMethod="无符号整数"/>
+              <Element Offset="48" Vartype="Pointer" Bytesize="8" Description="serverSettings" DisplayMethod="无符号整数">
+                <Structure Name="ServerSettings" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="ServerAddress" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="ServerPort" DisplayMethod="无符号整数"/>
+                    <Element Offset="28" Vartype="4 Bytes" Bytesize="4" Description="MatchmakingEnv" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Pointer" Bytesize="8" ChildStruct="String" Description="MatchmakingEntryCode" DisplayMethod="无符号整数"/>
+                    <Element Offset="40" Vartype="Pointer" Bytesize="8" Description="clientConfig" DisplayMethod="无符号整数">
+                      <Structure Name="ClientConfig" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                        <Elements>
+                          <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="m_CachedPtr" DisplayMethod="无符号整数"/>
+                          <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="defaultMatchEnvironment" DisplayMethod="无符号整数"/>
+                        </Elements>
+                      </Structure>
+                    </Element>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="56" Vartype="Pointer" Bytesize="8" Description="&lt;GraphicsSettings&gt;k__BackingField" DisplayMethod="无符号整数">
+                <Structure Name="GraphicsSettings" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="4 Bytes" Bytesize="4" Description="GraphicPreset" DisplayMethod="无符号整数"/>
+                    <Element Offset="20" Vartype="4 Bytes" Bytesize="4" Description="ResolutionW" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="4 Bytes" Bytesize="4" Description="ResolutionH" DisplayMethod="无符号整数"/>
+                    <Element Offset="28" Vartype="4 Bytes" Bytesize="4" Description="ResolutionHz" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Byte" Bytesize="1" Description="Windowed" DisplayMethod="无符号整数"/>
+                    <Element Offset="33" Vartype="Byte" Bytesize="1" Description="VSync" DisplayMethod="无符号整数"/>
+                    <Element Offset="36" Vartype="4 Bytes" Bytesize="4" Description="TextureQuality" DisplayMethod="无符号整数"/>
+                    <Element Offset="40" Vartype="4 Bytes" Bytesize="4" Description="ShadowsQuality" DisplayMethod="无符号整数"/>
+                    <Element Offset="44" Vartype="Byte" Bytesize="1" Description="MotionBlur" DisplayMethod="无符号整数"/>
+                    <Element Offset="45" Vartype="Byte" Bytesize="1" Description="Bloom" DisplayMethod="无符号整数"/>
+                    <Element Offset="46" Vartype="Byte" Bytesize="1" Description="DepthOfField" DisplayMethod="无符号整数"/>
+                    <Element Offset="48" Vartype="4 Bytes" Bytesize="4" Description="AmbientOcclusion" DisplayMethod="无符号整数"/>
+                    <Element Offset="52" Vartype="4 Bytes" Bytesize="4" Description="Antialiasing" DisplayMethod="无符号整数"/>
+                    <Element Offset="56" Vartype="4 Bytes" Bytesize="4" Description="ScreenSpaceReflections" DisplayMethod="无符号整数"/>
+                    <Element Offset="60" Vartype="Byte" Bytesize="1" Description="AnisotropicFiltering" DisplayMethod="无符号整数"/>
+                    <Element Offset="64" Vartype="Pointer" Bytesize="8" Description="_PCPostProcessProfile" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="64" Vartype="Pointer" Bytesize="8" Description="&lt;AudioSettings&gt;k__BackingField" DisplayMethod="无符号整数">
+                <Structure Name="AudioSettings" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+                  <Elements>
+                    <Element Offset="16" Vartype="Float" Bytesize="4" Description="MasterVolume" DisplayMethod="无符号整数"/>
+                    <Element Offset="20" Vartype="Float" Bytesize="4" Description="MusicVolume" DisplayMethod="无符号整数"/>
+                    <Element Offset="24" Vartype="Float" Bytesize="4" Description="SFXVolume" DisplayMethod="无符号整数"/>
+                    <Element Offset="32" Vartype="Pointer" Bytesize="8" Description="_applyInitialAudioSettings" DisplayMethod="无符号整数"/>
+                  </Elements>
+                </Structure>
+              </Element>
+              <Element Offset="72" Vartype="Pointer" Bytesize="8" Description="&lt;ExtraControlsSettings&gt;k__BackingField" DisplayMethod="无符号整数"/>
+            </Elements>
+          </Structure>
+  </Structures>
+</CheatTable>

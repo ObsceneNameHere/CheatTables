@@ -1,0 +1,1399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="34">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>1977</ID>
+      <Description>"Group 1 - Offset +38 | +D8 totals"</Description>
+      <Options moRecursiveSetValue="1" moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+      <LastState Value="" RealAddress="00000000"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>2181</ID>
+          <Description>"1G"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="500" RealAddress="1FC4ADD4F18"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>18</Offset>
+            <Offset>118</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2320</ID>
+              <Description>"1G Total"</Description>
+              <LastState Value="2" RealAddress="1FC4D05A828"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038EDA18</Address>
+              <Offsets>
+                <Offset>15C8</Offset>
+                <Offset>120</Offset>
+                <Offset>50</Offset>
+                <Offset>40</Offset>
+                <Offset>58</Offset>
+                <Offset>10</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2147</ID>
+          <Description>"2G"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="500" RealAddress="1FC4ADD4F50"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>50</Offset>
+            <Offset>118</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+            <Offset>10</Offset>
+            <Offset>60</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2270</ID>
+              <Description>"2G Total"</Description>
+              <LastState Value="3" RealAddress="1FC4D05A900"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+036B18D8</Address>
+              <Offsets>
+                <Offset>16A0</Offset>
+                <Offset>120</Offset>
+                <Offset>60</Offset>
+                <Offset>B8</Offset>
+                <Offset>0</Offset>
+                <Offset>C0</Offset>
+                <Offset>8</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2183</ID>
+          <Description>"3G"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="500" RealAddress="1FC4ADD4F88"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>88</Offset>
+            <Offset>118</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2316</ID>
+              <Description>"3G Total"</Description>
+              <LastState Value="200" RealAddress="1FC4D05A9D8"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038EDA18</Address>
+              <Offsets>
+                <Offset>1778</Offset>
+                <Offset>120</Offset>
+                <Offset>8</Offset>
+                <Offset>88</Offset>
+                <Offset>58</Offset>
+                <Offset>10</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2182</ID>
+          <Description>"4G"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="500" RealAddress="1FC4ADD4FC0"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>C0</Offset>
+            <Offset>118</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2511</ID>
+              <Description>"4G Total"</Description>
+              <LastState Value="2" RealAddress="1FC4D05AAB0"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038EDA10</Address>
+              <Offsets>
+                <Offset>1850</Offset>
+                <Offset>120</Offset>
+                <Offset>10</Offset>
+                <Offset>60</Offset>
+                <Offset>50</Offset>
+                <Offset>40</Offset>
+                <Offset>58</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2184</ID>
+          <Description>"5G"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="500" RealAddress="1FC4ADD4FF8"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>F8</Offset>
+            <Offset>118</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2314</ID>
+              <Description>"5G Total"</Description>
+              <LastState Value="150" RealAddress="1FC4D05AB88"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038EDA10</Address>
+              <Offsets>
+                <Offset>1928</Offset>
+                <Offset>120</Offset>
+                <Offset>58</Offset>
+                <Offset>58</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2186</ID>
+          <Description>"1B"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="500" RealAddress="1FC4ADD5030"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>130</Offset>
+            <Offset>118</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2274</ID>
+              <Description>"1B Total"</Description>
+              <LastState Value="1" RealAddress="1FC4D05AC60"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+036B18D8</Address>
+              <Offsets>
+                <Offset>1A00</Offset>
+                <Offset>120</Offset>
+                <Offset>60</Offset>
+                <Offset>B8</Offset>
+                <Offset>0</Offset>
+                <Offset>C0</Offset>
+                <Offset>8</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2187</ID>
+          <Description>"2B"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="500" RealAddress="1FC4ADD5068"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>168</Offset>
+            <Offset>118</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2512</ID>
+              <Description>"2B Total"</Description>
+              <LastState Value="2" RealAddress="1FC4D05AD38"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+036BDB78</Address>
+              <Offsets>
+                <Offset>1AD8</Offset>
+                <Offset>120</Offset>
+                <Offset>60</Offset>
+                <Offset>B8</Offset>
+                <Offset>0</Offset>
+                <Offset>1D30</Offset>
+                <Offset>240</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2188</ID>
+          <Description>"3B"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="500" RealAddress="1FC4ADD50A0"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>1A0</Offset>
+            <Offset>118</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2513</ID>
+              <Description>"3B Total"</Description>
+              <LastState Value="1" RealAddress="1FC4D05AE10"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+036B18D8</Address>
+              <Offsets>
+                <Offset>1BB0</Offset>
+                <Offset>120</Offset>
+                <Offset>60</Offset>
+                <Offset>B8</Offset>
+                <Offset>0</Offset>
+                <Offset>C0</Offset>
+                <Offset>8</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2189</ID>
+          <Description>"4B"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="500" RealAddress="1FC4ADD50D8"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>1D8</Offset>
+            <Offset>118</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2514</ID>
+              <Description>"4B Total"</Description>
+              <LastState Value="3" RealAddress="1FC4D05AEE8"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+              <Offsets>
+                <Offset>1C88</Offset>
+                <Offset>120</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2190</ID>
+          <Description>"5B"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="500" RealAddress="1FC4ADD5110"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>210</Offset>
+            <Offset>118</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2515</ID>
+              <Description>"5B Total"</Description>
+              <LastState Value="100" RealAddress="1FC4D05AFC0"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+036BDB78</Address>
+              <Offsets>
+                <Offset>1D60</Offset>
+                <Offset>120</Offset>
+                <Offset>60</Offset>
+                <Offset>B8</Offset>
+                <Offset>0</Offset>
+                <Offset>1D30</Offset>
+                <Offset>240</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2191</ID>
+          <Description>"6B"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="500" RealAddress="1FC4ADD5148"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>248</Offset>
+            <Offset>118</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2309</ID>
+              <Description>"6B Total"</Description>
+              <LastState Value="300" RealAddress="1FC4D05B098"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038EDA18</Address>
+              <Offsets>
+                <Offset>1E38</Offset>
+                <Offset>120</Offset>
+                <Offset>58</Offset>
+                <Offset>58</Offset>
+                <Offset>10</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2192</ID>
+          <Description>"7B"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="500" RealAddress="1FC4ADD5180"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>280</Offset>
+            <Offset>118</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2280</ID>
+              <Description>"7B Total"</Description>
+              <LastState Value="3" RealAddress="1FC4D05B170"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038EDA18</Address>
+              <Offsets>
+                <Offset>1F10</Offset>
+                <Offset>120</Offset>
+                <Offset>50</Offset>
+                <Offset>40</Offset>
+                <Offset>58</Offset>
+                <Offset>10</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2193</ID>
+          <Description>"8B"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="500" RealAddress="1FC4ADD51B8"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>2B8</Offset>
+            <Offset>118</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2510</ID>
+              <Description>"8B Total"</Description>
+              <LastState Value="10" RealAddress="1FC4D05B248"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+036B18D8</Address>
+              <Offsets>
+                <Offset>1FE8</Offset>
+                <Offset>120</Offset>
+                <Offset>60</Offset>
+                <Offset>B8</Offset>
+                <Offset>0</Offset>
+                <Offset>C0</Offset>
+                <Offset>8</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>2148</ID>
+      <Description>"Group 2 - Offset +38 | +D8 totals"</Description>
+      <Options moRecursiveSetValue="1" moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+      <LastState Value="" RealAddress="00000000"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>2134</ID>
+          <Description>"1G"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="500" RealAddress="1FC4ADD5218"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038EDA10</Address>
+          <Offsets>
+            <Offset>18</Offset>
+            <Offset>B0</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+            <Offset>58</Offset>
+            <Offset>58</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2368</ID>
+              <Description>"1G Total"</Description>
+              <LastState Value="3" RealAddress="1FC4D059D30"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038EDA18</Address>
+              <Offsets>
+                <Offset>AD0</Offset>
+                <Offset>120</Offset>
+                <Offset>50</Offset>
+                <Offset>40</Offset>
+                <Offset>58</Offset>
+                <Offset>10</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2133</ID>
+          <Description>"2G"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="500" RealAddress="1FC4ADD5250"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>50</Offset>
+            <Offset>B0</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+            <Offset>10</Offset>
+            <Offset>60</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2290</ID>
+              <Description>"2G Total"</Description>
+              <LastState Value="2" RealAddress="1FC4D059E08"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+              <Offsets>
+                <Offset>BA8</Offset>
+                <Offset>90</Offset>
+                <Offset>0</Offset>
+                <Offset>90</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1976</ID>
+          <Description>"3G"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="500" RealAddress="1FC4ADD5288"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038EDA10</Address>
+          <Offsets>
+            <Offset>88</Offset>
+            <Offset>B0</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+            <Offset>58</Offset>
+            <Offset>58</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2194</ID>
+              <Description>"3G Total"</Description>
+              <LastState Value="1" RealAddress="1FC4D059EE0"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038EDA18</Address>
+              <Offsets>
+                <Offset>C80</Offset>
+                <Offset>120</Offset>
+                <Offset>8</Offset>
+                <Offset>88</Offset>
+                <Offset>58</Offset>
+                <Offset>10</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1974</ID>
+          <Description>"4G"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="500" RealAddress="1FC4ADD52C0"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>C0</Offset>
+            <Offset>B0</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+            <Offset>10</Offset>
+            <Offset>60</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2517</ID>
+              <Description>"4G Total"</Description>
+              <LastState Value="10" RealAddress="1FC4D059FB8"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+              <Offsets>
+                <Offset>D58</Offset>
+                <Offset>120</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1975</ID>
+          <Description>"5G"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="500" RealAddress="1FC4ADD52F8"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038EDA10</Address>
+          <Offsets>
+            <Offset>F8</Offset>
+            <Offset>B0</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+            <Offset>58</Offset>
+            <Offset>58</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2525</ID>
+              <Description>"5G Total"</Description>
+              <LastState Value="25" RealAddress="1FC4D05A090"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038EDA10</Address>
+              <Offsets>
+                <Offset>E30</Offset>
+                <Offset>90</Offset>
+                <Offset>0</Offset>
+                <Offset>90</Offset>
+                <Offset>8</Offset>
+                <Offset>88</Offset>
+                <Offset>58</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1972</ID>
+          <Description>"1B"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="500" RealAddress="1FC4ADD5330"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038EDA10</Address>
+          <Offsets>
+            <Offset>130</Offset>
+            <Offset>B0</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+            <Offset>58</Offset>
+            <Offset>58</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2502</ID>
+              <Description>"1B Total"</Description>
+              <LastState Value="10" RealAddress="1FC4D05A168"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038EDA10</Address>
+              <Offsets>
+                <Offset>F08</Offset>
+                <Offset>120</Offset>
+                <Offset>10</Offset>
+                <Offset>60</Offset>
+                <Offset>50</Offset>
+                <Offset>40</Offset>
+                <Offset>58</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1973</ID>
+          <Description>"2B"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="500" RealAddress="1FC4ADD5368"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>168</Offset>
+            <Offset>B0</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+            <Offset>10</Offset>
+            <Offset>60</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2518</ID>
+              <Description>"2B Total"</Description>
+              <LastState Value="35" RealAddress="1FC4D05A240"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+037C3AE0</Address>
+              <Offsets>
+                <Offset>FE0</Offset>
+                <Offset>90</Offset>
+                <Offset>0</Offset>
+                <Offset>90</Offset>
+                <Offset>60</Offset>
+                <Offset>B8</Offset>
+                <Offset>120</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1988</ID>
+          <Description>"3B"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="500" RealAddress="1FC4ADD53A0"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>1A0</Offset>
+            <Offset>B0</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2519</ID>
+              <Description>"3B Total"</Description>
+              <LastState Value="15" RealAddress="1FC4D05A318"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+037C3AE0</Address>
+              <Offsets>
+                <Offset>10B8</Offset>
+                <Offset>120</Offset>
+                <Offset>8</Offset>
+                <Offset>90</Offset>
+                <Offset>B8</Offset>
+                <Offset>120</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1971</ID>
+          <Description>"4B"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="500" RealAddress="1FC4ADD53D8"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>1D8</Offset>
+            <Offset>B0</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+            <Offset>10</Offset>
+            <Offset>60</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2264</ID>
+              <Description>"4B Total"</Description>
+              <LastState Value="25" RealAddress="1FC4D05A3F0"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+036B18D8</Address>
+              <Offsets>
+                <Offset>1190</Offset>
+                <Offset>120</Offset>
+                <Offset>60</Offset>
+                <Offset>B8</Offset>
+                <Offset>0</Offset>
+                <Offset>C0</Offset>
+                <Offset>8</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2000</ID>
+          <Description>"5B"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="500" RealAddress="1FC4ADD5410"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038EDA10</Address>
+          <Offsets>
+            <Offset>210</Offset>
+            <Offset>B0</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+            <Offset>58</Offset>
+            <Offset>58</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2520</ID>
+              <Description>"5B Total"</Description>
+              <LastState Value="3" RealAddress="1FC4D05A4C8"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+              <Offsets>
+                <Offset>1268</Offset>
+                <Offset>120</Offset>
+                <Offset>10</Offset>
+                <Offset>60</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1999</ID>
+          <Description>"6B"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="500" RealAddress="1FC4ADD5448"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038EDA10</Address>
+          <Offsets>
+            <Offset>248</Offset>
+            <Offset>B0</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+            <Offset>58</Offset>
+            <Offset>58</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2506</ID>
+              <Description>"6B Total"</Description>
+              <LastState Value="5" RealAddress="1FC4D05A5A0"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+              <Offsets>
+                <Offset>1340</Offset>
+                <Offset>120</Offset>
+                <Offset>10</Offset>
+                <Offset>60</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1998</ID>
+          <Description>"7B"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="500" RealAddress="1FC4ADD5480"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038EDA10</Address>
+          <Offsets>
+            <Offset>280</Offset>
+            <Offset>B0</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+            <Offset>58</Offset>
+            <Offset>58</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2521</ID>
+              <Description>"7B Total"</Description>
+              <LastState Value="10" RealAddress="1FC4D05A678"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038EDA18</Address>
+              <Offsets>
+                <Offset>1418</Offset>
+                <Offset>120</Offset>
+                <Offset>58</Offset>
+                <Offset>58</Offset>
+                <Offset>10</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1997</ID>
+          <Description>"8B"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="500" RealAddress="1FC4ADD54B8"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038EDA10</Address>
+          <Offsets>
+            <Offset>2B8</Offset>
+            <Offset>B0</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+            <Offset>58</Offset>
+            <Offset>58</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2522</ID>
+              <Description>"8B Total"</Description>
+              <LastState Value="10" RealAddress="1FC4D05A750"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+              <Offsets>
+                <Offset>14F0</Offset>
+                <Offset>90</Offset>
+                <Offset>0</Offset>
+                <Offset>90</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1978</ID>
+      <Description>"Seasonal - Offset +38 | +D8 totals"</Description>
+      <Options moRecursiveSetValue="1" moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+      <LastState Value="" RealAddress="00000000"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>835</ID>
+          <Description>"Seasonal Points"</Description>
+          <LastState Value="34" RealAddress="1FC48076870"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3B28</Address>
+          <Offsets>
+            <Offset>30</Offset>
+            <Offset>8</Offset>
+            <Offset>8</Offset>
+            <Offset>60</Offset>
+            <Offset>58</Offset>
+            <Offset>0</Offset>
+            <Offset>20</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2009</ID>
+          <Description>"1G"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="1" RealAddress="1FC4864D7B8"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>F8</Offset>
+            <Offset>48</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+            <Offset>10</Offset>
+            <Offset>60</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2329</ID>
+              <Description>"1G Total"</Description>
+              <LastState Value="1" RealAddress="1FC4D059670"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038EDA10</Address>
+              <Offsets>
+                <Offset>410</Offset>
+                <Offset>120</Offset>
+                <Offset>8</Offset>
+                <Offset>40</Offset>
+                <Offset>60</Offset>
+                <Offset>58</Offset>
+                <Offset>58</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2013</ID>
+          <Description>"2G"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="5000" RealAddress="1FC4864D828"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>168</Offset>
+            <Offset>48</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+            <Offset>10</Offset>
+            <Offset>60</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2327</ID>
+              <Description>"2G Total"</Description>
+              <LastState Value="5000" RealAddress="1FC4D059820"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038EDA18</Address>
+              <Offsets>
+                <Offset>5C0</Offset>
+                <Offset>120</Offset>
+                <Offset>8</Offset>
+                <Offset>80</Offset>
+                <Offset>40</Offset>
+                <Offset>58</Offset>
+                <Offset>10</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2023</ID>
+          <Description>"3G"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="50" RealAddress="1FC4864D940"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>280</Offset>
+            <Offset>48</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+            <Offset>10</Offset>
+            <Offset>60</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2132</ID>
+              <Description>"3G"</Description>
+              <LastState Value="50" RealAddress="1FC4D059C58"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+              <Offsets>
+                <Offset>9F8</Offset>
+                <Offset>120</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2011</ID>
+          <Description>"1B"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="30" RealAddress="1FC4864D7F0"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>130</Offset>
+            <Offset>48</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+            <Offset>10</Offset>
+            <Offset>60</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2523</ID>
+              <Description>"1B Total"</Description>
+              <LastState Value="30" RealAddress="1FC4D059748"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+              <Offsets>
+                <Offset>4E8</Offset>
+                <Offset>120</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2003</ID>
+          <Description>"2B"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="0" RealAddress="1FC4864D6D8"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>18</Offset>
+            <Offset>48</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+            <Offset>10</Offset>
+            <Offset>60</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2335</ID>
+              <Description>"2B Total"</Description>
+              <LastState Value="25" RealAddress="1FC4D059310"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038EDA18</Address>
+              <Offsets>
+                <Offset>B0</Offset>
+                <Offset>120</Offset>
+                <Offset>58</Offset>
+                <Offset>58</Offset>
+                <Offset>10</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2135</ID>
+          <Description>"3B"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="1" RealAddress="1FC4864D710"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>50</Offset>
+            <Offset>48</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+            <Offset>10</Offset>
+            <Offset>60</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2333</ID>
+              <Description>"3B Total"</Description>
+              <LastState Value="1" RealAddress="1FC4D0593E8"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038EDA10</Address>
+              <Offsets>
+                <Offset>188</Offset>
+                <Offset>120</Offset>
+                <Offset>10</Offset>
+                <Offset>60</Offset>
+                <Offset>8</Offset>
+                <Offset>88</Offset>
+                <Offset>58</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2139</ID>
+          <Description>"4B"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="1" RealAddress="1FC4864D748"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>88</Offset>
+            <Offset>48</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+            <Offset>10</Offset>
+            <Offset>60</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2332</ID>
+              <Description>"4B Total"</Description>
+              <LastState Value="1" RealAddress="1FC4D0594C0"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+              <Offsets>
+                <Offset>260</Offset>
+                <Offset>90</Offset>
+                <Offset>0</Offset>
+                <Offset>90</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2141</ID>
+          <Description>"5B"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="52" RealAddress="1FC4864D780"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038EDA10</Address>
+          <Offsets>
+            <Offset>C0</Offset>
+            <Offset>48</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+            <Offset>58</Offset>
+            <Offset>58</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2330</ID>
+              <Description>"5B Total"</Description>
+              <LastState Value="50" RealAddress="1FC4D059598"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+              <Offsets>
+                <Offset>338</Offset>
+                <Offset>120</Offset>
+                <Offset>10</Offset>
+                <Offset>60</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2015</ID>
+          <Description>"6B"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="343" RealAddress="1FC4864D860"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>1A0</Offset>
+            <Offset>48</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+            <Offset>10</Offset>
+            <Offset>60</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2371</ID>
+              <Description>"6B Total"</Description>
+              <LastState Value="343" RealAddress="1FC4D0598F8"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038EDA18</Address>
+              <Offsets>
+                <Offset>698</Offset>
+                <Offset>120</Offset>
+                <Offset>8</Offset>
+                <Offset>80</Offset>
+                <Offset>40</Offset>
+                <Offset>58</Offset>
+                <Offset>10</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2017</ID>
+          <Description>"7B"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="30" RealAddress="1FC4864D898"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>1D8</Offset>
+            <Offset>48</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+            <Offset>10</Offset>
+            <Offset>60</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2324</ID>
+              <Description>"7B Total"</Description>
+              <LastState Value="30" RealAddress="1FC4D0599D0"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+037C3AE0</Address>
+              <Offsets>
+                <Offset>770</Offset>
+                <Offset>120</Offset>
+                <Offset>8</Offset>
+                <Offset>90</Offset>
+                <Offset>B8</Offset>
+                <Offset>120</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2019</ID>
+          <Description>"8B"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="2" RealAddress="1FC4864D8D0"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>210</Offset>
+            <Offset>48</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+            <Offset>10</Offset>
+            <Offset>60</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2322</ID>
+              <Description>"8B Total"</Description>
+              <LastState Value="2" RealAddress="1FC4D059AA8"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+              <Offsets>
+                <Offset>848</Offset>
+                <Offset>90</Offset>
+                <Offset>0</Offset>
+                <Offset>90</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2021</ID>
+          <Description>"9B"</Description>
+          <Options moAlwaysHideChildren="1" moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+          <LastState Value="20" RealAddress="1FC4864D908"/>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"MCC-Win64-Shipping.exe"+038D3738</Address>
+          <Offsets>
+            <Offset>248</Offset>
+            <Offset>48</Offset>
+            <Offset>8</Offset>
+            <Offset>0</Offset>
+            <Offset>78</Offset>
+            <Offset>10</Offset>
+            <Offset>60</Offset>
+          </Offsets>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2526</ID>
+              <Description>"9B Total"</Description>
+              <LastState Value="20" RealAddress="1FC4D059B80"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"MCC-Win64-Shipping.exe"+038EDA10</Address>
+              <Offsets>
+                <Offset>920</Offset>
+                <Offset>120</Offset>
+                <Offset>10</Offset>
+                <Offset>60</Offset>
+                <Offset>58</Offset>
+                <Offset>58</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <CheatCodes>
+    <CodeEntry Color="20000000">
+      <Description>Change of mov ecx,[rax+30]</Description>
+      <AddressString>MCC-Win64-Shipping.exe+3854ED</AddressString>
+      <Before>
+        <Byte>3B</Byte>
+        <Byte>46</Byte>
+        <Byte>20</Byte>
+        <Byte>74</Byte>
+        <Byte>05</Byte>
+      </Before>
+      <Actual>
+        <Byte>8B</Byte>
+        <Byte>48</Byte>
+        <Byte>30</Byte>
+      </Actual>
+      <After>
+        <Byte>EB</Byte>
+        <Byte>02</Byte>
+        <Byte>8B</Byte>
+        <Byte>CB</Byte>
+        <Byte>48</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry Color="20000000">
+      <Description>No description</Description>
+      <AddressString>MCC-Win64-Shipping.exe+184DA63</AddressString>
+      <Before>
+        <Byte>FC</Byte>
+        <Byte>FF</Byte>
+        <Byte>8B</Byte>
+        <Byte>46</Byte>
+        <Byte>20</Byte>
+      </Before>
+      <Actual>
+        <Byte>89</Byte>
+        <Byte>47</Byte>
+        <Byte>30</Byte>
+      </Actual>
+      <After>
+        <Byte>48</Byte>
+        <Byte>8B</Byte>
+        <Byte>C7</Byte>
+        <Byte>48</Byte>
+        <Byte>8B</Byte>
+      </After>
+    </CodeEntry>
+  </CheatCodes>
+  <UserdefinedSymbols>
+    <SymbolEntry>
+      <Name>pshieldv</Name>
+      <Address>05AD0000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>pshieldv2</Name>
+      <Address>05AD0010</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>shield/health_lock</Name>
+      <Address>13600030</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>mycode</Name>
+      <Address>29700050000</Address>
+    </SymbolEntry>
+  </UserdefinedSymbols>
+  <DisassemblerComments>
+    <DisassemblerComment>
+      <Address>"halo2.dll"+E66B9A</Address>
+      <Comment>mark 2
+
+incoming
+
+bonk
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"halo2.dll"+E66BB2</Address>
+      <Comment>asd
+sad
+sad
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"halo2.dll"+E66BCB</Address>
+      <Comment>da
+dsasa
+sadas
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"halo2.dll"+E66C82</Address>
+      <Comment>mark 1
+
+income
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"halo2.dll"+E66CCA</Address>
+      <Comment>dasf
+adfa
+adf
+</Comment>
+    </DisassemblerComment>
+  </DisassemblerComments>
+</CheatTable>

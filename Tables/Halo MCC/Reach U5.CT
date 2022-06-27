@@ -1,0 +1,3740 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="34">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"Halo Reach"</Description>
+      <Options moHideChildren="1"/>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{ Game   : MCC-Win64-Shipping.exe
+  Version: 
+  Date   : 2020-06-02
+  Author : Dread Pony Roberts
+  Help From : SilentRunner
+
+  This script does blah blah blah
+}
+
+[ENABLE]
+
+aobscanmodule(Player_Base_Reader,haloreach.dll,C3 41 0F B7 45 00) // should be unique
+alloc(newmem10,$200,Player_Base_Reader)
+alloc(p_base,$10)
+registersymbol(p_base)
+alloc(psh_base,8)
+registersymbol(psh_base)
+alloc(pg_base,8)
+registersymbol(pg_base)
+alloc(flag,$100)
+registersymbol(flag)
+
+label(code10)
+label(return10)
+
+newmem10:
+mov [pg_base],r13
+add r13,E54
+mov [psh_base],r13
+sub r13,E54
+
+code10:
+  movzx eax,word ptr [r13+00]
+  jmp return10
+
+Player_Base_Reader+1:
+  jmp newmem10
+return10:
+registersymbol(Player_Base_Reader)
+
+aobscanmodule(Vehicle_Reader,haloreach.dll,C7 48 8D 0C 40 48 8B 44 CA 10 0F B7 08) // should be unique
+alloc(newmem30,$100,Vehicle_Reader)
+
+label(code30)
+label(return30)
+
+newmem30:
+  mov rax,[rdx+rcx*8+10]
+  mov [p_base+8],rax
+
+code30:
+  jmp return30
+
+Vehicle_Reader+05:
+  jmp newmem30
+return30:
+registersymbol(Vehicle_Reader)
+
+aobscanmodule(Armor_Ability_Reader,haloreach.dll,4A 8B 7C C1 10 8B 0F) // should be unique
+alloc(newmem14,$100,Armor_Ability_Reader)
+
+label(code14)
+label(return14)
+
+newmem14:
+
+code14:
+  mov rdi,[rcx+r8*8+10]
+  mov [p_base],rdi
+  jmp return14
+
+Armor_Ability_Reader:
+  jmp newmem14
+return14:
+registersymbol(Armor_Ability_Reader)
+
+aobscanmodule(Player_Movement_Base,haloreach.dll,8B 82 C0 01 00 00 F3) // should be unique
+alloc(newmem18,$100,Player_Movement_Base)
+alloc(m_base,8)
+registersymbol(m_base)
+
+label(code18)
+label(return18)
+
+newmem18:
+push rax
+push rbx
+push rcx
+cmp [pg_base],0
+je code18
+lea rax,[rdx+000001C0]
+sub rax,70
+mov rbx,[pg_base]
+mov ecx,[rbx+44]
+cmp [rax+70],ecx
+jne code18
+mov ecx,[rbx+48]
+cmp [rax+74],ecx
+jne code18
+mov [m_base],rax
+
+code18:
+  pop rcx
+  pop rbx
+  pop rax
+  mov eax,[rdx+000001C0]
+  jmp return18
+
+Player_Movement_Base:
+  jmp newmem18
+  nop
+return18:
+registersymbol(Player_Movement_Base)
+
+aobscanmodule(Player_Walk_Base,haloreach.dll,F3 0F 59 44 BE 18) // should be unique
+alloc(newmem25,$100,Player_Walk_Base)
+alloc(speed_base,$10)
+registersymbol(speed_base)
+
+label(code25)
+label(return25)
+
+newmem25:
+push rax
+lea rax,[rsi+rdi*4]
+mov [speed_base],rax
+pop rax
+
+code25:
+  mulss xmm0,[rsi+rdi*4+18]
+  jmp return25
+
+Player_Walk_Base:
+  jmp newmem25
+  nop
+return25:
+registersymbol(Player_Walk_Base)
+
+aobscanmodule(Jump_Reader,haloreach.dll,8B 87 78 01 00 00 C1) // should be unique
+alloc(newmem31,$100,Jump_Reader)
+
+label(code31)
+label(return31)
+
+newmem31:
+  mov [speed_base+8],rdi
+
+code31:
+  mov eax,[rdi+00000178]
+  jmp return31
+
+Jump_Reader:
+  jmp newmem31
+  nop
+return31:
+registersymbol(Jump_Reader)
+
+aobscanmodule(Ground_Flag_Reader,haloreach.dll,4A 8B 14 02 48 8B 42 50 48 8B 54 C8 10 48 0F BF 82 B2 01 00 00 8B 0C 10 83 C1 F9 83 F9 01) // should be unique
+alloc(newmem24,$100,Ground_Flag_Reader)
+alloc(ground_flag,8)
+registersymbol(ground_flag)
+
+label(code24)
+label(return24)
+
+newmem24:
+push r12
+lea r12,[rax+rdx]
+mov [ground_flag],r12
+pop r12
+
+code24:
+  mov ecx,[rax+rdx]
+  add ecx,-07
+  jmp return24
+
+Ground_Flag_Reader+15:
+  jmp newmem24
+  nop
+return24:
+registersymbol(Ground_Flag_Reader)
+
+aobscanmodule(Skull_Reader,haloreach.dll,41 8B 85 C8 E9 01 00) // should be unique
+alloc(newmem29,$100,Skull_Reader)
+alloc(skull_base,8)
+registersymbol(skull_base)
+
+label(code29)
+label(return29)
+
+newmem29:
+mov [skull_base],r13
+
+code29:
+  mov eax,[r13+0001E9C8]
+  jmp return29
+
+Skull_Reader:
+  jmp newmem29
+  nop 2
+return29:
+registersymbol(Skull_Reader)
+
+aobscanmodule(Weapon_Reader,haloreach.dll,44 0F B7 02 42 8B 54 C1 04 8B) // should be unique
+alloc(newmem2,$100,Weapon_Reader)
+alloc(w_base,$18)
+registersymbol(w_base)
+
+label(code2)
+label(return2)
+
+newmem2:
+mov [w_base],rdx
+
+code2:
+  movzx r8d,word ptr [rdx]
+  mov edx,[rcx+r8*8+04]
+  jmp return2
+
+Weapon_Reader:
+  jmp newmem2
+  nop 4
+return2:
+registersymbol(Weapon_Reader)
+
+aobscanmodule(Max_Ammo_Reader,haloreach.dll,0F B7 44 B7 0A 66 41) // should be unique
+alloc(newmem34,$100,Max_Ammo_Reader)
+
+label(code34)
+label(return34)
+
+newmem34:
+  cmp rax,[w_base]
+  jne code34
+  push rax
+  lea rax,[rdi+rsi*4]
+  mov [w_base+8],rax
+  pop rax
+  mov [w_base+10],r13
+
+code34:
+  movzx eax,word ptr [rdi+rsi*4+0A]
+  jmp return34
+
+Max_Ammo_Reader:
+  jmp newmem34
+return34:
+registersymbol(Max_Ammo_Reader)
+
+aobscanmodule(Forge_Reader,haloreach.dll,8B 81 D4 02 00 00) // should be unique
+alloc(newmem32,$100,Forge_Reader)
+alloc(f_base,8)
+registersymbol(f_base)
+
+label(code32)
+label(return32)
+
+newmem32:
+  mov [f_base],rcx
+
+code32:
+  mov eax,[rcx+000002D4]
+  jmp return32
+
+Forge_Reader:
+  jmp newmem32
+  nop
+return32:
+registersymbol(Forge_Reader)
+
+aobscanmodule(Damage_Code,haloreach.dll,F3 41 0F 11 45 10) // should be unique
+alloc(newmem15,$1000,Damage_Code)
+alloc(p_lock_h_and_s,1)
+alloc(p_max_h_and_s,1)
+alloc(a_lock_h_and_s,1)
+alloc(e_lock_h_and_s,1)
+alloc(extreme,1)
+alloc(a_one_hit_kill,1)
+alloc(e_one_hit_kill,1)
+alloc(p_mod_damage,1)
+alloc(a_mod_damage,1)
+alloc(e_mod_damage,1)
+alloc(p_mod_damage_value,4)
+alloc(a_mod_damage_value,4)
+alloc(e_mod_damage_value,4)
+alloc(modded_damage,4)
+registersymbol(p_lock_h_and_s)
+registersymbol(p_max_h_and_s)
+registersymbol(a_lock_h_and_s)
+registersymbol(e_lock_h_and_s)
+registersymbol(extreme)
+registersymbol(a_one_hit_kill)
+registersymbol(e_one_hit_kill)
+registersymbol(p_mod_damage)
+registersymbol(a_mod_damage)
+registersymbol(e_mod_damage)
+registersymbol(p_mod_damage_value)
+registersymbol(a_mod_damage_value)
+registersymbol(e_mod_damage_value)
+
+label(code15)
+label(return15)
+
+newmem15:
+{
+cmp byte ptr [flag],1
+je ally_damage_code
+cmp byte ptr [flag],2
+je enemy_damage_code
+cmp byte ptr [flag],3
+je player_damage_code
+cmp byte ptr [flag],4
+je vehicle_damage_code
+}
+cmp rbx,[pg_base]
+je player_damage_code
+cmp rbx,[p_base+8]
+je player_damage_code
+cmp byte ptr [rbx+1CA],ff
+je vehicle_damage_code
+cmp byte ptr [rbx+1CA],2
+je ally_damage_code
+cmp byte ptr [rbx+1CA],3
+je enemy_damage_code
+jmp code15
+
+player_damage_code:
+cmp byte ptr [extreme],1
+jne @f
+xorpd xmm0,xmm0
+jmp code15
+@@:
+cmp byte ptr [p_lock_h_and_s],1
+je endpdmg1
+cmp byte ptr [p_max_h_and_s],1
+jne endpdmg2
+endpdmg1:
+jmp return15
+endpdmg2:
+cmp byte ptr [p_mod_damage],1
+jne @f
+addss xmm0,xmm6
+mulss xmm6,[a_mod_damage_value]
+subss xmm0,xmm6
+@@:
+jmp code15
+
+ally_damage_code:
+cmp byte ptr [a_lock_h_and_s],1
+je return15
+cmp byte ptr [a_one_hit_kill],1
+jne @f
+xorpd xmm0,xmm0
+jmp code15
+@@:
+cmp byte ptr [a_mod_damage],1
+jne @f
+addss xmm0,xmm6
+mulss xmm6,[a_mod_damage_value]
+subss xmm0,xmm6
+@@:
+jmp code15
+
+vehicle_damage_code:
+cmp byte ptr [a_lock_h_and_s],1
+je return15
+cmp byte ptr [p_lock_h_and_s],1
+je return15
+cmp byte ptr [p_max_h_and_s],1
+je return15
+jmp code15
+
+enemy_damage_code:
+cmp byte ptr [e_lock_h_and_s],1
+je return15
+cmp byte ptr [e_one_hit_kill],1
+jne @f
+xorpd xmm0,xmm0
+jmp code15
+@@:
+cmp byte ptr [e_mod_damage],1
+jne @f
+addss xmm0,xmm6
+mulss xmm6,[e_mod_damage_value]
+subss xmm0,xmm6
+@@:
+jmp code15
+
+code15:
+  movss [r13+10],xmm0
+  jmp return15
+
+Damage_Code:
+  jmp newmem15
+  nop
+return15:
+registersymbol(Damage_Code)
+
+aobscanmodule(Shield_and_Health_Delay,haloreach.dll,66 41 89 76 0C) // should be unique
+alloc(newmem22,$200,Shield_and_Health_Delay)
+alloc(health_timer,2)
+alloc(shield_timer,2)
+alloc(health_timer_active,1)
+alloc(shield_timer_active,1)
+alloc(no_timer_health,1)
+alloc(no_timer_shield,1)
+registersymbol(health_timer)
+registersymbol(shield_timer)
+registersymbol(health_timer_active)
+registersymbol(shield_timer_active)
+registersymbol(no_timer_health)
+registersymbol(no_timer_shield)
+
+label(code22)
+label(return22)
+
+newmem22:
+  push rdx
+  mov rdx,[psh_base]
+  sub rdx,10
+  cmp r14,rdx
+  pop rdx
+  je health_timer_code
+  push rdx
+  mov rdx,[psh_base]
+  add rdx,20
+  cmp r14,rdx
+  pop rdx
+  je shield_timer_code
+  jmp code22
+
+health_timer_code:
+cmp byte ptr [no_timer_health],1
+je return22
+cmp byte ptr [health_timer_active],1
+jne code22
+mov si,[health_timer]
+jmp code22
+
+shield_timer_code:
+cmp byte ptr [no_timer_shield],1
+je return22
+cmp byte ptr [shield_timer_active],1
+jne code22
+mov si,[shield_timer]
+jmp code22
+
+code22:
+  mov [r14+0C],si
+  jmp return22
+
+Shield_and_Health_Delay:
+  jmp newmem22
+return22:
+registersymbol(Shield_and_Health_Delay)
+
+aobscanmodule(Armor_Ability_Reducer,haloreach.dll,F3 0F 10 81 EC 01 00 00) // should be unique
+alloc(newmem11,$100,Armor_Ability_Reducer)
+alloc(lock_armor_ability,1)
+registersymbol(lock_armor_ability)
+
+label(code11)
+label(return11)
+
+newmem11:
+  cmp [p_base],rdi
+  jne code11
+  cmp byte ptr [lock_armor_ability],1
+  jne code11
+  mov [rcx+000001EC],(float)1
+
+code11:
+  movss xmm0,[rcx+000001EC]
+  jmp return11
+
+Armor_Ability_Reducer:
+  jmp newmem11
+  nop 3
+return11:
+registersymbol(Armor_Ability_Reducer)
+
+aobscanmodule(Clip_Ammo,haloreach.dll,66 43 29 B4 1A D2 02 00 00) // should be unique
+alloc(newmem3,$100,Clip_Ammo)
+alloc(lock_ammo,1)
+alloc(lock_clip_ammo,2)
+alloc(lock_belt_ammo,2)
+alloc(lock_plasma_ammo,2)
+alloc(lock_heat_ammo,1)
+registersymbol(lock_ammo)
+registersymbol(lock_clip_ammo)
+registersymbol(lock_belt_ammo)
+registersymbol(lock_plasma_ammo)
+registersymbol(lock_heat_ammo)
+
+label(code3)
+label(return3)
+
+newmem3:
+  push rdx
+  lea rdx,[r10+r11]
+  cmp rdx,[w_base]
+  pop rdx
+  jne code3
+  cmp byte ptr [lock_ammo],1
+  je @f
+  cmp byte ptr [lock_clip_ammo],1
+  jne code3
+@@:
+  jmp return3
+
+code3:
+  sub [r10+r11+000002D2],si
+  jmp return3
+
+Clip_Ammo:
+  jmp newmem3
+  nop 4
+return3:
+registersymbol(Clip_Ammo)
+
+aobscanmodule(Belt_Ammo,haloreach.dll,66 42 89 8C 32 CE 02 00 00) // should be unique
+alloc(newmem4,$100,Belt_Ammo)
+
+label(code4)
+label(return4)
+
+newmem4:
+  push rax
+  lea rax,[rdx+r14]
+  cmp rax,[w_base]
+  pop rax
+  jne code4
+  cmp byte ptr [lock_ammo],1
+  je @f
+  cmp byte ptr [lock_belt_ammo],1
+  jne code4
+@@:
+  jmp return4
+
+code4:
+  mov [rdx+r14+000002CE],cx
+  jmp return4
+
+Belt_Ammo:
+  jmp newmem4
+  nop 4
+return4:
+registersymbol(Belt_Ammo)
+
+aobscanmodule(Plasma_Ammo,haloreach.dll,F3 41 0F 11 83 E4 01 00 00) // should be unique
+alloc(newmem5,$100,Plasma_Ammo)
+
+label(code5)
+label(return5)
+
+newmem5:
+  cmp r11,[w_base]
+  jne code5
+  cmp byte ptr [lock_ammo],1
+  je @f
+  cmp byte ptr [lock_plasma_ammo],1
+  jne code5
+@@:
+  jmp return5
+
+code5:
+  movss [r11+000001E4],xmm0
+  jmp return5
+
+Plasma_Ammo:
+  jmp newmem5
+  nop 4
+return5:
+registersymbol(Plasma_Ammo)
+
+aobscanmodule(Plasma_Heat,haloreach.dll,F3 0F 11 83 E0 01 00 00 E8) // should be unique
+alloc(newmem6,$100,Plasma_Heat)
+
+label(code6)
+label(return6)
+
+newmem6:
+  cmp rbx,[w_base]
+  jne code6
+  cmp byte ptr [lock_ammo],1
+  je @f
+  cmp byte ptr [lock_clip_ammo],1
+  jne code6
+@@:
+  jmp return6
+
+code6:
+  movss [rbx+000001E0],xmm0
+  jmp return6
+
+Plasma_Heat:
+  jmp newmem6
+  nop 3
+return6:
+registersymbol(Plasma_Heat)
+
+aobscanmodule(Bullet_Spread,haloreach.dll,F3 0F 58 B4 24 80 00 00 00 F3 0F 11 33) // should be unique
+alloc(newmem7,$100,Bullet_Spread)
+alloc(no_bullet_spread,1)
+registersymbol(no_bullet_spread)
+
+label(code7)
+label(return7)
+
+newmem7:
+  addss xmm6,[rsp+00000080]
+push rax
+mov rax,rbx
+sub rax,264
+cmp rax,[w_base]
+pop rax
+jne code7
+cmp byte ptr [no_bullet_spread],1
+je return7
+
+code7:
+  movss [rbx],xmm6
+  jmp return7
+
+Bullet_Spread:
+  jmp newmem7
+  nop 8
+return7:
+registersymbol(Bullet_Spread)
+
+aobscanmodule(Rapid_Fire_1,haloreach.dll,66 89 AC 1F 4A 02 00 00) // should be unique
+alloc(newmem8,$100,Rapid_Fire_1)
+alloc(rapid_fire,1)
+registersymbol(rapid_fire)
+
+label(code8)
+label(return8)
+
+newmem8:
+push rax
+lea rax,[rdi+rbx]
+cmp rax,[w_base]
+pop rax
+jne code8
+cmp byte ptr [rapid_fire],1
+je return8
+
+code8:
+  mov [rdi+rbx+0000024A],bp
+  jmp return8
+
+Rapid_Fire_1:
+  jmp newmem8
+  nop 3
+return8:
+registersymbol(Rapid_Fire_1)
+
+aobscanmodule(Rapid_Fire_2,haloreach.dll,46 88 AC 37 48 02 00 00) // should be unique
+alloc(newmem9,$100,Rapid_Fire_2)
+
+label(code9)
+label(return9)
+
+newmem9:
+push rax
+lea rax,[rdi+r14]
+cmp rax,[w_base]
+pop rax
+jne code9
+cmp byte ptr [rapid_fire],1
+je return9
+
+code9:
+  mov [rdi+r14+00000248],r13l
+  jmp return9
+
+Rapid_Fire_2:
+  jmp newmem9
+  nop 3
+return9:
+registersymbol(Rapid_Fire_2)
+
+aobscanmodule(Rapid_Fire_3,haloreach.dll,66 89 9C 37 4A 02 00 00) // should be unique
+alloc(newmem16,$100,Rapid_Fire_3)
+
+label(code16)
+label(return16)
+
+newmem16:
+push rax
+lea rax,[rdi+rsi]
+cmp rax,[w_base]
+pop rax
+jne code16
+cmp byte ptr [rapid_fire],1
+je return16
+
+code16:
+  mov [rdi+rsi+0000024A],bx
+  jmp return16
+
+Rapid_Fire_3:
+  jmp newmem16
+  nop 3
+return16:
+registersymbol(Rapid_Fire_3)
+
+aobscanmodule(Rapid_Fire_Continuous,haloreach.dll,0F B7 8C 1F 4C 02 00 00) // should be unique
+alloc(newmem12,$100,"haloreach.dll"+60B58D)
+alloc(autofire,1)
+registersymbol(autofire)
+
+label(code12)
+label(return12)
+
+newmem12:
+push rax
+lea rax,[rdi+rbx]
+cmp rax,[w_base]
+pop rax
+jne code12
+cmp dword ptr [rdi+rbx+000002B0],0
+jne code12
+cmp byte ptr [autofire],1
+jne code12
+mov [rdi+rbx+0000024C],129
+
+code12:
+  movzx ecx,word ptr [rdi+rbx+0000024C]
+  jmp return12
+
+Rapid_Fire_Continuous:
+  jmp newmem12
+  nop 3
+return12:
+registersymbol(Rapid_Fire_Continuous)
+
+aobscanmodule(Grenade_Reducer,haloreach.dll,41 88 84 38 7E 03 00 00) // should be unique
+alloc(newmem13,$100,Grenade_Reducer)
+alloc(lock_grenades,1)
+alloc(max_grenades,1)
+registersymbol(lock_grenades)
+registersymbol(max_grenades)
+
+label(code13)
+label(return13)
+
+newmem13:
+  cmp byte ptr [lock_grenades],1
+  je return13
+  cmp byte ptr [max_grenades],1
+  je return13
+
+code13:
+  mov [r8+rdi+0000037E],al
+  jmp return13
+
+Grenade_Reducer:
+  jmp newmem13
+  nop 3
+return13:
+registersymbol(Grenade_Reducer)
+
+aobscanmodule(Stealth_Reducer,haloreach.dll,F3 0F 11 AF 9C 04 00 00 EB 07) // should be unique
+alloc(newmem26,$100,Stealth_Reducer)
+alloc(stealth,1)
+registersymbol(stealth)
+
+label(code26)
+label(return26)
+
+newmem26:
+  cmp rdi,[pg_base]
+  jne code26
+  cmp byte ptr [stealth],1
+  je return26
+
+code26:
+  movss [rdi+0000049C],xmm5
+  jmp return26
+
+Stealth_Reducer:
+  jmp newmem26
+  nop 3
+return26:
+registersymbol(Stealth_Reducer)
+
+aobscanmodule(Stealth_Reducer_2,haloreach.dll,F3 0F 11 83 9C 04 00 00 75) // should be unique
+alloc(newmem27,$100,Stealth_Reducer_2)
+
+label(code27)
+label(return27)
+
+newmem27:
+  cmp rbx,[pg_base]
+  jne code27
+  cmp byte ptr [stealth],1
+  je return27
+
+code27:
+  movss [rbx+0000049C],xmm0
+  jmp return27
+
+Stealth_Reducer_2:
+  jmp newmem27
+  nop 3
+return27:
+registersymbol(Stealth_Reducer_2)
+
+aobscanmodule(O_Flight_Code,haloreach.dll,0F 10 02 0F 11 81 E0 00 00 00) // should be unique
+alloc(newmem23,$200,O_Flight_Code)
+alloc(flight,3)
+registersymbol(flight)
+
+label(code23)
+label(return23)
+
+newmem23:
+  cmp rcx,[m_base]
+  jne code23
+  fld [rdx]
+  fstp [rcx+000000E0]
+  fld [rdx+4]
+  fstp [rcx+000000E4]
+  cmp byte ptr [flight],1
+  je @f
+  fld [rdx+8]
+  fstp [rcx+000000E8]
+@@:
+  fld [rdx+C]
+  fstp [rcx+000000EC]
+  jmp return23
+
+code23:
+  movups xmm0,[rdx]
+  movups [rcx+000000E0],xmm0
+  jmp return23
+
+O_Flight_Code:
+  jmp newmem23
+  nop 5
+return23:
+registersymbol(O_Flight_Code)
+
+aobscanmodule(NoClip,haloreach.dll,0F 10 6F 50 F3 0F 59 C6) // should be unique
+alloc(newmem19,$100,NoClip)
+
+label(code19)
+label(return19)
+
+newmem19:
+push rax
+lea rax,[rdi-20]
+cmp rax,[m_base]
+pop rax
+jne code19
+  cmp byte ptr [flight],1
+  je @f
+  cmp byte ptr [flight+2],1
+  je @f
+  movups xmm5,[rdi+50]
+@@:
+  mulss xmm0,xmm6
+  jmp return19
+
+code19:
+  movups xmm5,[rdi+50]
+  mulss xmm0,xmm6
+  jmp return19
+
+NoClip:
+  jmp newmem19
+  nop 3
+return19:
+registersymbol(NoClip)
+
+aobscanmodule(Call_1,haloreach.dll,5D 5F 5E C3 CC CC 48 8B C4 48 89 58 10 55) // should be unique
+registersymbol(Call_1)
+aobscanmodule(Noclip_Death,haloreach.dll,48 83 EF 01 40 8A F0) // should be unique
+alloc(newmem20,$100,Noclip_Death)
+
+label(code20)
+label(return20)
+
+newmem20:
+
+code20:
+  cmp byte ptr [flight],1
+  je @f
+  cmp byte ptr [flight+1],1
+  je @f
+  call Call_1+6
+@@:
+  jmp return20
+
+Noclip_Death-5:
+  jmp newmem20
+return20:
+registersymbol(Noclip_Death)
+
+aobscanmodule(Budget_Reducer,haloreach.dll,89 83 D4 02 00 00 48) // should be unique
+alloc(newmem33,$100,Budget_Reducer)
+
+label(code33)
+label(return33)
+
+newmem33:
+  cmp byte ptr [flag+2],1
+  je return33
+
+code33:
+  mov [rbx+000002D4],eax
+  jmp return33
+
+Budget_Reducer:
+  jmp newmem33
+  nop
+return33:
+registersymbol(Budget_Reducer)
+
+aobscanmodule(Manipulator,haloreach.dll,49 8B 04 C7 48 8D 0C 88 48 89 4E 08 45) // should be unique
+alloc(newmem21,$2000,Manipulator)
+alloc(save1,1)
+alloc(save2,1)
+alloc(save3,1)
+alloc(saved1,1)
+alloc(saved2,1)
+alloc(saved3,1)
+alloc(teleport1,1)
+alloc(teleport2,1)
+alloc(teleport3,1)
+alloc(t_coordinates1,12)
+alloc(t_coordinates2,12)
+alloc(t_coordinates3,12)
+alloc(flight_speed,4)
+alloc(up_bind,4)
+alloc(down_bind,4)
+alloc(flight_smoother,1)
+alloc(sprint,1)
+alloc(autorun,1)
+alloc(sprint_reset,1)
+alloc(sprint_bind,4)
+alloc(forward_sprint_speed,4)
+alloc(backward_sprint_speed,4)
+alloc(side_sprint_speed,4)
+alloc(sprint_friction,4)
+alloc(skull,20)
+alloc(skull_enable,1)
+alloc(f_blam,50)
+registersymbol(save1)
+registersymbol(save2)
+registersymbol(save3)
+registersymbol(teleport1)
+registersymbol(teleport2)
+registersymbol(teleport3)
+registersymbol(t_coordinates1)
+registersymbol(t_coordinates2)
+registersymbol(t_coordinates3)
+registersymbol(flight_speed)
+registersymbol(up_bind)
+registersymbol(down_bind)
+registersymbol(flight_smoother)
+registersymbol(sprint)
+registersymbol(autorun)
+registersymbol(sprint_bind)
+registersymbol(forward_sprint_speed)
+registersymbol(backward_sprint_speed)
+registersymbol(side_sprint_speed)
+registersymbol(sprint_friction)
+registersymbol(skull)
+registersymbol(skull_enable)
+registersymbol(f_blam)
+
+label(code21)
+label(return21)
+
+newmem21:
+push rax
+push rbx
+push rcx
+push rdx
+push r8
+push r9
+push r10
+push r11
+push r12
+push r13
+push r14
+push r15
+  cmp [psh_base],0
+  je end
+  cmp [m_base],0
+  je end
+  cmp [pg_base],0
+  je end
+  cmp [ground_flag],0
+  je end
+  mov rax,[psh_base]
+  mov rcx,[m_base]
+  mov rdx,[pg_base]
+  mov rbx,[skull_base]
+  mov r13,[ground_flag]
+  mov r14,[speed_base]
+
+Skull_Manip:
+  cmp byte ptr [skull_enable],1
+  jne skull_end
+  push rax
+  xor rax,rax
+  cmp byte ptr [skull+0],1
+  jne @f
+  add ah,1
+@@:
+  cmp byte ptr [skull+1],1
+  jne @f
+  add ah,2
+@@:
+  shl ah,4
+  cmp byte ptr [skull+2],1
+  jne @f
+  add ah,1
+@@:
+  cmp byte ptr [skull+3],1
+  jne @f
+  add ah,4
+@@:
+  cmp byte ptr [skull+4],1
+  jne @f
+  add ah,8
+@@:
+  cmp byte ptr [skull+5],1
+  jne @f
+  add al,1
+@@:
+  cmp byte ptr [skull+6],1
+  jne @f
+  add al,2
+@@:
+  cmp byte ptr [skull+7],1
+  jne @f
+  add al,4
+@@:
+  cmp byte ptr [skull+8],1
+  jne @f
+  add al,8
+@@:
+  shl al,4
+  cmp byte ptr [skull+9],1
+  jne @f
+  add al,1
+@@:
+  cmp byte ptr [skull+A],1
+  jne @f
+  add al,2
+@@:
+  cmp byte ptr [skull+B],1
+  jne @f
+  add al,4
+@@:
+  cmp byte ptr [skull+C],1
+  jne @f
+  add al,8
+@@:
+
+  mov [rbx+1E9C8],eax
+  pop rax
+skull_end:
+
+Grenade_Codes:
+  cmp byte ptr [max_grenades],1
+  jne @f
+  mov byte ptr [rdx+37E],4
+  mov byte ptr [rdx+37F],4
+@@:
+
+Health_And_Shield_Codes:
+  cmp byte ptr [extreme],1
+  je end1
+  cmp byte ptr [p_max_h_and_s],1
+  jne @f
+  mov [rax+0],(float)1
+  mov [rax+30],(float)1
+@@:
+end1:
+
+Armor_Ability_Code:
+  cmp [p_base],0
+  je @f
+  mov r12,[p_base]
+  cmp byte ptr [lock_armor_ability],1
+  jne @f
+  mov [r12+1EC],(float)1
+@@:
+
+Stealth_Coding:
+  cmp byte ptr [stealth],1
+  jne @f
+  mov [rdx+49C],(float)1
+@@:
+
+Save_Code:
+  cmp byte ptr [save1],1
+  jne @f
+  mov byte ptr [save1],0
+  mov byte ptr [saved1],1
+  fld [rcx+70]
+  fstp [t_coordinates1]
+  fld [rcx+74]
+  fstp [t_coordinates1+4]
+  fld [rcx+78]
+  fstp [t_coordinates1+8]
+@@:
+  cmp byte ptr [save2],1
+  jne @f
+  mov byte ptr [save2],0
+  mov byte ptr [saved2],1
+  fld [rcx+70]
+  fstp [t_coordinates2]
+  fld [rcx+74]
+  fstp [t_coordinates2+4]
+  fld [rcx+78]
+  fstp [t_coordinates2+8]
+@@:
+  cmp byte ptr [save3],1
+  jne @f
+  mov byte ptr [save3],0
+  mov byte ptr [saved3],1
+  fld [rcx+70]
+  fstp [t_coordinates3]
+  fld [rcx+74]
+  fstp [t_coordinates3+4]
+  fld [rcx+78]
+  fstp [t_coordinates3+8]
+@@:
+
+Teleportation_Code:
+  cmp byte ptr [teleport1],1
+  jne @f
+  cmp byte ptr [saved1],1
+  jne @f
+  mov byte ptr [teleport1],0
+  fld [t_coordinates1]
+  fstp [rcx+70]
+  fld [t_coordinates1+4]
+  fstp [rcx+74]
+  fld [t_coordinates1+8]
+  fstp [rcx+78]
+@@:
+  cmp byte ptr [teleport2],1
+  jne @f
+  cmp byte ptr [saved2],1
+  jne @f
+  mov byte ptr [teleport2],0
+  fld [t_coordinates2]
+  fstp [rcx+70]
+  fld [t_coordinates2+4]
+  fstp [rcx+74]
+  fld [t_coordinates2+8]
+  fstp [rcx+78]
+@@:
+  cmp byte ptr [teleport3],1
+  jne @f
+  cmp byte ptr [saved3],1
+  jne @f
+  mov byte ptr [teleport3],0
+  fld [t_coordinates3]
+  fstp [rcx+70]
+  fld [t_coordinates3+4]
+  fstp [rcx+74]
+  fld [t_coordinates3+8]
+  fstp [rcx+78]
+@@:
+
+Flight_Code:
+  cmp byte ptr [flight],1
+  jne flight_end
+  mov dword ptr [rcx+E8],0
+  mov byte ptr [r13],0
+  cmp byte ptr [flight_smoother],1
+  je Flight_Up
+  cmp byte ptr [flight_smoother],2
+  je Flight_Down
+
+Flight_Up:
+  push RAX
+  push RCX
+  push RDX
+  push R8
+  push R9
+  push R10
+  push R11
+  sub rsp,28
+  mov rcx,[up_bind]
+  call GetAsyncKeyState
+  add rsp,28
+  pop r11
+  pop r10
+  pop r9
+  pop r8
+  pop rdx
+  pop rcx
+  test ax,8001
+  pop rax
+  jz @f
+  fld [rcx+E8]
+  fadd [flight_speed]
+  fstp [rcx+E8]
+  mov byte ptr [flight_smoother],1
+  jmp flight_end
+@@:
+  mov byte ptr [flight_smoother],0
+
+Flight_Down:
+  push RAX
+  push RCX
+  push RDX
+  push R8
+  push R9
+  push R10
+  push R11
+  sub rsp,28
+  mov rcx,[down_bind]
+  call GetAsyncKeyState
+  add rsp,28
+  pop r11
+  pop r10
+  pop r9
+  pop r8
+  pop rdx
+  pop rcx
+  test ax,8001
+  pop rax
+  jz @f
+  fld [rcx+E8]
+  fsub [flight_speed]
+  fstp [rcx+E8]
+  mov byte ptr [flight_smoother],2
+  jmp flight_end
+@@:
+  mov byte ptr [flight_smoother],0
+
+flight_end:
+
+Sprint_Code:
+  cmp byte ptr [sprint],1
+  jne sprint_fixer
+  cmp byte ptr [autorun],1
+  je @f
+  push RAX
+  push RCX
+  push RDX
+  push R8
+  push R9
+  push R10
+  push R11
+  sub rsp,28
+  mov rcx,[sprint_bind]
+  call GetAsyncKeyState
+  add rsp,28
+  pop r11
+  pop r10
+  pop r9
+  pop r8
+  pop rdx
+  pop rcx
+  test ax,8001
+  pop rax
+  jz no_shift_button_held
+@@:
+  mov byte ptr [sprint_reset],1
+  fld [forward_sprint_speed]
+  fstp [r14+4]
+  fld [backward_sprint_speed]
+  fstp [r14+8]
+  fld [side_sprint_speed]
+  fstp [r14+C]
+  fld [sprint_friction]
+  fstp [r14+10]
+  jmp sprint_end
+no_shift_button_held:
+  mov byte ptr [sprint_reset],1
+  mov [r14+4],(float)2.200000048
+  mov [r14+8],(float)1.980000019
+  mov [r14+C],(float)1.980000019
+  mov [r14+10],(float)8.5
+  jmp sprint_end
+sprint_fixer:
+  cmp byte ptr [sprint_reset],1
+  jne sprint_end
+  mov byte ptr [sprint_reset],0
+  mov [r14+4],(float)2.200000048
+  mov [r14+8],(float)1.980000019
+  mov [r14+C],(float)1.980000019
+  mov [r14+10],(float)8.5
+  jmp sprint_end
+
+sprint_end:
+
+Jump_Code:
+  cmp [speed_base+8],0
+  je jump_end
+  mov r11,[speed_base+8]
+  cmp byte ptr [flag+1],2
+  jne jump_fix
+  fld [f_blam+0]
+  fstp [r11+53C]
+  jmp jump_end
+jump_fix:
+  cmp byte ptr [flag+1],1
+  jne jump_end
+  mov byte ptr [flag+1],0
+  push (float)2.299999952
+  fld [rsp]
+  fstp [r11+53C]
+  add rsp,8
+  jmp jump_end
+jump_end:
+
+Ammo_Manip:
+  cmp [w_base],0
+  je endammomanip
+  cmp [w_base+8],0
+  je endammomanip
+  mov rax,[w_base+8]
+  mov rcx,[w_base+10]
+  mov rbx,[w_base]
+  cmp byte ptr [lock_clip_ammo+1],1
+  jne @f
+  cmp rcx,rbx
+  jne @f
+  mov rax,[rax+A]
+  mov [rbx+2D2],ax
+@@:
+  mov rax,[w_base+8]
+  cmp byte ptr [lock_belt_ammo+1],1
+  jne @f
+  cmp rcx,rbx
+  jne @f
+  mov rax,[rax+C]
+  mov [rbx+2CE],ax
+@@:
+  xor rax,rax
+  cmp byte ptr [lock_plasma_ammo+1],1
+  jne @f
+  mov [rbx+1E4],eax
+@@:
+endammomanip:
+
+Forge_Manip:
+cmp [f_base],0
+je @f
+cmp byte ptr [flag+2],1
+jne @f
+mov r15,[f_base]
+mov [r15+2D4],0
+@@:
+
+end:
+
+pop r15
+pop r14
+pop r13
+pop r12
+pop r11
+pop r10
+pop r9
+pop r8
+pop rdx
+pop rcx
+pop rbx
+pop rax
+
+code21:
+  mov rax,[r15+rax*8]
+  lea rcx,[rax+rcx*4]
+  jmp return21
+
+Manipulator:
+  jmp newmem21
+  nop 3
+return21:
+registersymbol(Manipulator)
+
+[DISABLE]
+
+Player_Base_Reader+1:
+  db 41 0F B7 45 00
+
+unregistersymbol(Player_Base_Reader)
+dealloc(newmem10)
+dealloc(p_base)
+unregistersymbol(p_base)
+dealloc(psh_base)
+unregistersymbol(psh_base)
+dealloc(pg_base)
+unregistersymbol(pg_base)
+dealloc(flag)
+unregistersymbol(flag)
+
+Vehicle_Reader+05:
+  db 48 8B 44 CA 10
+
+unregistersymbol(Vehicle_Reader)
+dealloc(newmem30)
+
+Armor_Ability_Reader:
+  db 4A 8B 7C C1 10
+
+unregistersymbol(Armor_Ability_Reader)
+dealloc(newmem14)
+
+Player_Movement_Base:
+  db 8B 82 C0 01 00 00
+
+unregistersymbol(Player_Movement_Base)
+dealloc(newmem18)
+dealloc(m_base)
+unregistersymbol(m_base)
+
+Player_Walk_Base:
+  db F3 0F 59 44 BE 18
+
+unregistersymbol(Player_Walk_Base)
+dealloc(newmem25)
+dealloc(speed_base)
+unregistersymbol(speed_base)
+
+Jump_Reader:
+  db 8B 87 78 01 00 00
+
+unregistersymbol(Jump_Reader)
+dealloc(newmem31)
+
+Ground_Flag_Reader+15:
+  db 8B 0C 10 83 C1 F9
+
+unregistersymbol(Ground_Flag_Reader)
+dealloc(newmem24)
+dealloc(ground_flag)
+unregistersymbol(ground_flag)
+
+Skull_Reader:
+  db 41 8B 85 C8 E9 01 00
+
+unregistersymbol(Skull_Reader)
+dealloc(newmem29)
+dealloc(skull_base)
+unregistersymbol(skull_base)
+
+Weapon_Reader:
+  db 44 0F B7 02 42 8B 54 C1 04
+
+unregistersymbol(Weapon_Reader)
+dealloc(newmem2)
+dealloc(w_base)
+unregistersymbol(w_base)
+
+Max_Ammo_Reader:
+  db 0F B7 44 B7 0A
+
+unregistersymbol(Max_Ammo_Reader)
+dealloc(newmem34)
+
+Forge_Reader:
+  db 8B 81 D4 02 00 00
+
+unregistersymbol(Forge_Reader)
+dealloc(newmem32)
+dealloc(f_base)
+unregistersymbol(f_base)
+
+Damage_Code:
+  db F3 41 0F 11 45 10
+
+unregistersymbol(Damage_Code)
+dealloc(newmem15)
+dealloc(p_lock_h_and_s)
+dealloc(p_max_h_and_s)
+dealloc(a_lock_h_and_s)
+dealloc(e_lock_h_and_s)
+dealloc(extreme)
+dealloc(a_one_hit_kill)
+dealloc(e_one_hit_kill)
+dealloc(p_mod_damage)
+dealloc(a_mod_damage)
+dealloc(e_mod_damage)
+dealloc(p_mod_damage_value)
+dealloc(a_mod_damage_value)
+dealloc(e_mod_damage_value)
+dealloc(modded_damage)
+unregistersymbol(p_lock_h_and_s)
+unregistersymbol(p_max_h_and_s)
+unregistersymbol(a_lock_h_and_s)
+unregistersymbol(e_lock_h_and_s)
+unregistersymbol(extreme)
+unregistersymbol(a_one_hit_kill)
+unregistersymbol(e_one_hit_kill)
+unregistersymbol(p_mod_damage)
+unregistersymbol(a_mod_damage)
+unregistersymbol(e_mod_damage)
+unregistersymbol(p_mod_damage_value)
+unregistersymbol(a_mod_damage_value)
+unregistersymbol(e_mod_damage_value)
+
+Shield_and_Health_Delay:
+  db 66 41 89 76 0C
+
+unregistersymbol(Shield_and_Health_Delay)
+dealloc(newmem22)
+dealloc(health_timer)
+dealloc(shield_timer)
+dealloc(health_timer_active)
+dealloc(shield_timer_active)
+dealloc(no_timer_health)
+dealloc(no_timer_shield)
+unregistersymbol(health_timer)
+unregistersymbol(shield_timer)
+unregistersymbol(health_timer_active)
+unregistersymbol(shield_timer_active)
+unregistersymbol(no_timer_health)
+unregistersymbol(no_timer_shield)
+
+Armor_Ability_Reducer:
+  db F3 0F 10 81 EC 01 00 00
+
+unregistersymbol(Armor_Ability_Reducer)
+dealloc(newmem11)
+dealloc(lock_armor_ability)
+unregistersymbol(lock_armor_ability)
+
+Clip_Ammo:
+  db 66 43 29 B4 1A D2 02 00 00
+
+unregistersymbol(Clip_Ammo)
+dealloc(newmem3)
+dealloc(lock_ammo)
+dealloc(lock_clip_ammo)
+dealloc(lock_belt_ammo)
+dealloc(lock_plasma_ammo)
+dealloc(lock_heat_ammo)
+unregistersymbol(lock_ammo)
+unregistersymbol(lock_clip_ammo)
+unregistersymbol(lock_belt_ammo)
+unregistersymbol(lock_plasma_ammo)
+unregistersymbol(lock_heat_ammo)
+
+Belt_Ammo:
+  db 66 42 89 8C 32 CE 02 00 00
+
+unregistersymbol(Belt_Ammo)
+dealloc(newmem4)
+
+Plasma_Ammo:
+  db F3 41 0F 11 83 E4 01 00 00
+
+unregistersymbol(Plasma_Ammo)
+dealloc(newmem5)
+
+Plasma_Heat:
+  db F3 0F 11 83 E0 01 00 00
+
+unregistersymbol(Plasma_Heat)
+dealloc(newmem6)
+
+Bullet_Spread:
+  db F3 0F 58 B4 24 80 00 00 00 F3 0F 11 33
+
+unregistersymbol(Bullet_Spread)
+dealloc(newmem7)
+dealloc(no_bullet_spread)
+unregistersymbol(no_bullet_spread)
+
+Rapid_Fire_1:
+  db 66 89 AC 1F 4A 02 00 00
+
+unregistersymbol(Rapid_Fire_1)
+dealloc(newmem8)
+dealloc(rapid_fire)
+unregistersymbol(rapid_fire)
+
+Rapid_Fire_2:
+  db 46 88 AC 37 48 02 00 00
+
+unregistersymbol(Rapid_Fire_2)
+dealloc(newmem9)
+
+Rapid_Fire_3:
+  db 66 89 9C 37 4A 02 00 00
+
+unregistersymbol(Rapid_Fire_3)
+dealloc(newmem16)
+
+Rapid_Fire_Continuous:
+  db 0F B7 8C 1F 4C 02 00 00
+
+unregistersymbol(Rapid_Fire_Continuous)
+dealloc(newmem12)
+dealloc(autofire)
+unregistersymbol(autofire)
+
+Grenade_Reducer:
+  db 41 88 84 38 7E 03 00 00
+
+unregistersymbol(Grenade_Reducer)
+dealloc(newmem13)
+dealloc(lock_grenades)
+dealloc(max_grenades)
+unregistersymbol(lock_grenades)
+unregistersymbol(max_grenades)
+
+Stealth_Reducer:
+  db F3 0F 11 AF 9C 04 00 00
+
+unregistersymbol(Stealth_Reducer)
+dealloc(newmem26)
+dealloc(stealth)
+unregistersymbol(stealth)
+
+Stealth_Reducer_2:
+  db F3 0F 11 83 9C 04 00 00
+
+unregistersymbol(Stealth_Reducer_2)
+dealloc(newmem27)
+
+O_Flight_Code:
+  db 0F 10 02 0F 11 81 E0 00 00 00
+
+unregistersymbol(O_Flight_Code)
+dealloc(newmem23)
+dealloc(flight)
+unregistersymbol(flight)
+
+NoClip:
+  db 0F 10 6F 50 F3 0F 59 C6
+
+unregistersymbol(NoClip)
+dealloc(newmem19)
+
+Noclip_Death-5:
+  call Call_1+6
+
+unregistersymbol(Noclip_Death)
+dealloc(newmem20)
+unregistersymbol(Call_1)
+
+Budget_Reducer:
+  db 89 83 D4 02 00 00
+
+unregistersymbol(Budget_Reducer)
+dealloc(newmem33)
+
+Manipulator:
+  db 49 8B 04 C7 48 8D 0C 88
+
+unregistersymbol(Manipulator)
+dealloc(newmem21)
+dealloc(save1)
+dealloc(save2)
+dealloc(save3)
+dealloc(saved1)
+dealloc(saved2)
+dealloc(saved3)
+dealloc(teleport1)
+dealloc(teleport2)
+dealloc(teleport3)
+dealloc(t_coordinates1)
+dealloc(t_coordinates2)
+dealloc(t_coordinates3)
+dealloc(flight_speed)
+dealloc(up_bind)
+dealloc(down_bind)
+dealloc(flight_smoother)
+dealloc(sprint)
+dealloc(autorun)
+dealloc(sprint_reset)
+dealloc(sprint_bind)
+dealloc(forward_sprint_speed)
+dealloc(backward_sprint_speed)
+dealloc(side_sprint_speed)
+dealloc(sprint_friction)
+dealloc(skull)
+dealloc(skull_enable)
+dealloc(f_blam)
+unregistersymbol(save1)
+unregistersymbol(save2)
+unregistersymbol(save3)
+unregistersymbol(teleport1)
+unregistersymbol(teleport2)
+unregistersymbol(teleport3)
+unregistersymbol(t_coordinates1)
+unregistersymbol(t_coordinates2)
+unregistersymbol(t_coordinates3)
+unregistersymbol(flight_speed)
+unregistersymbol(up_bind)
+unregistersymbol(down_bind)
+unregistersymbol(flight_smoother)
+unregistersymbol(sprint)
+unregistersymbol(autorun)
+unregistersymbol(sprint_bind)
+unregistersymbol(forward_sprint_speed)
+unregistersymbol(backward_sprint_speed)
+unregistersymbol(side_sprint_speed)
+unregistersymbol(sprint_friction)
+unregistersymbol(skull)
+unregistersymbol(skull_enable)
+unregistersymbol(f_blam)
+
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>110</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>9</ID>
+          <Description>"Scripts"</Description>
+          <Options moHideChildren="1"/>
+          <LastState Value="" RealAddress="00000000"/>
+          <GroupHeader>1</GroupHeader>
+          <Hotkeys>
+            <Hotkey>
+              <Action>Toggle Activation</Action>
+              <Keys>
+                <Key>110</Key>
+              </Keys>
+              <ID>0</ID>
+            </Hotkey>
+          </Hotkeys>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>110</ID>
+              <Description>"Cheat Engine"</Description>
+              <Options moHideChildren="1"/>
+              <LastState Value="" RealAddress="00000000"/>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>111</ID>
+                  <Description>"Compact Mode"</Description>
+                  <LastState/>
+                  <Color>0000FF</Color>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>[ENABLE]
+LuaCall(function cycleFullCompact(sender,force) local state = not(compactmenuitem.Caption == 'Compact View Mode'); if force~=nil then state = not force end; compactmenuitem.Caption = state and 'Compact View Mode' or 'Full View Mode'; getMainForm().Splitter1.Visible = state; getMainForm().Panel4.Visible    = state; getMainForm().Panel5.Visible    = state; end; function addCompactMenu() if compactmenualreadyexists then return end; local parent = getMainForm().Menu.Items; compactmenuitem = createMenuItem(parent); parent.add(compactmenuitem); compactmenuitem.Caption = 'Compact View Mode'; compactmenuitem.OnClick = cycleFullCompact; compactmenualreadyexists = 'yes'; end; addCompactMenu(); cycleFullCompact(nil,true))
+
+[DISABLE]
+LuaCall(cycleFullCompact(nil,false))
+</AssemblerScript>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>117</ID>
+                  <Description>"Speedhack x0.5 (can edit here)"</Description>
+                  <LastState/>
+                  <Color>0000FF</Color>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>[Enable]
+{$lua}
+memrec.OnActivate = function(memrec, preState, curState)
+  if (not preState) and curState then
+    local t = createTimer()
+    t.Interval = 100
+    t.OnTimer = function(t)
+      t.destroy() -- destroy timer so it doesn't run again
+      memrec.Active = false -- disable this script
+    end
+  end
+  return true -- don't interrupt, not sure how it'd be handled...
+end
+{$asm}
+
+LUACALL(speedhack_setSpeed(0.5)) {Edit this number to change speed}
+
+[Disable]
+</AssemblerScript>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>116</ID>
+                  <Description>"Speedhack x1 (can edit here)"</Description>
+                  <LastState/>
+                  <Color>0000FF</Color>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>[Enable]
+{$lua}
+memrec.OnActivate = function(memrec, preState, curState)
+  if (not preState) and curState then
+    local t = createTimer()
+    t.Interval = 100
+    t.OnTimer = function(t)
+      t.destroy() -- destroy timer so it doesn't run again
+      memrec.Active = false -- disable this script
+    end
+  end
+  return true -- don't interrupt, not sure how it'd be handled...
+end
+{$asm}
+
+LUACALL(speedhack_setSpeed(1.0)) {Edit this number to change speed}
+
+[Disable]
+</AssemblerScript>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>118</ID>
+                  <Description>"Speedhack x3 (can edit here)"</Description>
+                  <LastState/>
+                  <Color>0000FF</Color>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>[Enable]
+{$lua}
+memrec.OnActivate = function(memrec, preState, curState)
+  if (not preState) and curState then
+    local t = createTimer()
+    t.Interval = 100
+    t.OnTimer = function(t)
+      t.destroy() -- destroy timer so it doesn't run again
+      memrec.Active = false -- disable this script
+    end
+  end
+  return true -- don't interrupt, not sure how it'd be handled...
+end
+{$asm}
+
+LUACALL(speedhack_setSpeed(3.0)) {Edit this number to change speed}
+
+[Disable]
+</AssemblerScript>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>33</ID>
+              <Description>"Player"</Description>
+              <Options moHideChildren="1"/>
+              <LastState Value="" RealAddress="00000000"/>
+              <GroupHeader>1</GroupHeader>
+              <Hotkeys>
+                <Hotkey>
+                  <Action>Toggle Activation</Action>
+                  <Keys>
+                    <Key>110</Key>
+                  </Keys>
+                  <ID>0</ID>
+                </Hotkey>
+              </Hotkeys>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>178</ID>
+                  <Description>"Health/Shields"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState Value="" RealAddress="00000000"/>
+                  <GroupHeader>1</GroupHeader>
+                  <Hotkeys>
+                    <Hotkey>
+                      <Action>Toggle Activation</Action>
+                      <Keys>
+                        <Key>97</Key>
+                      </Keys>
+                      <ID>0</ID>
+                    </Hotkey>
+                  </Hotkeys>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>43</ID>
+                      <Description>"Lock Health/Shields"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+p_lock_h_and_s:
+db 1
+[DISABLE]
+p_lock_h_and_s:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>119</ID>
+                      <Description>"Max Health/Shield"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+p_max_h_and_s:
+db 1
+[DISABLE]
+p_max_h_and_s:
+db 0
+</AssemblerScript>
+                      <Hotkeys>
+                        <Hotkey>
+                          <Action>Toggle Activation</Action>
+                          <Keys>
+                            <Key>97</Key>
+                          </Keys>
+                          <ID>0</ID>
+                        </Hotkey>
+                      </Hotkeys>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>191</ID>
+                      <Description>"Health Recharge Delay Disabled"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+no_timer_health:
+db 1
+[DISABLE]
+no_timer_health:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>192</ID>
+                      <Description>"Shield Recharge Delay Disabled"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+no_timer_shield:
+db 1
+[DISABLE]
+no_timer_shield:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>193</ID>
+                      <Description>"Health Recharge Delay Modifier (can edit here)"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+health_timer_active:
+db 1
+
+health_timer:
+dw (int)200 //Change this value to modify the Health Recharge Delay
+
+
+[DISABLE]
+health_timer_active:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>194</ID>
+                      <Description>"Shield Recharge Delay Modifier (can edit here)"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+shield_timer_active:
+db 1
+
+shield_timer:
+dw (int)200 //Change this value to modify the Shield Recharge Delay
+
+
+[DISABLE]
+shield_timer_active:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>56</ID>
+                      <Description>"Recieving Damage Multiplier (can edit here)"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+p_mod_damage:
+db 1
+
+p_mod_damage_value:
+dd (float)0.5  //Change this value to modify the Damage Multiplier
+
+[DISABLE]
+p_mod_damage:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>47</ID>
+                      <Description>"EXTREME GAMEPLAY"</Description>
+                      <LastState/>
+                      <Color>25C0D9</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+extreme:
+db 1
+[DISABLE]
+extreme:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>34</ID>
+                  <Description>"Weapons"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState Value="" RealAddress="00000000"/>
+                  <GroupHeader>1</GroupHeader>
+                  <Hotkeys>
+                    <Hotkey>
+                      <Action>Toggle Activation</Action>
+                      <Keys>
+                        <Key>98</Key>
+                      </Keys>
+                      <ID>0</ID>
+                    </Hotkey>
+                  </Hotkeys>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>11</ID>
+                      <Description>"Lock Clip Ammo"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+lock_clip_ammo:
+db 1
+[DISABLE]
+lock_clip_ammo:
+db 0
+</AssemblerScript>
+                      <Hotkeys>
+                        <Hotkey>
+                          <Action>Toggle Activation</Action>
+                          <Keys>
+                            <Key>98</Key>
+                          </Keys>
+                          <ID>0</ID>
+                        </Hotkey>
+                      </Hotkeys>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>835</ID>
+                      <Description>"Max Clip Ammo"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+lock_clip_ammo+1:
+db 1
+[DISABLE]
+lock_clip_ammo+1:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>14</ID>
+                      <Description>"Lock Belt Ammo"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+lock_belt_ammo:
+db 1
+[DISABLE]
+lock_belt_ammo:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>836</ID>
+                      <Description>"Max Belt Ammo"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+lock_belt_ammo+1:
+db 1
+[DISABLE]
+lock_belt_ammo+1:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>13</ID>
+                      <Description>"Lock Plasma Ammo"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+lock_plasma_ammo:
+db 1
+[DISABLE]
+lock_plasma_ammo:
+db 0
+</AssemblerScript>
+                      <Hotkeys>
+                        <Hotkey>
+                          <Action>Toggle Activation</Action>
+                          <Keys>
+                            <Key>98</Key>
+                          </Keys>
+                          <ID>0</ID>
+                        </Hotkey>
+                      </Hotkeys>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>837</ID>
+                      <Description>"Max Plasma Ammo"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+lock_plasma_ammo+1:
+db 1
+[DISABLE]
+lock_plasma_ammo+1:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>12</ID>
+                      <Description>"Lock Plasma Heat"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+lock_heat_ammo:
+db 1
+[DISABLE]
+lock_heat_ammo:
+db 0
+</AssemblerScript>
+                      <Hotkeys>
+                        <Hotkey>
+                          <Action>Toggle Activation</Action>
+                          <Keys>
+                            <Key>98</Key>
+                          </Keys>
+                          <ID>0</ID>
+                        </Hotkey>
+                      </Hotkeys>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>17</ID>
+                      <Description>"Lock Grenades"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+lock_grenades:
+db 1
+[DISABLE]
+lock_grenades:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>181</ID>
+                      <Description>"Max Grenades"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+max_grenades:
+db 1
+[DISABLE]
+max_grenades:
+db 0
+</AssemblerScript>
+                      <Hotkeys>
+                        <Hotkey>
+                          <Action>Toggle Activation</Action>
+                          <Keys>
+                            <Key>98</Key>
+                          </Keys>
+                          <ID>0</ID>
+                        </Hotkey>
+                      </Hotkeys>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>180</ID>
+                      <Description>"No Bullet Spread"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+no_bullet_spread:
+db 1
+[DISABLE]
+no_bullet_spread:
+db 0
+</AssemblerScript>
+                      <Hotkeys>
+                        <Hotkey>
+                          <Action>Toggle Activation</Action>
+                          <Keys>
+                            <Key>98</Key>
+                          </Keys>
+                          <ID>0</ID>
+                        </Hotkey>
+                      </Hotkeys>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>259</ID>
+                      <Description>"No Charge Up Delay"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>{ Game   : MCC-Win64-Shipping.exe
+  Version: 
+  Date   : 2020-11-27
+  Author : Dread Pony Roberts
+
+  This script does blah blah blah
+}
+
+[ENABLE]
+
+aobscanmodule(No_Charge_Up_Delay,haloreach.dll,66 41 89 84 88 B4 02 00 00) // should be unique
+alloc(newmem,$100,No_Charge_Up_Delay)
+
+label(code)
+label(return)
+
+newmem:
+  push rax
+  lea rax,[r8+rcx*4]
+  cmp rax,[w_base]
+  pop rax
+  je return
+
+code:
+  mov [r8+rcx*4+000002B4],ax
+  jmp return
+
+No_Charge_Up_Delay:
+  jmp newmem
+  nop 4
+return:
+registersymbol(No_Charge_Up_Delay)
+
+[DISABLE]
+
+No_Charge_Up_Delay:
+  db 66 41 89 84 88 B4 02 00 00
+
+unregistersymbol(No_Charge_Up_Delay)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: haloreach.dll+49A771
+
+haloreach.dll+49A740: 41 8B CC                    - mov ecx,r12d
+haloreach.dll+49A743: 8B 54 BB 48                 - mov edx,[rbx+rdi*4+48]
+haloreach.dll+49A747: E8 24 D9 01 00              - call haloreach.dll+4B8070
+haloreach.dll+49A74C: F3 0F 10 44 BB 1C           - movss xmm0,[rbx+rdi*4+1C]
+haloreach.dll+49A752: E8 69 7F BB FF              - call haloreach.dll+526C0
+haloreach.dll+49A757: 4B 8B 0C 2F                 - mov rcx,[r15+r13]
+haloreach.dll+49A75B: 48 8B 51 50                 - mov rdx,[rcx+50]
+haloreach.dll+49A75F: 4B 8D 0C 76                 - lea rcx,[r14+r14*2]
+haloreach.dll+49A763: 4C 8B 44 EA 10              - mov r8,[rdx+rbp*8+10]
+haloreach.dll+49A768: 41 C6 84 88 B0 02 00 00 01  - mov byte ptr [r8+rcx*4+000002B0],01
+// ---------- INJECTING HERE ----------
+haloreach.dll+49A771: 66 41 89 84 88 B4 02 00 00  - mov [r8+rcx*4+000002B4],ax
+// ---------- DONE INJECTING  ----------
+haloreach.dll+49A77A: 41 8B CC                    - mov ecx,r12d
+haloreach.dll+49A77D: E8 4E C5 FF FF              - call haloreach.dll+496CD0
+haloreach.dll+49A782: 83 F8 FF                    - cmp eax,-01
+haloreach.dll+49A785: 74 09                       - je haloreach.dll+49A790
+haloreach.dll+49A787: B2 01                       - mov dl,01
+haloreach.dll+49A789: 8B C8                       - mov ecx,eax
+haloreach.dll+49A78B: E8 B8 C7 FD FF              - call haloreach.dll+476F48
+haloreach.dll+49A790: 48 8B 5C 24 60              - mov rbx,[rsp+60]
+haloreach.dll+49A795: 48 8B 6C 24 68              - mov rbp,[rsp+68]
+haloreach.dll+49A79A: 48 8B 74 24 70              - mov rsi,[rsp+70]
+}
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>19</ID>
+                      <Description>"Rapid Fire"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+rapid_fire:
+db 1
+[DISABLE]
+rapid_fire:
+db 0
+</AssemblerScript>
+                      <Hotkeys>
+                        <Hotkey>
+                          <Action>Toggle Activation</Action>
+                          <Keys>
+                            <Key>98</Key>
+                          </Keys>
+                          <ID>0</ID>
+                        </Hotkey>
+                      </Hotkeys>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>53</ID>
+                      <Description>"Full Auto"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+autofire:
+db 1
+[DISABLE]
+autofire:
+db 0
+</AssemblerScript>
+                      <Hotkeys>
+                        <Hotkey>
+                          <Action>Toggle Activation</Action>
+                          <Keys>
+                            <Key>98</Key>
+                          </Keys>
+                          <ID>0</ID>
+                        </Hotkey>
+                      </Hotkeys>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>149</ID>
+                  <Description>"Teleportation"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState Value="" RealAddress="00000000"/>
+                  <GroupHeader>1</GroupHeader>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>143</ID>
+                      <Description>"Save 1"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[Enable]
+{$lua}
+memrec.OnActivate = function(memrec, preState, curState)
+  if (not preState) and curState then
+    local t = createTimer()
+    t.Interval = 100
+    t.OnTimer = function(t)
+      t.destroy() -- destroy timer so it doesn't run again
+      memrec.Active = false -- disable this script
+    end
+  end
+  return true -- don't interrupt, not sure how it'd be handled...
+end
+{$asm}
+
+save1:
+db 1
+
+[Disable]
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>144</ID>
+                      <Description>"Save 2"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[Enable]
+{$lua}
+memrec.OnActivate = function(memrec, preState, curState)
+  if (not preState) and curState then
+    local t = createTimer()
+    t.Interval = 100
+    t.OnTimer = function(t)
+      t.destroy() -- destroy timer so it doesn't run again
+      memrec.Active = false -- disable this script
+    end
+  end
+  return true -- don't interrupt, not sure how it'd be handled...
+end
+{$asm}
+
+save2:
+db 1
+
+[Disable]
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>145</ID>
+                      <Description>"Save 3"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[Enable]
+{$lua}
+memrec.OnActivate = function(memrec, preState, curState)
+  if (not preState) and curState then
+    local t = createTimer()
+    t.Interval = 100
+    t.OnTimer = function(t)
+      t.destroy() -- destroy timer so it doesn't run again
+      memrec.Active = false -- disable this script
+    end
+  end
+  return true -- don't interrupt, not sure how it'd be handled...
+end
+{$asm}
+
+save3:
+db 1
+
+[Disable]
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>146</ID>
+                      <Description>"Teleport 1"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[Enable]
+{$lua}
+memrec.OnActivate = function(memrec, preState, curState)
+  if (not preState) and curState then
+    local t = createTimer()
+    t.Interval = 100
+    t.OnTimer = function(t)
+      t.destroy() -- destroy timer so it doesn't run again
+      memrec.Active = false -- disable this script
+    end
+  end
+  return true -- don't interrupt, not sure how it'd be handled...
+end
+{$asm}
+
+teleport1:
+db 1
+
+[Disable]
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>147</ID>
+                      <Description>"Teleport 2"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[Enable]
+{$lua}
+memrec.OnActivate = function(memrec, preState, curState)
+  if (not preState) and curState then
+    local t = createTimer()
+    t.Interval = 100
+    t.OnTimer = function(t)
+      t.destroy() -- destroy timer so it doesn't run again
+      memrec.Active = false -- disable this script
+    end
+  end
+  return true -- don't interrupt, not sure how it'd be handled...
+end
+{$asm}
+
+teleport2:
+db 1
+
+[Disable]
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>148</ID>
+                      <Description>"Teleport 3"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[Enable]
+{$lua}
+memrec.OnActivate = function(memrec, preState, curState)
+  if (not preState) and curState then
+    local t = createTimer()
+    t.Interval = 100
+    t.OnTimer = function(t)
+      t.destroy() -- destroy timer so it doesn't run again
+      memrec.Active = false -- disable this script
+    end
+  end
+  return true -- don't interrupt, not sure how it'd be handled...
+end
+{$asm}
+
+teleport3:
+db 1
+
+[Disable]
+</AssemblerScript>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>200</ID>
+                  <Description>"Movement"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState Value="" RealAddress="00000000"/>
+                  <GroupHeader>1</GroupHeader>
+                  <Hotkeys>
+                    <Hotkey>
+                      <Action>Toggle Activation</Action>
+                      <Keys>
+                        <Key>97</Key>
+                      </Keys>
+                      <ID>0</ID>
+                    </Hotkey>
+                  </Hotkeys>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>196</ID>
+                      <Description>"Flight/Noclip (can edit keybinds and flight speed here)"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+flight_speed:
+dq (float)2    //Change this value to modify the flight speed
+
+up_bind:
+db 20    //Change this value to modify the move up bind (see instructions below)
+
+down_bind:
+db A4    //Change this value to modify the move down bind (see instructions below)
+
+flight:
+db 1
+
+[DISABLE]
+flight:
+db 0
+
+{
+
+Default controls are space to raise and left alt to lower.
+
+The up_bind and down_bind hex values equate to the Microsoft virtual key codes
+which can be found in the link below.
+https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
+Find whatever key you want and paste it over the values I've marked.
+Here are some examples.
+20=Spacebar
+A0=Left Shift key
+26=Up Arrow Key
+49=I Key
+A2=Left Control Key
+A4=Left Alt Key (It is also called the Left Menu Key in the website)
+ect...
+
+}
+</AssemblerScript>
+                      <Hotkeys>
+                        <Hotkey>
+                          <Action>Toggle Activation</Action>
+                          <Keys>
+                            <Key>100</Key>
+                          </Keys>
+                          <ID>0</ID>
+                        </Hotkey>
+                      </Hotkeys>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>201</ID>
+                      <Description>"Sprint (can edit keybind, sprint speed, and friction here)"</Description>
+                      <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+forward_sprint_speed:
+dd (float)7    //Change this value to modify the forward speed (default is 2.200000048)
+
+backward_sprint_speed:
+dd (float)7    //Change this value to modify the side speed (default is 1.980000019)
+
+side_sprint_speed:
+dd (float)7    //Change this value to modify the side speed (default is 1.980000019)
+
+sprint_friction:
+dd (float)40    //Change this value to modify the friction (default is 8.5)
+
+sprint_bind:
+db A0    //Change this value to modify the sprint bind (see instructions below)
+
+sprint:
+db 1
+
+[DISABLE]
+sprint:
+db 0
+
+{
+
+Default control is left shift to sprint.
+
+The up_bind and down_bind hex values equate to the Microsoft virtual key codes
+which can be found in the link below.
+https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
+Find whatever key you want and paste it over the values I've marked.
+Here are some examples.
+20=Spacebar
+A0=Left Shift key
+26=Up Arrow Key
+49=I Key
+A2=Left Control Key
+A4=Left Alt Key (It is also called the Left Menu Key in the website)
+ect...
+
+}
+</AssemblerScript>
+                      <Hotkeys>
+                        <Hotkey>
+                          <Action>Toggle Activation</Action>
+                          <Keys>
+                            <Key>97</Key>
+                          </Keys>
+                          <ID>0</ID>
+                        </Hotkey>
+                      </Hotkeys>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>202</ID>
+                          <Description>"Autorun"</Description>
+                          <LastState/>
+                          <Color>0000FF</Color>
+                          <VariableType>Auto Assembler Script</VariableType>
+                          <AssemblerScript>[ENABLE]
+autorun:
+ db 1
+[DISABLE]
+autorun:
+ db 0
+</AssemblerScript>
+                        </CheatEntry>
+                      </CheatEntries>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>817</ID>
+                      <Description>"Super Jump (can edit jump strength here)"</Description>
+                      <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+//Jump Strength
+f_blam+0:
+dd (float)5.5    //Change this value to modify the jump strength (default is 2.299999952)
+
+flag+1:
+db 2
+
+[DISABLE]
+flag+1:
+db 1
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>819</ID>
+                      <Description>"Noclip"</Description>
+                      <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+flight+2:
+db 1
+
+[DISABLE]
+flight+2:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>820</ID>
+                      <Description>"No Kill Barriers"</Description>
+                      <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+flight+1:
+db 1
+
+[DISABLE]
+flight+1:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>62</ID>
+                  <Description>"Vehicle"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState Value="" RealAddress="00000000"/>
+                  <GroupHeader>1</GroupHeader>
+                  <Hotkeys>
+                    <Hotkey>
+                      <Action>Toggle Activation</Action>
+                      <Keys>
+                        <Key>97</Key>
+                      </Keys>
+                      <ID>0</ID>
+                    </Hotkey>
+                  </Hotkeys>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>61</ID>
+                      <Description>"Max Vehicle Ability"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>{ Game   : MCC-Win64-Shipping.exe
+  Version: 
+  Date   : 2020-06-10
+  Author : Dread Pony Roberts
+
+  This script does blah blah blah
+}
+
+[ENABLE]
+
+aobscanmodule(Vehicle_Ability,haloreach.dll,F3 41 0F 11 2A F3 41 0F 11 33) // should be unique
+alloc(newmem,$100,Vehicle_Ability)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+//  movss [r10],xmm5
+  mov [r10],(float)1
+  jmp return
+
+Vehicle_Ability:
+  jmp newmem
+return:
+registersymbol(Vehicle_Ability)
+
+[DISABLE]
+
+Vehicle_Ability:
+  db F3 41 0F 11 2A
+
+unregistersymbol(Vehicle_Ability)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: "haloreach.dll"+5E706C
+
+"haloreach.dll"+5E703E: 75 04                       -  jne haloreach.dll+5E7044
+"haloreach.dll"+5E7040: 32 C0                       -  xor al,al
+"haloreach.dll"+5E7042: EB 02                       -  jmp haloreach.dll+5E7046
+"haloreach.dll"+5E7044: B0 01                       -  mov al,01
+"haloreach.dll"+5E7046: 44 0F 28 4C 24 20           -  movaps xmm9,[rsp+20]
+"haloreach.dll"+5E704C: 44 0F 28 44 24 30           -  movaps xmm8,[rsp+30]
+"haloreach.dll"+5E7052: 4C 8B A4 24 80 00 00 00     -  mov r12,[rsp+00000080]
+"haloreach.dll"+5E705A: F3 41 0F 11 37              -  movss [r15],xmm6
+"haloreach.dll"+5E705F: 0F 28 74 24 50              -  movaps xmm6,[rsp+50]
+"haloreach.dll"+5E7064: 4C 8B BC 24 90 00 00 00     -  mov r15,[rsp+00000090]
+// ---------- INJECTING HERE ----------
+"haloreach.dll"+5E706C: F3 41 0F 11 2E              -  movss [r14],xmm5
+// ---------- DONE INJECTING  ----------
+"haloreach.dll"+5E7071: 4C 8B B4 24 88 00 00 00     -  mov r14,[rsp+00000088]
+"haloreach.dll"+5E7079: F3 41 0F 11 12              -  movss [r10],xmm2
+"haloreach.dll"+5E707E: 48 8B 9C 24 98 00 00 00     -  mov rbx,[rsp+00000098]
+"haloreach.dll"+5E7086: 48 83 C4 60                 -  add rsp,60
+"haloreach.dll"+5E708A: 5F                          -  pop rdi
+"haloreach.dll"+5E708B: 5E                          -  pop rsi
+"haloreach.dll"+5E708C: 5D                          -  pop rbp
+"haloreach.dll"+5E708D: C3                          -  ret 
+"haloreach.dll"+5E708E: 32 C0                       -  xor al,al
+"haloreach.dll"+5E7090: 48 8B 9C 24 98 00 00 00     -  mov rbx,[rsp+00000098]
+}
+</AssemblerScript>
+                      <Hotkeys>
+                        <Hotkey>
+                          <Action>Toggle Activation</Action>
+                          <Keys>
+                            <Key>97</Key>
+                          </Keys>
+                          <ID>0</ID>
+                        </Hotkey>
+                      </Hotkeys>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>179</ID>
+                  <Description>"Other"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState Value="" RealAddress="00000000"/>
+                  <GroupHeader>1</GroupHeader>
+                  <Hotkeys>
+                    <Hotkey>
+                      <Action>Toggle Activation</Action>
+                      <Keys>
+                        <Key>97</Key>
+                      </Keys>
+                      <ID>0</ID>
+                    </Hotkey>
+                  </Hotkeys>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>217</ID>
+                      <Description>"Stealth"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+stealth:
+db 1
+[DISABLE]
+stealth:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>22</ID>
+                      <Description>"Max Armor Ability"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+lock_armor_ability:
+db 1
+[DISABLE]
+lock_armor_ability:
+db 0
+</AssemblerScript>
+                      <Hotkeys>
+                        <Hotkey>
+                          <Action>Toggle Activation</Action>
+                          <Keys>
+                            <Key>97</Key>
+                          </Keys>
+                          <ID>0</ID>
+                        </Hotkey>
+                      </Hotkeys>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>260</ID>
+              <Description>"NPCs"</Description>
+              <Options moHideChildren="1"/>
+              <LastState Value="" RealAddress="00000000"/>
+              <GroupHeader>1</GroupHeader>
+              <Hotkeys>
+                <Hotkey>
+                  <Action>Toggle Activation</Action>
+                  <Keys>
+                    <Key>110</Key>
+                  </Keys>
+                  <ID>0</ID>
+                </Hotkey>
+              </Hotkeys>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>50</ID>
+                  <Description>"Allies"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState Value="" RealAddress="00000000"/>
+                  <GroupHeader>1</GroupHeader>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>49</ID>
+                      <Description>"Lock Health/Shields"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+a_lock_h_and_s:
+db 1
+[DISABLE]
+a_lock_h_and_s:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>46</ID>
+                      <Description>"Easily Killed"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+a_one_hit_kill:
+db 1
+[DISABLE]
+a_one_hit_kill:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>57</ID>
+                      <Description>"Recieving Damage Multiplier (can edit here)"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+a_mod_damage:
+db 1
+
+a_mod_damage_value:
+dd (float)2  //Change this value to modify the Damage Multiplier
+
+[DISABLE]
+a_mod_damage:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>51</ID>
+                  <Description>"Enemies"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState Value="" RealAddress="00000000"/>
+                  <GroupHeader>1</GroupHeader>
+                  <Hotkeys>
+                    <Hotkey>
+                      <Action>Toggle Activation</Action>
+                      <Keys>
+                        <Key>99</Key>
+                      </Keys>
+                      <ID>0</ID>
+                    </Hotkey>
+                  </Hotkeys>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>48</ID>
+                      <Description>"Lock Health/Shields"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+e_lock_h_and_s:
+db 1
+[DISABLE]
+e_lock_h_and_s:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>52</ID>
+                      <Description>"Easily Killed"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+e_one_hit_kill:
+db 1
+[DISABLE]
+e_one_hit_kill:
+db 0
+</AssemblerScript>
+                      <Hotkeys>
+                        <Hotkey>
+                          <Action>Toggle Activation</Action>
+                          <Keys>
+                            <Key>99</Key>
+                          </Keys>
+                          <ID>0</ID>
+                        </Hotkey>
+                      </Hotkeys>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>58</ID>
+                      <Description>"Recieving Damage Multiplier (can edit here)"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+e_mod_damage:
+db 1
+
+e_mod_damage_value:
+dd (float)2  //Change this value to modify the Damage Multiplier
+
+[DISABLE]
+e_mod_damage:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>236</ID>
+              <Description>"Skulls"</Description>
+              <Options moHideChildren="1"/>
+              <LastState Value="" RealAddress="00000000"/>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>221</ID>
+                  <Description>"Skull Override"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState/>
+                  <Color>0000FF</Color>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>[ENABLE]
+skull_enable:
+db 1
+[DISABLE]
+skull_enable:
+db 0
+</AssemblerScript>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>234</ID>
+                      <Description>"Black Eye"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+skull+A:
+db 1
+[DISABLE]
+skull+A:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>230</ID>
+                      <Description>"Blind"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+skull+3:
+db 1
+[DISABLE]
+skull+3:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>232</ID>
+                      <Description>"Catch"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+skull+C:
+db 1
+[DISABLE]
+skull+C:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>229</ID>
+                      <Description>"Cowbell"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+skull+4:
+db 1
+[DISABLE]
+skull+4:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>227</ID>
+                      <Description>"Famine"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+skull+6:
+db 1
+[DISABLE]
+skull+6:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>228</ID>
+                      <Description>"Fog"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+skull+5:
+db 1
+[DISABLE]
+skull+5:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>222</ID>
+                      <Description>"Grunt Birthday Party"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+skull+0:
+db 1
+[DISABLE]
+skull+0:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>223</ID>
+                      <Description>"IWHBYD"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+skull+1:
+db 1
+[DISABLE]
+skull+1:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>224</ID>
+                      <Description>"Iron (Can't be disabled)"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+skull+9:
+db 1
+[DISABLE]
+skull+9:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>231</ID>
+                      <Description>"Mythic"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+skull+2:
+db 1
+[DISABLE]
+skull+2:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>226</ID>
+                      <Description>"Thunderstorm"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+skull+7:
+db 1
+[DISABLE]
+skull+7:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>225</ID>
+                      <Description>"Tilt"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+skull+8:
+db 1
+[DISABLE]
+skull+8:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>233</ID>
+                      <Description>"Tough Luck"</Description>
+                      <LastState/>
+                      <Color>0000FF</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+skull+B:
+db 1
+[DISABLE]
+skull+B:
+db 0
+</AssemblerScript>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>832</ID>
+              <Description>"Forge"</Description>
+              <Options moHideChildren="1"/>
+              <LastState Value="" RealAddress="00000000"/>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>833</ID>
+                  <Description>"Max Budget"</Description>
+                  <LastState/>
+                  <Color>0000FF</Color>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>[ENABLE]
+flag+2:
+db 1
+[DISABLE]
+flag+2:
+db 0
+</AssemblerScript>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>10</ID>
+          <Description>"Values"</Description>
+          <Options moHideChildren="1"/>
+          <LastState Value="" RealAddress="00000000"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>29</ID>
+              <Description>"Player"</Description>
+              <Options moHideChildren="1"/>
+              <LastState Value="" RealAddress="00000000"/>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>185</ID>
+                  <Description>"Player Base"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <Color>004000</Color>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>pg_base</Address>
+                  <Offsets>
+                    <Offset>0</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>243</ID>
+                  <Description>"Armor Base"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <Color>004000</Color>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>p_base</Address>
+                  <Offsets>
+                    <Offset>0</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>242</ID>
+                  <Description>"Shield"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <Color>004000</Color>
+                  <VariableType>Float</VariableType>
+                  <Address>pg_base</Address>
+                  <Offsets>
+                    <Offset>E84</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>186</ID>
+                  <Description>"Health"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <Color>004000</Color>
+                  <VariableType>Float</VariableType>
+                  <Address>pg_base</Address>
+                  <Offsets>
+                    <Offset>E54</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>67</ID>
+                  <Description>"Shield Timer"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <Color>004000</Color>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>pg_base</Address>
+                  <Offsets>
+                    <Offset>E80</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>66</ID>
+                  <Description>"Health Timer"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <Color>004000</Color>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>pg_base</Address>
+                  <Offsets>
+                    <Offset>E50</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>59</ID>
+                  <Description>"Armor Ability"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <Color>004000</Color>
+                  <VariableType>Float</VariableType>
+                  <Address>p_base</Address>
+                  <Offsets>
+                    <Offset>1EC</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>215</ID>
+                  <Description>"Stealth"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <Color>004000</Color>
+                  <VariableType>Float</VariableType>
+                  <Address>pg_base</Address>
+                  <Offsets>
+                    <Offset>49C</Offset>
+                  </Offsets>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>249</ID>
+              <Description>"Vehicle"</Description>
+              <Options moHideChildren="1"/>
+              <LastState Value="" RealAddress="00000000"/>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>250</ID>
+                  <Description>"Vehicle Base"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <Color>004000</Color>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>p_base+8</Address>
+                  <Offsets>
+                    <Offset>0</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>252</ID>
+                  <Description>"Health"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <Color>004000</Color>
+                  <VariableType>Float</VariableType>
+                  <Address>p_base+8</Address>
+                  <Offsets>
+                    <Offset>E84-8</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>254</ID>
+                  <Description>"Health Timer"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <Color>004000</Color>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>p_base+8</Address>
+                  <Offsets>
+                    <Offset>E84-C</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>257</ID>
+                  <Description>"Stealth"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <Color>004000</Color>
+                  <VariableType>Float</VariableType>
+                  <Address>p_base+8</Address>
+                  <Offsets>
+                    <Offset>49C</Offset>
+                  </Offsets>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>80</ID>
+              <Description>"Movement"</Description>
+              <Options moHideChildren="1"/>
+              <LastState Value="" RealAddress="00000000"/>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>79</ID>
+                  <Description>"Movement Base"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <Color>004000</Color>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>m_base</Address>
+                  <Offsets>
+                    <Offset>0</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>245</ID>
+                  <Description>"X Coordinate"</Description>
+                  <Color>004000</Color>
+                  <VariableType>Float</VariableType>
+                  <Address>m_base</Address>
+                  <Offsets>
+                    <Offset>70</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>82</ID>
+                  <Description>"Y Coordinate"</Description>
+                  <Color>004000</Color>
+                  <VariableType>Float</VariableType>
+                  <Address>m_base</Address>
+                  <Offsets>
+                    <Offset>74</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>81</ID>
+                  <Description>"Z Coordinate"</Description>
+                  <Color>004000</Color>
+                  <VariableType>Float</VariableType>
+                  <Address>m_base</Address>
+                  <Offsets>
+                    <Offset>78</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>83</ID>
+                  <Description>"X Movement Speed"</Description>
+                  <Color>004000</Color>
+                  <VariableType>Float</VariableType>
+                  <Address>m_base</Address>
+                  <Offsets>
+                    <Offset>E0</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>86</ID>
+                  <Description>"Y Movement Speed"</Description>
+                  <Color>004000</Color>
+                  <VariableType>Float</VariableType>
+                  <Address>m_base</Address>
+                  <Offsets>
+                    <Offset>E4</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>85</ID>
+                  <Description>"Z Movement Speed"</Description>
+                  <Color>004000</Color>
+                  <VariableType>Float</VariableType>
+                  <Address>m_base</Address>
+                  <Offsets>
+                    <Offset>E8</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>210</ID>
+                  <Description>"Forward Walk Speed"</Description>
+                  <Color>004000</Color>
+                  <VariableType>Float</VariableType>
+                  <Address>speed_base</Address>
+                  <Offsets>
+                    <Offset>4</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>212</ID>
+                  <Description>"Backward Walk Speed"</Description>
+                  <Color>004000</Color>
+                  <VariableType>Float</VariableType>
+                  <Address>speed_base</Address>
+                  <Offsets>
+                    <Offset>8</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>211</ID>
+                  <Description>"Side Walk Speed"</Description>
+                  <Color>004000</Color>
+                  <VariableType>Float</VariableType>
+                  <Address>speed_base</Address>
+                  <Offsets>
+                    <Offset>C</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>213</ID>
+                  <Description>"Walk Friction"</Description>
+                  <Color>004000</Color>
+                  <VariableType>Float</VariableType>
+                  <Address>speed_base</Address>
+                  <Offsets>
+                    <Offset>10</Offset>
+                  </Offsets>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>28</ID>
+              <Description>"Weapon"</Description>
+              <Options moHideChildren="1"/>
+              <LastState Value="" RealAddress="00000000"/>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>3</ID>
+                  <Description>"Belt Ammo"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <Color>004000</Color>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>w_base</Address>
+                  <Offsets>
+                    <Offset>2CE</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>7</ID>
+                  <Description>"Plasma Ammo"</Description>
+                  <Color>004000</Color>
+                  <VariableType>Float</VariableType>
+                  <Address>w_base</Address>
+                  <Offsets>
+                    <Offset>1E4</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>1</ID>
+                  <Description>"Clip Ammo"</Description>
+                  <Color>004000</Color>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>w_base</Address>
+                  <Offsets>
+                    <Offset>2D2</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>6</ID>
+                  <Description>"Plasma Heat"</Description>
+                  <Color>004000</Color>
+                  <VariableType>Float</VariableType>
+                  <Address>w_base</Address>
+                  <Offsets>
+                    <Offset>1E0</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>35</ID>
+                  <Description>"Frag Grenades"</Description>
+                  <Color>004000</Color>
+                  <VariableType>Byte</VariableType>
+                  <Address>pg_base</Address>
+                  <Offsets>
+                    <Offset>37E</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>36</ID>
+                  <Description>"Plasma Grenades"</Description>
+                  <Color>004000</Color>
+                  <VariableType>Byte</VariableType>
+                  <Address>pg_base</Address>
+                  <Offsets>
+                    <Offset>37F</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>5</ID>
+                  <Description>"Bullet Spread"</Description>
+                  <Color>004000</Color>
+                  <VariableType>Float</VariableType>
+                  <Address>w_base</Address>
+                  <Offsets>
+                    <Offset>264</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>4</ID>
+                  <Description>"Fire Delay Automatic"</Description>
+                  <Color>004000</Color>
+                  <VariableType>Byte</VariableType>
+                  <Address>w_base</Address>
+                  <Offsets>
+                    <Offset>248</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>2</ID>
+                  <Description>"Fire Delay Single Shot"</Description>
+                  <Color>004000</Color>
+                  <VariableType>Byte</VariableType>
+                  <Address>w_base</Address>
+                  <Offsets>
+                    <Offset>24A</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>238</ID>
+                  <Description>"Autofire"</Description>
+                  <Color>004000</Color>
+                  <VariableType>Byte</VariableType>
+                  <Address>w_base</Address>
+                  <Offsets>
+                    <Offset>24c</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>27</ID>
+                  <Description>"Fire Button Held"</Description>
+                  <Color>004000</Color>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>w_base</Address>
+                  <Offsets>
+                    <Offset>2B0</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>26</ID>
+                  <Description>"Base Weapon"</Description>
+                  <Color>004000</Color>
+                  <VariableType>Byte</VariableType>
+                  <Address>w_base</Address>
+                  <Offsets>
+                    <Offset>24A</Offset>
+                  </Offsets>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>235</ID>
+              <Description>"Other"</Description>
+              <Options moHideChildren="1"/>
+              <LastState Value="" RealAddress="00000000"/>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>219</ID>
+                  <Description>"Skull Flag"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <Color>004000</Color>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>skull_base</Address>
+                  <Offsets>
+                    <Offset>1E9C8</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>834</ID>
+                  <Description>"Forge Budget"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <Color>004000</Color>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>f_base</Address>
+                  <Offsets>
+                    <Offset>2D4</Offset>
+                  </Offsets>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols>
+    <SymbolEntry>
+      <Name>pshieldv</Name>
+      <Address>05AD0000</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>pshieldv2</Name>
+      <Address>05AD0010</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>shield/health_lock</Name>
+      <Address>13600030</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>mycode</Name>
+      <Address>29700050000</Address>
+    </SymbolEntry>
+  </UserdefinedSymbols>
+  <DisassemblerComments>
+    <DisassemblerComment>
+      <Address>"halo2.dll"+E66B9A</Address>
+      <Comment>mark 2
+
+incoming
+
+bonk
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"halo2.dll"+E66BB2</Address>
+      <Comment>asd
+sad
+sad
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"halo2.dll"+E66BCB</Address>
+      <Comment>da
+dsasa
+sadas
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"halo2.dll"+E66C82</Address>
+      <Comment>mark 1
+
+income
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"halo2.dll"+E66CCA</Address>
+      <Comment>dasf
+adfa
+adf
+</Comment>
+    </DisassemblerComment>
+  </DisassemblerComments>
+</CheatTable>

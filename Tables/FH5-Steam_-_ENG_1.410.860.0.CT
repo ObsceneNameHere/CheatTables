@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="38">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>1057</ID>
+      <Description>"All Cars in the Autoshow"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+{$lua}
+writeString("ForzaHorizon5.exe+6371091", "                            ")
+writeString("ForzaHorizon5.exe+63710B1", "                                ")
+writeString("ForzaHorizon5.exe+6371059", "                  ")
+[DISABLE]
+{$lua}
+writeString("ForzaHorizon5.exe+6371091", "AND NotAvailableInAutoshow=0")
+writeString("ForzaHorizon5.exe+63710B1", "AND IsCarVisible(Garage.ModelId)")
+writeString("ForzaHorizon5.exe+6371059", "AND NOT IsBarnFind")
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1067</ID>
+      <Description>"Only Rare Cars in the Autoshow"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+{$lua}
+writeString("ForzaHorizon5.exe+6371091", "AND NotAvailableInAutoshow=1")
+[DISABLE]
+{$lua}
+writeString("ForzaHorizon5.exe+6371091", "AND NotAvailableInAutoshow=0")
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1068</ID>
+      <Description>"Every Car Free"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+{$lua}
+writeString("ForzaHorizon5.exe+65C1D87", "Data_Car SET BaseCost = 0 WHERE BaseCost &gt;0                                                                                                                                                                                                                                                                                                                         ")
+[DISABLE]
+{$lua}
+writeString("ForzaHorizon5.exe+65C1D87", "%s SET TopSpeed=%f, DistanceDriven=%u, TimeDriven=%u, TotalWinnings=%u, TotalRepairs=%u, NumPodiums=%u, NumVictories=%u, NumRaces=%u, NumOwners=%u, NumTimesSold=%u, TimeDrivenInRoadTrips=%u, CurOwnerNumRaces=%u, CurOwnerWinnings=%u, NumSkillPointsEarned=%u, HighestSkillScore=%u, HasCurrentOwnerViewedCar=%u WHERE Id=%u                                     ")
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>4</ID>
+      <Description>"1 = XP"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"ForzaHorizon5.exe"+090E0C10</Address>
+      <Offsets>
+        <Offset>A8</Offset>
+        <Offset>50</Offset>
+        <Offset>18</Offset>
+        <Offset>D0</Offset>
+        <Offset>50</Offset>
+        <Offset>48</Offset>
+        <Offset>50</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>5</ID>
+      <Description>"XP"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"ForzaHorizon5.exe"+090E0C10</Address>
+      <Offsets>
+        <Offset>AC</Offset>
+        <Offset>50</Offset>
+        <Offset>18</Offset>
+        <Offset>D0</Offset>
+        <Offset>50</Offset>
+        <Offset>48</Offset>
+        <Offset>50</Offset>
+      </Offsets>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="29">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>3</ID>
+      <Description>"Inf. Health"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{ Game   : SM6EN.exe
+  Version:
+  Date   : 2018-12-07
+  Author : ColonelRVH
+
+  This script does blah blah blah
+}
+
+/*===============================
+Cheat Script by ColonelRVH
+
+Please Support my work at:
+  https://www.patreon.com/ColonelRVH
+
+Visit my website at:
+  https://www.thecheatscript.com
+- For latest content, better index &amp; easy to find game cheat that you need.
+
+● You can alter it as your own discretion, but you must keep my credits.
+● Any distributions of my tables &amp; codes are unadvised.
+
+===============================*/
+[ENABLE]
+
+aobscanmodule(Get_Player_HP_AOB,SM6EN.exe,D9 80 B8 01 00 00 D9 7D 0A) // should be unique
+alloc(newmem,$1000)
+
+label(code)
+label(return)
+
+newmem:
+  fld dword ptr [eax+000001B4]
+  fstp dword ptr [eax+000001B8]
+code:
+  fld dword ptr [eax+000001B8]
+  jmp return
+
+Get_Player_HP_AOB:
+  jmp newmem
+  nop
+return:
+registersymbol(Get_Player_HP_AOB)
+
+[DISABLE]
+
+Get_Player_HP_AOB:
+  db D9 80 B8 01 00 00
+
+unregistersymbol(Get_Player_HP_AOB)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: "SM6EN.exe"+10D0FE
+
+"SM6EN.exe"+10D0D2: 8B 0D C4 FB AC 01              -  mov ecx,[SM6EN.exe+73FBC4]
+"SM6EN.exe"+10D0D8: 53                             -  push ebx
+"SM6EN.exe"+10D0D9: 8B 1D 14 FE AC 01              -  mov ebx,[SM6EN.exe+73FE14]
+"SM6EN.exe"+10D0DF: 8B 83 10 01 00 00              -  mov eax,[ebx+00000110]
+"SM6EN.exe"+10D0E5: C7 45 F4 00 00 00 00           -  mov [ebp-0C],00000000
+"SM6EN.exe"+10D0EC: 85 C9                          -  test ecx,ecx
+"SM6EN.exe"+10D0EE: 75 06                          -  jne SM6EN.exe+10D0F6
+"SM6EN.exe"+10D0F0: 8B 0D DC FB AC 01              -  mov ecx,[SM6EN.exe+73FBDC]
+"SM6EN.exe"+10D0F6: 8B 49 08                       -  mov ecx,[ecx+08]
+"SM6EN.exe"+10D0F9: E8 C2 5F F1 FF                 -  call SM6EN.exe+230C0
+// ---------- INJECTING HERE ----------
+"SM6EN.exe"+10D0FE: D9 80 B8 01 00 00              -  fld dword ptr [eax+000001B8]
+// ---------- DONE INJECTING  ----------
+"SM6EN.exe"+10D104: D9 7D 0A                       -  fnstcw [ebp+0A]
+"SM6EN.exe"+10D107: 33 D2                          -  xor edx,edx
+"SM6EN.exe"+10D109: 0F B7 45 0A                    -  movzx eax,word ptr [ebp+0A]
+"SM6EN.exe"+10D10D: 0D 00 0C 00 00                 -  or eax,0C00
+"SM6EN.exe"+10D112: 89 45 FC                       -  mov [ebp-04],eax
+"SM6EN.exe"+10D115: D9 6D FC                       -  fldcw [ebp-04]
+"SM6EN.exe"+10D118: DF 7D F8                       -  fistp qword ptr [ebp-08]
+"SM6EN.exe"+10D11B: 8B 45 F8                       -  mov eax,[ebp-08]
+"SM6EN.exe"+10D11E: 6B C0 64                       -  imul eax,eax,64
+"SM6EN.exe"+10D121: D9 6D 0A                       -  fldcw [ebp+0A]
+}
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>97</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>5</ID>
+      <Description>"Inf. Musou"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{ Game   : SM6EN.exe
+  Version:
+  Date   : 2018-12-07
+  Author : ColonelRVH
+
+  This script does blah blah blah
+}
+
+/*===============================
+Cheat Script by ColonelRVH
+
+Please Support my work at:
+  https://www.patreon.com/ColonelRVH
+
+Visit my website at:
+  https://www.thecheatscript.com
+- For latest content, better index &amp; easy to find game cheat that you need.
+
+● You can alter it as your own discretion, but you must keep my credits.
+● Any distributions of my tables &amp; codes are unadvised.
+
+===============================*/
+[ENABLE]
+
+aobscanmodule(Get_Player_Musou_AOB,SM6EN.exe,F3 0F 2C B2 C4 01 00 00) // should be unique
+alloc(newmem,$1000)
+
+label(code)
+label(return)
+
+newmem:
+  mov esi,[edx+000001C0]
+  mov [edx+000001C4],esi
+code:
+  cvttss2si esi,[edx+000001C4]
+  jmp return
+
+Get_Player_Musou_AOB:
+  jmp newmem
+  nop
+  nop
+  nop
+return:
+registersymbol(Get_Player_Musou_AOB)
+
+[DISABLE]
+
+Get_Player_Musou_AOB:
+  db F3 0F 2C B2 C4 01 00 00
+
+unregistersymbol(Get_Player_Musou_AOB)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: "SM6EN.exe"+14DDD4
+
+"SM6EN.exe"+14DDA8: F3 0F 2C 82 C0 01 00 00        -  cvttss2si eax,[edx+000001C0]
+"SM6EN.exe"+14DDB0: 89 81 2C 16 00 00              -  mov [ecx+0000162C],eax
+"SM6EN.exe"+14DDB6: 83 F8 01                       -  cmp eax,01
+"SM6EN.exe"+14DDB9: 7C 0E                          -  jl SM6EN.exe+14DDC9
+"SM6EN.exe"+14DDBB: 3D E8 03 00 00                 -  cmp eax,000003E8
+"SM6EN.exe"+14DDC0: 7E 0C                          -  jle SM6EN.exe+14DDCE
+"SM6EN.exe"+14DDC2: B8 E8 03 00 00                 -  mov eax,000003E8
+"SM6EN.exe"+14DDC7: EB 05                          -  jmp SM6EN.exe+14DDCE
+"SM6EN.exe"+14DDC9: B8 01 00 00 00                 -  mov eax,00000001
+"SM6EN.exe"+14DDCE: 89 81 2C 16 00 00              -  mov [ecx+0000162C],eax
+// ---------- INJECTING HERE ----------
+"SM6EN.exe"+14DDD4: F3 0F 2C B2 C4 01 00 00        -  cvttss2si esi,[edx+000001C4]
+// ---------- DONE INJECTING  ----------
+"SM6EN.exe"+14DDDC: 33 C0                          -  xor eax,eax
+"SM6EN.exe"+14DDDE: 85 F6                          -  test esi,esi
+"SM6EN.exe"+14DDE0: 0F 98 C0                       -  sets al
+"SM6EN.exe"+14DDE3: 89 B1 38 16 00 00              -  mov [ecx+00001638],esi
+"SM6EN.exe"+14DDE9: 8D 78 FF                       -  lea edi,[eax-01]
+"SM6EN.exe"+14DDEC: 8B 81 2C 16 00 00              -  mov eax,[ecx+0000162C]
+"SM6EN.exe"+14DDF2: 23 FE                          -  and edi,esi
+"SM6EN.exe"+14DDF4: 3B F8                          -  cmp edi,eax
+"SM6EN.exe"+14DDF6: 7F 0A                          -  jg SM6EN.exe+14DE02
+"SM6EN.exe"+14DDF8: 33 C0                          -  xor eax,eax
+}
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>98</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1</ID>
+      <Description>"Inf. Gold"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{ Game   : SM6EN.exe
+  Version:
+  Date   : 2018-12-07
+  Author : ColonelRVH
+
+  This script does blah blah blah
+}
+
+/*===============================
+Cheat Script by ColonelRVH
+
+Please Support my work at:
+  https://www.patreon.com/ColonelRVH
+
+Visit my website at:
+  https://www.thecheatscript.com
+- For latest content, better index &amp; easy to find game cheat that you need.
+
+● You can alter it as your own discretion, but you must keep my credits.
+● Any distributions of my tables &amp; codes are unadvised.
+
+===============================*/
+[ENABLE]
+
+aobscanmodule(Get_Gold_AOB,SM6EN.exe,8B 86 B0 FC 00 00 8B) // should be unique
+alloc(newmem,$1000)
+
+label(code)
+label(return)
+
+newmem:
+  mov [esi+0000FCB0],#777777
+code:
+  mov eax,[esi+0000FCB0]
+  jmp return
+
+Get_Gold_AOB:
+  jmp newmem
+  nop
+return:
+registersymbol(Get_Gold_AOB)
+
+[DISABLE]
+
+Get_Gold_AOB:
+  db 8B 86 B0 FC 00 00
+
+unregistersymbol(Get_Gold_AOB)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: "SM6EN.exe"+30450B
+
+"SM6EN.exe"+3044ED: 53                       -  push ebx
+"SM6EN.exe"+3044EE: 56                       -  push esi
+"SM6EN.exe"+3044EF: 57                       -  push edi
+"SM6EN.exe"+3044F0: 33 FF                    -  xor edi,edi
+"SM6EN.exe"+3044F2: 8B D9                    -  mov ebx,ecx
+"SM6EN.exe"+3044F4: 89 54 24 34              -  mov [esp+34],edx
+"SM6EN.exe"+3044F8: 3B D7                    -  cmp edx,edi
+"SM6EN.exe"+3044FA: 0F 84 7F 04 00 00        -  je SM6EN.exe+30497F
+"SM6EN.exe"+304500: F3 0F 10 43 14           -  movss xmm0,[ebx+14]
+"SM6EN.exe"+304505: 8B 35 6C FE AC 01        -  mov esi,[SM6EN.exe+73FE6C]
+// ---------- INJECTING HERE ----------
+"SM6EN.exe"+30450B: 8B 86 B0 FC 00 00        -  mov eax,[esi+0000FCB0]
+// ---------- DONE INJECTING  ----------
+"SM6EN.exe"+304511: 8B 4B 1C                 -  mov ecx,[ebx+1C]
+"SM6EN.exe"+304514: 0F 5A C8                 -  vcvtps2pd xmm1,xmm0
+"SM6EN.exe"+304517: F2 0F 58 0D E0 90 A4 01  -  addsd xmm1,qword ptr [SM6EN.exe+6B90E0]
+"SM6EN.exe"+30451F: 66 0F 5A C9              -  cvtpd2ps xmm1,xmm1
+"SM6EN.exe"+304523: F3 0F 11 4C 24 2C        -  movss [esp+2C],xmm1
+"SM6EN.exe"+304529: F3 0F 10 4B 18           -  movss xmm1,[ebx+18]
+"SM6EN.exe"+30452E: 89 44 24 38              -  mov [esp+38],eax
+"SM6EN.exe"+304532: 8B 81 38 04 00 00        -  mov eax,[ecx+00000438]
+"SM6EN.exe"+304538: 0F 5A C9                 -  vcvtps2pd xmm1,xmm1
+"SM6EN.exe"+30453B: F2 0F 58 0D E0 90 A4 01  -  addsd xmm1,qword ptr [SM6EN.exe+6B90E0]
+}
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>100</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>24</ID>
+      <Description>"Inf. Skill Points"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+aobscan(_SkillPoints,0F BF 82 AE 00 00 00 53)
+label(SkillPoints)
+label(pSkillPoints)
+
+newmem:
+mov [pSkillPoints],edx
+mov word ptr [edx+000000AE],(int)9999
+jmp originalcode
+
+originalcode:
+movsx eax,word ptr [edx+000000AE]
+
+exit:
+jmp returnhere
+
+pSkillPoints:
+dd 0
+
+_SkillPoints:
+SkillPoints:
+jmp newmem
+nop
+nop
+returnhere:
+
+registersymbol(SkillPoints)
+registersymbol(pSkillPoints)
+
+[DISABLE]
+unregistersymbol(SkillPoints)
+unregistersymbol(pSkillPoints)
+dealloc(newmem)
+SkillPoints:
+db 0F BF 82 AE 00 00 00
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>101</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>9</ID>
+      <Description>"Inf. Buff"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+aobscan(_Buff,F3 0F 10 89 E0 00 00 00 ?? ?? 0D ?? ?? ?? ??)
+label(Buff)
+label(pBuff)
+
+newmem:
+mov [pBuff],ecx
+cmp byte ptr [ecx+00000538],1
+jne originalcode
+mov [ecx+000000C8],(float)1800
+mov [ecx+000000D4],(float)1800
+mov [ecx+000000E0],(float)1800
+jmp originalcode
+
+originalcode:
+movss xmm1,[ecx+000000E0]
+
+exit:
+jmp returnhere
+
+pBuff:
+dd 0
+
+_Buff:
+Buff:
+jmp newmem
+nop
+nop
+nop
+returnhere:
+
+registersymbol(Buff)
+registersymbol(pBuff)
+
+[DISABLE]
+unregistersymbol(Buff)
+unregistersymbol(pBuff)
+dealloc(newmem)
+Buff:
+db F3 0F 10 89 E0 00 00 00
+</AssemblerScript>
+      <Hotkeys>
+        <Hotkey>
+          <Action>Toggle Activation</Action>
+          <Keys>
+            <Key>99</Key>
+          </Keys>
+          <ID>0</ID>
+        </Hotkey>
+      </Hotkeys>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>27</ID>
+      <Description>"Max Seal Weapon Gauge"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+aobscan(_SealWeaponGauge,0F BF 51 1E 89 55 DC DB 45 DC)
+label(SealWeaponGauge)
+label(pSealWeaponGauge)
+
+newmem:
+mov [pSealWeaponGauge],ecx
+mov word ptr [ecx+1E],(int)1000
+jmp originalcode
+
+originalcode:
+movsx edx,word ptr [ecx+1E]
+mov [ebp-24],edx
+
+exit:
+jmp returnhere
+
+pSealWeaponGauge:
+dd 0
+
+_SealWeaponGauge:
+SealWeaponGauge:
+jmp newmem
+nop
+nop
+returnhere:
+
+registersymbol(SealWeaponGauge)
+registersymbol(pSealWeaponGauge)
+
+[DISABLE]
+unregistersymbol(SealWeaponGauge)
+unregistersymbol(pSealWeaponGauge)
+dealloc(newmem)
+SealWeaponGauge:
+db 0F BF 51 1E 89 55 DC
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>13</ID>
+      <Description>"Stats"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+aobscan(_Stats,0F BF 8E 9E 00 00 00 8D 74 10 64)
+label(Stats)
+label(pStats)
+
+newmem:
+mov [pStats],esi
+
+originalcode:
+movsx ecx,word ptr [esi+0000009E]
+
+exit:
+jmp returnhere
+
+pStats:
+dd 0
+
+_Stats:
+Stats:
+jmp newmem
+nop
+nop
+returnhere:
+
+registersymbol(Stats)
+registersymbol(pStats)
+
+[DISABLE]
+unregistersymbol(Stats)
+unregistersymbol(pStats)
+dealloc(newmem)
+Stats:
+db 0F BF 8E 9E 00 00 00
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>14</ID>
+          <Description>"Health"</Description>
+          <LastState Value="31506" RealAddress="0603009A"/>
+          <VariableType>2 Bytes</VariableType>
+          <Address>pStats</Address>
+          <Offsets>
+            <Offset>9A</Offset>
+          </Offsets>
+          <Hotkeys>
+            <Hotkey>
+              <Action>Set Value</Action>
+              <Keys>
+                <Key>191</Key>
+              </Keys>
+              <Value>1000</Value>
+              <Description>Stats</Description>
+              <ID>1</ID>
+            </Hotkey>
+          </Hotkeys>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>15</ID>
+          <Description>"Attack"</Description>
+          <LastState Value="65394" RealAddress="0603009C"/>
+          <VariableType>2 Bytes</VariableType>
+          <Address>pStats</Address>
+          <Offsets>
+            <Offset>9C</Offset>
+          </Offsets>
+          <Hotkeys>
+            <Hotkey>
+              <Action>Set Value</Action>
+              <Keys>
+                <Key>191</Key>
+              </Keys>
+              <Value>1400</Value>
+              <Description>Stats</Description>
+              <ID>1</ID>
+            </Hotkey>
+          </Hotkeys>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>16</ID>
+          <Description>"Defense"</Description>
+          <LastState Value="34189" RealAddress="0603009E"/>
+          <VariableType>2 Bytes</VariableType>
+          <Address>pStats</Address>
+          <Offsets>
+            <Offset>9E</Offset>
+          </Offsets>
+          <Hotkeys>
+            <Hotkey>
+              <Action>Set Value</Action>
+              <Keys>
+                <Key>191</Key>
+              </Keys>
+              <Value>1400</Value>
+              <Description>Stats</Description>
+              <ID>1</ID>
+            </Hotkey>
+          </Hotkeys>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>29</ID>
+          <Description>"Power"</Description>
+          <LastState Value="252" RealAddress="060300A0"/>
+          <VariableType>Byte</VariableType>
+          <Address>pStats</Address>
+          <Offsets>
+            <Offset>A0</Offset>
+          </Offsets>
+          <Hotkeys>
+            <Hotkey>
+              <Action>Set Value</Action>
+              <Keys>
+                <Key>191</Key>
+              </Keys>
+              <Value>100</Value>
+              <Description>Stats</Description>
+              <ID>0</ID>
+            </Hotkey>
+          </Hotkeys>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>31</ID>
+          <Description>"Speed"</Description>
+          <LastState Value="243" RealAddress="060300A2"/>
+          <VariableType>Byte</VariableType>
+          <Address>pStats</Address>
+          <Offsets>
+            <Offset>A2</Offset>
+          </Offsets>
+          <Hotkeys>
+            <Hotkey>
+              <Action>Set Value</Action>
+              <Keys>
+                <Key>191</Key>
+              </Keys>
+              <Value>100</Value>
+              <Description>Stats</Description>
+              <ID>0</ID>
+            </Hotkey>
+            <Hotkey>
+              <Action>Increase Value</Action>
+              <Keys>
+                <Key>107</Key>
+              </Keys>
+              <Value>50</Value>
+              <ID>1</ID>
+            </Hotkey>
+            <Hotkey>
+              <Action>Decrease Value</Action>
+              <Keys>
+                <Key>109</Key>
+              </Keys>
+              <Value>50</Value>
+              <ID>2</ID>
+            </Hotkey>
+          </Hotkeys>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols>
+    <SymbolEntry>
+      <Name>Musou</Name>
+      <Address>0054CEE4</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>pMusou</Name>
+      <Address>22370024</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Gold</Name>
+      <Address>006F8EBB</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>pGold</Name>
+      <Address>22380020</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>Stats</Name>
+      <Address>0059BB53</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>pStats</Name>
+      <Address>22E40012</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>SkillPoints</Name>
+      <Address>006336B3</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>pSkillPoints</Name>
+      <Address>1F550020</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>SealWeaponGauge</Name>
+      <Address>006269DF</Address>
+    </SymbolEntry>
+    <SymbolEntry>
+      <Name>pSealWeaponGauge</Name>
+      <Address>1F5B001D</Address>
+    </SymbolEntry>
+  </UserdefinedSymbols>
+</CheatTable>
