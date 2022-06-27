@@ -5,17 +5,366 @@
       <ID>12</ID>
       <Description>"Main"</Description>
       <Options moHideChildren="1" moManualExpandCollapse="1"/>
+      <LastState Value="" RealAddress="00000000"/>
       <GroupHeader>1</GroupHeader>
       <CheatEntries>
+        <CheatEntry>
+          <ID>451</ID>
+          <Description>"Character"</Description>
+          <Options moHideChildren="1"/>
+          <LastState Value="" RealAddress="00000000"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>124</ID>
+              <Description>"Axis"</Description>
+              <Options moHideChildren="1"/>
+              <LastState Value="" RealAddress="00000000"/>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>141</ID>
+                  <Description>"X"</Description>
+                  <LastState Value="3075.80957" RealAddress="24982CB4"/>
+                  <VariableType>Float</VariableType>
+                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
+                  <Offsets>
+                    <Offset>CA4</Offset>
+                    <Offset>24</Offset>
+                    <Offset>2C</Offset>
+                    <Offset>34</Offset>
+                    <Offset>34</Offset>
+                    <Offset>28</Offset>
+                    <Offset>148</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>137</ID>
+                  <Description>"Z"</Description>
+                  <LastState Value="89.32699585" RealAddress="24982CB8"/>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Float</VariableType>
+                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
+                  <Offsets>
+                    <Offset>CA8</Offset>
+                    <Offset>24</Offset>
+                    <Offset>28</Offset>
+                    <Offset>148</Offset>
+                  </Offsets>
+                  <Hotkeys>
+                    <Hotkey>
+                      <Action>Increase Value</Action>
+                      <Keys>
+                        <Key>22532</Key>
+                        <Key>22528</Key>
+                      </Keys>
+                      <Value>75</Value>
+                      <ID>0</ID>
+                    </Hotkey>
+                    <Hotkey>
+                      <Action>Decrease Value</Action>
+                      <Keys>
+                        <Key>22534</Key>
+                        <Key>22545</Key>
+                      </Keys>
+                      <Value>15</Value>
+                      <ID>1</ID>
+                    </Hotkey>
+                  </Hotkeys>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>140</ID>
+                  <Description>"Y"</Description>
+                  <LastState Value="-67.84827423" RealAddress="24982CBC"/>
+                  <VariableType>Float</VariableType>
+                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
+                  <Offsets>
+                    <Offset>CAC</Offset>
+                    <Offset>24</Offset>
+                    <Offset>34</Offset>
+                    <Offset>30</Offset>
+                    <Offset>28</Offset>
+                    <Offset>148</Offset>
+                  </Offsets>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>125</ID>
+              <Description>"Stats"</Description>
+              <Options moHideChildren="1"/>
+              <LastState Value="" RealAddress="00000000"/>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>170</ID>
+                  <Description>"Health"</Description>
+                  <LastState Value="110" Activated="1" RealAddress="24982FA8"/>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
+                  <Offsets>
+                    <Offset>F98</Offset>
+                    <Offset>24</Offset>
+                    <Offset>30</Offset>
+                    <Offset>0</Offset>
+                    <Offset>4</Offset>
+                    <Offset>38</Offset>
+                    <Offset>1E0</Offset>
+                  </Offsets>
+                  <Hotkeys>
+                    <Hotkey>
+                      <Action>Toggle Activation Allow Increase</Action>
+                      <Keys>
+                        <Key>22532</Key>
+                        <Key>22547</Key>
+                      </Keys>
+                      <ID>0</ID>
+                    </Hotkey>
+                  </Hotkeys>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>120</ID>
+                  <Description>"Spray Cans"</Description>
+                  <LastState Value="30" Activated="1" RealAddress="24982FB0"/>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
+                  <Offsets>
+                    <Offset>F6C</Offset>
+                    <Offset>38</Offset>
+                    <Offset>34</Offset>
+                    <Offset>28</Offset>
+                    <Offset>24</Offset>
+                    <Offset>148</Offset>
+                  </Offsets>
+                  <Hotkeys>
+                    <Hotkey>
+                      <Action>Set Value</Action>
+                      <Keys>
+                        <Key>22532</Key>
+                        <Key>22546</Key>
+                      </Keys>
+                      <Value>30</Value>
+                      <ID>0</ID>
+                    </Hotkey>
+                    <Hotkey>
+                      <Action>Toggle Activation</Action>
+                      <Keys>
+                        <Key>22532</Key>
+                        <Key>22546</Key>
+                      </Keys>
+                      <ID>1</ID>
+                    </Hotkey>
+                  </Hotkeys>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>148</ID>
+                  <Description>"Spray Cooldown"</Description>
+                  <LastState Value="0" Activated="1" RealAddress="2498244C"/>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
+                  <Offsets>
+                    <Offset>43C</Offset>
+                    <Offset>24</Offset>
+                    <Offset>28</Offset>
+                    <Offset>28</Offset>
+                    <Offset>C8</Offset>
+                  </Offsets>
+                  <Hotkeys>
+                    <Hotkey>
+                      <Action>Toggle Activation</Action>
+                      <Keys>
+                        <Key>22532</Key>
+                        <Key>22546</Key>
+                      </Keys>
+                      <ID>0</ID>
+                    </Hotkey>
+                  </Hotkeys>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>169</ID>
+                  <Description>"Speed"</Description>
+                  <LastState Value="0" RealAddress="24982CE4"/>
+                  <VariableType>Float</VariableType>
+                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
+                  <Offsets>
+                    <Offset>CD4</Offset>
+                    <Offset>24</Offset>
+                    <Offset>0</Offset>
+                    <Offset>4</Offset>
+                    <Offset>4</Offset>
+                    <Offset>38</Offset>
+                    <Offset>1E4</Offset>
+                  </Offsets>
+                  <Hotkeys>
+                    <Hotkey>
+                      <Action>Set Value</Action>
+                      <Keys>
+                        <Key>22534</Key>
+                        <Key>22533</Key>
+                      </Keys>
+                      <Value>4</Value>
+                      <ID>0</ID>
+                    </Hotkey>
+                    <Hotkey>
+                      <Action>Set Value</Action>
+                      <Keys>
+                        <Key>22532</Key>
+                        <Key>22551</Key>
+                      </Keys>
+                      <Value>0</Value>
+                      <ID>1</ID>
+                    </Hotkey>
+                  </Hotkeys>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>167</ID>
+                  <Description>"God Mode | Speed+Invincible"</Description>
+                  <LastState Value="0" RealAddress="24983178"/>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
+                  <Offsets>
+                    <Offset>1168</Offset>
+                    <Offset>148</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>193</ID>
+                  <Description>"Transparency"</Description>
+                  <LastState Value="1" RealAddress="24982C50"/>
+                  <VariableType>Float</VariableType>
+                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
+                  <Offsets>
+                    <Offset>C40</Offset>
+                    <Offset>24</Offset>
+                    <Offset>34</Offset>
+                    <Offset>30</Offset>
+                    <Offset>28</Offset>
+                    <Offset>148</Offset>
+                  </Offsets>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>157</ID>
+                      <Description>"Transflag"</Description>
+                      <LastState Value="0" RealAddress="2498317C"/>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
+                      <Offsets>
+                        <Offset>116C</Offset>
+                        <Offset>24</Offset>
+                        <Offset>1C8</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>453</ID>
+              <Description>"Tricks"</Description>
+              <Options moHideChildren="1"/>
+              <LastState Value="" RealAddress="00000000"/>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>254</ID>
+                  <Description>"Air Tricks"</Description>
+                  <LastState Value="1" RealAddress="249830E4"/>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
+                  <Offsets>
+                    <Offset>10D4</Offset>
+                    <Offset>24</Offset>
+                    <Offset>2C</Offset>
+                    <Offset>0</Offset>
+                    <Offset>4</Offset>
+                    <Offset>38</Offset>
+                    <Offset>1E0</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>256</ID>
+                  <Description>"Grind Tricks"</Description>
+                  <LastState Value="1" RealAddress="249830DC"/>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
+                  <Offsets>
+                    <Offset>10CC</Offset>
+                    <Offset>24</Offset>
+                    <Offset>30</Offset>
+                    <Offset>30</Offset>
+                    <Offset>28</Offset>
+                    <Offset>148</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>103</ID>
+                  <Description>"Trick Score"</Description>
+                  <LastState Value="0" RealAddress="2498305C"/>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
+                  <Offsets>
+                    <Offset>104C</Offset>
+                    <Offset>24</Offset>
+                    <Offset>30</Offset>
+                    <Offset>30</Offset>
+                    <Offset>30</Offset>
+                    <Offset>28</Offset>
+                    <Offset>148</Offset>
+                  </Offsets>
+                  <Hotkeys>
+                    <Hotkey>
+                      <Action>Increase Value</Action>
+                      <Keys>
+                        <Key>22532</Key>
+                        <Key>22531</Key>
+                      </Keys>
+                      <Value>50000</Value>
+                      <ID>0</ID>
+                    </Hotkey>
+                  </Hotkeys>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>9</ID>
+                  <Description>"Combo"</Description>
+                  <LastState Value="0" RealAddress="24983060"/>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
+                  <Offsets>
+                    <Offset>1050</Offset>
+                    <Offset>24</Offset>
+                    <Offset>2C</Offset>
+                    <Offset>30</Offset>
+                    <Offset>30</Offset>
+                    <Offset>28</Offset>
+                    <Offset>148</Offset>
+                  </Offsets>
+                  <Hotkeys>
+                    <Hotkey>
+                      <Action>Increase Value</Action>
+                      <Keys>
+                        <Key>22532</Key>
+                        <Key>22530</Key>
+                      </Keys>
+                      <Value>25</Value>
+                      <ID>0</ID>
+                    </Hotkey>
+                  </Hotkeys>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
         <CheatEntry>
           <ID>450</ID>
           <Description>"Mission"</Description>
           <Options moHideChildren="1"/>
+          <LastState Value="" RealAddress="00000000"/>
           <GroupHeader>1</GroupHeader>
           <CheatEntries>
             <CheatEntry>
               <ID>253</ID>
               <Description>"Mission CountDown"</Description>
+              <LastState Value="0" RealAddress="248F7058"/>
               <VariableType>4 Bytes</VariableType>
               <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
               <Offsets>
@@ -30,6 +379,7 @@
             <CheatEntry>
               <ID>149</ID>
               <Description>"Boss Health"</Description>
+              <LastState Value="0" RealAddress="26C5A658"/>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>Float</VariableType>
               <Address>"cxbxr-ldr.exe"+00221CBC</Address>
@@ -44,83 +394,170 @@
           </CheatEntries>
         </CheatEntry>
         <CheatEntry>
-          <ID>126</ID>
-          <Description>"Misc"</Description>
+          <ID>443</ID>
+          <Description>"HUD"</Description>
           <Options moHideChildren="1"/>
+          <LastState Value="" RealAddress="00000000"/>
           <GroupHeader>1</GroupHeader>
           <CheatEntries>
             <CheatEntry>
-              <ID>94</ID>
-              <Description>"Stance|1-Default|2-Air|3-Rail|4-WallRide|5-HalfPipe|6-HPAir|7-HPHand|8-Dance|9-GetUp|10-Fall"</Description>
-              <Options moAllowManualCollapseAndExpand="1"/>
-              <VariableType>4 Bytes</VariableType>
-              <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
-              <Offsets>
-                <Offset>E50</Offset>
-                <Offset>24</Offset>
-                <Offset>30</Offset>
-                <Offset>30</Offset>
-                <Offset>30</Offset>
-                <Offset>28</Offset>
-                <Offset>148</Offset>
-              </Offsets>
-              <Hotkeys>
-                <Hotkey>
-                  <Action>Toggle Activation</Action>
-                  <Keys>
-                    <Key>22533</Key>
-                    <Key>22551</Key>
-                  </Keys>
-                  <ID>0</ID>
-                </Hotkey>
-              </Hotkeys>
+              <ID>198</ID>
+              <Description>"Title Screen"</Description>
+              <Options moHideChildren="1"/>
+              <LastState Value="" RealAddress="00000000"/>
+              <GroupHeader>1</GroupHeader>
               <CheatEntries>
                 <CheatEntry>
-                  <ID>145</ID>
-                  <Description>"11-Drown|18-Crawl|23-IdlePose|25-Phrase|27-Invis|28Max"</Description>
-                  <GroupHeader>1</GroupHeader>
+                  <ID>212</ID>
+                  <Description>"Demo-Start To Begin Trans"</Description>
+                  <VariableType>Float</VariableType>
+                  <Address>"cxbxr-ldr.exe"+00241F24</Address>
+                  <Offsets>
+                    <Offset>58</Offset>
+                    <Offset>4</Offset>
+                    <Offset>7C</Offset>
+                    <Offset>28</Offset>
+                    <Offset>28</Offset>
+                    <Offset>24</Offset>
+                    <Offset>40</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>243</ID>
+                  <Description>"Stage Time"</Description>
+                  <LastState Value="408433472" RealAddress="1F2E6670"/>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"cxbxr-emu.dll"+004B6690</Address>
+                  <Offsets>
+                    <Offset>2F8</Offset>
+                    <Offset>14</Offset>
+                    <Offset>18</Offset>
+                    <Offset>4</Offset>
+                    <Offset>68</Offset>
+                    <Offset>AC</Offset>
+                    <Offset>30</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>217</ID>
+                  <Description>"Title Idle Timer"</Description>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"cxbxr-ldr.exe"+00241F24</Address>
+                  <Offsets>
+                    <Offset>4C</Offset>
+                    <Offset>28</Offset>
+                    <Offset>C</Offset>
+                    <Offset>4</Offset>
+                    <Offset>38</Offset>
+                    <Offset>30</Offset>
+                    <Offset>34</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>211</ID>
+                  <Description>"Title Press Start Trans"</Description>
+                  <VariableType>Float</VariableType>
+                  <Address>"cxbxr-ldr.exe"+00241F24</Address>
+                  <Offsets>
+                    <Offset>58</Offset>
+                    <Offset>8</Offset>
+                    <Offset>7C</Offset>
+                    <Offset>28</Offset>
+                    <Offset>C</Offset>
+                    <Offset>38</Offset>
+                    <Offset>34</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>203</ID>
+                  <Description>"Title Screen Scene | 6 Max"</Description>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
+                  <Offsets>
+                    <Offset>44</Offset>
+                    <Offset>28</Offset>
+                    <Offset>40</Offset>
+                    <Offset>2C</Offset>
+                    <Offset>24</Offset>
+                    <Offset>2C</Offset>
+                    <Offset>438</Offset>
+                  </Offsets>
                 </CheatEntry>
               </CheatEntries>
             </CheatEntry>
             <CheatEntry>
-              <ID>102</ID>
-              <Description>"Idle Timer|700-Dance|1200-Diag.|"</Description>
-              <VariableType>4 Bytes</VariableType>
-              <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
-              <Offsets>
-                <Offset>A80</Offset>
-                <Offset>24</Offset>
-                <Offset>1E4</Offset>
-              </Offsets>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>150</ID>
-              <Description>"Character Select|23 Max"</Description>
-              <VariableType>4 Bytes</VariableType>
-              <Address>"cxbxr-emu.dll"+0005BB14</Address>
-              <Offsets>
-                <Offset>5C</Offset>
-                <Offset>28</Offset>
-                <Offset>34</Offset>
-                <Offset>C</Offset>
-                <Offset>38</Offset>
-                <Offset>290</Offset>
-              </Offsets>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>119</ID>
-              <Description>"IG-Char Sel|23Max"</Description>
-              <VariableType>4 Bytes</VariableType>
-              <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
-              <Offsets>
-                <Offset>18</Offset>
-                <Offset>A0</Offset>
-                <Offset>34</Offset>
-                <Offset>30</Offset>
-                <Offset>2C</Offset>
-                <Offset>2C</Offset>
-                <Offset>1DC</Offset>
-              </Offsets>
+              <ID>452</ID>
+              <Description>"In-Game"</Description>
+              <Options moHideChildren="1"/>
+              <LastState Value="" RealAddress="00000000"/>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>442</ID>
+                  <Description>"Chat | Copy Value BEFORE Disabling"</Description>
+                  <LastState Value="0" RealAddress="226A1BA8"/>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"cxbxr-ldr.exe"+00241DAC</Address>
+                  <Offsets>
+                    <Offset>B8</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>604</ID>
+                  <Description>"IG HUD - Normal 3211010816 | Other 25794986 | Off 0"</Description>
+                  <LastState Value="3212095744" RealAddress="2499C69C"/>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
+                  <Offsets>
+                    <Offset>16AC</Offset>
+                    <Offset>30</Offset>
+                    <Offset>30</Offset>
+                    <Offset>28</Offset>
+                    <Offset>2C</Offset>
+                    <Offset>1DC</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>274</ID>
+                  <Description>"Black Bars | Copy Value BEFORE Disabling"</Description>
+                  <LastState Value="0" RealAddress="226A1F08"/>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"cxbxr-ldr.exe"+00241F24</Address>
+                  <Offsets>
+                    <Offset>498</Offset>
+                    <Offset>F0</Offset>
+                    <Offset>30</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>455</ID>
+                  <Description>"Talk to NPC Bubble"</Description>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"cxbxr-ldr.exe"+00255120</Address>
+                  <Offsets>
+                    <Offset>8C</Offset>
+                    <Offset>144</Offset>
+                    <Offset>64</Offset>
+                    <Offset>4</Offset>
+                    <Offset>5B8</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>456</ID>
+                  <Description>"Enable Save - 536870912 | Paint Save 2147483648"</Description>
+                  <LastState Value="0" RealAddress="2499C6A0"/>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
+                  <Offsets>
+                    <Offset>16B0</Offset>
+                    <Offset>30</Offset>
+                    <Offset>2C</Offset>
+                    <Offset>24</Offset>
+                    <Offset>28</Offset>
+                    <Offset>4610</Offset>
+                  </Offsets>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
           </CheatEntries>
         </CheatEntry>
@@ -128,6 +565,7 @@
           <ID>171</ID>
           <Description>"Mini-Games"</Description>
           <Options moHideChildren="1"/>
+          <LastState Value="" RealAddress="00000000"/>
           <GroupHeader>1</GroupHeader>
           <CheatEntries>
             <CheatEntry>
@@ -199,6 +637,7 @@
             <CheatEntry>
               <ID>185</ID>
               <Description>"PowerUp|10 Max"</Description>
+              <LastState Value="4294967295" RealAddress="24982FC4"/>
               <VariableType>4 Bytes</VariableType>
               <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
               <Offsets>
@@ -214,491 +653,87 @@
           </CheatEntries>
         </CheatEntry>
         <CheatEntry>
-          <ID>443</ID>
-          <Description>"HUD"</Description>
+          <ID>126</ID>
+          <Description>"Misc"</Description>
           <Options moHideChildren="1"/>
+          <LastState Value="" RealAddress="00000000"/>
           <GroupHeader>1</GroupHeader>
           <CheatEntries>
             <CheatEntry>
-              <ID>198</ID>
-              <Description>"Title Screen"</Description>
-              <Options moHideChildren="1"/>
-              <GroupHeader>1</GroupHeader>
+              <ID>94</ID>
+              <Description>"Stance|1-Default|2-Air|3-Rail|4-WallRide|5-HalfPipe|6-HPAir|7-HPHand|8-Dance|9-GetUp|10-Fall"</Description>
+              <Options moAllowManualCollapseAndExpand="1"/>
+              <LastState Value="1" RealAddress="24982E60"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
+              <Offsets>
+                <Offset>E50</Offset>
+                <Offset>24</Offset>
+                <Offset>30</Offset>
+                <Offset>30</Offset>
+                <Offset>30</Offset>
+                <Offset>28</Offset>
+                <Offset>148</Offset>
+              </Offsets>
+              <Hotkeys>
+                <Hotkey>
+                  <Action>Toggle Activation</Action>
+                  <Keys>
+                    <Key>22533</Key>
+                    <Key>22551</Key>
+                  </Keys>
+                  <ID>0</ID>
+                </Hotkey>
+              </Hotkeys>
               <CheatEntries>
                 <CheatEntry>
-                  <ID>212</ID>
-                  <Description>"Demo-Start To Begin Trans"</Description>
-                  <VariableType>Float</VariableType>
-                  <Address>"cxbxr-ldr.exe"+00241F24</Address>
-                  <Offsets>
-                    <Offset>58</Offset>
-                    <Offset>4</Offset>
-                    <Offset>7C</Offset>
-                    <Offset>28</Offset>
-                    <Offset>28</Offset>
-                    <Offset>24</Offset>
-                    <Offset>40</Offset>
-                  </Offsets>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>243</ID>
-                  <Description>"Stage Time"</Description>
-                  <VariableType>4 Bytes</VariableType>
-                  <Address>"cxbxr-emu.dll"+004B6690</Address>
-                  <Offsets>
-                    <Offset>2F8</Offset>
-                    <Offset>14</Offset>
-                    <Offset>18</Offset>
-                    <Offset>4</Offset>
-                    <Offset>68</Offset>
-                    <Offset>AC</Offset>
-                    <Offset>30</Offset>
-                  </Offsets>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>217</ID>
-                  <Description>"Title Idle Timer"</Description>
-                  <VariableType>4 Bytes</VariableType>
-                  <Address>"cxbxr-ldr.exe"+00241F24</Address>
-                  <Offsets>
-                    <Offset>4C</Offset>
-                    <Offset>28</Offset>
-                    <Offset>C</Offset>
-                    <Offset>4</Offset>
-                    <Offset>38</Offset>
-                    <Offset>30</Offset>
-                    <Offset>34</Offset>
-                  </Offsets>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>211</ID>
-                  <Description>"Title Press Start Trans"</Description>
-                  <VariableType>Float</VariableType>
-                  <Address>"cxbxr-ldr.exe"+00241F24</Address>
-                  <Offsets>
-                    <Offset>58</Offset>
-                    <Offset>8</Offset>
-                    <Offset>7C</Offset>
-                    <Offset>28</Offset>
-                    <Offset>C</Offset>
-                    <Offset>38</Offset>
-                    <Offset>34</Offset>
-                  </Offsets>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>203</ID>
-                  <Description>"Title Screen Scene | 6 Max"</Description>
-                  <VariableType>4 Bytes</VariableType>
-                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
-                  <Offsets>
-                    <Offset>44</Offset>
-                    <Offset>28</Offset>
-                    <Offset>40</Offset>
-                    <Offset>2C</Offset>
-                    <Offset>24</Offset>
-                    <Offset>2C</Offset>
-                    <Offset>438</Offset>
-                  </Offsets>
+                  <ID>145</ID>
+                  <Description>"11-Drown|18-Crawl|23-IdlePose|25-Phrase|27-Invis|28Max"</Description>
+                  <LastState Value="" RealAddress="00000000"/>
+                  <GroupHeader>1</GroupHeader>
                 </CheatEntry>
               </CheatEntries>
             </CheatEntry>
             <CheatEntry>
-              <ID>452</ID>
-              <Description>"In-Game"</Description>
-              <Options moHideChildren="1"/>
-              <GroupHeader>1</GroupHeader>
-              <CheatEntries>
-                <CheatEntry>
-                  <ID>442</ID>
-                  <Description>"Chat | Copy Value BEFORE Disabling"</Description>
-                  <VariableType>4 Bytes</VariableType>
-                  <Address>"cxbxr-ldr.exe"+00241DAC</Address>
-                  <Offsets>
-                    <Offset>B8</Offset>
-                  </Offsets>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>454</ID>
-                  <Description>"IG HUD - Normal 3211010816 | Other 25794986 | Off 0"</Description>
-                  <VariableType>4 Bytes</VariableType>
-                  <Address>"cxbxr-ldr.exe"+002550E4</Address>
-                  <Offsets>
-                    <Offset>16AC</Offset>
-                    <Offset>24</Offset>
-                    <Offset>28</Offset>
-                    <Offset>138</Offset>
-                    <Offset>4</Offset>
-                    <Offset>8</Offset>
-                    <Offset>F4C</Offset>
-                  </Offsets>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>274</ID>
-                  <Description>"Black Bars | Copy Value BEFORE Disabling"</Description>
-                  <VariableType>4 Bytes</VariableType>
-                  <Address>"cxbxr-ldr.exe"+00241F24</Address>
-                  <Offsets>
-                    <Offset>498</Offset>
-                    <Offset>F0</Offset>
-                    <Offset>30</Offset>
-                  </Offsets>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>455</ID>
-                  <Description>"Talk to NPC Bubble"</Description>
-                  <VariableType>4 Bytes</VariableType>
-                  <Address>"cxbxr-ldr.exe"+00255120</Address>
-                  <Offsets>
-                    <Offset>8C</Offset>
-                    <Offset>144</Offset>
-                    <Offset>64</Offset>
-                    <Offset>4</Offset>
-                    <Offset>5B8</Offset>
-                  </Offsets>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>456</ID>
-                  <Description>"Enable Save - 536870912 | Paint Save 2147483648"</Description>
-                  <VariableType>4 Bytes</VariableType>
-                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
-                  <Offsets>
-                    <Offset>16B0</Offset>
-                    <Offset>30</Offset>
-                    <Offset>2C</Offset>
-                    <Offset>24</Offset>
-                    <Offset>28</Offset>
-                    <Offset>4610</Offset>
-                  </Offsets>
-                </CheatEntry>
-              </CheatEntries>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>451</ID>
-          <Description>"Character"</Description>
-          <Options moHideChildren="1"/>
-          <GroupHeader>1</GroupHeader>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>124</ID>
-              <Description>"Axis"</Description>
-              <Options moHideChildren="1"/>
-              <GroupHeader>1</GroupHeader>
-              <CheatEntries>
-                <CheatEntry>
-                  <ID>141</ID>
-                  <Description>"X"</Description>
-                  <VariableType>Float</VariableType>
-                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
-                  <Offsets>
-                    <Offset>CA4</Offset>
-                    <Offset>24</Offset>
-                    <Offset>2C</Offset>
-                    <Offset>34</Offset>
-                    <Offset>34</Offset>
-                    <Offset>28</Offset>
-                    <Offset>148</Offset>
-                  </Offsets>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>137</ID>
-                  <Description>"Z"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>Float</VariableType>
-                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
-                  <Offsets>
-                    <Offset>CA8</Offset>
-                    <Offset>24</Offset>
-                    <Offset>28</Offset>
-                    <Offset>148</Offset>
-                  </Offsets>
-                  <Hotkeys>
-                    <Hotkey>
-                      <Action>Increase Value</Action>
-                      <Keys>
-                        <Key>22532</Key>
-                        <Key>22528</Key>
-                      </Keys>
-                      <Value>75</Value>
-                      <ID>0</ID>
-                    </Hotkey>
-                    <Hotkey>
-                      <Action>Decrease Value</Action>
-                      <Keys>
-                        <Key>22534</Key>
-                        <Key>22545</Key>
-                      </Keys>
-                      <Value>15</Value>
-                      <ID>1</ID>
-                    </Hotkey>
-                  </Hotkeys>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>140</ID>
-                  <Description>"Y"</Description>
-                  <VariableType>Float</VariableType>
-                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
-                  <Offsets>
-                    <Offset>CAC</Offset>
-                    <Offset>24</Offset>
-                    <Offset>34</Offset>
-                    <Offset>30</Offset>
-                    <Offset>28</Offset>
-                    <Offset>148</Offset>
-                  </Offsets>
-                </CheatEntry>
-              </CheatEntries>
+              <ID>102</ID>
+              <Description>"Idle Timer|700-Dance|1200-Diag.|"</Description>
+              <LastState Value="65" RealAddress="24982A90"/>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
+              <Offsets>
+                <Offset>A80</Offset>
+                <Offset>24</Offset>
+                <Offset>1E4</Offset>
+              </Offsets>
             </CheatEntry>
             <CheatEntry>
-              <ID>125</ID>
-              <Description>"Stats"</Description>
-              <Options moHideChildren="1"/>
-              <GroupHeader>1</GroupHeader>
-              <CheatEntries>
-                <CheatEntry>
-                  <ID>170</ID>
-                  <Description>"Health"</Description>
-                  <VariableType>4 Bytes</VariableType>
-                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
-                  <Offsets>
-                    <Offset>F98</Offset>
-                    <Offset>24</Offset>
-                    <Offset>30</Offset>
-                    <Offset>0</Offset>
-                    <Offset>4</Offset>
-                    <Offset>38</Offset>
-                    <Offset>1E0</Offset>
-                  </Offsets>
-                  <Hotkeys>
-                    <Hotkey>
-                      <Action>Toggle Activation Allow Increase</Action>
-                      <Keys>
-                        <Key>22532</Key>
-                        <Key>22547</Key>
-                      </Keys>
-                      <ID>0</ID>
-                    </Hotkey>
-                  </Hotkeys>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>120</ID>
-                  <Description>"Spray Cans"</Description>
-                  <VariableType>4 Bytes</VariableType>
-                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
-                  <Offsets>
-                    <Offset>F6C</Offset>
-                    <Offset>38</Offset>
-                    <Offset>34</Offset>
-                    <Offset>28</Offset>
-                    <Offset>24</Offset>
-                    <Offset>148</Offset>
-                  </Offsets>
-                  <Hotkeys>
-                    <Hotkey>
-                      <Action>Set Value</Action>
-                      <Keys>
-                        <Key>22532</Key>
-                        <Key>22546</Key>
-                      </Keys>
-                      <Value>30</Value>
-                      <ID>0</ID>
-                    </Hotkey>
-                    <Hotkey>
-                      <Action>Toggle Activation</Action>
-                      <Keys>
-                        <Key>22532</Key>
-                        <Key>22546</Key>
-                      </Keys>
-                      <ID>1</ID>
-                    </Hotkey>
-                  </Hotkeys>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>148</ID>
-                  <Description>"Spray Cooldown"</Description>
-                  <VariableType>4 Bytes</VariableType>
-                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
-                  <Offsets>
-                    <Offset>43C</Offset>
-                    <Offset>24</Offset>
-                    <Offset>28</Offset>
-                    <Offset>28</Offset>
-                    <Offset>C8</Offset>
-                  </Offsets>
-                  <Hotkeys>
-                    <Hotkey>
-                      <Action>Toggle Activation</Action>
-                      <Keys>
-                        <Key>22532</Key>
-                        <Key>22546</Key>
-                      </Keys>
-                      <ID>0</ID>
-                    </Hotkey>
-                  </Hotkeys>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>169</ID>
-                  <Description>"Speed"</Description>
-                  <VariableType>Float</VariableType>
-                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
-                  <Offsets>
-                    <Offset>CD4</Offset>
-                    <Offset>24</Offset>
-                    <Offset>0</Offset>
-                    <Offset>4</Offset>
-                    <Offset>4</Offset>
-                    <Offset>38</Offset>
-                    <Offset>1E4</Offset>
-                  </Offsets>
-                  <Hotkeys>
-                    <Hotkey>
-                      <Action>Set Value</Action>
-                      <Keys>
-                        <Key>22534</Key>
-                        <Key>22533</Key>
-                      </Keys>
-                      <Value>4</Value>
-                      <ID>0</ID>
-                    </Hotkey>
-                    <Hotkey>
-                      <Action>Set Value</Action>
-                      <Keys>
-                        <Key>22532</Key>
-                        <Key>22551</Key>
-                      </Keys>
-                      <Value>0</Value>
-                      <ID>1</ID>
-                    </Hotkey>
-                  </Hotkeys>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>167</ID>
-                  <Description>"God Mode | Speed+Invincible"</Description>
-                  <VariableType>4 Bytes</VariableType>
-                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
-                  <Offsets>
-                    <Offset>1168</Offset>
-                    <Offset>148</Offset>
-                  </Offsets>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>193</ID>
-                  <Description>"Transparency"</Description>
-                  <VariableType>Float</VariableType>
-                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
-                  <Offsets>
-                    <Offset>C40</Offset>
-                    <Offset>24</Offset>
-                    <Offset>34</Offset>
-                    <Offset>30</Offset>
-                    <Offset>28</Offset>
-                    <Offset>148</Offset>
-                  </Offsets>
-                  <CheatEntries>
-                    <CheatEntry>
-                      <ID>157</ID>
-                      <Description>"Transflag"</Description>
-                      <VariableType>4 Bytes</VariableType>
-                      <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
-                      <Offsets>
-                        <Offset>116C</Offset>
-                        <Offset>24</Offset>
-                        <Offset>1C8</Offset>
-                      </Offsets>
-                    </CheatEntry>
-                  </CheatEntries>
-                </CheatEntry>
-              </CheatEntries>
+              <ID>150</ID>
+              <Description>"Character Select|23 Max"</Description>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"cxbxr-emu.dll"+0005BB14</Address>
+              <Offsets>
+                <Offset>5C</Offset>
+                <Offset>28</Offset>
+                <Offset>34</Offset>
+                <Offset>C</Offset>
+                <Offset>38</Offset>
+                <Offset>290</Offset>
+              </Offsets>
             </CheatEntry>
             <CheatEntry>
-              <ID>453</ID>
-              <Description>"Tricks"</Description>
-              <Options moHideChildren="1"/>
-              <GroupHeader>1</GroupHeader>
-              <CheatEntries>
-                <CheatEntry>
-                  <ID>254</ID>
-                  <Description>"Air Tricks"</Description>
-                  <VariableType>4 Bytes</VariableType>
-                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
-                  <Offsets>
-                    <Offset>10D4</Offset>
-                    <Offset>24</Offset>
-                    <Offset>2C</Offset>
-                    <Offset>0</Offset>
-                    <Offset>4</Offset>
-                    <Offset>38</Offset>
-                    <Offset>1E0</Offset>
-                  </Offsets>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>256</ID>
-                  <Description>"Grind Tricks"</Description>
-                  <VariableType>4 Bytes</VariableType>
-                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
-                  <Offsets>
-                    <Offset>10CC</Offset>
-                    <Offset>24</Offset>
-                    <Offset>30</Offset>
-                    <Offset>30</Offset>
-                    <Offset>28</Offset>
-                    <Offset>148</Offset>
-                  </Offsets>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>103</ID>
-                  <Description>"Trick Score"</Description>
-                  <VariableType>4 Bytes</VariableType>
-                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
-                  <Offsets>
-                    <Offset>104C</Offset>
-                    <Offset>24</Offset>
-                    <Offset>30</Offset>
-                    <Offset>30</Offset>
-                    <Offset>30</Offset>
-                    <Offset>28</Offset>
-                    <Offset>148</Offset>
-                  </Offsets>
-                  <Hotkeys>
-                    <Hotkey>
-                      <Action>Increase Value</Action>
-                      <Keys>
-                        <Key>22532</Key>
-                        <Key>22531</Key>
-                      </Keys>
-                      <Value>50000</Value>
-                      <ID>0</ID>
-                    </Hotkey>
-                  </Hotkeys>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>9</ID>
-                  <Description>"Combo"</Description>
-                  <VariableType>4 Bytes</VariableType>
-                  <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
-                  <Offsets>
-                    <Offset>1050</Offset>
-                    <Offset>24</Offset>
-                    <Offset>2C</Offset>
-                    <Offset>30</Offset>
-                    <Offset>30</Offset>
-                    <Offset>28</Offset>
-                    <Offset>148</Offset>
-                  </Offsets>
-                  <Hotkeys>
-                    <Hotkey>
-                      <Action>Increase Value</Action>
-                      <Keys>
-                        <Key>22532</Key>
-                        <Key>22530</Key>
-                      </Keys>
-                      <Value>25</Value>
-                      <ID>0</ID>
-                    </Hotkey>
-                  </Hotkeys>
-                </CheatEntry>
-              </CheatEntries>
+              <ID>119</ID>
+              <Description>"IG-Char Sel|23Max"</Description>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"cxbxr-ldr.exe"+0021FCE0</Address>
+              <Offsets>
+                <Offset>18</Offset>
+                <Offset>A0</Offset>
+                <Offset>34</Offset>
+                <Offset>30</Offset>
+                <Offset>2C</Offset>
+                <Offset>2C</Offset>
+                <Offset>1DC</Offset>
+              </Offsets>
             </CheatEntry>
           </CheatEntries>
         </CheatEntry>
