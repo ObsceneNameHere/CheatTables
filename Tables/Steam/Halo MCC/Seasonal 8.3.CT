@@ -2,30 +2,17 @@
 <CheatTable CheatEngineTableVersion="42">
   <CheatEntries>
     <CheatEntry>
-      <ID>74</ID>
-      <Description>"Exchange Points"</Description>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"MCC-Win64-Shipping.exe"+03F7C280</Address>
-      <Offsets>
-        <Offset>30</Offset>
-        <Offset>8</Offset>
-        <Offset>0</Offset>
-        <Offset>68</Offset>
-        <Offset>A0</Offset>
-        <Offset>0</Offset>
-        <Offset>20</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
       <ID>71</ID>
       <Description>"Challenges"</Description>
       <Options moHideChildren="1" moRecursiveSetValue="1"/>
+      <LastState Value="" RealAddress="00000000"/>
       <GroupHeader>1</GroupHeader>
       <CheatEntries>
         <CheatEntry>
           <ID>0</ID>
           <Description>"PvP"</Description>
           <Options moHideChildren="1" moRecursiveSetValue="1"/>
+          <LastState Value="" RealAddress="00000000"/>
           <GroupHeader>1</GroupHeader>
           <CheatEntries>
             <CheatEntry>
@@ -216,6 +203,7 @@
           <ID>1</ID>
           <Description>"PvE"</Description>
           <Options moHideChildren="1" moRecursiveSetValue="1"/>
+          <LastState Value="" RealAddress="00000000"/>
           <GroupHeader>1</GroupHeader>
           <CheatEntries>
             <CheatEntry>
@@ -406,6 +394,7 @@
           <ID>2</ID>
           <Description>"Tactical Exercises"</Description>
           <Options moHideChildren="1" moRecursiveSetValue="1"/>
+          <LastState Value="" RealAddress="00000000"/>
           <GroupHeader>1</GroupHeader>
           <CheatEntries>
             <CheatEntry>
@@ -479,6 +468,27 @@
               </Offsets>
             </CheatEntry>
           </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>89</ID>
+      <Description>"Other"</Description>
+      <Options moHideChildren="1"/>
+      <LastState Value="" Activated="1" RealAddress="00000000"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>102</ID>
+          <Description>"XPUpdateCNT"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HaloNetworkLayer_Ship.dll+1704D0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>107</ID>
+          <Description>"XP"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HaloNetworkLayer_Ship.dll+1A77B4</Address>
         </CheatEntry>
       </CheatEntries>
     </CheatEntry>

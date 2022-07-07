@@ -15,13 +15,17 @@ B (+4) | Secondary Counter for challenge. Updated periodicly from Item-C (~5 sec
 
 C (+8) | Counter for challenge. This value is what triggers the completion status and immediately displays when viewing challenges.
 
-I (+20) | Inidates if challenge is Pinned. Increases value by 256 when pinned and decreases by 256 when unpinned. Can be 0/256 or large 4 byte value. This can also make a challenge marked as 'completed' viewable again by setting to 0.
+I (+20) | Inidates if challenge is Pinned. Increases value by 256 when pinned and decreases by 256 when unpinned. Can be 0/256 or large 4 byte value. This can also make a challenge marked as 'completed' viewable again by setting to 0. 0=Incomplete 1=Complete 256=Pinnedc
 
 J (+24) | Indicator for an Online Match challenge?* 1=Offine 0=Online Changing this does not work to complete the challenge offline.
 
-C/F/H   | Unknown but seem to carry the same value from time to time.
+D/F/H/N*  | Unknown but seem to carry the same value from time to time. *N is less often to carry identical values.
 
-E/G/K/L/M/N | Unknown.
+K/L     | Unique Challenge indentifier. Can be 0. i.e. (VS CPU) Complete weekly challenges.
+
+E/G/K/L/M | Unknown.
+
+Online Challenges | Do not carry values in D/E/F/G/H/I while offline does. 
 
 PvE
 (Incomplete)
@@ -32,6 +36,12 @@ PvE
 8 0 0 1701276020 1486018064 495 1486018048 495 0 1 2848480448 1287426871 2776562358 1837781129
 8 0 0 0 629700496 498 629700480 498 0 1 2848480448 1287426871 2776562358 1837781129
 
+(Complete)
+
+8 9999 9999 0 629700496 498 629700480 498 1 1 2848480448 1287426871 2776562358 1837781129
+
+9 9999 9999 498 629732304 498 629732288 498 640614401 1 81307273 1136629617 2085699007 691571947
+
 (Online)
 11 0 0 0 0 0 0 0 3641442304 0 3186596776 1095022383 2493123257 2516109604
 
@@ -40,6 +50,10 @@ PvP
 
 16 0 0 0 1486016944 495 1486016928 495 0 1 2933581600 1189773286 779052168 131654475
 16 0 0 0 629731632 498 629731616 498 0 1 2933581600 1189773286 779052168 131654475
+
+(Complete)
+
+16 9999 9999 0 629731632 498 629731616 498 1 1 2933581600 1189773286 779052168 131654475
 
 (Online)
 
