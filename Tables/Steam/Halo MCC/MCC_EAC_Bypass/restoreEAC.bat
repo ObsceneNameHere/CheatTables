@@ -10,4 +10,4 @@ copy /y "D:\Program Files (x86)\Steam\steamapps\common\Halo The Master Chief Col
 
 echo Done!
 
-timeout 3
+timeout 1

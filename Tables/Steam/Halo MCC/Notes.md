@@ -15,7 +15,7 @@ B (+4) | Secondary Counter for challenge. Updated periodicly from Item-C (~5 sec
 
 C (+8) | Counter for challenge. This value is what triggers the completion status and immediately displays when viewing challenges.
 
-I (+20) | Inidates if challenge is Pinned. Increases value by 256 when pinned and decreases by 256 when unpinned. Can be 0/256 or large 4 byte value. This can also make a challenge marked as 'completed' viewable again by setting to 0. 0=Incomplete 1=Complete 256=Pinnedc
+I (+20) | Inidates if challenge is Pinned. Increases value by 256 when pinned and decreases by 256 when unpinned. Can be 0/256 or large 4 byte value. This can also make a challenge marked as 'completed' viewable again by setting to 0. 0=Incomplete 1=Complete 256=Pinned
 
 J (+24) | Indicator for an Online Match challenge?* 1=Offine 0=Online Changing this does not work to complete the challenge offline.
 

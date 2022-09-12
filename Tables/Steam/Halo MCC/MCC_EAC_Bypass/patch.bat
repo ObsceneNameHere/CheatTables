@@ -10,4 +10,4 @@ copy /y "%~dp0\EasyAntiCheat_x86.dll" "D:\Program Files (x86)\Steam\steamapps\co
 
 echo Done!
 
-timeout 3
+timeout 1
