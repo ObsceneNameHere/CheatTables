@@ -7,16 +7,15 @@
       <GroupHeader>1</GroupHeader>
       <CheatEntries>
         <CheatEntry>
-          <ID>35</ID>
+          <ID>63</ID>
           <Description>"Seasonal Points"</Description>
           <VariableType>4 Bytes</VariableType>
           <Address>"MCC-Win64-Shipping.exe"+03F94D80</Address>
           <Offsets>
             <Offset>30</Offset>
             <Offset>8</Offset>
-            <Offset>8</Offset>
-            <Offset>60</Offset>
-            <Offset>F8</Offset>
+            <Offset>38</Offset>
+            <Offset>A8</Offset>
             <Offset>0</Offset>
             <Offset>20</Offset>
           </Offsets>
