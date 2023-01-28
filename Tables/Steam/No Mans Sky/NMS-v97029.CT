@@ -148,6 +148,18 @@
           <Description>"Weapons | +4 Offset"</Description>
           <Options moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1" moAllowManualCollapseAndExpand="1"/>
           <GroupHeader>1</GroupHeader>
+          <Hotkeys>
+            <Hotkey>
+              <Action>Toggle Activation</Action>
+              <Keys>
+                <Key>18</Key>
+                <Key>67</Key>
+              </Keys>
+              <ID>0</ID>
+              <ActivateSound>Activate</ActivateSound>
+              <DeactivateSound>Deactivate</DeactivateSound>
+            </Hotkey>
+          </Hotkeys>
           <CheatEntries>
             <CheatEntry>
               <ID>2359</ID>
@@ -219,7 +231,7 @@
           <CheatEntries>
             <CheatEntry>
               <ID>2249</ID>
-              <Description>"Fuels| SHIPJUMP1 | LAUNCHER | HYPERDRIVE | SHIPSHIELD | EE37A1A4"</Description>
+              <Description>"Fuels| SHIPJUMP1 | LAUNCHER | HYPERDRIVE | SHIPSHIELD | EE37A1A4 | 30- Offset"</Description>
               <Options moRecursiveSetValue="1" moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1" moAllowManualCollapseAndExpand="1"/>
               <GroupHeader>1</GroupHeader>
               <Hotkeys>
@@ -246,31 +258,31 @@
               </Hotkeys>
               <CheatEntries>
                 <CheatEntry>
-                  <ID>2620</ID>
-                  <Description>"No description"</Description>
-                  <VariableType>4 Bytes</VariableType>
-                  <Address>258C13380A8</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>2623</ID>
+                  <ID>2637</ID>
                   <Description>"No description"</Description>
                   <ShowAsSigned>0</ShowAsSigned>
                   <VariableType>4 Bytes</VariableType>
-                  <Address>258C1338018</Address>
+                  <Address>170BCC32018</Address>
                 </CheatEntry>
                 <CheatEntry>
-                  <ID>2624</ID>
+                  <ID>2636</ID>
                   <Description>"No description"</Description>
                   <ShowAsSigned>0</ShowAsSigned>
                   <VariableType>4 Bytes</VariableType>
-                  <Address>258C1338048</Address>
+                  <Address>170BCC32048</Address>
                 </CheatEntry>
                 <CheatEntry>
-                  <ID>2625</ID>
+                  <ID>2638</ID>
                   <Description>"No description"</Description>
                   <ShowAsSigned>0</ShowAsSigned>
                   <VariableType>4 Bytes</VariableType>
-                  <Address>258C1338078</Address>
+                  <Address>170BCC32078</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>2635</ID>
+                  <Description>"No description"</Description>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>170BCC320A8</Address>
                 </CheatEntry>
               </CheatEntries>
             </CheatEntry>
@@ -284,7 +296,7 @@
         </CheatEntry>
         <CheatEntry>
           <ID>2298</ID>
-          <Description>"Stats/Milestones | 18+ Offset"</Description>
+          <Description>"Stats/Milestones/Etc. | 18+ Offset"</Description>
           <Options moHideChildren="1" moAllowManualCollapseAndExpand="1"/>
           <GroupHeader>1</GroupHeader>
           <CheatEntries>
@@ -772,8 +784,172 @@
               </CheatEntries>
             </CheatEntry>
             <CheatEntry>
+              <ID>2665</ID>
+              <Description>"Misc."</Description>
+              <Options moHideChildren="1" moAllowManualCollapseAndExpand="1"/>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>2662</ID>
+                  <Description>"Community Contribute"</Description>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"NMS.exe"+03C7C280</Address>
+                  <Offsets>
+                    <Offset>16F0</Offset>
+                    <Offset>28</Offset>
+                    <Offset>B8</Offset>
+                    <Offset>2D0</Offset>
+                    <Offset>8</Offset>
+                    <Offset>F0</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>2663</ID>
+                  <Description>"Comm9 Day"</Description>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"NMS.exe"+03C7C280</Address>
+                  <Offsets>
+                    <Offset>16A8</Offset>
+                    <Offset>28</Offset>
+                    <Offset>B8</Offset>
+                    <Offset>2D0</Offset>
+                    <Offset>8</Offset>
+                    <Offset>F0</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>2664</ID>
+                  <Description>"Mp_Event_Index"</Description>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"NMS.exe"+03C7C280</Address>
+                  <Offsets>
+                    <Offset>1558</Offset>
+                    <Offset>28</Offset>
+                    <Offset>B8</Offset>
+                    <Offset>2D0</Offset>
+                    <Offset>8</Offset>
+                    <Offset>F0</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>2667</ID>
+                  <Description>"Time"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Float</VariableType>
+                  <Address>"NMS.exe"+03C7C280</Address>
+                  <Offsets>
+                    <Offset>478</Offset>
+                    <Offset>28</Offset>
+                    <Offset>B8</Offset>
+                    <Offset>2D0</Offset>
+                    <Offset>8</Offset>
+                    <Offset>F0</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>2669</ID>
+                  <Description>"MP_Time_Full"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"NMS.exe"+03C7C280</Address>
+                  <Offsets>
+                    <Offset>1F18</Offset>
+                    <Offset>28</Offset>
+                    <Offset>B8</Offset>
+                    <Offset>2D0</Offset>
+                    <Offset>8</Offset>
+                    <Offset>F0</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>2671</ID>
+                  <Description>"Reward_Seed"</Description>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"NMS.exe"+03C7C280</Address>
+                  <Offsets>
+                    <Offset>2EF0</Offset>
+                    <Offset>28</Offset>
+                    <Offset>B8</Offset>
+                    <Offset>2D0</Offset>
+                    <Offset>8</Offset>
+                    <Offset>F0</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>2673</ID>
+                  <Description>"MP_Depot_Hack"</Description>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"NMS.exe"+03C7C280</Address>
+                  <Offsets>
+                    <Offset>1C0</Offset>
+                    <Offset>28</Offset>
+                    <Offset>B8</Offset>
+                    <Offset>2D0</Offset>
+                    <Offset>8</Offset>
+                    <Offset>F0</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>2675</ID>
+                  <Description>"Survey Power"</Description>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"NMS.exe"+03C7C280</Address>
+                  <Offsets>
+                    <Offset>1D8</Offset>
+                    <Offset>28</Offset>
+                    <Offset>B8</Offset>
+                    <Offset>2D0</Offset>
+                    <Offset>8</Offset>
+                    <Offset>F0</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>2677</ID>
+                  <Description>"Survey_Min"</Description>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"NMS.exe"+03C7C280</Address>
+                  <Offsets>
+                    <Offset>388</Offset>
+                    <Offset>28</Offset>
+                    <Offset>B8</Offset>
+                    <Offset>2D0</Offset>
+                    <Offset>8</Offset>
+                    <Offset>F0</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>2679</ID>
+                  <Description>"MP_Event_Count"</Description>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"NMS.exe"+03C7C280</Address>
+                  <Offsets>
+                    <Offset>850</Offset>
+                    <Offset>28</Offset>
+                    <Offset>B8</Offset>
+                    <Offset>2D0</Offset>
+                    <Offset>8</Offset>
+                    <Offset>F0</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>2681</ID>
+                  <Description>"MP_Survey_Pow"</Description>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"NMS.exe"+03C7C280</Address>
+                  <Offsets>
+                    <Offset>958</Offset>
+                    <Offset>28</Offset>
+                    <Offset>B8</Offset>
+                    <Offset>2D0</Offset>
+                    <Offset>8</Offset>
+                    <Offset>F0</Offset>
+                  </Offsets>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
               <ID>2302</ID>
-              <Description>"Others | 2FD0+ Offset F-L"</Description>
+              <Description>"Placeholders | 2FD0+ Offset F-L"</Description>
               <Options moHideChildren="1" moAllowManualCollapseAndExpand="1"/>
               <GroupHeader>1</GroupHeader>
               <CheatEntries>
