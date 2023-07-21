@@ -48,7 +48,7 @@
               <CheatEntries>
                 <CheatEntry>
                   <ID>64</ID>
-                  <Description>"0"</Description>
+                  <Description>"13"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
@@ -62,7 +62,7 @@
                 </CheatEntry>
                 <CheatEntry>
                   <ID>65</ID>
-                  <Description>"1"</Description>
+                  <Description>"14"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
@@ -76,7 +76,7 @@
                 </CheatEntry>
                 <CheatEntry>
                   <ID>66</ID>
-                  <Description>"2"</Description>
+                  <Description>"15"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
@@ -90,7 +90,7 @@
                 </CheatEntry>
                 <CheatEntry>
                   <ID>67</ID>
-                  <Description>"3"</Description>
+                  <Description>"16"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
@@ -104,7 +104,7 @@
                 </CheatEntry>
                 <CheatEntry>
                   <ID>68</ID>
-                  <Description>"4"</Description>
+                  <Description>"17"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
@@ -118,7 +118,7 @@
                 </CheatEntry>
                 <CheatEntry>
                   <ID>69</ID>
-                  <Description>"5"</Description>
+                  <Description>"18"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
@@ -132,7 +132,7 @@
                 </CheatEntry>
                 <CheatEntry>
                   <ID>70</ID>
-                  <Description>"6"</Description>
+                  <Description>"19"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
@@ -146,7 +146,7 @@
                 </CheatEntry>
                 <CheatEntry>
                   <ID>71</ID>
-                  <Description>"7"</Description>
+                  <Description>"20"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
@@ -160,7 +160,7 @@
                 </CheatEntry>
                 <CheatEntry>
                   <ID>72</ID>
-                  <Description>"8"</Description>
+                  <Description>"21"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
@@ -174,7 +174,7 @@
                 </CheatEntry>
                 <CheatEntry>
                   <ID>73</ID>
-                  <Description>"9"</Description>
+                  <Description>"22"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
@@ -188,7 +188,7 @@
                 </CheatEntry>
                 <CheatEntry>
                   <ID>74</ID>
-                  <Description>"10"</Description>
+                  <Description>"23"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
@@ -202,7 +202,7 @@
                 </CheatEntry>
                 <CheatEntry>
                   <ID>75</ID>
-                  <Description>"11"</Description>
+                  <Description>"24"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
@@ -216,7 +216,7 @@
                 </CheatEntry>
                 <CheatEntry>
                   <ID>76</ID>
-                  <Description>"12"</Description>
+                  <Description>"25"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
@@ -237,182 +237,182 @@
               <GroupHeader>1</GroupHeader>
               <CheatEntries>
                 <CheatEntry>
-                  <ID>93</ID>
+                  <ID>106</ID>
                   <Description>"0"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
-                    <Offset>618</Offset>
+                    <Offset>18</Offset>
                     <Offset>48</Offset>
-                    <Offset>8</Offset>
+                    <Offset>0</Offset>
                     <Offset>8</Offset>
                     <Offset>0</Offset>
                     <Offset>78</Offset>
                   </Offsets>
                 </CheatEntry>
                 <CheatEntry>
-                  <ID>94</ID>
+                  <ID>107</ID>
                   <Description>"1"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
-                    <Offset>650</Offset>
+                    <Offset>50</Offset>
                     <Offset>48</Offset>
-                    <Offset>8</Offset>
+                    <Offset>0</Offset>
                     <Offset>8</Offset>
                     <Offset>0</Offset>
                     <Offset>78</Offset>
                   </Offsets>
                 </CheatEntry>
                 <CheatEntry>
-                  <ID>95</ID>
+                  <ID>108</ID>
                   <Description>"2"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
-                    <Offset>688</Offset>
+                    <Offset>88</Offset>
                     <Offset>48</Offset>
-                    <Offset>8</Offset>
+                    <Offset>0</Offset>
                     <Offset>8</Offset>
                     <Offset>0</Offset>
                     <Offset>78</Offset>
                   </Offsets>
                 </CheatEntry>
                 <CheatEntry>
-                  <ID>96</ID>
+                  <ID>109</ID>
                   <Description>"3"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
-                    <Offset>6C0</Offset>
+                    <Offset>C0</Offset>
                     <Offset>48</Offset>
-                    <Offset>8</Offset>
+                    <Offset>0</Offset>
                     <Offset>8</Offset>
                     <Offset>0</Offset>
                     <Offset>78</Offset>
                   </Offsets>
                 </CheatEntry>
                 <CheatEntry>
-                  <ID>97</ID>
+                  <ID>110</ID>
                   <Description>"4"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
-                    <Offset>6F8</Offset>
+                    <Offset>F8</Offset>
                     <Offset>48</Offset>
-                    <Offset>8</Offset>
+                    <Offset>0</Offset>
                     <Offset>8</Offset>
                     <Offset>0</Offset>
                     <Offset>78</Offset>
                   </Offsets>
                 </CheatEntry>
                 <CheatEntry>
-                  <ID>98</ID>
+                  <ID>111</ID>
                   <Description>"5"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
-                    <Offset>730</Offset>
+                    <Offset>130</Offset>
                     <Offset>48</Offset>
-                    <Offset>8</Offset>
+                    <Offset>0</Offset>
                     <Offset>8</Offset>
                     <Offset>0</Offset>
                     <Offset>78</Offset>
                   </Offsets>
                 </CheatEntry>
                 <CheatEntry>
-                  <ID>99</ID>
+                  <ID>112</ID>
                   <Description>"6"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
-                    <Offset>768</Offset>
+                    <Offset>168</Offset>
                     <Offset>48</Offset>
-                    <Offset>8</Offset>
+                    <Offset>0</Offset>
                     <Offset>8</Offset>
                     <Offset>0</Offset>
                     <Offset>78</Offset>
                   </Offsets>
                 </CheatEntry>
                 <CheatEntry>
-                  <ID>100</ID>
+                  <ID>113</ID>
                   <Description>"7"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
-                    <Offset>7A0</Offset>
+                    <Offset>1A0</Offset>
                     <Offset>48</Offset>
-                    <Offset>8</Offset>
+                    <Offset>0</Offset>
                     <Offset>8</Offset>
                     <Offset>0</Offset>
                     <Offset>78</Offset>
                   </Offsets>
                 </CheatEntry>
                 <CheatEntry>
-                  <ID>101</ID>
+                  <ID>114</ID>
                   <Description>"8"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
-                    <Offset>7D8</Offset>
+                    <Offset>1D8</Offset>
                     <Offset>48</Offset>
-                    <Offset>8</Offset>
+                    <Offset>0</Offset>
                     <Offset>8</Offset>
                     <Offset>0</Offset>
                     <Offset>78</Offset>
                   </Offsets>
                 </CheatEntry>
                 <CheatEntry>
-                  <ID>102</ID>
+                  <ID>115</ID>
                   <Description>"9"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
-                    <Offset>810</Offset>
+                    <Offset>210</Offset>
                     <Offset>48</Offset>
-                    <Offset>8</Offset>
+                    <Offset>0</Offset>
                     <Offset>8</Offset>
                     <Offset>0</Offset>
                     <Offset>78</Offset>
                   </Offsets>
                 </CheatEntry>
                 <CheatEntry>
-                  <ID>103</ID>
+                  <ID>116</ID>
                   <Description>"10"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
-                    <Offset>848</Offset>
+                    <Offset>248</Offset>
                     <Offset>48</Offset>
-                    <Offset>8</Offset>
+                    <Offset>0</Offset>
                     <Offset>8</Offset>
                     <Offset>0</Offset>
                     <Offset>78</Offset>
                   </Offsets>
                 </CheatEntry>
                 <CheatEntry>
-                  <ID>104</ID>
+                  <ID>117</ID>
                   <Description>"11"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
-                    <Offset>880</Offset>
+                    <Offset>280</Offset>
                     <Offset>48</Offset>
-                    <Offset>8</Offset>
+                    <Offset>0</Offset>
                     <Offset>8</Offset>
                     <Offset>0</Offset>
                     <Offset>78</Offset>
                   </Offsets>
                 </CheatEntry>
                 <CheatEntry>
-                  <ID>105</ID>
+                  <ID>118</ID>
                   <Description>"12"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
-                    <Offset>8B8</Offset>
+                    <Offset>2B8</Offset>
                     <Offset>48</Offset>
-                    <Offset>8</Offset>
+                    <Offset>0</Offset>
                     <Offset>8</Offset>
                     <Offset>0</Offset>
                     <Offset>78</Offset>
@@ -428,7 +428,7 @@
               <CheatEntries>
                 <CheatEntry>
                   <ID>30</ID>
-                  <Description>"0"</Description>
+                  <Description>"26"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
@@ -442,7 +442,7 @@
                 </CheatEntry>
                 <CheatEntry>
                   <ID>31</ID>
-                  <Description>"1"</Description>
+                  <Description>"27"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
@@ -456,7 +456,7 @@
                 </CheatEntry>
                 <CheatEntry>
                   <ID>32</ID>
-                  <Description>"2"</Description>
+                  <Description>"28"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
@@ -470,7 +470,7 @@
                 </CheatEntry>
                 <CheatEntry>
                   <ID>33</ID>
-                  <Description>"3"</Description>
+                  <Description>"29"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
@@ -484,7 +484,7 @@
                 </CheatEntry>
                 <CheatEntry>
                   <ID>34</ID>
-                  <Description>"4"</Description>
+                  <Description>"30"</Description>
                   <VariableType>4 Bytes</VariableType>
                   <Address>"MCC-Win64-Shipping.exe"+03FFCC68</Address>
                   <Offsets>
