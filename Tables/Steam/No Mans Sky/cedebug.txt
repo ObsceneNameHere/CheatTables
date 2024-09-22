@@ -1,0 +1,21 @@
+First log message: 9/18/2024
+TAutoSizeCtrlData.FixControlProperties cbShowAdvancedOptions:TCheckBox a=akTop old=:TPointerFileList new=nil
+Unnamed: Unhandled exception: Access violation (Exception class EAccessViolation) (tried to read address 00000878)
+  Stack trace:
+  $0000000000654918  GETSHOWASSIGNED,  line 2127 of MemoryRecordUnit.pas
+  $00000000006571E2  GETVALUE,  line 3120 of MemoryRecordUnit.pas
+  $0000000000656A1F  GETDISPLAYVALUE,  line 3004 of MemoryRecordUnit.pas
+  $000000000064E113  ADVANCEDCUSTOMDRAWITEM,  line 2298 of addresslist.pas
+  $00000000008B4332  CUSTOMDRAWITEM,  line 6343 of include/treeview.inc
+  $00000000008B041C  DOPAINTNODE,  line 5506 of include/treeview.inc
+  $00000000008AF7FC  DOPAINT,  line 4899 of include/treeview.inc
+  $00000000008AC4B1  PAINT,  line 3635 of include/treeview.inc
+  $00000000004476F6  PAINTWINDOW,  line 123 of include/customcontrol.inc
+  $000000000042FBF1  PAINTHANDLER,  line 4857 of include/wincontrol.inc
+  $000000000043404A  WMPAINT,  line 6836 of include/wincontrol.inc
+  $00000000004475FF  WMPAINT,  line 103 of include/customcontrol.inc
+  $0000000000411721
+  $000000000043DB1F  WNDPROC,  line 2282 of include/control.inc
+  $00000000004311C5  WNDPROC,  line 5429 of include/wincontrol.inc
+  $00000000009A8313  DELIVERMESSAGE,  line 112 of lclmessageglue.pas
+  $00000000008406A1  SENDPAINTMESSAGE,  line 745 of win32callback.inc

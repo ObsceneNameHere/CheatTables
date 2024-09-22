@@ -1,0 +1,2587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="45">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>2361</ID>
+      <Description>"Enable/Disable all NMS Scripts"</Description>
+      <Options moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
+      <Color>00FF80</Color>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>2362</ID>
+          <Description>"ExoSuit &gt;"</Description>
+          <Options moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
+          <Color>FF8000</Color>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2106</ID>
+              <Description>"Unlimited Run Stamina"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+alloc(RUNTIMEMEM,12)
+registersymbol(RUNTIMEMEM)
+aobscanmodule(RUNTIME,NMS.exe,F3 0F 5C C6 F3 0F 11 87 ?? 4E 00 00)
+alloc(newmem,$100,RUNTIME)
+
+label(code)
+label(return)
+
+RUNTIMEMEM:
+readmem(RUNTIME,12)
+
+newmem:
+
+code:
+  movss [rdi+00004E80],xmm0
+  jmp return
+
+RUNTIME:
+  jmp newmem
+  nop 7
+return:
+registersymbol(RUNTIME)
+
+[DISABLE]
+
+RUNTIME:
+readmem(RUNTIMEMEM,12)
+
+unregistersymbol(*)
+dealloc(*)
+
+{
+// ORIGINAL CODE - RUNTIMEION POINT: NMS.exe+115564B
+
+NMS.exe+1155613: 75 08                             - jne NMS.exe+115561D
+NMS.exe+1155615: F3 0F 59 35 07 EF F1 01           - mulss xmm6,[NMS.exe+3074524]
+NMS.exe+115561D: 48 8D 0D 5C 62 FB 03              - lea rcx,[NMS.exe+510B880]
+NMS.exe+1155624: E8 97 94 11 FF                    - call NMS.exe+26EAC0
+NMS.exe+1155629: 48 8D 88 68 16 20 00              - lea rcx,[rax+00201668]
+NMS.exe+1155630: E8 AB E4 24 FF                    - call NMS.exe+3A3AE0
+NMS.exe+1155635: F3 0F 59 F0                       - mulss xmm6,xmm0
+NMS.exe+1155639: F3 0F 10 87 B0 4E 00 00           - movss xmm0,[rdi+00004EB0]
+NMS.exe+1155641: F3 41 0F 59 F1                    - mulss xmm6,xmm9
+NMS.exe+1155646: F3 41 0F 5E F3                    - divss xmm6,xmm11
+// ---------- INJECTING HERE ----------
+NMS.exe+115564B: F3 0F 5C C6                       - subss xmm0,xmm6
+// ---------- DONE INJECTING  ----------
+NMS.exe+115564F: F3 0F 11 87 B0 4E 00 00           - movss [rdi+00004EB0],xmm0
+NMS.exe+1155657: 44 0F 2F 87 B0 4E 00 00           - comiss xmm8,[rdi+00004EB0]
+NMS.exe+115565F: 72 50                             - jb NMS.exe+11556B1
+NMS.exe+1155661: 48 8D 0D 18 62 FB 03              - lea rcx,[NMS.exe+510B880]
+NMS.exe+1155668: 48 C7 87 AC 4E 00 00 01 00 00 00  - mov qword ptr [rdi+00004EAC],00000001
+NMS.exe+1155673: E8 C8 94 11 FF                    - call NMS.exe+26EB40
+NMS.exe+1155678: 4C 8B 87 C0 02 00 00              - mov r8,[rdi+000002C0]
+NMS.exe+115567F: 48 8D 54 24 70                    - lea rdx,[rsp+70]
+NMS.exe+1155684: C6 85 BC 02 00 00 01              - mov byte ptr [rbp+000002BC],01
+NMS.exe+115568B: 48 8B C8                          - mov rcx,rax
+}
+
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>34</ID>
+              <Description>"Unlimited Jetpack Propulsion"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,NMS.exe,F3 41 0F 5C C2 F3 0F 11 87)
+alloc(newmem,$100,INJECT)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  jmp return
+
+INJECT:
+  jmp newmem
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db F3 41 0F 5C C2
+
+unregistersymbol(*)
+dealloc(*)
+
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>2268</ID>
+              <Description>"Unlimited Jetpack Aqua Propulsion"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,NMS.exe,F3 41 0F 5C C4 F3 0F 5F F8) // should be unique
+alloc(newmem,$100,INJECT)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  // subss xmm0,xmm12
+  jmp return
+
+INJECT:
+  jmp newmem
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db F3 41 0F 5C C4
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: NMS.exe+1135E9F
+
+NMS.exe+1135E69: 41 0F 28 C0                 - movaps xmm0,xmm8
+NMS.exe+1135E6D: 0F C6 C0 00                 - shufps xmm0,xmm0,00
+NMS.exe+1135E71: 41 0F 59 C2                 - mulps xmm0,xmm10
+NMS.exe+1135E75: 48 8B 8F C0 01 00 00        - mov rcx,[rdi+000001C0]
+NMS.exe+1135E7C: 48 8D 54 24 60              - lea rdx,[rsp+60]
+NMS.exe+1135E81: 0F 29 44 24 60              - movaps [rsp+60],xmm0
+NMS.exe+1135E86: E8 85 05 25 01              - call NMS.exe+2386410
+NMS.exe+1135E8B: F3 44 0F 59 25 DC 0A 15 02  - mulss xmm12,[NMS.exe+3286970]
+NMS.exe+1135E94: C6 87 6D 2D 00 00 01        - mov byte ptr [rdi+00002D6D],01
+NMS.exe+1135E9B: F3 0F 10 03                 - movss xmm0,[rbx]
+// ---------- INJECTING HERE ----------
+NMS.exe+1135E9F: F3 41 0F 5C C4              - subss xmm0,xmm12
+// ---------- DONE INJECTING  ----------
+NMS.exe+1135EA4: F3 0F 5F F8                 - maxss xmm7,xmm0
+NMS.exe+1135EA8: F3 0F 11 3B                 - movss [rbx],xmm7
+NMS.exe+1135EAC: EB 4F                       - jmp NMS.exe+1135EFD
+NMS.exe+1135EAE: C6 87 3C 2D 00 00 00        - mov byte ptr [rdi+00002D3C],00
+NMS.exe+1135EB5: EB 46                       - jmp NMS.exe+1135EFD
+NMS.exe+1135EB7: C6 87 6D 2D 00 00 00        - mov byte ptr [rdi+00002D6D],00
+NMS.exe+1135EBE: C6 87 3C 2D 00 00 00        - mov byte ptr [rdi+00002D3C],00
+NMS.exe+1135EC5: F3 44 0F 59 25 A6 0A 15 02  - mulss xmm12,[NMS.exe+3286974]
+NMS.exe+1135ECE: F3 44 0F 58 A7 44 2D 00 00  - addss xmm12,[rdi+00002D44]
+NMS.exe+1135ED7: E8 E4 DA FD FF              - call NMS.exe+11139C0
+}
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>2083</ID>
+              <Description>"Unlimited Life Support"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,NMS.exe,2B D3 85 D2 0F 4E D7)
+alloc(newmem,$100,INJECT)
+
+label(code return lifeSupport)
+
+newmem:
+
+code:
+  cmp edx,#100 // Life Support less the 100%
+  je lifeSupport
+  mov edx,#100
+  lifeSupport:
+  test edx,edx
+  cmovle edx,edi
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop 2
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db 2B D3 85 D2 0F 4E D7
+
+unregistersymbol(*)
+dealloc(*)
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>2411</ID>
+              <Description>"Unlimited Health"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,NMS.exe,45 01 A6 B0 01 00 00) // should be unique
+alloc(newmem,$1000,INJECT)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  // add [r14+000001B0],r12d
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop 2
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db 45 01 A6 B0 01 00 00
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: NMS.exe+114DCAF
+
+NMS.exe+114DC87: 0B C1                 - or eax,ecx
+NMS.exe+114DC89: 49 8B CE              - mov rcx,r14
+NMS.exe+114DC8C: 89 44 24 60           - mov [rsp+60],eax
+NMS.exe+114DC90: B8 FF FF FF FF        - mov eax,FFFFFFFF
+NMS.exe+114DC95: F3 0F 58 4C 24 60     - addss xmm1,[rsp+60]
+NMS.exe+114DC9B: F3 44 0F 2C E1        - cvttss2si r12d,xmm1
+NMS.exe+114DCA0: 41 83 FC FF           - cmp r12d,-01
+NMS.exe+114DCA4: 44 0F 4F E0           - cmovg r12d,eax
+NMS.exe+114DCA8: 48 39 74 24 58        - cmp [rsp+58],rsi
+NMS.exe+114DCAD: 75 35                 - jne NMS.exe+114DCE4
+// ---------- INJECTING HERE ----------
+NMS.exe+114DCAF: 45 01 A6 B0 01 00 00  - add [r14+000001B0],r12d
+// ---------- DONE INJECTING  ----------
+NMS.exe+114DCB6: 41 8B D7              - mov edx,r15d
+NMS.exe+114DCB9: E8 52 A4 35 FF        - call NMS.exe+4A8110
+NMS.exe+114DCBE: 41 8B 8E B0 01 00 00  - mov ecx,[r14+000001B0]
+NMS.exe+114DCC5: 85 C9                 - test ecx,ecx
+NMS.exe+114DCC7: 0F 4E CE              - cmovle ecx,esi
+NMS.exe+114DCCA: 3B C8                 - cmp ecx,eax
+NMS.exe+114DCCC: 0F 4D C8              - cmovge ecx,eax
+NMS.exe+114DCCF: 49 FF 86 48 01 00 00  - inc qword ptr [r14+00000148]
+NMS.exe+114DCD6: 41 89 8E B0 01 00 00  - mov [r14+000001B0],ecx
+NMS.exe+114DCDD: 8B C1                 - mov eax,ecx
+}
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>2372</ID>
+              <Description>"Unlimited Shields"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,NMS.exe,FF 4F 18 F3 0F 10 05 D6 F8 0A 04) // should be unique
+alloc(newmem,$1000,INJECT)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  // dec [rdi+18]
+  mov [rdi+18],#80
+  movss xmm0,[NMS.exe+52692A4]
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop 6
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db FF 4F 18 F3 0F 10 05 D6 F8 0A 04
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: NMS.exe+11B99C3
+
+NMS.exe+11B9995: 48 83 C0 0C                    - add rax,0C
+NMS.exe+11B9999: 48 3B C1                       - cmp rax,rcx
+NMS.exe+11B999C: 75 F2                          - jne NMS.exe+11B9990
+NMS.exe+11B999E: EB 04                          - jmp NMS.exe+11B99A4
+NMS.exe+11B99A0: F3 0F 10 30                    - movss xmm6,[rax]
+NMS.exe+11B99A4: F3 0F 5E 35 F4 FB B0 01        - divss xmm6,[NMS.exe+2CC95A0]
+NMS.exe+11B99AC: F3 0F 10 05 F0 F8 0A 04        - movss xmm0,[NMS.exe+52692A4]
+NMS.exe+11B99B4: F3 42 0F 5C 84 B3 C0 00 00 00  - subss xmm0,[rbx+r14*4+000000C0]
+NMS.exe+11B99BE: 0F 2F C6                       - comiss xmm0,xmm6
+NMS.exe+11B99C1: 76 5E                          - jna NMS.exe+11B9A21
+// ---------- INJECTING HERE ----------
+NMS.exe+11B99C3: FF 4F 18                       - dec [rdi+18]
+// ---------- DONE INJECTING  ----------
+NMS.exe+11B99C6: F3 0F 10 05 D6 F8 0A 04        - movss xmm0,[NMS.exe+52692A4]
+NMS.exe+11B99CE: F3 42 0F 11 84 B3 C0 00 00 00  - movss [rbx+r14*4+000000C0],xmm0
+NMS.exe+11B99D8: 44 39 7F 18                    - cmp [rdi+18],r15d
+NMS.exe+11B99DC: 75 43                          - jne NMS.exe+11B9A21
+NMS.exe+11B99DE: 48 8B 0D D3 1E F5 03           - mov rcx,[NMS.exe+510B8B8]
+NMS.exe+11B99E5: 48 8D 54 24 30                 - lea rdx,[rsp+30]
+NMS.exe+11B99EA: 4C 8B 83 E0 00 00 00           - mov r8,[rbx+000000E0]
+NMS.exe+11B99F1: 48 81 C1 D0 ED 89 00           - add rcx,0089EDD0
+NMS.exe+11B99F8: C6 44 24 3C 01                 - mov byte ptr [rsp+3C],01
+NMS.exe+11B99FD: 4C 89 7C 24 30                 - mov [rsp+30],r15
+}
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>2358</ID>
+              <Description>"Unlimited Environmental Suit - Oxygen / Health / Thermals / Toxicity"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,NMS.exe,F3 0F 58 4C 9F 40) // should be unique
+alloc(newmem,$100,INJECT)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  // addss xmm1,[rdi+rbx*4+40]
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db F3 0F 58 4C 9F 40
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: NMS.exe+1194970
+
+NMS.exe+119493B: 0F 86 BD 00 00 00           - jbe NMS.exe+11949FE
+NMS.exe+1194941: 48 8B 05 C0 29 F2 03        - mov rax,[NMS.exe+50B7308]
+NMS.exe+1194948: 41 8B D6                    - mov edx,r14d
+NMS.exe+119494B: 48 8B CF                    - mov rcx,rdi
+NMS.exe+119494E: F3 0F 10 9C 98 A4 BE 44 00  - movss xmm3,[rax+rbx*4+0044BEA4]
+NMS.exe+1194957: F3 0F 10 94 98 D4 BE 44 00  - movss xmm2,[rax+rbx*4+0044BED4]
+NMS.exe+1194960: E8 6B 08 00 00              - call NMS.exe+11951D0
+NMS.exe+1194965: 41 0F 28 C9                 - movaps xmm1,xmm9
+NMS.exe+1194969: F3 0F 5E C8                 - divss xmm1,xmm0
+NMS.exe+119496D: 0F 28 C7                    - movaps xmm0,xmm7
+// ---------- INJECTING HERE ----------
+NMS.exe+1194970: F3 0F 58 4C 9F 40           - addss xmm1,[rdi+rbx*4+40]
+// ---------- DONE INJECTING  ----------
+NMS.exe+1194976: F3 0F 5D C1                 - minss xmm0,xmm1
+NMS.exe+119497A: F3 0F 11 44 9F 40           - movss [rdi+rbx*4+40],xmm0
+NMS.exe+1194980: F3 0F 10 05 74 3E 08 04     - movss xmm0,[NMS.exe+52187FC]
+NMS.exe+1194988: F3 0F 11 84 9F 88 00 00 00  - movss [rdi+rbx*4+00000088],xmm0
+NMS.exe+1194991: EB 6B                       - jmp NMS.exe+11949FE
+NMS.exe+1194993: F3 0F 10 44 9F 40           - movss xmm0,[rdi+rbx*4+40]
+NMS.exe+1194999: 41 0F 2F C0                 - comiss xmm0,xmm8
+NMS.exe+119499D: 76 5F                       - jna NMS.exe+11949FE
+NMS.exe+119499F: F3 0F 10 05 55 3E 08 04     - movss xmm0,[NMS.exe+52187FC]
+NMS.exe+11949A7: F3 0F 5C 44 9F 58           - subss xmm0,[rdi+rbx*4+58]
+}
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2293</ID>
+          <Description>"Exocraft &gt;"</Description>
+          <Options moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
+          <Color>FF8000</Color>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2307</ID>
+              <Description>"Unlimited Exocraft Fuel"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,NMS.exe,2B CB 85 C9 0F 4E CA) // should be unique
+alloc(newmem,$100,INJECT)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  // sub ecx,ebx
+  test ecx,ecx
+  cmovle ecx,edx
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop 2
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db 2B CB 85 C9 0F 4E CA
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: NMS.exe+13E9295
+
+NMS.exe+13E9268: 41 B9 01 00 00 00        - mov r9d,00000001
+NMS.exe+13E926E: C7 44 24 20 FF FF FF FF  - mov [rsp+20],FFFFFFFF
+NMS.exe+13E9276: 48 81 C1 00 B4 00 00     - add rcx,0000B400
+NMS.exe+13E927D: BA AB 00 00 00           - mov edx,000000AB
+NMS.exe+13E9282: 45 8D 41 09              - lea r8d,[r9+09]
+NMS.exe+13E9286: E8 F5 99 0C FF           - call NMS.exe+4B2C80
+NMS.exe+13E928B: 48 85 C0                 - test rax,rax
+NMS.exe+13E928E: 74 0F                    - je NMS.exe+13E929F
+NMS.exe+13E9290: 8B 48 18                 - mov ecx,[rax+18]
+NMS.exe+13E9293: 33 D2                    - xor edx,edx
+// ---------- INJECTING HERE ----------
+NMS.exe+13E9295: 2B CB                    - sub ecx,ebx
+// ---------- DONE INJECTING  ----------
+NMS.exe+13E9297: 85 C9                    - test ecx,ecx
+NMS.exe+13E9299: 0F 4E CA                 - cmovle ecx,edx
+NMS.exe+13E929C: 89 48 18                 - mov [rax+18],ecx
+NMS.exe+13E929F: 48 83 C4 30              - add rsp,30
+NMS.exe+13E92A3: 5B                       - pop rbx
+NMS.exe+13E92A4: C3                       - ret 
+NMS.exe+13E92A5: CC                       - int 3 
+NMS.exe+13E92A6: CC                       - int 3 
+NMS.exe+13E92A7: CC                       - int 3 
+NMS.exe+13E92A8: CC                       - int 3 
+}
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>2292</ID>
+              <Description>"Unlimited Exocraft Boost"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,NMS.exe,F3 41 0F 5C C0 0F 2F F8 F3 0F 11 87 E0) // should be unique
+alloc(newmem,$100,INJECT)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  jmp return
+
+INJECT:
+  jmp newmem
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db F3 41 0F 5C C0
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: NMS.exe+13E5A15
+
+NMS.exe+13E59E4: BA B0 00 00 00           - mov edx,000000B0
+NMS.exe+13E59E9: 44 88 7C 24 20           - mov [rsp+20],r15b
+NMS.exe+13E59EE: E8 1D CA 0C FF           - call NMS.exe+4B2410
+NMS.exe+13E59F3: 0F 2F F8                 - comiss xmm7,xmm0
+NMS.exe+13E59F6: 72 04                    - jb NMS.exe+13E59FC
+NMS.exe+13E59F8: 41 0F 28 C1              - movaps xmm0,xmm9
+NMS.exe+13E59FC: 48 8B 47 38              - mov rax,[rdi+38]
+NMS.exe+13E5A00: F3 0F 59 80 94 03 00 00  - mulss xmm0,[rax+00000394]
+NMS.exe+13E5A08: F3 44 0F 5E C0           - divss xmm8,xmm0
+NMS.exe+13E5A0D: F3 0F 10 87 E0 07 00 00  - movss xmm0,[rdi+000007E0]
+// ---------- INJECTING HERE ----------
+NMS.exe+13E5A15: F3 41 0F 5C C0           - subss xmm0,xmm8
+// ---------- DONE INJECTING  ----------
+NMS.exe+13E5A1A: 0F 2F F8                 - comiss xmm7,xmm0
+NMS.exe+13E5A1D: F3 0F 11 87 E0 07 00 00  - movss [rdi+000007E0],xmm0
+NMS.exe+13E5A25: 0F 82 84 03 00 00        - jb NMS.exe+13E5DAF
+NMS.exe+13E5A2B: 44 89 BF E0 07 00 00     - mov [rdi+000007E0],r15d
+NMS.exe+13E5A32: 40 88 33                 - mov [rbx],sil
+NMS.exe+13E5A35: E9 75 03 00 00           - jmp NMS.exe+13E5DAF
+NMS.exe+13E5A3A: 84 DB                    - test bl,bl
+NMS.exe+13E5A3C: 0F 84 6D 03 00 00        - je NMS.exe+13E5DAF
+NMS.exe+13E5A42: 48 8B 0D BF 18 CD 03     - mov rcx,[NMS.exe+50B7308]
+NMS.exe+13E5A49: 4C 8D 0D A0 6E 7D 01     - lea r9,[NMS.exe+2BBC8F0]
+}
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>2318</ID>
+              <Description>"Unlimited Exocraft Thruster"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,NMS.exe,F3 0F 5C C1 F3 0F 11 87 F4 00 00 00) // should be unique
+alloc(newmem,$100,INJECT)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  movss [rdi+000000F4],xmm0
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop 7
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db F3 0F 5C C1 F3 0F 11 87 F4 00 00 00
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: NMS.exe+13B166F
+
+NMS.exe+13B1643: 72 04                    - jb NMS.exe+13B1649
+NMS.exe+13B1645: 45 0F 28 C7              - movaps xmm8,xmm15
+NMS.exe+13B1649: 48 8B CF                 - mov rcx,rdi
+NMS.exe+13B164C: E8 CF 9E 00 00           - call NMS.exe+13BB520
+NMS.exe+13B1651: 84 C0                    - test al,al
+NMS.exe+13B1653: 74 26                    - je NMS.exe+13B167B
+NMS.exe+13B1655: F3 0F 10 0D 57 C9 E7 01  - movss xmm1,[NMS.exe+322DFB4]
+NMS.exe+13B165D: F3 0F 10 87 F4 00 00 00  - movss xmm0,[rdi+000000F4]
+NMS.exe+13B1665: F3 41 0F 5E C8           - divss xmm1,xmm8
+NMS.exe+13B166A: F3 41 0F 59 CA           - mulss xmm1,xmm10
+// ---------- INJECTING HERE ----------
+NMS.exe+13B166F: F3 0F 5C C1              - subss xmm0,xmm1
+// ---------- DONE INJECTING  ----------
+NMS.exe+13B1673: F3 0F 11 87 F4 00 00 00  - movss [rdi+000000F4],xmm0
+NMS.exe+13B167B: 44 0F 28 45 D0           - movaps xmm8,[rbp-30]
+NMS.exe+13B1680: 0F 57 C0                 - xorps xmm0,xmm0
+NMS.exe+13B1683: 41 0F 28 CF              - movaps xmm1,xmm15
+NMS.exe+13B1687: F3 0F 5F 87 F4 00 00 00  - maxss xmm0,[rdi+000000F4]
+NMS.exe+13B168F: 41 B7 01                 - mov r15b,01
+NMS.exe+13B1692: F3 0F 5D C8              - minss xmm1,xmm0
+NMS.exe+13B1696: F3 0F 11 8F F4 00 00 00  - movss [rdi+000000F4],xmm1
+NMS.exe+13B169E: 41 8B 04 36              - mov eax,[r14+rsi]
+NMS.exe+13B16A2: A9 FA FF FF FF           - test eax,FFFFFFFA
+}
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>2319</ID>
+              <Description>"Unlimited Exocraft Mining Laser"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,NMS.exe,2B C1 44 0F 49 E0) // should be unique
+alloc(newmem,$100,INJECT)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  // sub eax,ecx
+  cmovns r12d,eax
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db 2B C1 44 0F 49 E0
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: NMS.exe+13E06C3
+
+NMS.exe+13E0693: F3 0F 59 F1                 - mulss xmm6,xmm1
+NMS.exe+13E0697: F3 41 0F 58 B6 14 11 00 00  - addss xmm6,[r14+00001114]
+NMS.exe+13E06A0: 0F 28 C6                    - movaps xmm0,xmm6
+NMS.exe+13E06A3: E8 96 D6 5D 01              - call NMS.exe+29BDD3E
+NMS.exe+13E06A8: F3 0F 2C C8                 - cvttss2si ecx,xmm0
+NMS.exe+13E06AC: 66 0F 6E C9                 - movd xmm1,ecx
+NMS.exe+13E06B0: 0F 5B C9                    - cvtdq2ps xmm1,xmm1
+NMS.exe+13E06B3: F3 0F 5C F1                 - subss xmm6,xmm1
+NMS.exe+13E06B7: F3 41 0F 11 B6 14 11 00 00  - movss [r14+00001114],xmm6
+NMS.exe+13E06C0: 8B 46 18                    - mov eax,[rsi+18]
+// ---------- INJECTING HERE ----------
+NMS.exe+13E06C3: 2B C1                       - sub eax,ecx
+// ---------- DONE INJECTING  ----------
+NMS.exe+13E06C5: 44 0F 49 E0                 - cmovns r12d,eax
+NMS.exe+13E06C9: 44 89 66 18                 - mov [rsi+18],r12d
+NMS.exe+13E06CD: 48 8B B4 24 48 06 00 00     - mov rsi,[rsp+00000648]
+NMS.exe+13E06D5: F3 41 0F 10 07              - movss xmm0,[r15]
+NMS.exe+13E06DA: 0F 2F C7                    - comiss xmm0,xmm7
+NMS.exe+13E06DD: 4C 8B A4 24 38 06 00 00     - mov r12,[rsp+00000638]
+NMS.exe+13E06E5: 76 0E                       - jna NMS.exe+13E06F5
+NMS.exe+13E06E7: F3 41 0F 5C C2              - subss xmm0,xmm10
+NMS.exe+13E06EC: F3 0F 5F F8                 - maxss xmm7,xmm0
+NMS.exe+13E06F0: F3 41 0F 11 3F              - movss [r15],xmm7
+}
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2363</ID>
+          <Description>"StarShip &gt;"</Description>
+          <Options moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
+          <Color>FF8000</Color>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2232</ID>
+              <Description>"Unlimited Starship Shields"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>{ Game   : NMS.exe
+  Version: 
+  Date   : 2024-08-17
+  Author : apech
+
+  This script does blah blah blah
+}
+
+[ENABLE]
+
+aobscanmodule(INJECT,NMS.exe,44 01 60 18 49 8B CE) // should be unique
+alloc(newmem,$100,INJECT)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  //add [rax+18],r12d
+  mov rcx,r14
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop 2
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db 44 01 60 18 49 8B CE
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: NMS.exe+1128B30
+
+NMS.exe+1128B0D: 8B C1           - mov eax,ecx
+NMS.exe+1128B0F: E9 80 00 00 00  - jmp NMS.exe+1128B94
+NMS.exe+1128B14: 45 33 C9        - xor r9d,r9d
+NMS.exe+1128B17: 89 44 24 20     - mov [rsp+20],eax
+NMS.exe+1128B1B: 45 8B C7        - mov r8d,r15d
+NMS.exe+1128B1E: BA 86 00 00 00  - mov edx,00000086
+NMS.exe+1128B23: E8 D8 8A 38 FF  - call NMS.exe+4B1600
+NMS.exe+1128B28: 4C 8B F8        - mov r15,rax
+NMS.exe+1128B2B: 48 85 C0        - test rax,rax
+NMS.exe+1128B2E: 74 2F           - je NMS.exe+1128B5F
+// ---------- INJECTING HERE ----------
+NMS.exe+1128B30: 44 01 60 18     - add [rax+18],r12d
+// ---------- DONE INJECTING  ----------
+NMS.exe+1128B34: 49 8B CE        - mov rcx,r14
+NMS.exe+1128B37: 44 8B 64 24 54  - mov r12d,[rsp+54]
+NMS.exe+1128B3C: 41 8B D4        - mov edx,r12d
+NMS.exe+1128B3F: E8 3C 66 37 FF  - call NMS.exe+49F180
+NMS.exe+1128B44: 41 8B 4F 18     - mov ecx,[r15+18]
+NMS.exe+1128B48: 85 C9           - test ecx,ecx
+NMS.exe+1128B4A: 0F 4E CE        - cmovle ecx,esi
+NMS.exe+1128B4D: 3B C8           - cmp ecx,eax
+NMS.exe+1128B4F: 0F 4D C8        - cmovge ecx,eax
+NMS.exe+1128B52: 41 89 4F 18     - mov [r15+18],ecx
+}
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>1985</ID>
+              <Description>"Unlimited Launch Thruster"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(AOBLaunchThruster,NMS.exe,2B C8 89 4E 18)
+aobscanmodule(AOBLaunchOut,NMS.exe,39 47 18 7C A1)
+alloc(MemLaunchThruster,$1000,AOBLaunchThruster)
+alloc(MemLaunchOut,$100,AOBLaunchOut)
+
+label(code return restoreFuel codeLaunchOut returnLaunchOut MaxFuelFromZ)
+
+MemLaunchThruster:
+
+code:
+  cmp [rsi+18],#200
+  jne restoreFuel
+  mov [rsi+18],ecx
+  jmp return
+
+restoreFuel:
+  push ecx
+  mov ecx,#200
+  mov [rsi+18],ecx
+  pop ecx
+  jmp return
+
+MemLaunchOut:
+
+codeLaunchOut:
+  cmp [rdi+18],#200
+  je MaxFuelFromZ
+  mov [rdi+18],#200
+MaxFuelFromZ:
+  cmp [rdi+18],eax
+  jl NMS.exe+136F1AD
+  jmp returnLaunchOut
+
+AOBLaunchOut:
+  jmp MemLaunchOut
+returnLaunchOut:
+registersymbol(AOBLaunchOut)
+
+AOBLaunchThruster:
+  jmp MemLaunchThruster
+return:
+registersymbol(AOBLaunchThruster)
+
+[DISABLE]
+
+AOBLaunchThruster:
+  db 2B C8 89 4E 18
+
+AOBLaunchOut:
+  db 39 47 18 7C A1
+
+unregistersymbol(*)
+dealloc(*)
+
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>2148</ID>
+              <Description>"Unlimited Hyper Drive"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,NMS.exe,89 4B 18 0F 57 C0) // should be unique
+alloc(newmem,$100,INJECT)
+
+label(code)
+label(return)
+
+newmem:
+  mov ecx,#120
+
+code:
+  mov [rbx+18],ecx
+  xorps xmm0,xmm0
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db 89 4B 18 0F 57 C0
+
+unregistersymbol(*)
+dealloc(*)
+
+{
+// ORIGINAL CODE - INJECTION POINT: NMS.exe+106496C
+
+NMS.exe+1064949: 44 38 25 70 A7 23 02  - cmp [NMS.exe+329F0C0],r12b
+NMS.exe+1064950: 75 1D                 - jne NMS.exe+106496F
+NMS.exe+1064952: 45 33 C9              - xor r9d,r9d
+NMS.exe+1064955: 45 33 C0              - xor r8d,r8d
+NMS.exe+1064958: 41 0F B6 D6           - movzx edx,r14b
+NMS.exe+106495C: E8 2F C1 0A 00        - call NMS.exe+1110A90
+NMS.exe+1064961: 8B 4B 18              - mov ecx,[rbx+18]
+NMS.exe+1064964: 2B C8                 - sub ecx,eax
+NMS.exe+1064966: 85 C9                 - test ecx,ecx
+NMS.exe+1064968: 41 0F 4E CC           - cmovle ecx,r12d
+// ---------- INJECTING HERE ----------
+NMS.exe+106496C: 89 4B 18              - mov [rbx+18],ecx
+// ---------- DONE INJECTING  ----------
+NMS.exe+106496F: 0F 57 C0              - xorps xmm0,xmm0
+NMS.exe+1064972: 4C 89 65 F0           - mov [rbp-10],r12
+NMS.exe+1064976: 48 8D 4D C0           - lea rcx,[rbp-40]
+NMS.exe+106497A: F3 0F 7F 45 E0        - movdqu [rbp-20],xmm0
+NMS.exe+106497F: E8 4C 4F A9 00        - call NMS.exe+1AF98D0
+NMS.exe+1064984: 48 8B CE              - mov rcx,rsi
+NMS.exe+1064987: 48 8D 54 24 6C        - lea rdx,[rsp+6C]
+NMS.exe+106498C: 48 C1 E9 20           - shr rcx,20
+NMS.exe+1064990: 0F B6 C1              - movzx eax,cl
+NMS.exe+1064993: 89 45 80              - mov [rbp-80],eax
+}
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>2002</ID>
+              <Description>"Unlimited Pulse Engine"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(AOBPulseFuel,NMS.exe,41 FF 4D 18 89 9F B4 00 00 00)
+aobscanmodule(AOBPulseOut,NMS.exe,83 7F 18 00 7F 0C)
+alloc(MemPulseFuel,$100,AOBPulseFuel)
+alloc(MemPulseOut,$100,AOBPulseOut)
+
+// Return Labels
+label(returnPulseFuel returnPulseOut)
+
+// Jump Labels
+label(MaxFuel MaxFuelFromZ)
+
+// Code Labels
+label(codePulseFuel codePulseOut)
+
+MemPulseFuel:
+
+codePulseFuel:
+  cmp [r13+18],#200
+  je MaxFuel
+  mov [r13+18],#200
+  MaxFuel:
+  mov [rdi+000000B4],ebx
+  jmp returnPulseFuel
+
+MemPulseOut:
+
+codePulseOut:
+  cmp [rdi+18],#200
+  je MaxFuelFromZ // Is the Pulse Engine out of fuel?
+  mov [rdi+18],#200
+  MaxFuelFromZ:
+  cmp dword ptr [rdi+18],00
+  jg NMS.exe+7F7DDD
+  jmp returnPulseOut
+
+AOBPulseOut:
+  jmp MemPulseOut
+  nop
+returnPulseOut:
+registersymbol(AOBPulseOut)
+
+AOBPulseFuel:
+  jmp MemPulseFuel
+  nop 5
+returnPulseFuel:
+registersymbol(AOBPulseFuel)
+
+[DISABLE]
+
+AOBPulseFuel:
+  db 41 FF 4D 18 89 9F B4 00 00 00
+
+AOBPulseOut:
+  db 83 7F 18 00 7F 0C
+
+unregistersymbol(*)
+dealloc(*)
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>2025</ID>
+              <Description>"Zero Thermal Load (Heat) for Photo Cannon"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(AOBThermalLoad,NMS.exe,F3 41 0F 11 8C 86 E4 22 00 00)
+alloc(newmem,$100,AOBThermalLoad)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  jmp return
+
+AOBThermalLoad:
+  jmp newmem
+  nop 5
+return:
+registersymbol(AOBThermalLoad)
+
+[DISABLE]
+
+AOBThermalLoad:
+  db F3 41 0F 11 8C 86 E4 22 00 00
+
+unregistersymbol(*)
+dealloc(*)
+
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>2176</ID>
+              <Description>"Rocket Launcher - Hyper Cool Down Speed (Adjust to Taste)"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,NMS.exe,41 89 84 8E 00 23 00 00) // should be unique
+alloc(newmem,$100,INJECT)
+
+label(code)
+label(return)
+
+newmem:
+  mov eax,(float)0.25 // Adjust for taste! It's a little bit mad this one.
+                      // 0 is Extreme, 1 is Slow, 5 is Normal.
+code:
+  mov [r14+rcx*4+00002300],eax
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop 3
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db 41 89 84 8E 00 23 00 00
+
+unregistersymbol(*)
+dealloc(*)
+
+{
+// ORIGINAL CODE - INJECTION POINT: NMS.exe+13A6A36
+
+NMS.exe+13A69F1: 0F 2F 05 14 07 8D 01                 - comiss xmm0,[NMS.exe+2C7710C]
+NMS.exe+13A69F8: 72 44                                - jb NMS.exe+13A6A3E
+NMS.exe+13A69FA: 42 80 BC 30 1C 23 00 00 00           - cmp byte ptr [rax+r14+0000231C],00
+NMS.exe+13A6A03: 75 10                                - jne NMS.exe+13A6A15
+NMS.exe+13A6A05: 42 C6 84 30 1C 23 00 00 01           - mov byte ptr [rax+r14+0000231C],01
+NMS.exe+13A6A0E: 4D 8D A6 2C 23 00 00                 - lea r12,[r14+0000232C]
+NMS.exe+13A6A15: 49 63 86 0C 01 00 00                 - movsxd  rax,dword ptr [r14+0000010C]
+NMS.exe+13A6A1C: 41 C7 84 86 E4 22 00 00 00 00 80 3F  - mov [r14+rax*4+000022E4],3F800000
+NMS.exe+13A6A28: 49 63 8E 0C 01 00 00                 - movsxd  rcx,dword ptr [r14+0000010C]
+NMS.exe+13A6A2F: 8B 84 1F EC 52 00 00                 - mov eax,[rdi+rbx+000052EC]
+// ---------- INJECTING HERE ----------
+NMS.exe+13A6A36: 41 89 84 8E 00 23 00 00              - mov [r14+rcx*4+00002300],eax
+// ---------- DONE INJECTING  ----------
+NMS.exe+13A6A3E: F3 0F 10 05 76 7E E6 03              - movss xmm0,[NMS.exe+520E8BC]
+NMS.exe+13A6A46: F3 41 0F 11 04 24                    - movss [r12],xmm0
+NMS.exe+13A6A4C: E9 B1 01 00 00                       - jmp NMS.exe+13A6C02
+NMS.exe+13A6A51: 49 63 86 0C 01 00 00                 - movsxd  rax,dword ptr [r14+0000010C]
+NMS.exe+13A6A58: 40 0F B6 DE                          - movzx ebx,sil
+NMS.exe+13A6A5C: 88 9D 10 08 00 00                    - mov [rbp+00000810],bl
+NMS.exe+13A6A62: 42 80 BC 30 1C 23 00 00 00           - cmp byte ptr [rax+r14+0000231C],00
+NMS.exe+13A6A6B: 0F 84 98 01 00 00                    - je NMS.exe+13A6C09
+NMS.exe+13A6A71: 88 9D 10 08 00 00                    - mov [rbp+00000810],bl
+NMS.exe+13A6A77: E8 C4 37 00 00                       - call NMS.exe+13AA240
+}
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>438</ID>
+          <Description>"MultiTool &gt;"</Description>
+          <Options moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
+          <Color>FF8000</Color>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>435</ID>
+              <Description>"Unlimited Mining Beam"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,NMS.exe,41 29 45 18 01 1E)
+alloc(newmem,$100,INJECT)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  mov [r13+18],C8
+  add [rsi],ebx
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db 41 29 45 18 01 1E
+
+unregistersymbol(*)
+dealloc(*)
+
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>12</ID>
+              <Description>"No Mining Beam Overheat"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+alloc(BEAMHEATMEM,8)
+registersymbol(BEAMHEATMEM)
+aobscanmodule(BEAMHEAT,NMS.exe,F3 0F 58 86 ?? 21 00 00)
+alloc(newmem,$100,BEAMHEAT)
+
+label(code)
+label(return)
+
+BEAMHEATMEM:
+readmem(BEAMHEAT,8)
+
+newmem:
+
+code:
+  jmp return
+
+BEAMHEAT:
+  jmp newmem
+  nop 3
+return:
+registersymbol(BEAMHEAT)
+
+[DISABLE]
+
+BEAMHEAT:
+readmem(BEAMHEATMEM,8)
+
+unregistersymbol(*)
+dealloc(*)
+
+{
+// ORIGINAL CODE - BEAMHEATION POINT: NMS.exe+10FCA76
+
+NMS.exe+10FCA41: 0F 28 85 00 07 00 00     - movaps xmm0,[rbp+00000700]
+NMS.exe+10FCA48: 66 0F 7F 85 A0 00 00 00  - movdqa [rbp+000000A0],xmm0
+NMS.exe+10FCA50: F3 0F 5D D1              - minss xmm2,xmm1
+NMS.exe+10FCA54: E8 87 5A 41 01           - call NMS.exe+25124E0
+NMS.exe+10FCA59: E9 FE 02 00 00           - jmp NMS.exe+10FCD5C
+NMS.exe+10FCA5E: 80 BE 38 13 00 00 00     - cmp byte ptr [rsi+00001338],00
+NMS.exe+10FCA65: 48 8B CE                 - mov rcx,rsi
+NMS.exe+10FCA68: 0F 84 DA 01 00 00        - je NMS.exe+10FCC48
+NMS.exe+10FCA6E: 41 0F 28 C5              - movaps xmm0,xmm13
+NMS.exe+10FCA72: 41 0F 28 F5              - movaps xmm6,xmm13
+// ---------- INJECTING HERE ----------
+NMS.exe+10FCA76: F3 0F 58 86 C0 21 00 00  - addss xmm0,[rsi+000021C0]
+// ---------- DONE INJECTING  ----------
+NMS.exe+10FCA7E: F3 0F 11 86 C0 21 00 00  - movss [rsi+000021C0],xmm0
+NMS.exe+10FCA86: F3 0F 58 B6 C4 21 00 00  - addss xmm6,[rsi+000021C4]
+NMS.exe+10FCA8E: F3 0F 11 B6 C4 21 00 00  - movss [rsi+000021C4],xmm6
+NMS.exe+10FCA96: E8 E5 5F FF FF           - call NMS.exe+10F2A80
+NMS.exe+10FCA9B: 0F 2F F0                 - comiss xmm6,xmm0
+NMS.exe+10FCA9E: 0F 86 91 00 00 00        - jbe NMS.exe+10FCB35
+NMS.exe+10FCAA4: 48 8D 0D D5 ED 00 04     - lea rcx,[NMS.exe+510B880]
+NMS.exe+10FCAAB: E8 10 20 17 FF           - call NMS.exe+26EAC0
+NMS.exe+10FCAB0: 48 8D 98 68 16 20 00     - lea rbx,[rax+00201668]
+NMS.exe+10FCAB7: 48 8B CB                 - mov rcx,rbx
+}
+
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>2081</ID>
+              <Description>"Unlimited Boltcaster Ammo"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+alloc(BOLTCASTERAMMOMEM,11)
+registersymbol(BOLTCASTERAMMOMEM)
+aobscanmodule(BOLTCASTERAMMO,NMS.exe,41 2B C4 42 89 84 BF ?? 22 00 00)
+alloc(newmem,$100,BOLTCASTERAMMO)
+
+label(code)
+label(return)
+
+BOLTCASTERAMMOMEM:
+readmem(BOLTCASTERAMMO,11)
+
+newmem:
+
+code:
+  mov [rdi+r15*4+000022E8],eax
+  jmp return
+
+BOLTCASTERAMMO:
+  jmp newmem
+  nop 6
+return:
+registersymbol(BOLTCASTERAMMO)
+
+[DISABLE]
+
+BOLTCASTERAMMO:
+readmem(BOLTCASTERAMMOMEM,11)
+
+unregistersymbol(*)
+dealloc(*)
+
+{
+// ORIGINAL CODE - BOLTCASTERAMMOION POINT: NMS.exe+11099F3
+
+NMS.exe+11099C7: 42 8B 84 BF E8 22 00 00           - mov eax,[rdi+r15*4+000022E8]
+NMS.exe+11099CF: 4C 8D 05 2A 66 EF FE              - lea r8,[NMS.exe]
+NMS.exe+11099D6: F3 44 0F 2C E0                    - cvttss2si r12d,xmm0
+NMS.exe+11099DB: 49 8B D5                          - mov rdx,r13
+NMS.exe+11099DE: 0F 57 C0                          - xorps xmm0,xmm0
+NMS.exe+11099E1: 44 3B E3                          - cmp r12d,ebx
+NMS.exe+11099E4: 0F 11 45 A0                       - movups [rbp-60],xmm0
+NMS.exe+11099E8: 44 0F 4C E3                       - cmovl r12d,ebx
+NMS.exe+11099EC: 41 3B C4                          - cmp eax,r12d
+NMS.exe+11099EF: 44 0F 4C E0                       - cmovl r12d,eax
+// ---------- INJECTING HERE ----------
+NMS.exe+11099F3: 41 2B C4                          - sub eax,r12d
+// ---------- DONE INJECTING  ----------
+NMS.exe+11099F6: 42 89 84 BF E8 22 00 00           - mov [rdi+r15*4+000022E8],eax
+NMS.exe+11099FE: 4C 8B 15 B3 1E 00 04              - mov r10,[NMS.exe+510B8B8]
+NMS.exe+1109A05: 66 66 66 0F 1F 84 00 00 00 00 00  - nop word ptr [rax+rax+00000000]
+NMS.exe+1109A10: 42 0F B6 8C 02 80 37 C8 02        - movzx ecx,byte ptr [rdx+r8+02C83780]
+NMS.exe+1109A19: 88 4C 15 A0                       - mov [rbp+rdx-60],cl
+NMS.exe+1109A1D: 8D 41 9F                          - lea eax,[rcx-61]
+NMS.exe+1109A20: 3C 19                             - cmp al,19
+NMS.exe+1109A22: 77 07                             - ja NMS.exe+1109A2B
+NMS.exe+1109A24: 80 E9 20                          - sub cl,20
+NMS.exe+1109A27: 88 4C 15 A0                       - mov [rbp+rdx-60],cl
+}
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>2099</ID>
+              <Description>"Unlimited Terrain Manipulator"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(AOBTerrainGun,NMS.exe,89 4F 18 48 8D 4D 78)
+alloc(newmem,$100,AOBTerrainGun)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  mov ecx,#600
+  mov [rdi+18],ecx
+  lea rcx,[rbp+78]
+  jmp return
+
+AOBTerrainGun:
+  jmp newmem
+  nop 2
+return:
+registersymbol(AOBTerrainGun)
+
+[DISABLE]
+
+AOBTerrainGun:
+  db 89 4F 18 48 8D 4D 78
+
+unregistersymbol(*)
+dealloc(*)
+
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>2101</ID>
+              <Description>"Unlimited Blaze Javelin Ammo"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,NMS.exe,89 43 18 48 8B 95 08 01 00 00)
+alloc(newmem,$100,INJECT)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  mov eax,#50
+  mov [rbx+18],eax
+  mov rdx,[rbp+00000108]
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop 5
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db 89 43 18 48 8B 95 08 01 00 00
+
+unregistersymbol(*)
+dealloc(*)
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>2409</ID>
+              <Description>"Unlimited Grenades"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(AOBGranades,NMS.exe,FF 4B 18 48 8B 05 22 16 00 04)
+alloc(newmem,$100,AOBGranades)
+
+label(code)
+label(return)
+
+newmem:
+push r15
+mov r15,[rbx+20]
+mov [rbx+18],r15
+pop r15
+
+//mov [rbx+18],[rbx+20]
+
+code:
+  // dec [rbx+18]
+  mov rax,[NMS.exe+510B8B8]
+  jmp return
+
+AOBGranades:
+  jmp newmem
+  nop 5
+return:
+registersymbol(AOBGranades)
+
+[DISABLE]
+
+AOBGranades:
+  db FF 4B 18 48 8B 05 22 16 00 04
+
+unregistersymbol(AOBGranades)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: NMS.exe+110A28C
+
+NMS.exe+110A25C: 4C 8D 4D C0              - lea r9,[rbp-40]
+NMS.exe+110A260: 45 33 FF                 - xor r15d,r15d
+NMS.exe+110A263: 48 8D 55 A0              - lea rdx,[rbp-60]
+NMS.exe+110A267: 48 8D 8D 28 0C 00 00     - lea rcx,[rbp+00000C28]
+NMS.exe+110A26E: 66 44 89 7D AD           - mov [rbp-53],r15w
+NMS.exe+110A273: 44 88 7D AF              - mov [rbp-51],r15b
+NMS.exe+110A277: E8 C4 9B 4B FF           - call NMS.exe+5C3E40
+NMS.exe+110A27C: 48 8B 05 35 16 00 04     - mov rax,[NMS.exe+510B8B8]
+NMS.exe+110A283: 44 39 A0 10 24 20 00     - cmp [rax+00202410],r12d
+NMS.exe+110A28A: 76 0A                    - jna NMS.exe+110A296
+// ---------- INJECTING HERE ----------
+NMS.exe+110A28C: FF 4B 18                 - dec [rbx+18]
+// ---------- DONE INJECTING  ----------
+NMS.exe+110A28F: 48 8B 05 22 16 00 04     - mov rax,[NMS.exe+510B8B8]
+NMS.exe+110A296: 4C 89 7C 24 38           - mov [rsp+38],r15
+NMS.exe+110A29B: 48 8D 88 90 B4 00 00     - lea rcx,[rax+0000B490]
+NMS.exe+110A2A2: 48 8B 80 A0 02 00 00     - mov rax,[rax+000002A0]
+NMS.exe+110A2A9: 45 8B C4                 - mov r8d,r12d
+NMS.exe+110A2AC: 4C 89 7C 24 30           - mov [rsp+30],r15
+NMS.exe+110A2B1: BA 29 00 00 00           - mov edx,00000029
+NMS.exe+110A2B6: 44 88 7C 24 28           - mov [rsp+28],r15b
+NMS.exe+110A2BB: 44 88 7C 24 20           - mov [rsp+20],r15b
+NMS.exe+110A2C0: 46 8B 8C 30 2C 01 00 00  - mov r9d,[rax+r14+0000012C]
+}
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>2360</ID>
+              <Description>"No Topographic Scanner Recharge"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,NMS.exe,44 89 6E 10 44 89 6E 3C) // should be unique
+alloc(newmem,$100,INJECT)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+ // mov [rsi+10],r13d
+  mov [rsi+3C],r13d
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop 3
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db 44 89 6E 10 44 89 6E 3C
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: NMS.exe+104DD69
+
+NMS.exe+104DD2C: 44 38 2D 1F E3 2A 02        - cmp [NMS.exe+32FC052],r13b
+NMS.exe+104DD33: 0F 84 5F FC FF FF           - je NMS.exe+104D998
+NMS.exe+104DD39: 44 38 AE B0 00 00 00        - cmp [rsi+000000B0],r13b
+NMS.exe+104DD40: 0F 85 52 FC FF FF           - jne NMS.exe+104D998
+NMS.exe+104DD46: F3 0F 10 05 BE 91 21 04     - movss xmm0,[NMS.exe+5266F0C]
+NMS.exe+104DD4E: 4C 8D B6 B8 00 00 00        - lea r14,[rsi+000000B8]
+NMS.exe+104DD55: F3 0F 11 46 18              - movss [rsi+18],xmm0
+NMS.exe+104DD5A: 48 8D 55 F0                 - lea rdx,[rbp-10]
+NMS.exe+104DD5E: C6 86 B0 00 00 00 01        - mov byte ptr [rsi+000000B0],01
+NMS.exe+104DD65: 44 89 6E 34                 - mov [rsi+34],r13d
+// ---------- INJECTING HERE ----------
+NMS.exe+104DD69: 44 89 6E 10                 - mov [rsi+10],r13d
+// ---------- DONE INJECTING  ----------
+NMS.exe+104DD6D: 44 89 6E 3C                 - mov [rsi+3C],r13d
+NMS.exe+104DD71: 41 0F 10 04 24              - movups xmm0,[r12]
+NMS.exe+104DD76: C6 45 EC 01                 - mov byte ptr [rbp-14],01
+NMS.exe+104DD7A: 4C 89 6D E0                 - mov [rbp-20],r13
+NMS.exe+104DD7E: 0F 11 46 50                 - movups [rsi+50],xmm0
+NMS.exe+104DD82: C7 45 E8 B2 EE 22 80        - mov [rbp-18],8022EEB2
+NMS.exe+104DD89: 41 0F 10 44 24 10           - movups xmm0,[r12+10]
+NMS.exe+104DD8F: 4C 89 BC 24 B0 06 00 00     - mov [rsp+000006B0],r15
+NMS.exe+104DD97: 44 0F 29 BC 24 C0 05 00 00  - movaps [rsp+000005C0],xmm15
+NMS.exe+104DDA0: 0F 11 46 60                 - movups [rsi+60],xmm0
+}
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2328</ID>
+          <Description>"Crafting &gt;"</Description>
+          <Options moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
+          <Color>FF8000</Color>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2240</ID>
+              <Description>"Crafting consumes no inventory resources"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,NMS.exe,44 29 7B 18 45 2B E7) // should be unique
+alloc(newmem,$100,INJECT)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+ // sub [rbx+18],r15d
+  sub r12d,r15d
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop 2
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db 44 29 7B 18 45 2B E7
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: NMS.exe+49CF90
+
+NMS.exe+49CF69: 0F 1F 80 00 00 00 00  - nop dword ptr [rax+00000000]
+NMS.exe+49CF70: 48 8D 53 10           - lea rdx,[rbx+10]
+NMS.exe+49CF74: 48 8D 4E 10           - lea rcx,[rsi+10]
+NMS.exe+49CF78: E8 93 6A 0E 01        - call NMS.exe+1583A10
+NMS.exe+49CF7D: 84 C0                 - test al,al
+NMS.exe+49CF7F: 0F 85 8C 00 00 00     - jne NMS.exe+49D011
+NMS.exe+49CF85: 48 83 C3 30           - add rbx,30
+NMS.exe+49CF89: 48 3B DF              - cmp rbx,rdi
+NMS.exe+49CF8C: 75 E2                 - jne NMS.exe+49CF70
+NMS.exe+49CF8E: 33 DB                 - xor ebx,ebx
+// ---------- INJECTING HERE ----------
+NMS.exe+49CF90: 44 29 7B 18           - sub [rbx+18],r15d
+// ---------- DONE INJECTING  ----------
+NMS.exe+49CF94: 45 2B E7              - sub r12d,r15d
+NMS.exe+49CF97: 49 83 C6 08           - add r14,08
+NMS.exe+49CF9B: 49 8D 9D 90 00 00 00  - lea rbx,[r13+00000090]
+NMS.exe+49CFA2: 4C 3B 75 6F           - cmp r14,[rbp+6F]
+NMS.exe+49CFA6: 75 98                 - jne NMS.exe+49CF40
+NMS.exe+49CFA8: 4C 8B 75 C7           - mov r14,[rbp-39]
+NMS.exe+49CFAC: 8B 4D C3              - mov ecx,[rbp-3D]
+NMS.exe+49CFAF: 4C 8B 7D 5F           - mov r15,[rbp+5F]
+NMS.exe+49CFB3: 85 C9                 - test ecx,ecx
+NMS.exe+49CFB5: B8 00 00 00 00        - mov eax,00000000
+}
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>2327</ID>
+              <Description>"Unlimited Refiner Fuel"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,NMS.exe,44 89 7F 18 4C 8B 7C 24 38) // should be unique
+alloc(newmem,$1000,INJECT)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  //mov [rdi+18],r15d
+  mov [rdi+18],#100
+  mov r15,[rsp+38]
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop 4
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db 44 89 7F 18 4C 8B 7C 24 38
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: NMS.exe+DD65D0
+
+NMS.exe+DD65B1: 75 28                          - jne NMS.exe+DD65DB
+NMS.exe+DD65B3: 48 83 C7 30                    - add rdi,30
+NMS.exe+DD65B7: 49 3B FE                       - cmp rdi,r14
+NMS.exe+DD65BA: 75 E5                          - jne NMS.exe+DD65A1
+NMS.exe+DD65BC: 33 C9                          - xor ecx,ecx
+NMS.exe+DD65BE: 8B F9                          - mov edi,ecx
+NMS.exe+DD65C0: 45 85 FF                       - test r15d,r15d
+NMS.exe+DD65C3: 44 0F 4E F9                    - cmovle r15d,ecx
+NMS.exe+DD65C7: 44 3B 7B 20                    - cmp r15d,[rbx+20]
+NMS.exe+DD65CB: 44 0F 4D 7B 20                 - cmovge r15d,[rbx+20]
+// ---------- INJECTING HERE ----------
+NMS.exe+DD65D0: 44 89 7F 18                    - mov [rdi+18],r15d
+// ---------- DONE INJECTING  ----------
+NMS.exe+DD65D4: 4C 8B 7C 24 38                 - mov r15,[rsp+38]
+NMS.exe+DD65D9: EB 21                          - jmp NMS.exe+DD65FC
+NMS.exe+DD65DB: 81 BE EC 00 00 00 00 01 00 00  - cmp [rsi+000000EC],00000100
+NMS.exe+DD65E5: 73 0F                          - jae NMS.exe+DD65F6
+NMS.exe+DD65E7: 48 8D 8E E8 00 00 00           - lea rcx,[rsi+000000E8]
+NMS.exe+DD65EE: 48 8B D7                       - mov rdx,rdi
+NMS.exe+DD65F1: E8 0A B1 62 FF                 - call NMS.exe+401700
+NMS.exe+DD65F6: 33 C9                          - xor ecx,ecx
+NMS.exe+DD65F8: EB C6                          - jmp NMS.exe+DD65C0
+NMS.exe+DD65FA: 33 C9                          - xor ecx,ecx
+}
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>2332</ID>
+              <Description>"Unlimited Refiner Resources"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,NMS.exe,42 2B 54 39 10) // should be unique
+alloc(newmem,$1000,INJECT)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  // sub edx,[rcx+r15+10]
+  jmp return
+
+INJECT:
+  jmp newmem
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db 42 2B 54 39 10
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: NMS.exe+E258CA
+
+NMS.exe+E258A7: 44 8B C6        - mov r8d,esi
+NMS.exe+E258AA: 48 8D 0C 40     - lea rcx,[rax+rax*2]
+NMS.exe+E258AE: 48 8B 43 78     - mov rax,[rbx+78]
+NMS.exe+E258B2: 48 8D 14 C8     - lea rdx,[rax+rcx*8]
+NMS.exe+E258B6: 48 8B CF        - mov rcx,rdi
+NMS.exe+E258B9: E8 22 1A 00 00  - call NMS.exe+E272E0
+NMS.exe+E258BE: 48 85 C0        - test rax,rax
+NMS.exe+E258C1: 74 37           - je NMS.exe+E258FA
+NMS.exe+E258C3: 48 8B 4B 78     - mov rcx,[rbx+78]
+NMS.exe+E258C7: 8B 50 18        - mov edx,[rax+18]
+// ---------- INJECTING HERE ----------
+NMS.exe+E258CA: 42 2B 54 39 10  - sub edx,[rcx+r15+10]
+// ---------- DONE INJECTING  ----------
+NMS.exe+E258CF: 89 50 18        - mov [rax+18],edx
+NMS.exe+E258D2: 48 8B 4B 78     - mov rcx,[rbx+78]
+NMS.exe+E258D6: 42 3B 54 39 10  - cmp edx,[rcx+r15+10]
+NMS.exe+E258DB: 7D 1D           - jnl NMS.exe+E258FA
+NMS.exe+E258DD: 83 FA 01        - cmp edx,01
+NMS.exe+E258E0: 7F 18           - jg NMS.exe+E258FA
+NMS.exe+E258E2: 0F 10 48 10     - movups xmm1,[rax+10]
+NMS.exe+E258E6: 48 8D 4F 50     - lea rcx,[rdi+50]
+NMS.exe+E258EA: 45 33 C0        - xor r8d,r8d
+NMS.exe+E258ED: 0F 29 4D B7     - movaps [rbp-49],xmm1
+}
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2151</ID>
+          <Description>"Inventory &gt;"</Description>
+          <Color>FF8000</Color>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2150</ID>
+              <Description>"Max out current inventory items - (Access inventory to update) (Not an AOB script so may break in the future)"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>define(address,"NMS.exe"+21F2BF2)
+define(bytes,8B 42 18 89 41 18)
+
+[ENABLE]
+assert(address,bytes)
+
+{$lua}
+if syntaxcheck then return end
+timer = createTimer(nil, false)
+timer.Interval = 800
+timer.OnTimer = function(timer)
+    getAddressList().getMemoryRecordByDescription("Max out current inventory items - (Access inventory to update) (Not an AOB script so may break in the future)").Active=false
+    timer.Enabled = false
+    timer.destroy()
+end
+{$asm}
+
+alloc(newmem,$100,"NMS.exe"+21F0F12)
+
+label(code)
+label(return)
+
+newmem:
+  mov eax,[rdx+20]
+  mov [rdx+18],eax
+code:
+  mov eax,[rdx+18]
+  mov [rcx+18],eax
+  jmp return
+
+address:
+  jmp newmem
+  nop
+return:
+
+{$lua}
+if syntaxcheck then return end
+timer.Enabled = true
+{$asm}
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+address:
+  db bytes
+  // mov eax,[rdx+18]
+  // mov [rcx+18],eax
+
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: NMS.exe+21F2BF2
+
+NMS.exe+21F2BD5: 57              - push rdi
+NMS.exe+21F2BD6: 48 83 EC 20     - sub rsp,20
+NMS.exe+21F2BDA: 0F 10 02        - movups xmm0,[rdx]
+NMS.exe+21F2BDD: 48 8B DA        - mov rbx,rdx
+NMS.exe+21F2BE0: 48 8B F9        - mov rdi,rcx
+NMS.exe+21F2BE3: 0F 11 01        - movups [rcx],xmm0
+NMS.exe+21F2BE6: 8B 42 10        - mov eax,[rdx+10]
+NMS.exe+21F2BE9: 89 41 10        - mov [rcx+10],eax
+NMS.exe+21F2BEC: 8B 42 14        - mov eax,[rdx+14]
+NMS.exe+21F2BEF: 89 41 14        - mov [rcx+14],eax
+// ---------- INJECTING HERE ----------
+NMS.exe+21F2BF2: 8B 42 18        - mov eax,[rdx+18]
+// ---------- DONE INJECTING  ----------
+NMS.exe+21F2BF5: 89 41 18        - mov [rcx+18],eax
+NMS.exe+21F2BF8: 8B 42 1C        - mov eax,[rdx+1C]
+NMS.exe+21F2BFB: 89 41 1C        - mov [rcx+1C],eax
+NMS.exe+21F2BFE: 8B 42 20        - mov eax,[rdx+20]
+NMS.exe+21F2C01: 48 83 C2 24     - add rdx,24
+NMS.exe+21F2C05: 89 41 20        - mov [rcx+20],eax
+NMS.exe+21F2C08: 48 83 C1 24     - add rcx,24
+NMS.exe+21F2C0C: E8 DF 5F 21 FE  - call NMS.exe+408BF0
+NMS.exe+21F2C11: 0F B6 43 28     - movzx eax,byte ptr [rbx+28]
+NMS.exe+21F2C15: 48 8B 5C 24 30  - mov rbx,[rsp+30]
+}
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2274</ID>
+          <Description>"General &gt;"</Description>
+          <Options moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
+          <Color>FF8000</Color>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2273</ID>
+              <Description>"Remove All Technology Overloads"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,NMS.exe,8B 40 20 48 83 C4 20) // should be unique
+alloc(newmem,$100,INJECT)
+
+label(code)
+label(return)
+
+newmem:
+  mov [rax+20],0
+
+code:
+  mov eax,[rax+20]
+  add rsp,20
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop 2
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db 8B 40 20 48 83 C4 20
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: NMS.exe+40BCF2
+
+NMS.exe+40BCC2: 74 37                 - je NMS.exe+40BCFB
+NMS.exe+40BCC4: 48 81 C1 F0 01 00 00  - add rcx,000001F0
+NMS.exe+40BCCB: 48 89 5C 24 30        - mov [rsp+30],rbx
+NMS.exe+40BCD0: E8 2B 14 F7 FF        - call NMS.exe+37D100
+NMS.exe+40BCD5: 48 8B 5C 24 30        - mov rbx,[rsp+30]
+NMS.exe+40BCDA: 48 8D 0C 80           - lea rcx,[rax+rax*4]
+NMS.exe+40BCDE: 48 8B 87 00 02 00 00  - mov rax,[rdi+00000200]
+NMS.exe+40BCE5: 48 8D 04 C8           - lea rax,[rax+rcx*8]
+NMS.exe+40BCE9: 48 3B 87 08 02 00 00  - cmp rax,[rdi+00000208]
+NMS.exe+40BCF0: 74 09                 - je NMS.exe+40BCFB
+// ---------- INJECTING HERE ----------
+NMS.exe+40BCF2: 8B 40 20              - mov eax,[rax+20]
+// ---------- DONE INJECTING  ----------
+NMS.exe+40BCF5: 48 83 C4 20           - add rsp,20
+NMS.exe+40BCF9: 5F                    - pop rdi
+NMS.exe+40BCFA: C3                    - ret 
+NMS.exe+40BCFB: 33 C0                 - xor eax,eax
+NMS.exe+40BCFD: 48 83 C4 20           - add rsp,20
+NMS.exe+40BD01: 5F                    - pop rdi
+NMS.exe+40BD02: C3                    - ret 
+NMS.exe+40BD03: CC                    - int 3 
+NMS.exe+40BD04: CC                    - int 3 
+NMS.exe+40BD05: CC                    - int 3 
+}
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>37</ID>
+              <Description>"Free Items - Plus 600 Mill in Units"</Description>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,NMS.exe,44 2B C0 45 33 DB 44 89 81 BC)
+alloc(newmem,$100,INJECT)
+
+label(code)
+label(return addcredits)
+
+newmem:
+
+code:
+  cmp r8d,23C34600
+  jl addcredits
+  add r8d,eax
+  xor r11d,r11d
+  jmp return
+
+  addcredits:
+  push eax
+  mov eax,23C34600
+  mov r8d,eax
+  pop eax
+  xor r11d,r11d
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db 44 2B C0 45 33 DB
+
+unregistersymbol(*)
+dealloc(*)
+
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>1973</ID>
+              <Description>"Money - (Access Inventory to Get Units)"</Description>
+              <Options moHideChildren="1"/>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(AOBNanites,NMS.exe,8B 88 4C B6 00 00 89 8F)
+alloc(newmem,$100,AOBNanites)
+label(code)
+label(return unitBasePointer)
+
+newmem:
+
+code:
+  mov [unitBasePointer],rax
+  mov ecx,[rax+0000B64C]
+  jmp return
+
+unitBasePointer:
+dq 0
+
+AOBNanites:
+  jmp newmem
+  nop
+return:
+registersymbol(AOBNanites unitBasePointer)
+
+[DISABLE]
+
+AOBNanites:
+  db 8B 88 4C B6 00 00
+
+unregistersymbol(*)
+dealloc(*)
+
+{
+// ORIGINAL CODE - INJECTION POINT: NMS.exe+769AE7
+
+NMS.exe+769AA8: F3 0F 58 97 40 1E 00 00  - addss xmm2,[rdi+00001E40]
+NMS.exe+769AB0: F3 0F 11 8F 3C 1E 00 00  - movss [rdi+00001E3C],xmm1
+NMS.exe+769AB8: F3 0F 11 97 40 1E 00 00  - movss [rdi+00001E40],xmm2
+NMS.exe+769AC0: 48 8B 05 61 FA 99 04     - mov rax,[NMS.exe+5109528]
+NMS.exe+769AC7: 48 8B 88 80 CF 89 00     - mov rcx,[rax+0089CF80]
+NMS.exe+769ACE: 48 8B 41 10              - mov rax,[rcx+10]
+NMS.exe+769AD2: 48 83 C1 10              - add rcx,10
+NMS.exe+769AD6: FF 50 38                 - call qword ptr [rax+38]
+NMS.exe+769AD9: C6 87 78 64 01 00 00     - mov byte ptr [rdi+00016478],00
+NMS.exe+769AE0: 48 8B 05 41 FA 99 04     - mov rax,[NMS.exe+5109528]
+// ---------- INJECTING HERE ----------
+NMS.exe+769AE7: 8B 88 4C B6 00 00        - mov ecx,[rax+0000B64C]
+// ---------- DONE INJECTING  ----------
+NMS.exe+769AED: 89 8F A4 2C 00 00        - mov [rdi+00002CA4],ecx
+NMS.exe+769AF3: 48 8B 05 2E FA 99 04     - mov rax,[NMS.exe+5109528]
+NMS.exe+769AFA: 8B 88 54 B6 00 00        - mov ecx,[rax+0000B654]
+NMS.exe+769B00: 89 8F A8 2C 00 00        - mov [rdi+00002CA8],ecx
+NMS.exe+769B06: 48 8B 05 1B FA 99 04     - mov rax,[NMS.exe+5109528]
+NMS.exe+769B0D: 8B 88 50 B6 00 00        - mov ecx,[rax+0000B650]
+NMS.exe+769B13: 89 8F AC 2C 00 00        - mov [rdi+00002CAC],ecx
+NMS.exe+769B19: 45 33 E4                 - xor r12d,r12d
+NMS.exe+769B1C: 0F 29 B4 24 B0 00 00 00  - movaps [rsp+000000B0],xmm6
+NMS.exe+769B24: 45 0F 57 C9              - xorps xmm9,xmm9
+}
+</AssemblerScript>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>2089</ID>
+                  <Description>"Units"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <Color>4080FF</Color>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>unitBasePointer</Address>
+                  <Offsets>
+                    <Offset>B64C</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>2095</ID>
+                  <Description>"Nanites"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <Color>4080FF</Color>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>unitBasePointer</Address>
+                  <Offsets>
+                    <Offset>B650</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>2097</ID>
+                  <Description>"Quicksilver"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <Color>4080FF</Color>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>unitBasePointer</Address>
+                  <Offsets>
+                    <Offset>B654</Offset>
+                  </Offsets>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>2140</ID>
+              <Description>"Get Race &amp; Faction Standings (Exit Ship to get Standings)"</Description>
+              <Options moHideChildren="1"/>
+              <Color>FBBF84</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,NMS.exe,48 8B 40 10 4C 8D 4C 24 40 48 89 84 24 B0) // should be unique
+alloc(newmem,$100,INJECT)
+
+label(code)
+label(return time)
+registersymbol(time)
+
+newmem:
+cmp [rax+4],0 // This is Current Time Pointer
+jne code
+mov [time],rax // Time
+
+code:
+  mov rax,[rax+10]
+  lea r9,[rsp+40]
+  jmp return
+
+  time:
+  dq 0
+
+INJECT:
+  jmp newmem
+  nop 4
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db 48 8B 40 10 4C 8D 4C 24 40
+
+unregistersymbol(*)
+dealloc(*)
+
+{
+// ORIGINAL CODE - INJECTION POINT: NMS.exe+5004D6
+
+NMS.exe+5004AB: 0F 85 0B 01 00 00        - jne NMS.exe+5005BC
+NMS.exe+5004B1: 48 8B D6                 - mov rdx,rsi
+NMS.exe+5004B4: 48 8D 4B 18              - lea rcx,[rbx+18]
+NMS.exe+5004B8: E8 83 DE DA FF           - call NMS.exe+2AE340
+NMS.exe+5004BD: 48 8D 0C 40              - lea rcx,[rax+rax*2]
+NMS.exe+5004C1: 48 8B 43 28              - mov rax,[rbx+28]
+NMS.exe+5004C5: 48 C1 E1 03              - shl rcx,03
+NMS.exe+5004C9: 48 03 C1                 - add rax,rcx
+NMS.exe+5004CC: 48 3B 43 30              - cmp rax,[rbx+30]
+NMS.exe+5004D0: 0F 84 F7 01 00 00        - je NMS.exe+5006CD
+// ---------- INJECTING HERE ----------
+NMS.exe+5004D6: 48 8B 40 10              - mov rax,[rax+10]
+// ---------- DONE INJECTING  ----------
+NMS.exe+5004DA: 4C 8D 4C 24 40           - lea r9,[rsp+40]
+NMS.exe+5004DF: 48 89 84 24 B0 00 00 00  - mov [rsp+000000B0],rax
+NMS.exe+5004E7: 4C 8B C5                 - mov r8,rbp
+NMS.exe+5004EA: 48 8D 84 24 B0 00 00 00  - lea rax,[rsp+000000B0]
+NMS.exe+5004F2: 48 8B D6                 - mov rdx,rsi
+NMS.exe+5004F5: 49 8B CE                 - mov rcx,r14
+NMS.exe+5004F8: 48 89 44 24 20           - mov [rsp+20],rax
+NMS.exe+5004FD: E8 FE AA FE FF           - call NMS.exe+4EB000
+NMS.exe+500502: 4D 8B 46 78              - mov r8,[r14+78]
+NMS.exe+500506: 41 8B 56 74              - mov edx,[r14+74]
+}
+</AssemblerScript>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>2117</ID>
+                  <Description>"LifeForm Standings &gt;"</Description>
+                  <Color>5BC4E6</Color>
+                  <GroupHeader>1</GroupHeader>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>2111</ID>
+                      <Description>"Gek Standing Total"</Description>
+                      <ShowAsSigned>0</ShowAsSigned>
+                      <Color>4080FF</Color>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>[time]-FC8</Address>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>2116</ID>
+                      <Description>"Vy'keen Standing Total"</Description>
+                      <ShowAsSigned>0</ShowAsSigned>
+                      <Color>4080FF</Color>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>[time]-1448</Address>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>2113</ID>
+                      <Description>"Korvax Standing Total"</Description>
+                      <ShowAsSigned>0</ShowAsSigned>
+                      <Color>4080FF</Color>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>[time]-C98</Address>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>2118</ID>
+                  <Description>"Faction Standings &gt;"</Description>
+                  <Color>5BC4E6</Color>
+                  <GroupHeader>1</GroupHeader>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>2143</ID>
+                      <Description>"Merchants Guild Total"</Description>
+                      <ShowAsSigned>0</ShowAsSigned>
+                      <Color>4080FF</Color>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>[time]+88</Address>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>2120</ID>
+                      <Description>"Mercenaries Guild Total"</Description>
+                      <ShowAsSigned>0</ShowAsSigned>
+                      <Color>4080FF</Color>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>[time]-728</Address>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>2121</ID>
+                      <Description>"Explorers Guild Total"</Description>
+                      <ShowAsSigned>0</ShowAsSigned>
+                      <Color>4080FF</Color>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>[time]-11A8</Address>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>2410</ID>
+      <Description>"Test Scripts - Do not use..... Game Crash"</Description>
+      <Options moHideChildren="1"/>
+      <Color>C080FF</Color>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>2407</ID>
+          <Description>"No Boltcaster Over Heat New"</Description>
+          <Color>FBBF84</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,NMS.exe,F3 0F 11 87 34 22 00 00 F3) // should be unique
+alloc(newmem,$1000,INJECT)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  movss [rdi+00002234],xmm0
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop 3
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db F3 0F 11 87 34 22 00 00
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: NMS.exe+1109608
+
+NMS.exe+11095D3: 0F 11 44 24 70           - movups [rsp+70],xmm0
+NMS.exe+11095D8: EB 14                    - jmp NMS.exe+11095EE
+NMS.exe+11095DA: F3 0F 10 1D FA FA BB 01  - movss xmm3,[NMS.exe+2CC90DC]
+NMS.exe+11095E2: 48 8D 55 C0              - lea rdx,[rbp-40]
+NMS.exe+11095E6: F3 0F 10 15 42 DE BB 01  - movss xmm2,[NMS.exe+2CC7430]
+NMS.exe+11095EE: 40 88 74 24 28           - mov [rsp+28],sil
+NMS.exe+11095F3: 48 8B CF                 - mov rcx,rdi
+NMS.exe+11095F6: 40 88 74 24 20           - mov [rsp+20],sil
+NMS.exe+11095FB: E8 C0 31 00 00           - call NMS.exe+110C7C0
+NMS.exe+1109600: F3 0F 10 05 9C FC 15 04  - movss xmm0,[NMS.exe+52692A4]
+// ---------- INJECTING HERE ----------
+NMS.exe+1109608: F3 0F 11 87 34 22 00 00  - movss [rdi+00002234],xmm0
+// ---------- DONE INJECTING  ----------
+NMS.exe+1109610: F3 0F 11 B7 30 22 00 00  - movss [rdi+00002230],xmm6
+NMS.exe+1109618: 48 63 8F 2C 0F 00 00     - movsxd  rcx,dword ptr [rdi+00000F2C]
+NMS.exe+110961F: 48 C1 E1 06              - shl rcx,06
+NMS.exe+1109623: 48 81 C1 E0 04 00 00     - add rcx,000004E0
+NMS.exe+110962A: 48 03 CF                 - add rcx,rdi
+NMS.exe+110962D: E8 EE B1 0D FF           - call NMS.exe+1E4820
+NMS.exe+1109632: 0F BF 0D 2F C3 04 02     - movsx ecx,word ptr [NMS.exe+3155968]
+NMS.exe+1109639: 48 8B D0                 - mov rdx,rax
+NMS.exe+110963C: E8 CF AA 31 01           - call NMS.exe+2424110
+NMS.exe+1109641: 48 8B F0                 - mov rsi,rax
+}
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2256</ID>
+          <Description>"No Boltcaster Over Heat"</Description>
+          <Color>FBBF84</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+alloc(NOBLASTERCOOLMEM,9)
+registersymbol(NOBLASTERCOOLMEM)
+aobscanmodule(NOBLASTERCOOL,NMS.exe,F3 0F 11 87 ?? 22 00 00 F3)
+alloc(newmem,$1000,NOBLASTERCOOL)
+alloc(clipSize,4)
+alloc(shotSpeed,4)
+
+label(code)
+label(return)
+
+NOBLASTERCOOLMEM:
+readmem(NOBLASTERCOOL,9)
+
+newmem:
+//xmm0 : 118.60
+//xmm0 : 57.82
+//xmm6 : 0.13
+// mov [shotSpeed],(float)0.1
+ mov [clipSize],(float)0.13
+// movss xmm0,[shotSpeed]
+ movss xmm6,[clipSize]
+// movss xmm6,[rdi+00001E10]
+// movss xmm0,[rdi+00001E14]
+code:
+  movss [rdi+00002234],xmm0
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop 3
+return:
+registersymbol(NOBLASTERCOOL)
+
+[DISABLE]
+
+NOBLASTERCOOL:
+readmem(NOBLASTERCOOLMEM,9)
+
+unregistersymbol(*)
+dealloc(*)
+
+{
+// ORIGINAL CODE - INJECTION POINT: NMS.exe+1108B28
+
+NMS.exe+1108AF3: 0F 11 44 24 70           - movups [rsp+70],xmm0
+NMS.exe+1108AF8: EB 14                    - jmp NMS.exe+1108B0E
+NMS.exe+1108AFA: F3 0F 10 1D AA E4 BB 01  - movss xmm3,[NMS.exe+2CC6FAC]
+NMS.exe+1108B02: 48 8D 55 C0              - lea rdx,[rbp-40]
+NMS.exe+1108B06: F3 0F 10 15 F2 C7 BB 01  - movss xmm2,[NMS.exe+2CC5300]
+NMS.exe+1108B0E: 40 88 74 24 28           - mov [rsp+28],sil
+NMS.exe+1108B13: 48 8B CF                 - mov rcx,rdi
+NMS.exe+1108B16: 40 88 74 24 20           - mov [rsp+20],sil
+NMS.exe+1108B1B: E8 C0 31 00 00           - call NMS.exe+110BCE0
+NMS.exe+1108B20: F3 0F 10 05 E4 E3 15 04  - movss xmm0,[NMS.exe+5266F0C]
+// ---------- INJECTING HERE ----------
+NMS.exe+1108B28: F3 0F 11 87 04 22 00 00  - movss [rdi+00002204],xmm0
+// ---------- DONE INJECTING  ----------
+NMS.exe+1108B30: F3 0F 11 B7 00 22 00 00  - movss [rdi+00002200],xmm6
+NMS.exe+1108B38: 48 63 8F 2C 0F 00 00     - movsxd  rcx,dword ptr [rdi+00000F2C]
+NMS.exe+1108B3F: 48 C1 E1 06              - shl rcx,06
+NMS.exe+1108B43: 48 81 C1 E0 04 00 00     - add rcx,000004E0
+NMS.exe+1108B4A: 48 03 CF                 - add rcx,rdi
+NMS.exe+1108B4D: E8 CE BC 0D FF           - call NMS.exe+1E4820
+NMS.exe+1108B52: 0F BF 0D DB AC 04 02     - movsx ecx,word ptr [NMS.exe+3153834]
+NMS.exe+1108B59: 48 8B D0                 - mov rdx,rax
+NMS.exe+1108B5C: E8 CF 98 31 01           - call NMS.exe+2422430
+NMS.exe+1108B61: 48 8B F0                 - mov rsi,rax
+}
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+  <Structures StructVersion="2">
+    <Structure Name="unnamed structure" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+      <Elements>
+        <Element Offset="0" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="00000000" DisplayMethod="unsigned integer"/>
+        <Element Offset="2" Vartype="2 Bytes" Bytesize="2" OffsetHex="00000002" DisplayMethod="unsigned integer"/>
+        <Element Offset="4" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000004" DisplayMethod="unsigned integer"/>
+        <Element Offset="8" Vartype="String" Bytesize="12" OffsetHex="00000008" DisplayMethod="unsigned integer"/>
+        <Element Offset="20" Vartype="4 Bytes" Bytesize="4" RLECount="3" OffsetHex="00000014" DisplayMethod="unsigned integer"/>
+        <Element Offset="32" Vartype="String" Bytesize="11" OffsetHex="00000020" DisplayMethod="unsigned integer"/>
+        <Element Offset="43" Vartype="Byte" Bytesize="1" OffsetHex="0000002B" DisplayMethod="unsigned integer"/>
+        <Element Offset="44" Vartype="4 Bytes" Bytesize="4" RLECount="3" OffsetHex="0000002C" DisplayMethod="unsigned integer"/>
+        <Element Offset="56" Vartype="String" Bytesize="10" OffsetHex="00000038" DisplayMethod="unsigned integer"/>
+        <Element Offset="66" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="00000042" DisplayMethod="unsigned integer"/>
+        <Element Offset="68" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000044" DisplayMethod="unsigned integer"/>
+        <Element Offset="72" Vartype="Float" Bytesize="4" OffsetHex="00000048" DisplayMethod="unsigned integer"/>
+        <Element Offset="76" Vartype="4 Bytes" Bytesize="4" OffsetHex="0000004C" DisplayMethod="unsigned integer"/>
+        <Element Offset="80" Vartype="String" Bytesize="15" OffsetHex="00000050" DisplayMethod="unsigned integer"/>
+        <Element Offset="95" Vartype="Byte" Bytesize="1" OffsetHex="0000005F" DisplayMethod="unsigned integer"/>
+        <Element Offset="96" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000060" DisplayMethod="unsigned integer"/>
+        <Element Offset="104" Vartype="String" Bytesize="13" OffsetHex="00000068" DisplayMethod="unsigned integer"/>
+        <Element Offset="117" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="00000075" DisplayMethod="unsigned integer"/>
+        <Element Offset="120" Vartype="4 Bytes" Bytesize="4" RLECount="20" OffsetHex="00000078" DisplayMethod="unsigned integer"/>
+        <Element Offset="200" Vartype="String" Bytesize="13" OffsetHex="000000C8" DisplayMethod="unsigned integer"/>
+        <Element Offset="213" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="000000D5" DisplayMethod="unsigned integer"/>
+        <Element Offset="216" Vartype="4 Bytes" Bytesize="4" RLECount="8" OffsetHex="000000D8" DisplayMethod="unsigned integer"/>
+        <Element Offset="248" Vartype="String" Bytesize="13" OffsetHex="000000F8" DisplayMethod="unsigned integer"/>
+        <Element Offset="261" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="00000105" DisplayMethod="unsigned integer"/>
+        <Element Offset="264" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000108" DisplayMethod="unsigned integer"/>
+        <Element Offset="272" Vartype="String" Bytesize="16" OffsetHex="00000110" DisplayMethod="unsigned integer"/>
+        <Element Offset="288" Vartype="4 Bytes" Bytesize="4" RLECount="8" OffsetHex="00000120" DisplayMethod="unsigned integer"/>
+        <Element Offset="320" Vartype="String" Bytesize="13" OffsetHex="00000140" DisplayMethod="unsigned integer"/>
+        <Element Offset="333" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="0000014D" DisplayMethod="unsigned integer"/>
+        <Element Offset="335" Vartype="2 Bytes" Bytesize="2" OffsetHex="0000014F" DisplayMethod="unsigned integer"/>
+        <Element Offset="337" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="00000151" DisplayMethod="unsigned integer"/>
+        <Element Offset="340" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000154" DisplayMethod="unsigned integer"/>
+        <Element Offset="344" Vartype="String" Bytesize="15" OffsetHex="00000158" DisplayMethod="unsigned integer"/>
+        <Element Offset="359" Vartype="Byte" Bytesize="1" OffsetHex="00000167" DisplayMethod="unsigned integer"/>
+        <Element Offset="360" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000168" DisplayMethod="unsigned integer"/>
+        <Element Offset="368" Vartype="String" Bytesize="16" OffsetHex="00000170" DisplayMethod="unsigned integer"/>
+        <Element Offset="384" Vartype="4 Bytes" Bytesize="4" RLECount="8" OffsetHex="00000180" DisplayMethod="unsigned integer"/>
+        <Element Offset="416" Vartype="String" Bytesize="13" OffsetHex="000001A0" DisplayMethod="unsigned integer"/>
+        <Element Offset="429" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="000001AD" DisplayMethod="unsigned integer"/>
+        <Element Offset="432" Vartype="4 Bytes" Bytesize="4" RLECount="20" OffsetHex="000001B0" DisplayMethod="unsigned integer"/>
+        <Element Offset="512" Vartype="String" Bytesize="16" OffsetHex="00000200" DisplayMethod="unsigned integer"/>
+        <Element Offset="528" Vartype="4 Bytes" Bytesize="4" RLECount="8" OffsetHex="00000210" DisplayMethod="unsigned integer"/>
+        <Element Offset="560" Vartype="String" Bytesize="14" OffsetHex="00000230" DisplayMethod="unsigned integer"/>
+        <Element Offset="574" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="0000023E" DisplayMethod="unsigned integer"/>
+        <Element Offset="576" Vartype="4 Bytes" Bytesize="4" RLECount="14" OffsetHex="00000240" DisplayMethod="unsigned integer"/>
+        <Element Offset="632" Vartype="String" Bytesize="14" OffsetHex="00000278" DisplayMethod="unsigned integer"/>
+        <Element Offset="646" Vartype="Byte" Bytesize="1" OffsetHex="00000286" DisplayMethod="unsigned integer"/>
+        <Element Offset="647" Vartype="2 Bytes" Bytesize="2" OffsetHex="00000287" DisplayMethod="unsigned integer"/>
+        <Element Offset="649" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="00000289" DisplayMethod="unsigned integer"/>
+        <Element Offset="652" Vartype="4 Bytes" Bytesize="4" OffsetHex="0000028C" DisplayMethod="unsigned integer"/>
+        <Element Offset="656" Vartype="String" Bytesize="16" OffsetHex="00000290" DisplayMethod="unsigned integer"/>
+        <Element Offset="672" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="000002A0" DisplayMethod="unsigned integer"/>
+        <Element Offset="680" Vartype="String" Bytesize="14" OffsetHex="000002A8" DisplayMethod="unsigned integer"/>
+        <Element Offset="694" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="000002B6" DisplayMethod="unsigned integer"/>
+        <Element Offset="696" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="000002B8" DisplayMethod="unsigned integer"/>
+        <Element Offset="704" Vartype="String" Bytesize="15" OffsetHex="000002C0" DisplayMethod="unsigned integer"/>
+        <Element Offset="719" Vartype="Byte" Bytesize="1" OffsetHex="000002CF" DisplayMethod="unsigned integer"/>
+        <Element Offset="720" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="000002D0" DisplayMethod="unsigned integer"/>
+        <Element Offset="728" Vartype="String" Bytesize="12" OffsetHex="000002D8" DisplayMethod="unsigned integer"/>
+        <Element Offset="740" Vartype="4 Bytes" Bytesize="4" RLECount="3" OffsetHex="000002E4" DisplayMethod="unsigned integer"/>
+        <Element Offset="752" Vartype="String" Bytesize="10" OffsetHex="000002F0" DisplayMethod="unsigned integer"/>
+        <Element Offset="762" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="000002FA" DisplayMethod="unsigned integer"/>
+        <Element Offset="764" Vartype="4 Bytes" Bytesize="4" OffsetHex="000002FC" DisplayMethod="unsigned integer"/>
+        <Element Offset="768" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000300" DisplayMethod="hexadecimal"/>
+        <Element Offset="772" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000304" DisplayMethod="unsigned integer"/>
+        <Element Offset="776" Vartype="String" Bytesize="14" OffsetHex="00000308" DisplayMethod="unsigned integer"/>
+        <Element Offset="790" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="00000316" DisplayMethod="unsigned integer"/>
+        <Element Offset="792" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000318" DisplayMethod="unsigned integer"/>
+        <Element Offset="800" Vartype="String" Bytesize="15" OffsetHex="00000320" DisplayMethod="unsigned integer"/>
+        <Element Offset="815" Vartype="Byte" Bytesize="1" OffsetHex="0000032F" DisplayMethod="unsigned integer"/>
+        <Element Offset="816" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000330" DisplayMethod="unsigned integer"/>
+        <Element Offset="824" Vartype="String" Bytesize="16" OffsetHex="00000338" DisplayMethod="unsigned integer"/>
+        <Element Offset="840" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000348" DisplayMethod="unsigned integer"/>
+        <Element Offset="848" Vartype="String" Bytesize="14" OffsetHex="00000350" DisplayMethod="unsigned integer"/>
+        <Element Offset="862" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="0000035E" DisplayMethod="unsigned integer"/>
+        <Element Offset="864" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000360" DisplayMethod="unsigned integer"/>
+        <Element Offset="872" Vartype="String" Bytesize="15" OffsetHex="00000368" DisplayMethod="unsigned integer"/>
+        <Element Offset="887" Vartype="Byte" Bytesize="1" OffsetHex="00000377" DisplayMethod="unsigned integer"/>
+        <Element Offset="888" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000378" DisplayMethod="unsigned integer"/>
+        <Element Offset="896" Vartype="String" Bytesize="14" OffsetHex="00000380" DisplayMethod="unsigned integer"/>
+        <Element Offset="910" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="0000038E" DisplayMethod="unsigned integer"/>
+        <Element Offset="912" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000390" DisplayMethod="unsigned integer"/>
+        <Element Offset="920" Vartype="String" Bytesize="15" OffsetHex="00000398" DisplayMethod="unsigned integer"/>
+        <Element Offset="935" Vartype="2 Bytes" Bytesize="2" OffsetHex="000003A7" DisplayMethod="unsigned integer"/>
+        <Element Offset="937" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="000003A9" DisplayMethod="unsigned integer"/>
+        <Element Offset="940" Vartype="4 Bytes" Bytesize="4" OffsetHex="000003AC" DisplayMethod="unsigned integer"/>
+        <Element Offset="944" Vartype="String" Bytesize="13" OffsetHex="000003B0" DisplayMethod="unsigned integer"/>
+        <Element Offset="957" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="000003BD" DisplayMethod="unsigned integer"/>
+        <Element Offset="960" Vartype="Float" Bytesize="4" OffsetHex="000003C0" DisplayMethod="unsigned integer"/>
+        <Element Offset="964" Vartype="4 Bytes" Bytesize="4" OffsetHex="000003C4" DisplayMethod="unsigned integer"/>
+        <Element Offset="968" Vartype="String" Bytesize="11" OffsetHex="000003C8" DisplayMethod="unsigned integer"/>
+        <Element Offset="979" Vartype="Byte" Bytesize="1" OffsetHex="000003D3" DisplayMethod="unsigned integer"/>
+        <Element Offset="980" Vartype="4 Bytes" Bytesize="4" RLECount="9" OffsetHex="000003D4" DisplayMethod="unsigned integer"/>
+        <Element Offset="1016" Vartype="String" Bytesize="16" OffsetHex="000003F8" DisplayMethod="unsigned integer"/>
+        <Element Offset="1032" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000408" DisplayMethod="unsigned integer"/>
+        <Element Offset="1040" Vartype="String" Bytesize="13" OffsetHex="00000410" DisplayMethod="unsigned integer"/>
+        <Element Offset="1053" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="0000041D" DisplayMethod="unsigned integer"/>
+        <Element Offset="1055" Vartype="2 Bytes" Bytesize="2" OffsetHex="0000041F" DisplayMethod="unsigned integer"/>
+        <Element Offset="1057" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="00000421" DisplayMethod="unsigned integer"/>
+        <Element Offset="1060" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000424" DisplayMethod="unsigned integer"/>
+        <Element Offset="1064" Vartype="String" Bytesize="15" OffsetHex="00000428" DisplayMethod="unsigned integer"/>
+        <Element Offset="1079" Vartype="Byte" Bytesize="1" OffsetHex="00000437" DisplayMethod="unsigned integer"/>
+        <Element Offset="1080" Vartype="4 Bytes" Bytesize="4" RLECount="8" OffsetHex="00000438" DisplayMethod="unsigned integer"/>
+        <Element Offset="1112" Vartype="String" Bytesize="16" OffsetHex="00000458" DisplayMethod="unsigned integer"/>
+        <Element Offset="1128" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000468" DisplayMethod="unsigned integer"/>
+        <Element Offset="1136" Vartype="String" Bytesize="15" OffsetHex="00000470" DisplayMethod="unsigned integer"/>
+        <Element Offset="1151" Vartype="Byte" Bytesize="1" OffsetHex="0000047F" DisplayMethod="unsigned integer"/>
+        <Element Offset="1152" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000480" DisplayMethod="unsigned integer"/>
+        <Element Offset="1160" Vartype="String" Bytesize="12" OffsetHex="00000488" DisplayMethod="unsigned integer"/>
+        <Element Offset="1172" Vartype="4 Bytes" Bytesize="4" RLECount="9" OffsetHex="00000494" DisplayMethod="unsigned integer"/>
+        <Element Offset="1208" Vartype="String" Bytesize="11" OffsetHex="000004B8" DisplayMethod="unsigned integer"/>
+        <Element Offset="1219" Vartype="Byte" Bytesize="1" OffsetHex="000004C3" DisplayMethod="unsigned integer"/>
+        <Element Offset="1220" Vartype="4 Bytes" Bytesize="4" RLECount="15" OffsetHex="000004C4" DisplayMethod="unsigned integer"/>
+        <Element Offset="1280" Vartype="String" Bytesize="14" OffsetHex="00000500" DisplayMethod="unsigned integer"/>
+        <Element Offset="1294" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="0000050E" DisplayMethod="unsigned integer"/>
+        <Element Offset="1296" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000510" DisplayMethod="unsigned integer"/>
+        <Element Offset="1304" Vartype="String" Bytesize="12" OffsetHex="00000518" DisplayMethod="unsigned integer"/>
+        <Element Offset="1316" Vartype="4 Bytes" Bytesize="4" RLECount="3" OffsetHex="00000524" DisplayMethod="unsigned integer"/>
+        <Element Offset="1328" Vartype="String" Bytesize="10" OffsetHex="00000530" DisplayMethod="unsigned integer"/>
+        <Element Offset="1338" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="0000053A" DisplayMethod="unsigned integer"/>
+        <Element Offset="1340" Vartype="4 Bytes" Bytesize="4" RLECount="9" OffsetHex="0000053C" DisplayMethod="unsigned integer"/>
+        <Element Offset="1376" Vartype="String" Bytesize="13" OffsetHex="00000560" DisplayMethod="unsigned integer"/>
+        <Element Offset="1389" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="0000056D" DisplayMethod="unsigned integer"/>
+        <Element Offset="1392" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000570" DisplayMethod="unsigned integer"/>
+        <Element Offset="1400" Vartype="String" Bytesize="7" OffsetHex="00000578" DisplayMethod="unsigned integer"/>
+        <Element Offset="1407" Vartype="Byte" Bytesize="1" OffsetHex="0000057F" DisplayMethod="unsigned integer"/>
+        <Element Offset="1408" Vartype="4 Bytes" Bytesize="4" RLECount="4" OffsetHex="00000580" DisplayMethod="unsigned integer"/>
+        <Element Offset="1424" Vartype="String" Bytesize="16" OffsetHex="00000590" DisplayMethod="unsigned integer"/>
+        <Element Offset="1440" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="000005A0" DisplayMethod="unsigned integer"/>
+        <Element Offset="1448" Vartype="String" Bytesize="9" OffsetHex="000005A8" DisplayMethod="unsigned integer"/>
+        <Element Offset="1457" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="000005B1" DisplayMethod="unsigned integer"/>
+        <Element Offset="1460" Vartype="4 Bytes" Bytesize="4" OffsetHex="000005B4" DisplayMethod="unsigned integer"/>
+        <Element Offset="1464" Vartype="4 Bytes" Bytesize="4" OffsetHex="000005B8" DisplayMethod="hexadecimal"/>
+        <Element Offset="1468" Vartype="4 Bytes" Bytesize="4" OffsetHex="000005BC" DisplayMethod="unsigned integer"/>
+        <Element Offset="1472" Vartype="String" Bytesize="9" OffsetHex="000005C0" DisplayMethod="unsigned integer"/>
+        <Element Offset="1481" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="000005C9" DisplayMethod="unsigned integer"/>
+        <Element Offset="1484" Vartype="4 Bytes" Bytesize="4" RLECount="9" OffsetHex="000005CC" DisplayMethod="unsigned integer"/>
+        <Element Offset="1520" Vartype="String" Bytesize="15" OffsetHex="000005F0" DisplayMethod="unsigned integer"/>
+        <Element Offset="1535" Vartype="Byte" Bytesize="1" OffsetHex="000005FF" DisplayMethod="unsigned integer"/>
+        <Element Offset="1536" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000600" DisplayMethod="unsigned integer"/>
+        <Element Offset="1544" Vartype="String" Bytesize="14" OffsetHex="00000608" DisplayMethod="unsigned integer"/>
+        <Element Offset="1558" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="00000616" DisplayMethod="unsigned integer"/>
+        <Element Offset="1560" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000618" DisplayMethod="unsigned integer"/>
+        <Element Offset="1568" Vartype="String" Bytesize="10" OffsetHex="00000620" DisplayMethod="unsigned integer"/>
+        <Element Offset="1578" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="0000062A" DisplayMethod="unsigned integer"/>
+        <Element Offset="1580" Vartype="4 Bytes" Bytesize="4" RLECount="3" OffsetHex="0000062C" DisplayMethod="unsigned integer"/>
+        <Element Offset="1592" Vartype="String" Bytesize="15" OffsetHex="00000638" DisplayMethod="unsigned integer"/>
+        <Element Offset="1607" Vartype="Byte" Bytesize="1" OffsetHex="00000647" DisplayMethod="unsigned integer"/>
+        <Element Offset="1608" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000648" DisplayMethod="unsigned integer"/>
+        <Element Offset="1616" Vartype="String" Bytesize="10" OffsetHex="00000650" DisplayMethod="unsigned integer"/>
+        <Element Offset="1626" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="0000065A" DisplayMethod="unsigned integer"/>
+        <Element Offset="1628" Vartype="4 Bytes" Bytesize="4" RLECount="3" OffsetHex="0000065C" DisplayMethod="unsigned integer"/>
+        <Element Offset="1640" Vartype="String" Bytesize="13" OffsetHex="00000668" DisplayMethod="unsigned integer"/>
+        <Element Offset="1653" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="00000675" DisplayMethod="unsigned integer"/>
+        <Element Offset="1655" Vartype="2 Bytes" Bytesize="2" OffsetHex="00000677" DisplayMethod="unsigned integer"/>
+        <Element Offset="1657" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="00000679" DisplayMethod="unsigned integer"/>
+        <Element Offset="1660" Vartype="4 Bytes" Bytesize="4" OffsetHex="0000067C" DisplayMethod="unsigned integer"/>
+        <Element Offset="1664" Vartype="String" Bytesize="12" OffsetHex="00000680" DisplayMethod="unsigned integer"/>
+        <Element Offset="1676" Vartype="4 Bytes" Bytesize="4" RLECount="3" OffsetHex="0000068C" DisplayMethod="unsigned integer"/>
+        <Element Offset="1688" Vartype="String" Bytesize="9" OffsetHex="00000698" DisplayMethod="unsigned integer"/>
+        <Element Offset="1697" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="000006A1" DisplayMethod="unsigned integer"/>
+        <Element Offset="1700" Vartype="4 Bytes" Bytesize="4" RLECount="3" OffsetHex="000006A4" DisplayMethod="unsigned integer"/>
+        <Element Offset="1712" Vartype="String" Bytesize="13" OffsetHex="000006B0" DisplayMethod="unsigned integer"/>
+        <Element Offset="1725" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="000006BD" DisplayMethod="unsigned integer"/>
+        <Element Offset="1728" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="000006C0" DisplayMethod="unsigned integer"/>
+        <Element Offset="1736" Vartype="String" Bytesize="14" OffsetHex="000006C8" DisplayMethod="unsigned integer"/>
+        <Element Offset="1750" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="000006D6" DisplayMethod="unsigned integer"/>
+        <Element Offset="1752" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="000006D8" DisplayMethod="unsigned integer"/>
+        <Element Offset="1760" Vartype="String" Bytesize="11" OffsetHex="000006E0" DisplayMethod="unsigned integer"/>
+        <Element Offset="1771" Vartype="Byte" Bytesize="1" OffsetHex="000006EB" DisplayMethod="unsigned integer"/>
+        <Element Offset="1772" Vartype="4 Bytes" Bytesize="4" RLECount="3" OffsetHex="000006EC" DisplayMethod="unsigned integer"/>
+        <Element Offset="1784" Vartype="String" Bytesize="15" OffsetHex="000006F8" DisplayMethod="unsigned integer"/>
+        <Element Offset="1799" Vartype="Byte" Bytesize="1" OffsetHex="00000707" DisplayMethod="unsigned integer"/>
+        <Element Offset="1800" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000708" DisplayMethod="unsigned integer"/>
+        <Element Offset="1808" Vartype="String" Bytesize="13" OffsetHex="00000710" DisplayMethod="unsigned integer"/>
+        <Element Offset="1821" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="0000071D" DisplayMethod="unsigned integer"/>
+        <Element Offset="1824" Vartype="4 Bytes" Bytesize="4" RLECount="8" OffsetHex="00000720" DisplayMethod="unsigned integer"/>
+        <Element Offset="1856" Vartype="String" Bytesize="14" OffsetHex="00000740" DisplayMethod="unsigned integer"/>
+        <Element Offset="1870" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="0000074E" DisplayMethod="unsigned integer"/>
+        <Element Offset="1872" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000750" DisplayMethod="unsigned integer"/>
+        <Element Offset="1880" Vartype="String" Bytesize="12" OffsetHex="00000758" DisplayMethod="unsigned integer"/>
+        <Element Offset="1892" Vartype="4 Bytes" Bytesize="4" RLECount="3" OffsetHex="00000764" DisplayMethod="unsigned integer"/>
+        <Element Offset="1904" Vartype="String" Bytesize="15" OffsetHex="00000770" DisplayMethod="unsigned integer"/>
+        <Element Offset="1919" Vartype="Byte" Bytesize="1" OffsetHex="0000077F" DisplayMethod="unsigned integer"/>
+        <Element Offset="1920" Vartype="4 Bytes" Bytesize="4" RLECount="20" OffsetHex="00000780" DisplayMethod="unsigned integer"/>
+        <Element Offset="2000" Vartype="String" Bytesize="12" OffsetHex="000007D0" DisplayMethod="unsigned integer"/>
+        <Element Offset="2012" Vartype="4 Bytes" Bytesize="4" RLECount="3" OffsetHex="000007DC" DisplayMethod="unsigned integer"/>
+        <Element Offset="2024" Vartype="String" Bytesize="13" OffsetHex="000007E8" DisplayMethod="unsigned integer"/>
+        <Element Offset="2037" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="000007F5" DisplayMethod="unsigned integer"/>
+        <Element Offset="2040" Vartype="4 Bytes" Bytesize="4" RLECount="8" OffsetHex="000007F8" DisplayMethod="unsigned integer"/>
+        <Element Offset="2072" Vartype="String" Bytesize="12" OffsetHex="00000818" DisplayMethod="unsigned integer"/>
+        <Element Offset="2084" Vartype="4 Bytes" Bytesize="4" RLECount="9" OffsetHex="00000824" DisplayMethod="unsigned integer"/>
+        <Element Offset="2120" Vartype="String" Bytesize="10" OffsetHex="00000848" DisplayMethod="unsigned integer"/>
+        <Element Offset="2130" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="00000852" DisplayMethod="unsigned integer"/>
+        <Element Offset="2132" Vartype="4 Bytes" Bytesize="4" RLECount="3" OffsetHex="00000854" DisplayMethod="unsigned integer"/>
+        <Element Offset="2144" Vartype="String" Bytesize="13" OffsetHex="00000860" DisplayMethod="unsigned integer"/>
+        <Element Offset="2157" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="0000086D" DisplayMethod="unsigned integer"/>
+        <Element Offset="2160" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000870" DisplayMethod="unsigned integer"/>
+        <Element Offset="2168" Vartype="String" Bytesize="15" OffsetHex="00000878" DisplayMethod="unsigned integer"/>
+        <Element Offset="2183" Vartype="Byte" Bytesize="1" OffsetHex="00000887" DisplayMethod="unsigned integer"/>
+        <Element Offset="2184" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000888" DisplayMethod="unsigned integer"/>
+        <Element Offset="2192" Vartype="String" Bytesize="15" OffsetHex="00000890" DisplayMethod="unsigned integer"/>
+        <Element Offset="2207" Vartype="Byte" Bytesize="1" OffsetHex="0000089F" DisplayMethod="unsigned integer"/>
+        <Element Offset="2208" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="000008A0" DisplayMethod="unsigned integer"/>
+        <Element Offset="2216" Vartype="String" Bytesize="13" OffsetHex="000008A8" DisplayMethod="unsigned integer"/>
+        <Element Offset="2229" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="000008B5" DisplayMethod="unsigned integer"/>
+        <Element Offset="2232" Vartype="4 Bytes" Bytesize="4" RLECount="8" OffsetHex="000008B8" DisplayMethod="unsigned integer"/>
+        <Element Offset="2264" Vartype="String" Bytesize="14" OffsetHex="000008D8" DisplayMethod="unsigned integer"/>
+        <Element Offset="2278" Vartype="Byte" Bytesize="1" OffsetHex="000008E6" DisplayMethod="unsigned integer"/>
+        <Element Offset="2279" Vartype="2 Bytes" Bytesize="2" OffsetHex="000008E7" DisplayMethod="unsigned integer"/>
+        <Element Offset="2281" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="000008E9" DisplayMethod="unsigned integer"/>
+        <Element Offset="2284" Vartype="4 Bytes" Bytesize="4" OffsetHex="000008EC" DisplayMethod="unsigned integer"/>
+        <Element Offset="2288" Vartype="String" Bytesize="16" OffsetHex="000008F0" DisplayMethod="unsigned integer"/>
+        <Element Offset="2304" Vartype="4 Bytes" Bytesize="4" RLECount="32" OffsetHex="00000900" DisplayMethod="unsigned integer"/>
+        <Element Offset="2432" Vartype="String" Bytesize="14" OffsetHex="00000980" DisplayMethod="unsigned integer"/>
+        <Element Offset="2446" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="0000098E" DisplayMethod="unsigned integer"/>
+        <Element Offset="2448" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000990" DisplayMethod="unsigned integer"/>
+        <Element Offset="2456" Vartype="String" Bytesize="14" OffsetHex="00000998" DisplayMethod="unsigned integer"/>
+        <Element Offset="2470" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="000009A6" DisplayMethod="unsigned integer"/>
+        <Element Offset="2472" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="000009A8" DisplayMethod="unsigned integer"/>
+        <Element Offset="2480" Vartype="String" Bytesize="15" OffsetHex="000009B0" DisplayMethod="unsigned integer"/>
+        <Element Offset="2495" Vartype="Byte" Bytesize="1" OffsetHex="000009BF" DisplayMethod="unsigned integer"/>
+        <Element Offset="2496" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="000009C0" DisplayMethod="unsigned integer"/>
+        <Element Offset="2504" Vartype="String" Bytesize="16" OffsetHex="000009C8" DisplayMethod="unsigned integer"/>
+        <Element Offset="2520" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="000009D8" DisplayMethod="unsigned integer"/>
+        <Element Offset="2528" Vartype="String" Bytesize="13" OffsetHex="000009E0" DisplayMethod="unsigned integer"/>
+        <Element Offset="2541" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="000009ED" DisplayMethod="unsigned integer"/>
+        <Element Offset="2544" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="000009F0" DisplayMethod="unsigned integer"/>
+        <Element Offset="2552" Vartype="String" Bytesize="12" OffsetHex="000009F8" DisplayMethod="unsigned integer"/>
+        <Element Offset="2564" Vartype="4 Bytes" Bytesize="4" RLECount="3" OffsetHex="00000A04" DisplayMethod="unsigned integer"/>
+        <Element Offset="2576" Vartype="String" Bytesize="14" OffsetHex="00000A10" DisplayMethod="unsigned integer"/>
+        <Element Offset="2590" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="00000A1E" DisplayMethod="unsigned integer"/>
+        <Element Offset="2592" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000A20" DisplayMethod="unsigned integer"/>
+        <Element Offset="2600" Vartype="String" Bytesize="12" OffsetHex="00000A28" DisplayMethod="unsigned integer"/>
+        <Element Offset="2612" Vartype="4 Bytes" Bytesize="4" RLECount="3" OffsetHex="00000A34" DisplayMethod="unsigned integer"/>
+        <Element Offset="2624" Vartype="String" Bytesize="16" OffsetHex="00000A40" DisplayMethod="unsigned integer"/>
+        <Element Offset="2640" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000A50" DisplayMethod="unsigned integer"/>
+        <Element Offset="2648" Vartype="String" Bytesize="10" OffsetHex="00000A58" DisplayMethod="unsigned integer"/>
+        <Element Offset="2658" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="00000A62" DisplayMethod="unsigned integer"/>
+        <Element Offset="2660" Vartype="4 Bytes" Bytesize="4" RLECount="3" OffsetHex="00000A64" DisplayMethod="unsigned integer"/>
+        <Element Offset="2672" Vartype="String" Bytesize="14" OffsetHex="00000A70" DisplayMethod="unsigned integer"/>
+        <Element Offset="2686" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="00000A7E" DisplayMethod="unsigned integer"/>
+        <Element Offset="2688" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000A80" DisplayMethod="unsigned integer"/>
+        <Element Offset="2696" Vartype="String" Bytesize="9" OffsetHex="00000A88" DisplayMethod="unsigned integer"/>
+        <Element Offset="2705" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="00000A91" DisplayMethod="unsigned integer"/>
+        <Element Offset="2708" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000A94" DisplayMethod="unsigned integer"/>
+        <Element Offset="2712" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000A98" DisplayMethod="hexadecimal"/>
+        <Element Offset="2716" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000A9C" DisplayMethod="unsigned integer"/>
+        <Element Offset="2720" Vartype="String" Bytesize="12" OffsetHex="00000AA0" DisplayMethod="unsigned integer"/>
+        <Element Offset="2732" Vartype="4 Bytes" Bytesize="4" RLECount="3" OffsetHex="00000AAC" DisplayMethod="unsigned integer"/>
+        <Element Offset="2744" Vartype="String" Bytesize="11" OffsetHex="00000AB8" DisplayMethod="unsigned integer"/>
+        <Element Offset="2755" Vartype="Byte" Bytesize="1" OffsetHex="00000AC3" DisplayMethod="unsigned integer"/>
+        <Element Offset="2756" Vartype="4 Bytes" Bytesize="4" RLECount="9" OffsetHex="00000AC4" DisplayMethod="unsigned integer"/>
+        <Element Offset="2792" Vartype="String" Bytesize="13" OffsetHex="00000AE8" DisplayMethod="unsigned integer"/>
+        <Element Offset="2805" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="00000AF5" DisplayMethod="unsigned integer"/>
+        <Element Offset="2808" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000AF8" DisplayMethod="unsigned integer"/>
+        <Element Offset="2816" Vartype="String" Bytesize="16" OffsetHex="00000B00" DisplayMethod="unsigned integer"/>
+        <Element Offset="2832" Vartype="4 Bytes" Bytesize="4" RLECount="8" OffsetHex="00000B10" DisplayMethod="unsigned integer"/>
+        <Element Offset="2864" Vartype="String" Bytesize="15" OffsetHex="00000B30" DisplayMethod="unsigned integer"/>
+        <Element Offset="2879" Vartype="Byte" Bytesize="1" OffsetHex="00000B3F" DisplayMethod="unsigned integer"/>
+        <Element Offset="2880" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000B40" DisplayMethod="unsigned integer"/>
+        <Element Offset="2888" Vartype="String" Bytesize="13" OffsetHex="00000B48" DisplayMethod="unsigned integer"/>
+        <Element Offset="2901" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="00000B55" DisplayMethod="unsigned integer"/>
+        <Element Offset="2904" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000B58" DisplayMethod="unsigned integer"/>
+        <Element Offset="2912" Vartype="String" Bytesize="15" OffsetHex="00000B60" DisplayMethod="unsigned integer"/>
+        <Element Offset="2927" Vartype="Byte" Bytesize="1" OffsetHex="00000B6F" DisplayMethod="unsigned integer"/>
+        <Element Offset="2928" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000B70" DisplayMethod="unsigned integer"/>
+        <Element Offset="2936" Vartype="String" Bytesize="15" OffsetHex="00000B78" DisplayMethod="unsigned integer"/>
+        <Element Offset="2951" Vartype="2 Bytes" Bytesize="2" OffsetHex="00000B87" DisplayMethod="unsigned integer"/>
+        <Element Offset="2953" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="00000B89" DisplayMethod="unsigned integer"/>
+        <Element Offset="2956" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000B8C" DisplayMethod="unsigned integer"/>
+        <Element Offset="2960" Vartype="String" Bytesize="12" OffsetHex="00000B90" DisplayMethod="unsigned integer"/>
+        <Element Offset="2972" Vartype="4 Bytes" Bytesize="4" RLECount="3" OffsetHex="00000B9C" DisplayMethod="unsigned integer"/>
+        <Element Offset="2984" Vartype="String" Bytesize="15" OffsetHex="00000BA8" DisplayMethod="unsigned integer"/>
+        <Element Offset="2999" Vartype="Byte" Bytesize="1" OffsetHex="00000BB7" DisplayMethod="unsigned integer"/>
+        <Element Offset="3000" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000BB8" DisplayMethod="unsigned integer"/>
+        <Element Offset="3008" Vartype="String" Bytesize="13" OffsetHex="00000BC0" DisplayMethod="unsigned integer"/>
+        <Element Offset="3021" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="00000BCD" DisplayMethod="unsigned integer"/>
+        <Element Offset="3024" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000BD0" DisplayMethod="unsigned integer"/>
+        <Element Offset="3032" Vartype="String" Bytesize="13" OffsetHex="00000BD8" DisplayMethod="unsigned integer"/>
+        <Element Offset="3045" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="00000BE5" DisplayMethod="unsigned integer"/>
+        <Element Offset="3048" Vartype="4 Bytes" Bytesize="4" RLECount="8" OffsetHex="00000BE8" DisplayMethod="unsigned integer"/>
+        <Element Offset="3080" Vartype="String" Bytesize="14" OffsetHex="00000C08" DisplayMethod="unsigned integer"/>
+        <Element Offset="3094" Vartype="Byte" Bytesize="1" OffsetHex="00000C16" DisplayMethod="unsigned integer"/>
+        <Element Offset="3095" Vartype="2 Bytes" Bytesize="2" OffsetHex="00000C17" DisplayMethod="unsigned integer"/>
+        <Element Offset="3097" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="00000C19" DisplayMethod="unsigned integer"/>
+        <Element Offset="3100" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000C1C" DisplayMethod="unsigned integer"/>
+        <Element Offset="3104" Vartype="String" Bytesize="15" OffsetHex="00000C20" DisplayMethod="unsigned integer"/>
+        <Element Offset="3119" Vartype="Byte" Bytesize="1" OffsetHex="00000C2F" DisplayMethod="unsigned integer"/>
+        <Element Offset="3120" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000C30" DisplayMethod="unsigned integer"/>
+        <Element Offset="3128" Vartype="String" Bytesize="16" OffsetHex="00000C38" DisplayMethod="unsigned integer"/>
+        <Element Offset="3144" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000C48" DisplayMethod="unsigned integer"/>
+        <Element Offset="3152" Vartype="String" Bytesize="9" OffsetHex="00000C50" DisplayMethod="unsigned integer"/>
+        <Element Offset="3161" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="00000C59" DisplayMethod="unsigned integer"/>
+        <Element Offset="3164" Vartype="4 Bytes" Bytesize="4" RLECount="3" OffsetHex="00000C5C" DisplayMethod="unsigned integer"/>
+        <Element Offset="3176" Vartype="String" Bytesize="14" OffsetHex="00000C68" DisplayMethod="unsigned integer"/>
+        <Element Offset="3190" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="00000C76" DisplayMethod="unsigned integer"/>
+        <Element Offset="3192" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000C78" DisplayMethod="unsigned integer"/>
+        <Element Offset="3200" Vartype="String" Bytesize="11" OffsetHex="00000C80" DisplayMethod="unsigned integer"/>
+        <Element Offset="3211" Vartype="Byte" Bytesize="1" OffsetHex="00000C8B" DisplayMethod="unsigned integer"/>
+        <Element Offset="3212" Vartype="4 Bytes" Bytesize="4" RLECount="3" OffsetHex="00000C8C" DisplayMethod="unsigned integer"/>
+        <Element Offset="3224" Vartype="String" Bytesize="15" OffsetHex="00000C98" DisplayMethod="unsigned integer"/>
+        <Element Offset="3239" Vartype="Byte" Bytesize="1" OffsetHex="00000CA7" DisplayMethod="unsigned integer"/>
+        <Element Offset="3240" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000CA8" DisplayMethod="unsigned integer"/>
+        <Element Offset="3248" Vartype="String" Bytesize="14" OffsetHex="00000CB0" DisplayMethod="unsigned integer"/>
+        <Element Offset="3262" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="00000CBE" DisplayMethod="unsigned integer"/>
+        <Element Offset="3264" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000CC0" DisplayMethod="unsigned integer"/>
+        <Element Offset="3272" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000CC8" DisplayMethod="hexadecimal"/>
+        <Element Offset="3276" Vartype="4 Bytes" Bytesize="4" RLECount="5" OffsetHex="00000CCC" DisplayMethod="unsigned integer"/>
+        <Element Offset="3296" Vartype="String" Bytesize="14" OffsetHex="00000CE0" DisplayMethod="unsigned integer"/>
+        <Element Offset="3310" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="00000CEE" DisplayMethod="unsigned integer"/>
+        <Element Offset="3312" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000CF0" DisplayMethod="unsigned integer"/>
+        <Element Offset="3320" Vartype="String" Bytesize="15" OffsetHex="00000CF8" DisplayMethod="unsigned integer"/>
+        <Element Offset="3335" Vartype="Byte" Bytesize="1" OffsetHex="00000D07" DisplayMethod="unsigned integer"/>
+        <Element Offset="3336" Vartype="4 Bytes" Bytesize="4" RLECount="14" OffsetHex="00000D08" DisplayMethod="unsigned integer"/>
+        <Element Offset="3392" Vartype="String" Bytesize="9" OffsetHex="00000D40" DisplayMethod="unsigned integer"/>
+        <Element Offset="3401" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="00000D49" DisplayMethod="unsigned integer"/>
+        <Element Offset="3404" Vartype="4 Bytes" Bytesize="4" RLECount="3" OffsetHex="00000D4C" DisplayMethod="unsigned integer"/>
+        <Element Offset="3416" Vartype="String" Bytesize="15" OffsetHex="00000D58" DisplayMethod="unsigned integer"/>
+        <Element Offset="3431" Vartype="Byte" Bytesize="1" OffsetHex="00000D67" DisplayMethod="unsigned integer"/>
+        <Element Offset="3432" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000D68" DisplayMethod="unsigned integer"/>
+        <Element Offset="3440" Vartype="String" Bytesize="14" OffsetHex="00000D70" DisplayMethod="unsigned integer"/>
+        <Element Offset="3454" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="00000D7E" DisplayMethod="unsigned integer"/>
+        <Element Offset="3456" Vartype="4 Bytes" Bytesize="4" RLECount="8" OffsetHex="00000D80" DisplayMethod="unsigned integer"/>
+        <Element Offset="3488" Vartype="String" Bytesize="12" OffsetHex="00000DA0" DisplayMethod="unsigned integer"/>
+        <Element Offset="3500" Vartype="4 Bytes" Bytesize="4" RLECount="21" OffsetHex="00000DAC" DisplayMethod="unsigned integer"/>
+        <Element Offset="3584" Vartype="String" Bytesize="11" OffsetHex="00000E00" DisplayMethod="unsigned integer"/>
+        <Element Offset="3595" Vartype="Byte" Bytesize="1" OffsetHex="00000E0B" DisplayMethod="unsigned integer"/>
+        <Element Offset="3596" Vartype="4 Bytes" Bytesize="4" RLECount="21" OffsetHex="00000E0C" DisplayMethod="unsigned integer"/>
+        <Element Offset="3680" Vartype="String" Bytesize="14" OffsetHex="00000E60" DisplayMethod="unsigned integer"/>
+        <Element Offset="3694" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="00000E6E" DisplayMethod="unsigned integer"/>
+        <Element Offset="3696" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000E70" DisplayMethod="unsigned integer"/>
+        <Element Offset="3704" Vartype="String" Bytesize="14" OffsetHex="00000E78" DisplayMethod="unsigned integer"/>
+        <Element Offset="3718" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="00000E86" DisplayMethod="unsigned integer"/>
+        <Element Offset="3720" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000E88" DisplayMethod="unsigned integer"/>
+        <Element Offset="3728" Vartype="String" Bytesize="13" OffsetHex="00000E90" DisplayMethod="unsigned integer"/>
+        <Element Offset="3741" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="00000E9D" DisplayMethod="unsigned integer"/>
+        <Element Offset="3744" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000EA0" DisplayMethod="unsigned integer"/>
+        <Element Offset="3752" Vartype="String" Bytesize="16" OffsetHex="00000EA8" DisplayMethod="unsigned integer"/>
+        <Element Offset="3768" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000EB8" DisplayMethod="unsigned integer"/>
+        <Element Offset="3776" Vartype="String" Bytesize="16" OffsetHex="00000EC0" DisplayMethod="unsigned integer"/>
+        <Element Offset="3792" Vartype="4 Bytes" Bytesize="4" RLECount="14" OffsetHex="00000ED0" DisplayMethod="unsigned integer"/>
+        <Element Offset="3848" Vartype="String" Bytesize="11" OffsetHex="00000F08" DisplayMethod="unsigned integer"/>
+        <Element Offset="3859" Vartype="Byte" Bytesize="1" OffsetHex="00000F13" DisplayMethod="unsigned integer"/>
+        <Element Offset="3860" Vartype="4 Bytes" Bytesize="4" RLECount="15" OffsetHex="00000F14" DisplayMethod="unsigned integer"/>
+        <Element Offset="3920" Vartype="String" Bytesize="8" OffsetHex="00000F50" DisplayMethod="unsigned integer"/>
+        <Element Offset="3928" Vartype="4 Bytes" Bytesize="4" RLECount="4" OffsetHex="00000F58" DisplayMethod="unsigned integer"/>
+        <Element Offset="3944" Vartype="String" Bytesize="10" OffsetHex="00000F68" DisplayMethod="unsigned integer"/>
+        <Element Offset="3954" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="00000F72" DisplayMethod="unsigned integer"/>
+        <Element Offset="3956" Vartype="4 Bytes" Bytesize="4" RLECount="3" OffsetHex="00000F74" DisplayMethod="unsigned integer"/>
+        <Element Offset="3968" Vartype="String" Bytesize="14" OffsetHex="00000F80" DisplayMethod="unsigned integer"/>
+        <Element Offset="3982" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="00000F8E" DisplayMethod="unsigned integer"/>
+        <Element Offset="3984" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000F90" DisplayMethod="unsigned integer"/>
+        <Element Offset="3992" Vartype="String" Bytesize="15" OffsetHex="00000F98" DisplayMethod="unsigned integer"/>
+        <Element Offset="4007" Vartype="Byte" Bytesize="1" OffsetHex="00000FA7" DisplayMethod="unsigned integer"/>
+        <Element Offset="4008" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000FA8" DisplayMethod="unsigned integer"/>
+        <Element Offset="4016" Vartype="String" Bytesize="13" OffsetHex="00000FB0" DisplayMethod="unsigned integer"/>
+        <Element Offset="4029" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="00000FBD" DisplayMethod="unsigned integer"/>
+        <Element Offset="4032" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000FC0" DisplayMethod="unsigned integer"/>
+        <Element Offset="4040" Vartype="String" Bytesize="13" OffsetHex="00000FC8" DisplayMethod="unsigned integer"/>
+        <Element Offset="4053" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="00000FD5" DisplayMethod="unsigned integer"/>
+        <Element Offset="4056" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000FD8" DisplayMethod="unsigned integer"/>
+        <Element Offset="4064" Vartype="String" Bytesize="13" OffsetHex="00000FE0" DisplayMethod="unsigned integer"/>
+        <Element Offset="4077" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="00000FED" DisplayMethod="unsigned integer"/>
+        <Element Offset="4080" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000FF0" DisplayMethod="unsigned integer"/>
+        <Element Offset="4088" Vartype="String" Bytesize="8" OffsetHex="00000FF8" DisplayMethod="unsigned integer"/>
+      </Elements>
+    </Structure>
+  </Structures>
+  <Comments>Imporved thermal pro
+</Comments>
+</CheatTable>
